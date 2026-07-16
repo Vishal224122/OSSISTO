@@ -7,7 +7,7 @@ export default function SuccessStories() {
     {
       bgTitle: "Building The Next-Gen CRM",
       linkTitle: "Salesforce Instance Pipeline Optimization",
-      description: "For a leading cloud security vendor, Xoriant engineered decoupled Apex triggers and customized routing configurations, boosting sales velocity by 45%.",
+      description: "For a leading cloud security vendor, Ossisto engineered decoupled Apex triggers and customized routing configurations, boosting sales velocity by 45%.",
       image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop"
     },
     {
@@ -30,8 +30,8 @@ export default function SuccessStories() {
     },
     {
       bgTitle: "Modernizing Financial Systems For A Global Bank",
-      linkTitle: "EAB's Zero-Incident Deployments with Xoriant",
-      description: "Ahead of Bulgaria's legally mandated Euro (EUR) adoption on 1 January 2026, a leading financial institution partnered with Xoriant to execute zero-incident system migrations.",
+      linkTitle: "EAB's Zero-Incident Deployments with Ossisto",
+      description: "Ahead of Bulgaria's legally mandated Euro (EUR) adoption on 1 January 2026, a leading financial institution partnered with Ossisto to execute zero-incident system migrations.",
       image: "/neon_mortarboard.png"
     },
     {
@@ -48,7 +48,7 @@ export default function SuccessStories() {
         
         {/* Section Header */}
         <div className="text-center space-y-2">
-          <span className="block text-xl md:text-2xl font-black text-xoriant-green tracking-wide">
+          <span className="block text-xl md:text-2xl font-black text-ossisto-blue tracking-wide">
             D.R.E.A.M. Realized
           </span>
           <h2 className="text-sm md:text-base font-extrabold text-black uppercase tracking-wider">
@@ -60,7 +60,7 @@ export default function SuccessStories() {
         <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-150 grid grid-cols-1 md:grid-cols-12 min-h-[165px] bg-slate-950">
           
           {/* Left Panel */}
-          <div className="md:col-span-6 bg-[#f8fafc] border-t-[5px] border-xoriant-green p-4 md:p-5 flex flex-col justify-between relative min-h-[165px]">
+          <div className="md:col-span-6 bg-[#f8fafc] border-t-[5px] border-ossisto-blue p-4 md:p-5 flex flex-col justify-between relative min-h-[165px]">
             
             {/* Watermark & Content Area */}
             <div className="relative flex-1 flex flex-col justify-center">
@@ -98,7 +98,7 @@ export default function SuccessStories() {
                   onClick={() => setActiveStory(idx)}
                   className={`w-7 h-7 rounded-full flex items-center justify-center font-extrabold text-xs transition-all border ${
                     activeStory === idx
-                      ? 'bg-xoriant-green border-xoriant-green text-white shadow-md shadow-xoriant-green/10'
+                      ? 'bg-ossisto-blue border-ossisto-blue text-white shadow-md shadow-ossisto-blue/10'
                       : 'bg-white border-gray-200 text-slate-700 hover:border-slate-400'
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}

@@ -23,7 +23,7 @@ export default function DataAnalyticsModernization() {
       title: "Accelerated Cloud Modernization",
       desc: "Migrate legacy systems to modern, cloud-native platforms with pre-built frameworks and proven methodologies.",
       icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 text-xoriant-green fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 24 24" className="w-8 h-8 text-ossisto-blue fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
         </svg>
       )
@@ -32,7 +32,7 @@ export default function DataAnalyticsModernization() {
       title: "BI Optimization at Scale",
       desc: "Streamline and modernize reporting with automated dashboard rationalization, metadata discovery, and visualization upgrades.",
       icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 text-xoriant-green fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 24 24" className="w-8 h-8 text-ossisto-blue fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
         </svg>
       )
@@ -41,7 +41,7 @@ export default function DataAnalyticsModernization() {
       title: "Built-In Observability & Governance",
       desc: "Ensure data quality, lineage, and compliance with embedded observability and governance across the data lifecycle.",
       icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 text-xoriant-green fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 24 24" className="w-8 h-8 text-ossisto-blue fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
         </svg>
       )
@@ -130,7 +130,7 @@ export default function DataAnalyticsModernization() {
     {
       name: "ORIAN.AI Studio",
       desc: "Marketplace of advanced AI business use cases",
-      color: "bg-[#00b23b]",
+      color: "bg-[#236CB1]",
       hasLink: true
     }
   ];
@@ -267,13 +267,13 @@ export default function DataAnalyticsModernization() {
         <div className="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <span className="text-xoriant-green text-xs md:text-sm font-extrabold uppercase tracking-widest block">
+            <span className="text-ossisto-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block">
               Data & Analytics Modernization
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight">
               From Legacy to AI-Ready Data Ecosystems
             </h1>
-            <button className="bg-[#00b23b] hover:bg-[#009632] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-xoriant-green/10 hover:scale-105 active:scale-95 duration-200">
+            <button className="bg-[#236CB1] hover:bg-[#236CB1] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
               LET'S CONNECT <span className="text-[10px]">▶</span>
             </button>
           </div>
@@ -281,7 +281,7 @@ export default function DataAnalyticsModernization() {
           {/* Right Image */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-xs md:max-w-sm">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-xoriant-green to-transparent opacity-20 blur-xl" />
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-ossisto-blue to-transparent opacity-20 blur-xl" />
               <img 
                 src="/data_modernization_hero.png" 
                 alt="Data Ecosystem Visualization" 
@@ -311,7 +311,7 @@ export default function DataAnalyticsModernization() {
                 >
                   {tab.name}
                   {activeTab === tab.id && (
-                    <span className="absolute bottom-0 left-0 w-full h-[3px] bg-xoriant-green rounded-full animate-fade-in" />
+                    <span className="absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full animate-fade-in" />
                   )}
                 </button>
               ))}
@@ -341,7 +341,7 @@ export default function DataAnalyticsModernization() {
           
           {/* Right Content */}
           <div className="md:col-span-9 lg:col-span-8 space-y-5 text-left">
-            <span className="text-xoriant-green text-xs font-black uppercase tracking-wider block">
+            <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
               Confidence You Can Trust
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-2xl font-sans">
@@ -367,7 +367,7 @@ export default function DataAnalyticsModernization() {
       <section id="differentiators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-slate-50">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Our Key Differentiators
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight max-w-3xl mx-auto leading-tight">
@@ -379,7 +379,7 @@ export default function DataAnalyticsModernization() {
             {differentiators.map((item, idx) => (
               <div 
                 key={idx}
-                className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-xoriant-green/40 transition-all duration-300 flex flex-col justify-between text-left min-h-[220px]"
+                className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-ossisto-blue/40 transition-all duration-300 flex flex-col justify-between text-left min-h-[220px]"
               >
                 <div className="space-y-4">
                   <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center">
@@ -403,7 +403,7 @@ export default function DataAnalyticsModernization() {
         <div className="max-w-6xl mx-auto space-y-10">
           {/* Header */}
           <div className="text-left space-y-2">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Our Services
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight leading-tight">
@@ -426,7 +426,7 @@ export default function DataAnalyticsModernization() {
                 >
                   <div className="flex items-center gap-2">
                     {activeService === key && (
-                      <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-xoriant-green border-b-[6px] border-b-transparent shrink-0" />
+                      <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-ossisto-blue border-b-[6px] border-b-transparent shrink-0" />
                     )}
                     <span className={activeService === key ? 'pl-0' : 'pl-4'}>
                       {services[key].menuName}
@@ -439,7 +439,7 @@ export default function DataAnalyticsModernization() {
             {/* Right Detailed Container */}
             <div className="md:col-span-7 lg:col-span-8 bg-[#f8fafc] border border-slate-100 rounded-2xl p-8 text-left space-y-6 min-h-[300px] flex flex-col justify-between shadow-sm">
               <div className="space-y-4">
-                <h3 className="text-xoriant-green text-lg font-black tracking-tight leading-snug">
+                <h3 className="text-ossisto-blue text-lg font-black tracking-tight leading-snug">
                   {services[activeService].title}
                 </h3>
                 <p className="text-slate-600 text-xs font-semibold leading-relaxed">
@@ -475,7 +475,7 @@ export default function DataAnalyticsModernization() {
         <div className="max-w-5xl mx-auto space-y-10">
           {/* Header */}
           <div className="text-left space-y-2">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               How it Works
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight leading-tight">
@@ -499,7 +499,7 @@ export default function DataAnalyticsModernization() {
             {/* Right Column Steps */}
             <div className="lg:col-span-7 space-y-6 text-left">
               {playbooks.map((step, idx) => (
-                <div key={idx} className="space-y-1 pl-4 border-l-2 border-slate-200 hover:border-xoriant-green transition-all duration-300">
+                <div key={idx} className="space-y-1 pl-4 border-l-2 border-slate-200 hover:border-ossisto-blue transition-all duration-300">
                   <h4 className="text-sm font-black text-slate-900">{step.title}</h4>
                   <p className="text-xs leading-relaxed text-slate-500 font-medium">{step.desc}</p>
                 </div>
@@ -524,7 +524,7 @@ export default function DataAnalyticsModernization() {
       <section id="accelerators" className="py-16 md:py-20 px-6 md:px-12 lg:px-24 bg-white border-b border-gray-150">
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="text-left space-y-3">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Our Accelerators
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight">
@@ -561,7 +561,7 @@ export default function DataAnalyticsModernization() {
       {/* 8. Collaborators Section (Screenshot 4 Part A: Continuous Scrolling Marquee) */}
       <section id="collaborators" className="py-16 px-6 md:px-12 lg:px-24 bg-slate-50 border-b border-gray-150">
         <div className="max-w-5xl mx-auto text-left space-y-4">
-          <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+          <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
             Our Collaborators
           </span>
           <h2 className="text-xl sm:text-2xl font-extrabold text-black tracking-tight leading-tight">
@@ -589,7 +589,7 @@ export default function DataAnalyticsModernization() {
           </div>
 
           <div className="pt-4">
-            <a href="#ecosystem" className="inline-flex items-center gap-1 text-xs font-extrabold text-black hover:text-xoriant-green transition-colors uppercase tracking-widest">
+            <a href="#ecosystem" className="inline-flex items-center gap-1 text-xs font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-widest">
               All Partners <span className="text-[10px]">▶</span>
             </a>
           </div>
@@ -643,7 +643,7 @@ export default function DataAnalyticsModernization() {
                     onClick={() => setActiveStoryIdx(idx)}
                     className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black border transition-all ${
                       activeStoryIdx === idx 
-                        ? 'bg-xoriant-green border-xoriant-green text-white' 
+                        ? 'bg-ossisto-blue border-ossisto-blue text-white' 
                         : 'bg-white border-gray-300 text-slate-500 hover:border-slate-500'
                     }`}
                   >

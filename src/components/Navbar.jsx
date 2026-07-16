@@ -49,7 +49,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
       ],
       featured: {
         category: "News",
-        title: "Xoriant Acquires TestDevLab to Expand European Reach",
+        title: "Ossisto Acquires TestDevLab to Expand European Reach",
         desc: "Expanding presence in EU for AI-driven Quality Engineering.",
         image: "https://www.xoriant.com/cdn/ff/5hii6a26ufChGUjvX3c1n1H8r-6QIlwHLpZONHr00_Q/1771476515/public/styles/100/public/2026-02/Acquisition%20news%20%281%29.png_100x50_2.jpg.webp?itok=pf_clXkg"
       }
@@ -149,7 +149,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
     },
     {
       title: "COE",
-      headerTitle: "Xoriant Centers of Excellence",
+      headerTitle: "Ossisto Centers of Excellence",
       desc: "Core capabilities that power next-generation software development across embedded systems, AI, and cybersecurity platforms.",
       links: [
         { name: "Embedded systems", href: "#dream-details" },
@@ -166,7 +166,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
     },
     {
       title: "CAREER",
-      headerTitle: "Careers at Xoriant",
+      headerTitle: "Careers at Ossisto",
       desc: "Join our team of global co-creators, where every engineer builds technology that reshapes industries.",
       links: [
         { name: "Open roles", href: "#dream-details" },
@@ -182,11 +182,11 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
     },
     {
       title: "ABOUT US",
-      headerTitle: "About Xoriant Group",
+      headerTitle: "About Ossisto Group",
       desc: "Review our journey of engineering innovation and leadership in enterprise software delivery.",
       links: [
-        { name: "Our story", href: "#about-xoriant" },
-        { name: "Leadership", href: "#about-xoriant" },
+        { name: "Our story", href: "#about-ossisto" },
+        { name: "Leadership", href: "#about-ossisto" },
         { name: "Global presence", href: "#contact" }
       ],
       featured: {
@@ -200,7 +200,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
 
   const sidebarGroups = {
     company: [
-      { name: "Our Story", href: "#about-xoriant" },
+      { name: "Our Story", href: "#about-ossisto" },
       { name: "Leadership Team", href: "#contact" },
       { name: "News & Announcements", href: "#keeping-updated" },
       { name: "Events", href: "#contact" },
@@ -233,8 +233,8 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
               className="flex items-center"
             >
               <img
-                src="https://www.xoriant.com/cdn/ff/F71b10FRNa0RU2jATbQpCPM8vDUBGt8N8AkCT1IeuVg/1692609954/public/Xoriant-Logo_0.png"
-                alt="Xoriant Logo"
+                src="https://ossisto.com/wp-content/uploads/2023/04/Ossisto_Logo.png"
+                alt="Ossisto Logo"
                 className={`h-8 md:h-10 object-contain transition-all duration-300 ${isScrolled ? '' : 'brightness-0 invert'}`}
               />
             </a>
@@ -251,12 +251,12 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
               >
                 <button
                   onClick={() => setActiveTab(item.title)}
-                  className={`relative flex items-center font-black text-[10.5px] xl:text-[11.5px] py-4 transition-colors whitespace-nowrap uppercase tracking-wider ${isScrolled ? 'text-slate-900 hover:text-xoriant-green' : 'text-white hover:text-xoriant-green'
+                  className={`relative flex items-center font-black text-[10.5px] xl:text-[11.5px] py-4 transition-colors whitespace-nowrap uppercase tracking-wider ${isScrolled ? 'text-slate-900 hover:text-ossisto-blue' : 'text-white hover:text-ossisto-blue'
                     }`}
                 >
                   {item.title}
                   {/* Underline matching the screenshot */}
-                  <span className={`absolute bottom-0 left-0 w-full h-[3px] bg-xoriant-green rounded-full transition-transform duration-300 origin-left ${activeDropdown === index || (activeDropdown === null && activeTab === item.title)
+                  <span className={`absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full transition-transform duration-300 origin-left ${activeDropdown === index || (activeDropdown === null && activeTab === item.title)
                     ? 'scale-x-100'
                     : 'scale-x-0 group-hover:scale-x-100'
                     }`} />
@@ -272,7 +272,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-12">
 
                       {/* Column 1: Featured Insights (Green background with left bleed) */}
-                      <div className="col-span-3 bg-[#00b23b] [box-shadow:-100vw_0_0_100vw_#00b23b] p-6 lg:p-8 text-white flex flex-col justify-between relative z-10">
+                      <div className="col-span-3 bg-[#236CB1] [box-shadow:-100vw_0_0_100vw_#236CB1] p-6 lg:p-8 text-white flex flex-col justify-between relative z-10">
                         <div>
                           <h3 className="text-sm lg:text-base font-extrabold tracking-wider mb-5 uppercase text-white">
                             Featured Insights
@@ -289,7 +289,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
                               <div>
                                 <span className="block text-[8px] font-extrabold uppercase text-green-100 tracking-wider">News</span>
                                 <a href="#keeping-updated" className="block text-[11px] font-bold leading-tight hover:underline line-clamp-2">
-                                  Xoriant Acquires TestDevLab to Expand European Reach
+                                  Ossisto Acquires TestDevLab to Expand European Reach
                                 </a>
                               </div>
                             </div>
@@ -337,7 +337,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
                         </p>
                         <a
                           href="#dream-details"
-                          className="inline-flex items-center gap-1.5 text-xs lg:text-sm font-extrabold text-black hover:text-xoriant-green transition-colors uppercase tracking-wider"
+                          className="inline-flex items-center gap-1.5 text-xs lg:text-sm font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-wider"
                         >
                           Know More <span className="text-[10px]">▶</span>
                         </a>
@@ -381,10 +381,10 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
                                     setActiveDropdown(null);
                                   }
                                 }}
-                                className="text-xs lg:text-sm font-bold text-slate-800 hover:text-xoriant-green flex items-center justify-between group/sublink transition-colors"
+                                className="text-xs lg:text-sm font-bold text-slate-800 hover:text-ossisto-blue flex items-center justify-between group/sublink transition-colors"
                               >
                                 <span>{link.name}</span>
-                                <span className="text-[9px] text-slate-400 group-hover/sublink:text-xoriant-green transition-colors">▶</span>
+                                <span className="text-[9px] text-slate-400 group-hover/sublink:text-ossisto-blue transition-colors">▶</span>
                               </a>
                             </li>
                           ))}
@@ -403,7 +403,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
             {/* Sidebar Toggle Burger (☰) */}
             <button
               onClick={() => setIsSidePanelOpen(true)}
-              className={`p-2 transition-colors group flex items-center justify-center ${isScrolled ? 'text-slate-900 hover:text-xoriant-green' : 'text-white hover:text-xoriant-green'
+              className={`p-2 transition-colors group flex items-center justify-center ${isScrolled ? 'text-slate-900 hover:text-ossisto-blue' : 'text-white hover:text-ossisto-blue'
                 }`}
               aria-label="Open sidebar menu"
             >
@@ -413,9 +413,9 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <rect y="0" width="24" height="2.5" rx="1.25" className={`${isScrolled ? 'fill-slate-900' : 'fill-white'} group-hover:fill-xoriant-green transition-colors duration-200`} />
-                <rect y="7.5" width="24" height="2.5" rx="1.25" className={`${isScrolled ? 'fill-slate-900' : 'fill-white'} group-hover:fill-xoriant-green transition-colors duration-200`} />
-                <rect y="15" width="24" height="2.5" rx="1.25" className={`${isScrolled ? 'fill-slate-900' : 'fill-white'} group-hover:fill-xoriant-green transition-colors duration-200`} />
+                <rect y="0" width="24" height="2.5" rx="1.25" className={`${isScrolled ? 'fill-slate-900' : 'fill-white'} group-hover:fill-ossisto-blue transition-colors duration-200`} />
+                <rect y="7.5" width="24" height="2.5" rx="1.25" className={`${isScrolled ? 'fill-slate-900' : 'fill-white'} group-hover:fill-ossisto-blue transition-colors duration-200`} />
+                <rect y="15" width="24" height="2.5" rx="1.25" className={`${isScrolled ? 'fill-slate-900' : 'fill-white'} group-hover:fill-ossisto-blue transition-colors duration-200`} />
               </svg>
             </button>
 
@@ -426,12 +426,12 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className={`bg-slate-900/60 border border-slate-700/50 text-white text-xs rounded-full py-1.5 pl-4 pr-10 focus:outline-none focus:border-xoriant-green transition-all duration-300 ${isSearchExpanded ? 'w-40 opacity-100' : 'w-0 opacity-0 pointer-events-none'
+                className={`bg-slate-900/60 border border-slate-700/50 text-white text-xs rounded-full py-1.5 pl-4 pr-10 focus:outline-none focus:border-ossisto-blue transition-all duration-300 ${isSearchExpanded ? 'w-40 opacity-100' : 'w-0 opacity-0 pointer-events-none'
                   }`}
               />
               <button
                 onClick={() => setIsSearchExpanded(!isSearchExpanded)}
-                className={`p-2 transition-colors relative ${isScrolled ? 'text-slate-700 hover:text-xoriant-green' : 'text-white hover:text-xoriant-green'
+                className={`p-2 transition-colors relative ${isScrolled ? 'text-slate-700 hover:text-ossisto-blue' : 'text-white hover:text-ossisto-blue'
                   }`}
               >
                 <Search className="w-4.5 h-4.5" />
@@ -441,7 +441,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
             {/* CONTACT ▶ Button */}
             <button
               onClick={onContactClick}
-              className="bg-xoriant-green hover:bg-[#009632] text-white font-bold py-2 px-4.5 text-xs rounded uppercase tracking-wider flex items-center gap-1.5 transition-all duration-300 shadow-md shadow-xoriant-green/10 shrink-0"
+              className="bg-ossisto-blue always-blue-bg hover:bg-[#236CB1] text-white font-bold py-2 px-4.5 text-xs rounded uppercase tracking-wider flex items-center gap-1.5 transition-all duration-300 shadow-md shadow-ossisto-blue/10 shrink-0"
             >
               CONTACT <span className="text-[9px] select-none">▶</span>
             </button>
@@ -466,8 +466,8 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-slate-100 pb-4">
               <img
-                src="https://www.xoriant.com/cdn/ff/F71b10FRNa0RU2jATbQpCPM8vDUBGt8N8AkCT1IeuVg/1692609954/public/Xoriant-Logo_0.png"
-                alt="Xoriant Logo"
+                src="https://ossisto.com/wp-content/uploads/2023/04/Ossisto_Logo.png"
+                alt="Ossisto Logo"
                 className="h-7 object-contain"
               />
               <button
@@ -485,7 +485,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
               <div className="space-y-2">
                 <button
                   onClick={() => setActiveSideSub(activeSideSub === 'thought' ? null : 'thought')}
-                  className="w-full flex items-center justify-between text-base font-bold text-slate-900 hover:text-xoriant-green transition-colors text-left"
+                  className="w-full flex items-center justify-between text-base font-bold text-slate-900 hover:text-ossisto-blue transition-colors text-left"
                 >
                   <span>Thought Leadership</span>
                   <span className="text-xs text-slate-400 font-mono">{activeSideSub === 'thought' ? '[-]' : '[+]'}</span>
@@ -497,7 +497,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
                         key={idx}
                         href={item.href}
                         onClick={() => setIsSidePanelOpen(false)}
-                        className="block text-sm text-slate-600 hover:text-xoriant-green py-1 transition-colors font-medium"
+                        className="block text-sm text-slate-600 hover:text-ossisto-blue py-1 transition-colors font-medium"
                       >
                         {item.name}
                       </a>
@@ -510,7 +510,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
               <div className="space-y-2">
                 <button
                   onClick={() => setActiveSideSub(activeSideSub === 'company' ? null : 'company')}
-                  className="w-full flex items-center justify-between text-base font-bold text-slate-900 hover:text-xoriant-green transition-colors text-left"
+                  className="w-full flex items-center justify-between text-base font-bold text-slate-900 hover:text-ossisto-blue transition-colors text-left"
                 >
                   <span>Company</span>
                   <span className="text-xs text-slate-400 font-mono">{activeSideSub === 'company' ? '[-]' : '[+]'}</span>
@@ -522,7 +522,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
                         key={idx}
                         href={item.href}
                         onClick={() => setIsSidePanelOpen(false)}
-                        className="block text-sm text-slate-600 hover:text-xoriant-green py-1 transition-colors font-medium"
+                        className="block text-sm text-slate-600 hover:text-ossisto-blue py-1 transition-colors font-medium"
                       >
                         {item.name}
                       </a>
@@ -536,7 +536,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
                 <a
                   href="#contact"
                   onClick={() => setIsSidePanelOpen(false)}
-                  className="block text-base font-bold text-slate-900 hover:text-xoriant-green transition-colors"
+                  className="block text-base font-bold text-slate-900 hover:text-ossisto-blue transition-colors"
                 >
                   Careers
                 </a>
@@ -546,7 +546,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
                     setIsSidePanelOpen(false);
                     onContactClick();
                   }}
-                  className="block text-base font-bold text-slate-900 hover:text-xoriant-green transition-colors"
+                  className="block text-base font-bold text-slate-900 hover:text-ossisto-blue transition-colors"
                 >
                   Contact Us
                 </a>
@@ -557,14 +557,14 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
             {/* Footer with social media channels */}
             <div className="border-t border-slate-100 pt-4 space-y-4">
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block font-sans">
-                Follow Xoriant Life
+                Follow Ossisto Life
               </span>
               <div className="flex justify-between text-slate-400">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-xoriant-green transition-colors"><Linkedin className="w-5 h-5" /></a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-xoriant-green transition-colors"><Instagram className="w-5 h-5" /></a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-xoriant-green transition-colors"><Facebook className="w-5 h-5" /></a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-xoriant-green transition-colors"><Twitter className="w-5 h-5" /></a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-xoriant-green transition-colors"><Youtube className="w-5 h-5" /></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-ossisto-blue transition-colors"><Linkedin className="w-5 h-5" /></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-ossisto-blue transition-colors"><Instagram className="w-5 h-5" /></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-ossisto-blue transition-colors"><Facebook className="w-5 h-5" /></a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-ossisto-blue transition-colors"><Twitter className="w-5 h-5" /></a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-ossisto-blue transition-colors"><Youtube className="w-5 h-5" /></a>
               </div>
             </div>
 

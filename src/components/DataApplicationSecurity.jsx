@@ -61,7 +61,7 @@ export default function DataApplicationSecurity() {
       title: "Shift-Left Velocity",
       desc: "We embed AI-powered scanners into CI/CD pipelines, enabling continuous application security testing during development. Teams fix issues early, slash remediation costs, and release secure code faster.",
       icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 text-xoriant-green fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 24 24" className="w-8 h-8 text-ossisto-blue fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       )
@@ -70,7 +70,7 @@ export default function DataApplicationSecurity() {
       title: "Data-Centric Protection",
       desc: "We secure data at rest, in motion, and in use using dynamic masking, encryption & key management, and database activity monitoring, ensuring protection even within AI models and analytics workflows.",
       icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 text-xoriant-green fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 24 24" className="w-8 h-8 text-ossisto-blue fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.746 3.746 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
         </svg>
       )
@@ -79,7 +79,7 @@ export default function DataApplicationSecurity() {
       title: "Self-Healing Resilience",
       desc: "We use AI-driven monitoring to detect anomalies and trigger automated isolation and recovery. Threats are neutralized in real time, reducing dwell time and strengthening operational resilience 24/7.",
       icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 text-xoriant-green fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 24 24" className="w-8 h-8 text-ossisto-blue fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
         </svg>
       )
@@ -346,13 +346,13 @@ export default function DataApplicationSecurity() {
         <div className="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <span className="text-xoriant-green text-xs md:text-sm font-extrabold uppercase tracking-widest block">
+            <span className="text-ossisto-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block">
               Data and Application Security
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight uppercase">
               Secure by Design, Protected by Intelligence
             </h1>
-            <button className="bg-[#00b23b] hover:bg-[#009632] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-xoriant-green/10 hover:scale-105 active:scale-95 duration-200">
+            <button className="bg-[#236CB1] hover:bg-[#236CB1] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
               LET'S CONNECT <span className="text-[10px]">▶</span>
             </button>
           </div>
@@ -360,7 +360,7 @@ export default function DataApplicationSecurity() {
           {/* Right Image */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-xs md:max-w-md">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-xoriant-green to-transparent opacity-20 blur-xl" />
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-ossisto-blue to-transparent opacity-20 blur-xl" />
               <img 
                 src="/data_security_hero.png" 
                 alt="Cyber Security Lock Visualization" 
@@ -390,7 +390,7 @@ export default function DataApplicationSecurity() {
                 >
                   {tab.name}
                   {activeTab === tab.id && (
-                    <span className="absolute bottom-0 left-0 w-full h-[3px] bg-xoriant-green rounded-full animate-fade-in" />
+                    <span className="absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full animate-fade-in" />
                   )}
                 </button>
               ))}
@@ -420,7 +420,7 @@ export default function DataApplicationSecurity() {
           
           {/* Right Content */}
           <div className="md:col-span-9 lg:col-span-8 space-y-5 text-left">
-            <span className="text-xoriant-green text-xs font-black uppercase tracking-wider block">
+            <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
               Your Digital Armor
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-2xl font-sans">
@@ -432,7 +432,7 @@ export default function DataApplicationSecurity() {
                 In a world of GenAI, APIs, and distributed cloud systems, the application perimeter no longer exists. Data flows through code, pipelines, and models at machine speed. Securing it after deployment is too late.
               </p>
               <p>
-                Xoriant applies AI-led application security testing, enterprise data privacy controls, and secure DevOps / DevSecOps practices directly into the SDLC. We help enterprises prevent data exposure, protect sensitive workloads, and ensure applications are engineered secure from the first line of code to runtime, without slowing innovation.
+                Ossisto applies AI-led application security testing, enterprise data privacy controls, and secure DevOps / DevSecOps practices directly into the SDLC. We help enterprises prevent data exposure, protect sensitive workloads, and ensure applications are engineered secure from the first line of code to runtime, without slowing innovation.
               </p>
             </div>
           </div>
@@ -443,7 +443,7 @@ export default function DataApplicationSecurity() {
       <section id="capabilities" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-slate-50 relative">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Our Capabilities
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight max-w-3xl mx-auto leading-tight">
@@ -455,7 +455,7 @@ export default function DataApplicationSecurity() {
             {capabilities.map((item, idx) => (
               <div 
                 key={idx}
-                className="bg-white border-2 border-xoriant-green rounded-2xl p-6 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 flex flex-col justify-between text-left min-h-[220px]"
+                className="bg-white border-2 border-ossisto-blue rounded-2xl p-6 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 flex flex-col justify-between text-left min-h-[220px]"
               >
                 <div className="space-y-4">
                   <h3 className="font-extrabold text-slate-900 text-[13px] leading-snug">
@@ -486,11 +486,11 @@ export default function DataApplicationSecurity() {
       <section id="differentiators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Our Key Differentiators
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight leading-tight">
-              The Xoriant Engineering Advantage
+              The Ossisto Engineering Advantage
             </h2>
           </div>
 
@@ -524,7 +524,7 @@ export default function DataApplicationSecurity() {
             {/* Left Content */}
             <div className="w-full md:w-3/5 p-8 lg:p-10 flex flex-col justify-between text-left">
               <div>
-                <span className="text-xoriant-green text-xs font-bold tracking-widest uppercase block mb-3">
+                <span className="text-ossisto-blue text-xs font-bold tracking-widest uppercase block mb-3">
                   Featured Insight
                 </span>
                 <h3 className="text-black text-xl md:text-2xl font-black leading-snug mb-4 max-w-md">
@@ -534,7 +534,7 @@ export default function DataApplicationSecurity() {
               <div className="pt-4">
                 <a 
                   href="#keeping-updated" 
-                  className="inline-flex items-center gap-1.5 text-xs font-extrabold text-black hover:text-xoriant-green transition-colors uppercase tracking-widest"
+                  className="inline-flex items-center gap-1.5 text-xs font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-widest"
                 >
                   Let's Find Out <span className="text-[10px]">▶</span>
                 </a>
@@ -558,11 +558,11 @@ export default function DataApplicationSecurity() {
         <div className="max-w-5xl mx-auto space-y-10">
           {/* Header */}
           <div className="text-left space-y-2">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               How We Deliver
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight leading-tight">
-              How Xoriant Safeguards Your Data and Applications
+              How Ossisto Safeguards Your Data and Applications
             </h2>
           </div>
 
@@ -581,7 +581,7 @@ export default function DataApplicationSecurity() {
             {/* Right Column Steps */}
             <div className="lg:col-span-7 space-y-6 text-left">
               {deliverySteps.map((step, idx) => (
-                <div key={idx} className="space-y-1 pl-4 border-l-2 border-slate-200 hover:border-xoriant-green transition-all duration-300">
+                <div key={idx} className="space-y-1 pl-4 border-l-2 border-slate-200 hover:border-ossisto-blue transition-all duration-300">
                   <h4 className="text-sm font-black text-slate-900">{step.title}</h4>
                   <p className="text-xs leading-relaxed text-slate-550 font-semibold">{step.desc}</p>
                 </div>
@@ -594,7 +594,7 @@ export default function DataApplicationSecurity() {
       {/* 8. Our Collaborators Section (New Screenshot 1 Part A: Logo Slider) */}
       <section id="collaborators" className="py-16 px-6 md:px-12 lg:px-24 bg-slate-50 border-b border-gray-150">
         <div className="max-w-5xl mx-auto text-left space-y-4">
-          <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+          <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
             Our Collaborators
           </span>
           <h2 className="text-xl sm:text-2xl font-extrabold text-black tracking-tight leading-tight">
@@ -621,7 +621,7 @@ export default function DataApplicationSecurity() {
           </div>
 
           <div className="pt-4">
-            <a href="#ecosystem" className="inline-flex items-center gap-1 text-xs font-extrabold text-black hover:text-xoriant-green transition-colors uppercase tracking-widest">
+            <a href="#ecosystem" className="inline-flex items-center gap-1 text-xs font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-widest">
               All Partners <span className="text-[10px]">▶</span>
             </a>
           </div>
@@ -675,7 +675,7 @@ export default function DataApplicationSecurity() {
                     onClick={() => setActiveStoryIdx(idx)}
                     className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black border transition-all ${
                       activeStoryIdx === idx 
-                        ? 'bg-xoriant-green border-xoriant-green text-white' 
+                        ? 'bg-ossisto-blue border-ossisto-blue text-white' 
                         : 'bg-white border-gray-300 text-slate-500 hover:border-slate-500'
                     }`}
                   >
@@ -717,7 +717,7 @@ export default function DataApplicationSecurity() {
               <button 
                 onClick={() => setActiveResourceTab('thought')}
                 className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'thought' ? 'text-black border-b-2 border-xoriant-green' : 'text-slate-400 hover:text-black'
+                  activeResourceTab === 'thought' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
                 }`}
               >
                 Thought Leadership
@@ -725,7 +725,7 @@ export default function DataApplicationSecurity() {
               <button 
                 onClick={() => setActiveResourceTab('insights')}
                 className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'insights' ? 'text-black border-b-2 border-xoriant-green' : 'text-slate-400 hover:text-black'
+                  activeResourceTab === 'insights' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
                 }`}
               >
                 Insights
@@ -749,7 +749,7 @@ export default function DataApplicationSecurity() {
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <span className="text-xoriant-green text-[10px] font-bold uppercase tracking-wider block">
+                    <span className="text-ossisto-blue text-[10px] font-bold uppercase tracking-wider block">
                       {item.category}
                     </span>
                     <h4 className="text-slate-900 font-extrabold text-xs leading-snug line-clamp-3">
@@ -758,7 +758,7 @@ export default function DataApplicationSecurity() {
                   </div>
                   <a 
                     href={item.href} 
-                    className="text-[10px] font-black text-black hover:text-xoriant-green uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
+                    className="text-[10px] font-black text-black hover:text-ossisto-blue uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
                   >
                     Know More <span className="text-[9px]">▶</span>
                   </a>
@@ -783,7 +783,7 @@ export default function DataApplicationSecurity() {
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <span className="text-xoriant-green text-[10px] font-bold uppercase tracking-wider block">
+                    <span className="text-ossisto-blue text-[10px] font-bold uppercase tracking-wider block">
                       {item.category}
                     </span>
                     <h4 className="text-slate-900 font-extrabold text-xs leading-snug line-clamp-3">
@@ -792,7 +792,7 @@ export default function DataApplicationSecurity() {
                   </div>
                   <a 
                     href={item.href} 
-                    className="text-[10px] font-black text-black hover:text-xoriant-green uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
+                    className="text-[10px] font-black text-black hover:text-ossisto-blue uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
                   >
                     Know More <span className="text-[9px]">▶</span>
                   </a>
@@ -809,7 +809,7 @@ export default function DataApplicationSecurity() {
           <h2 className="text-xl md:text-2xl font-black text-black tracking-tight mb-4">
             Data and Application Security - Questions Frequently Asked
           </h2>
-          <div className="w-full h-[1.5px] bg-xoriant-green mb-8" />
+          <div className="w-full h-[1.5px] bg-ossisto-blue mb-8" />
 
           <div className="divide-y divide-gray-200">
             {faqs.map((faq, idx) => {
@@ -820,12 +820,12 @@ export default function DataApplicationSecurity() {
                     onClick={() => toggleFaq(idx)}
                     className="w-full py-2 flex items-center justify-between text-left focus:outline-none group select-none"
                   >
-                    <span className="text-[13px] font-black text-slate-900 group-hover:text-xoriant-green transition-colors leading-snug pr-6">
+                    <span className="text-[13px] font-black text-slate-900 group-hover:text-ossisto-blue transition-colors leading-snug pr-6">
                       {faq.q}
                     </span>
                     <div className={`w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center text-slate-400 group-hover:border-slate-500 group-hover:text-slate-700 transition-all shrink-0`}>
                       {isOpen ? (
-                        <Minus className="w-3.5 h-3.5 text-xoriant-green stroke-[3px]" />
+                        <Minus className="w-3.5 h-3.5 text-ossisto-blue stroke-[3px]" />
                       ) : (
                         <Plus className="w-3.5 h-3.5 stroke-[3px]" />
                       )}

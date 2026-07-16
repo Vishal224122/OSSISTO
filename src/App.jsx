@@ -3,7 +3,7 @@ import AnnouncementBar from './components/AnnouncementBar';
 import Navbar from './components/Navbar';
 import ContactModal from './components/ContactModal';
 import Hero from './components/Hero';
-import AboutXoriantModern from './components/AboutXoriantModern';
+import AboutOssistoModern from './components/AboutOssistoModern';
 import DreamDetails from './components/DreamDetails';
 import SuccessStories from './components/SuccessStories';
 import CareersSectionModern from './components/CareersSectionModern';
@@ -78,7 +78,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-[#0b0f19] text-gray-200 min-h-screen font-sans selection:bg-xoriant-green selection:text-white overflow-x-hidden antialiased">
+    <div className="bg-[#0b0f19] text-gray-200 min-h-screen font-sans selection:bg-ossisto-blue selection:text-white overflow-x-hidden antialiased">
       {/* Top Banner Alert */}
       <AnnouncementBar />
 
@@ -98,7 +98,7 @@ function App() {
           <Hero />
 
           {/* About Narrative and Stats Section */}
-          <AboutXoriantModern />
+          <AboutOssistoModern />
 
           {/* Capabilities Grids */}
           <DreamDetails />

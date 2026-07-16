@@ -31,7 +31,7 @@ export default function Hero() {
     {
       letter: "A",
       wordSuffix: "CCELERATE",
-      description: "Accelerating time-to-value with Xoriant accelerators",
+      description: "Accelerating time-to-value with Ossisto accelerators",
       image: "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=800&auto=format&fit=crop",
       link: "#dream-details"
     },
@@ -46,7 +46,7 @@ export default function Hero() {
 
   return (
     <div 
-      className="relative h-screen w-full overflow-hidden bg-xoriant-dark"
+      className="relative h-screen w-full overflow-hidden bg-ossisto-dark"
       onMouseLeave={() => setHoveredIdx(1)} // Reset to match screenshot state (R expanded)
     >
       
@@ -83,13 +83,13 @@ export default function Hero() {
                     <span className="text-5xl md:text-6xl lg:text-7xl font-black text-white select-none">
                       {panel.letter}
                     </span>
-                    <span className={`text-xl md:text-2xl font-black text-gray-400 uppercase tracking-wide transition-all duration-500 origin-left overflow-hidden ${
+                    <span className={`text-xl md:text-2xl font-black text-ossisto-blue uppercase tracking-wide transition-all duration-500 origin-left overflow-hidden ${
                       isHovered ? 'max-w-xs opacity-100 ml-0.5' : 'max-w-0 opacity-0'
                     }`}>
                       {panel.wordSuffix}
                     </span>
                     {panel.greenWord && isHovered && (
-                      <span className="text-xl md:text-2xl font-black text-xoriant-green uppercase tracking-wide ml-2 animate-fade-in">
+                      <span className="text-xl md:text-2xl font-black text-ossisto-blue uppercase tracking-wide ml-2 animate-fade-in">
                         {panel.greenWord}
                       </span>
                     )}
@@ -106,7 +106,7 @@ export default function Hero() {
                   <div className="pt-1.5">
                     <a 
                       href={panel.link}
-                      className="inline-flex items-center gap-1 text-[11px] font-bold text-xoriant-green hover:text-white uppercase tracking-wider transition-colors"
+                      className="inline-flex items-center gap-1 text-[11px] font-bold text-ossisto-blue hover:text-white uppercase tracking-wider transition-colors"
                     >
                       Know More 
                       <span className="text-[10px] select-none">▶</span>
@@ -124,10 +124,10 @@ export default function Hero() {
       {/* Floating Center Search Bar Overlay (Fixed viewport position) */}
       <div className="fixed bottom-12 left-1/2 -translate-x-1/2 z-30 w-full max-w-lg px-4 hidden md:block">
         {/* Custom Search Box */}
-        <div className="bg-slate-950/85 backdrop-blur-md border border-xoriant-green/30 px-5 py-3 rounded-full flex items-center justify-between gap-3 shadow-2xl">
+        <div className="bg-slate-950/85 backdrop-blur-md border border-ossisto-blue/30 px-5 py-3 rounded-full flex items-center justify-between gap-3 shadow-2xl">
           <div className="flex items-center gap-2.5 flex-1">
             {/* Sparkle star icon */}
-            <span className="text-xoriant-green text-sm font-bold animate-pulse">✦</span>
+            <span className="text-ossisto-blue text-sm font-bold animate-pulse">✦</span>
             <input 
               type="text" 
               placeholder="Search the intelligent future..."
@@ -139,7 +139,7 @@ export default function Hero() {
           
           {/* Green Go Button */}
           <button 
-            className="w-8 h-8 rounded-full bg-xoriant-green hover:bg-[#009632] flex items-center justify-center text-white shrink-0 shadow-md shadow-xoriant-green/10 transition-colors duration-200"
+            className="w-8 h-8 rounded-full bg-ossisto-blue hover:bg-[#236CB1] flex items-center justify-center text-white shrink-0 shadow-md shadow-ossisto-blue/10 transition-colors duration-200"
             aria-label="Submit search query"
           >
             <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />

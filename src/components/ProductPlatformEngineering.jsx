@@ -53,7 +53,7 @@ export default function ProductPlatformEngineering() {
       render: () => (
         <div className="flex items-center gap-1 font-sans font-black text-slate-900 shrink-0 select-none">
           <div className="w-5.5 h-5.5 rounded-md bg-[#111625] flex items-center justify-center text-white font-serif text-[10px]">D</div>
-          <span className="text-[13px] font-bold">Digital<span className="text-xoriant-green font-black">Ex</span></span>
+          <span className="text-[13px] font-bold">Digital<span className="text-ossisto-blue font-black">Ex</span></span>
         </div>
       )
     },
@@ -325,13 +325,13 @@ export default function ProductPlatformEngineering() {
         <div className="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <span className="text-xoriant-green text-xs md:text-sm font-extrabold uppercase tracking-widest block">
+            <span className="text-ossisto-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block">
               Product & Platform Engineering
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight">
               Engineer AI-native product and platforms
             </h1>
-            <button className="bg-[#00b23b] hover:bg-[#009632] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-xoriant-green/10 hover:scale-105 active:scale-95 duration-200">
+            <button className="bg-[#236CB1] hover:bg-[#236CB1] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
               LET'S CONNECT <span className="text-[10px]">▶</span>
             </button>
           </div>
@@ -339,7 +339,7 @@ export default function ProductPlatformEngineering() {
           {/* Right Image */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-xs">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-xoriant-green to-transparent opacity-20 blur-xl" />
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-ossisto-blue to-transparent opacity-20 blur-xl" />
               <img 
                 src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=800&auto=format&fit=crop" 
                 alt="AR Headset Engineering" 
@@ -369,7 +369,7 @@ export default function ProductPlatformEngineering() {
                 >
                   {tab.name}
                   {activeTab === tab.id && (
-                    <span className="absolute bottom-0 left-0 w-full h-[3px] bg-xoriant-green rounded-full" />
+                    <span className="absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full" />
                   )}
                 </button>
               ))}
@@ -394,14 +394,14 @@ export default function ProductPlatformEngineering() {
           
           {/* Right Text */}
           <div className="md:col-span-9 lg:col-span-8 space-y-4 text-left">
-            <span className="text-xoriant-green text-xs font-black uppercase tracking-wider block">
+            <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
               Winning the digital race
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-xl">
               Accelerate product value through platform engineering.
             </h2>
             <p className="text-slate-500 text-sm leading-relaxed max-w-2xl font-medium">
-              In a software-defined market, every product must evolve into a platform. From our House of Engineering, Xoriant blends human ingenuity with AI-led enterprise product engineering and platform modernization services to help you lead what's next. Powered by ORIAN Pulse, our agentic AI platform, we strengthen the SDLC with scalable platform architecture, platform performance optimization, and API-first platform engineering, so teams ship faster and platforms stay reliable.
+              In a software-defined market, every product must evolve into a platform. From our House of Engineering, Ossisto blends human ingenuity with AI-led enterprise product engineering and platform modernization services to help you lead what's next. Powered by ORIAN Pulse, our agentic AI platform, we strengthen the SDLC with scalable platform architecture, platform performance optimization, and API-first platform engineering, so teams ship faster and platforms stay reliable.
             </p>
           </div>
         </div>
@@ -411,7 +411,7 @@ export default function ProductPlatformEngineering() {
       <section id="capabilities" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-slate-50">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Our Capabilities
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight max-w-2xl mx-auto leading-tight">
@@ -423,7 +423,7 @@ export default function ProductPlatformEngineering() {
             {capabilities.map((item, idx) => (
               <div 
                 key={idx}
-                className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-xoriant-green/40 transition-all duration-300 border-t-4 border-t-xoriant-green flex flex-col justify-between text-left"
+                className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-ossisto-blue/40 transition-all duration-300 border-t-4 border-t-ossisto-blue flex flex-col justify-between text-left"
               >
                 <h3 className="font-bold text-slate-900 text-base mb-3 leading-snug">
                   {item.title}
@@ -445,7 +445,7 @@ export default function ProductPlatformEngineering() {
             {/* Left Content */}
             <div className="w-full md:w-3/5 p-8 lg:p-10 flex flex-col justify-between text-left">
               <div>
-                <span className="text-xoriant-green text-xs font-bold tracking-widest uppercase block mb-3">
+                <span className="text-ossisto-blue text-xs font-bold tracking-widest uppercase block mb-3">
                   Featured Insight
                 </span>
                 <h3 className="text-black text-xl md:text-2xl font-black leading-snug mb-4 max-w-md">
@@ -458,7 +458,7 @@ export default function ProductPlatformEngineering() {
                 </span>
                 <a 
                   href="#keeping-updated" 
-                  className="inline-flex items-center gap-1 text-xs font-extrabold text-black hover:text-xoriant-green transition-colors uppercase tracking-widest"
+                  className="inline-flex items-center gap-1 text-xs font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-widest"
                 >
                   Let's Find Out <span className="text-[10px]">▶</span>
                 </a>
@@ -466,7 +466,7 @@ export default function ProductPlatformEngineering() {
             </div>
 
             {/* Right Graphic Banner */}
-            <div className="w-full md:w-2/5 bg-gradient-to-br from-[#00b23b] to-[#009632] flex items-center justify-center p-8 relative overflow-hidden">
+            <div className="w-full md:w-2/5 bg-gradient-to-br from-[#236CB1] to-[#236CB1] flex items-center justify-center p-8 relative overflow-hidden">
               {/* Background abstract overlays */}
               <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl" />
@@ -488,7 +488,7 @@ export default function ProductPlatformEngineering() {
           
           {/* Part A: Accelerators */}
           <div className="text-left space-y-3">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Accelerators In House
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-2xl">
@@ -497,7 +497,7 @@ export default function ProductPlatformEngineering() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6">
               {/* iPerform */}
-              <div className="bg-[#00b23b] text-white p-6 rounded-2xl shadow-sm flex flex-col justify-between min-h-[200px] hover:scale-[1.02] transition-transform duration-300 text-left">
+              <div className="bg-[#236CB1] text-white p-6 rounded-2xl shadow-sm flex flex-col justify-between min-h-[200px] hover:scale-[1.02] transition-transform duration-300 text-left">
                 <div className="space-y-4">
                   <h3 className="text-2xl font-extrabold">iPerform</h3>
                   <p className="text-xs font-semibold leading-relaxed opacity-95">
@@ -549,7 +549,7 @@ export default function ProductPlatformEngineering() {
 
           {/* Part B: Our Collaborators */}
           <div className="text-left space-y-4 pt-8 border-t border-gray-100">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Our Collaborators
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight leading-tight">
@@ -593,7 +593,7 @@ export default function ProductPlatformEngineering() {
             </div>
 
             <div className="pt-4">
-              <a href="#ecosystem" className="inline-flex items-center gap-1 text-xs font-extrabold text-black hover:text-xoriant-green transition-colors uppercase tracking-widest">
+              <a href="#ecosystem" className="inline-flex items-center gap-1 text-xs font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-widest">
                 All Partners <span className="text-[10px]">▶</span>
               </a>
             </div>
@@ -613,7 +613,7 @@ export default function ProductPlatformEngineering() {
         
         <div className="max-w-7xl mx-auto relative z-10 text-left space-y-8">
           <div className="space-y-3">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Incredible Numbers
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight max-w-xl">
@@ -623,7 +623,7 @@ export default function ProductPlatformEngineering() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
             {/* Card 1 */}
-            <div className="bg-[#00b23b] text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center min-h-[160px] text-left hover:scale-[1.02] transition-transform duration-300">
+            <div className="bg-[#236CB1] text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center min-h-[160px] text-left hover:scale-[1.02] transition-transform duration-300">
               <span className="text-4xl font-black tracking-tight mb-2">200%</span>
               <p className="text-xs font-semibold leading-relaxed opacity-95">
                 Faster mortgage processing across the U.S.
@@ -631,7 +631,7 @@ export default function ProductPlatformEngineering() {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-[#00b23b] text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center min-h-[160px] text-left hover:scale-[1.02] transition-transform duration-300">
+            <div className="bg-[#236CB1] text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center min-h-[160px] text-left hover:scale-[1.02] transition-transform duration-300">
               <span className="text-4xl font-black tracking-tight mb-2">$7 Trillion</span>
               <p className="text-xs font-semibold leading-relaxed opacity-95">
                 Daily global settlements enabled
@@ -647,7 +647,7 @@ export default function ProductPlatformEngineering() {
             </div>
 
             {/* Card 4 */}
-            <div className="bg-[#00b23b] text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center min-h-[160px] text-left hover:scale-[1.02] transition-transform duration-300">
+            <div className="bg-[#236CB1] text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center min-h-[160px] text-left hover:scale-[1.02] transition-transform duration-300">
               <span className="text-4xl font-black tracking-tight mb-2">60%</span>
               <p className="text-xs font-semibold leading-relaxed opacity-95">
                 OPEX savings for smart factory platforms
@@ -662,14 +662,14 @@ export default function ProductPlatformEngineering() {
         <div className="max-w-7xl mx-auto space-y-12">
           {/* Section Header */}
           <div className="text-center space-y-3">
-            <span className="text-xoriant-green text-xs font-black uppercase tracking-wider block">
+            <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
               Keeping You Updated
             </span>
             <div className="flex justify-center space-x-6 text-sm font-bold border-b border-gray-100 pb-2 max-w-xs mx-auto">
               <button 
                 onClick={() => setActiveResourceTab('thought')}
                 className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'thought' ? 'text-black border-b-2 border-xoriant-green' : 'text-slate-400 hover:text-black'
+                  activeResourceTab === 'thought' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
                 }`}
               >
                 Thought Leadership
@@ -677,7 +677,7 @@ export default function ProductPlatformEngineering() {
               <button 
                 onClick={() => setActiveResourceTab('insights')}
                 className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'insights' ? 'text-black border-b-2 border-xoriant-green' : 'text-slate-400 hover:text-black'
+                  activeResourceTab === 'insights' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
                 }`}
               >
                 Insights
@@ -701,7 +701,7 @@ export default function ProductPlatformEngineering() {
                 </div>
                 <div className="p-4 flex-1 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <span className="text-xoriant-green text-[10px] font-bold uppercase tracking-wider block">
+                    <span className="text-ossisto-blue text-[10px] font-bold uppercase tracking-wider block">
                       {item.category}
                     </span>
                     <h4 className="text-slate-900 font-extrabold text-xs leading-snug line-clamp-3">
@@ -710,7 +710,7 @@ export default function ProductPlatformEngineering() {
                   </div>
                   <a 
                     href={item.href} 
-                    className="text-[10px] font-black text-black hover:text-xoriant-green uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
+                    className="text-[10px] font-black text-black hover:text-ossisto-blue uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
                   >
                     Know More <span className="text-[9px]">▶</span>
                   </a>
@@ -765,7 +765,7 @@ export default function ProductPlatformEngineering() {
           <h2 className="text-2xl md:text-3xl font-black text-black tracking-tight mb-4">
             Platform Engineering - Questions frequently asked
           </h2>
-          <div className="w-full h-[2px] bg-xoriant-green mb-8" />
+          <div className="w-full h-[2px] bg-ossisto-blue mb-8" />
 
           <div className="divide-y divide-gray-200">
             {faqs.map((faq, idx) => {
@@ -776,12 +776,12 @@ export default function ProductPlatformEngineering() {
                     onClick={() => toggleFaq(idx)}
                     className="w-full py-2 flex items-center justify-between text-left focus:outline-none group select-none"
                   >
-                    <span className="text-xs md:text-[13px] font-black text-slate-900 group-hover:text-xoriant-green transition-colors leading-snug pr-6">
+                    <span className="text-xs md:text-[13px] font-black text-slate-900 group-hover:text-ossisto-blue transition-colors leading-snug pr-6">
                       {faq.q}
                     </span>
                     <div className={`w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center text-slate-400 group-hover:border-slate-500 group-hover:text-slate-700 transition-all shrink-0`}>
                       {isOpen ? (
-                        <Minus className="w-3.5 h-3.5 text-xoriant-green stroke-[3px]" />
+                        <Minus className="w-3.5 h-3.5 text-ossisto-blue stroke-[3px]" />
                       ) : (
                         <Plus className="w-3.5 h-3.5 stroke-[3px]" />
                       )}

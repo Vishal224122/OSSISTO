@@ -55,7 +55,7 @@ export default function CSRSectionModern() {
             </h3>
             <a 
               href="#know-more"
-              className="inline-flex items-center gap-1.5 text-xs md:text-sm font-extrabold text-xoriant-green hover:text-[#009632] uppercase tracking-wider transition-colors pt-1"
+              className="inline-flex items-center gap-1.5 text-xs md:text-sm font-extrabold text-ossisto-blue hover:text-[#236CB1] uppercase tracking-wider transition-colors pt-1"
             >
               Know More <span className="text-[10px] select-none">▶</span>
             </a>
@@ -75,7 +75,7 @@ export default function CSRSectionModern() {
                 >
                   {tab.name}
                   {isActive && (
-                    <div className="absolute bottom-[-10px] left-0 right-0 h-[2.5px] bg-xoriant-green rounded-full animate-fade-in" />
+                    <div className="absolute bottom-[-10px] left-0 right-0 h-[2.5px] bg-ossisto-blue rounded-full animate-fade-in" />
                   )}
                 </button>
               );

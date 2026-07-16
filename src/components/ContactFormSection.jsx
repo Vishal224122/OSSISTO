@@ -95,7 +95,7 @@ export default function ContactFormSection() {
         {/* Left Side Info Panel */}
         <div className="lg:col-span-5 space-y-6">
           <div className="space-y-4">
-            <span className="text-xoriant-green text-xs font-bold uppercase tracking-widest block">Get In Touch</span>
+            <span className="text-ossisto-blue text-xs font-bold uppercase tracking-widest block">Get In Touch</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
               Ready to Accelerate Your <span className="text-gradient font-black">Technology Transformation</span>?
             </h2>
@@ -107,20 +107,20 @@ export default function ContactFormSection() {
           <div className="space-y-4 pt-4 border-t border-slate-900">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center shrink-0">
-                <Mail className="w-4.5 h-4.5 text-xoriant-green" />
+                <Mail className="w-4.5 h-4.5 text-ossisto-blue" />
               </div>
               <div>
                 <span className="block text-[10px] font-bold text-gray-500 uppercase tracking-wider">Business Consulting</span>
-                <span className="block text-xs text-white font-bold">connect@xoriant.com</span>
+                <span className="block text-xs text-white font-bold">connect@ossisto.com</span>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center shrink-0">
-                <Mail className="w-4.5 h-4.5 text-xoriant-green" />
+                <Mail className="w-4.5 h-4.5 text-ossisto-blue" />
               </div>
               <div>
                 <span className="block text-[10px] font-bold text-gray-500 uppercase tracking-wider">Careers Inquiries</span>
-                <span className="block text-xs text-white font-bold">recruitment@xoriant.com</span>
+                <span className="block text-xs text-white font-bold">recruitment@ossisto.com</span>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function ContactFormSection() {
                 onClick={() => setActiveForm(tab)}
                 className={`flex-1 text-center py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-colors ${
                   activeForm === tab 
-                    ? 'bg-xoriant-green text-white shadow-md' 
+                    ? 'bg-ossisto-blue text-white shadow-md' 
                     : 'bg-transparent text-gray-400 hover:text-white'
                 }`}
               >
@@ -148,7 +148,7 @@ export default function ContactFormSection() {
 
           {submitted ? (
             <div className="flex flex-col items-center justify-center text-center py-16 space-y-4 animate-fade-in">
-              <CheckCircle className="w-16 h-16 text-xoriant-green animate-bounce" />
+              <CheckCircle className="w-16 h-16 text-ossisto-blue animate-bounce" />
               <h3 className="text-lg font-bold text-white uppercase tracking-wider">Inquiry Logs Registered</h3>
               <p className="text-xs text-gray-400 max-w-sm">
                 Success! Your details have been submitted. An engineering cell representative will connect with you shortly.
@@ -165,7 +165,7 @@ export default function ContactFormSection() {
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                     placeholder="First Name"
-                    className={`w-full bg-slate-950 border ${errors.firstName ? 'border-red-500' : 'border-slate-800 focus:border-xoriant-green'} text-white rounded-lg p-3 text-xs focus:outline-none transition-colors`}
+                    className={`w-full bg-slate-950 border ${errors.firstName ? 'border-red-500' : 'border-slate-800 focus:border-ossisto-blue'} text-white rounded-lg p-3 text-xs focus:outline-none transition-colors`}
                   />
                   {errors.firstName && <p className="text-[10px] text-red-500 mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors.firstName}</p>}
                 </div>
@@ -176,7 +176,7 @@ export default function ContactFormSection() {
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                     placeholder="Last Name"
-                    className={`w-full bg-slate-950 border ${errors.lastName ? 'border-red-500' : 'border-slate-800 focus:border-xoriant-green'} text-white rounded-lg p-3 text-xs focus:outline-none transition-colors`}
+                    className={`w-full bg-slate-950 border ${errors.lastName ? 'border-red-500' : 'border-slate-800 focus:border-ossisto-blue'} text-white rounded-lg p-3 text-xs focus:outline-none transition-colors`}
                   />
                   {errors.lastName && <p className="text-[10px] text-red-500 mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors.lastName}</p>}
                 </div>
@@ -190,7 +190,7 @@ export default function ContactFormSection() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="Email Address"
-                    className={`w-full bg-slate-950 border ${errors.email ? 'border-red-500' : 'border-slate-800 focus:border-xoriant-green'} text-white rounded-lg p-3 text-xs focus:outline-none transition-colors`}
+                    className={`w-full bg-slate-950 border ${errors.email ? 'border-red-500' : 'border-slate-800 focus:border-ossisto-blue'} text-white rounded-lg p-3 text-xs focus:outline-none transition-colors`}
                   />
                   {errors.email && <p className="text-[10px] text-red-500 mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors.email}</p>}
                 </div>
@@ -203,7 +203,7 @@ export default function ContactFormSection() {
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         placeholder="Company Name"
-                        className={`w-full bg-slate-950 border ${errors.company ? 'border-red-500' : 'border-slate-800 focus:border-xoriant-green'} text-white rounded-lg p-3 text-xs focus:outline-none transition-colors`}
+                        className={`w-full bg-slate-950 border ${errors.company ? 'border-red-500' : 'border-slate-800 focus:border-ossisto-blue'} text-white rounded-lg p-3 text-xs focus:outline-none transition-colors`}
                       />
                       {errors.company && <p className="text-[10px] text-red-500 mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors.company}</p>}
                     </>
@@ -213,7 +213,7 @@ export default function ContactFormSection() {
                       <input 
                         type="file" 
                         onChange={(e) => setFormData({ ...formData, resume: e.target.files[0] })}
-                        className="w-full bg-slate-950 border border-slate-800 text-gray-400 rounded-lg p-2.5 text-xs focus:outline-none focus:border-xoriant-green file:mr-4 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-[10px] file:font-bold file:uppercase file:bg-xoriant-green/10 file:text-xoriant-green file:cursor-pointer hover:file:bg-xoriant-green/20"
+                        className="w-full bg-slate-950 border border-slate-800 text-gray-400 rounded-lg p-2.5 text-xs focus:outline-none focus:border-ossisto-blue file:mr-4 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-[10px] file:font-bold file:uppercase file:bg-ossisto-blue/10 file:text-ossisto-blue file:cursor-pointer hover:file:bg-ossisto-blue/20"
                       />
                     </>
                   ) : (
@@ -222,7 +222,7 @@ export default function ContactFormSection() {
                       <select 
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                        className="w-full bg-slate-950 border border-slate-800 focus:border-xoriant-green text-white rounded-lg p-3 text-xs focus:outline-none transition-colors"
+                        className="w-full bg-slate-950 border border-slate-800 focus:border-ossisto-blue text-white rounded-lg p-3 text-xs focus:outline-none transition-colors"
                       >
                         <option>General Support</option>
                         <option>Media Inquiry</option>
@@ -240,7 +240,7 @@ export default function ContactFormSection() {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Share details regarding your tech transformation goals..."
                   rows={4}
-                  className={`w-full bg-slate-950 border ${errors.message ? 'border-red-500' : 'border-slate-800 focus:border-xoriant-green'} text-white rounded-lg p-3 text-xs focus:outline-none transition-colors resize-none`}
+                  className={`w-full bg-slate-950 border ${errors.message ? 'border-red-500' : 'border-slate-800 focus:border-ossisto-blue'} text-white rounded-lg p-3 text-xs focus:outline-none transition-colors resize-none`}
                 />
                 {errors.message && <p className="text-[10px] text-red-500 mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors.message}</p>}
               </div>
@@ -257,7 +257,7 @@ export default function ContactFormSection() {
                     value={formData.captchaInput}
                     onChange={(e) => setFormData({ ...formData, captchaInput: e.target.value })}
                     placeholder="Your Answer"
-                    className={`w-28 bg-slate-900 border ${errors.captchaInput ? 'border-red-500' : 'border-slate-800 focus:border-xoriant-green'} text-white text-center rounded-lg p-2.5 text-xs focus:outline-none transition-colors`}
+                    className={`w-28 bg-slate-900 border ${errors.captchaInput ? 'border-red-500' : 'border-slate-800 focus:border-ossisto-blue'} text-white text-center rounded-lg p-2.5 text-xs focus:outline-none transition-colors`}
                   />
                   {errors.captchaInput && <p className="text-[10px] text-red-500 mt-1 text-center font-semibold">{errors.captchaInput}</p>}
                 </div>
@@ -265,7 +265,7 @@ export default function ContactFormSection() {
 
               <button 
                 type="submit"
-                className="w-full bg-xoriant-green hover:bg-[#009632] text-white font-bold py-3 rounded-lg text-xs tracking-wider uppercase transition-all duration-300 shadow-md shadow-xoriant-green/10"
+                className="w-full bg-ossisto-blue hover:bg-[#236CB1] text-white font-bold py-3 rounded-lg text-xs tracking-wider uppercase transition-all duration-300 shadow-md shadow-ossisto-blue/10"
               >
                 Send Message
               </button>

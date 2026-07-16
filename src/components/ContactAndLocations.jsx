@@ -93,39 +93,39 @@ export default function ContactAndLocations({ title }) {
           {/* India detailed office pins */}
           {/* Delhi */}
           <div className="absolute top-[31%] left-[37%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* Noida */}
           <div className="absolute top-[36%] left-[39%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* Mumbai */}
           <div className="absolute top-[59%] left-[32%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* Pune */}
           <div className="absolute top-[65%] left-[35%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* Bengaluru */}
           <div className="absolute top-[75%] left-[39%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* Chennai */}
           <div className="absolute top-[76%] left-[43%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* Hyderabad */}
           <div className="absolute top-[61%] left-[44%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* Kolkata */}
           <div className="absolute top-[48%] left-[51%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* Singapore */}
           <div className="absolute top-[82%] left-[67%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
         </div>
       );
@@ -144,11 +144,11 @@ export default function ContactAndLocations({ title }) {
           {/* Europe Pins */}
           {/* London */}
           <div className="absolute top-[38%] left-[40%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* Dublin */}
           <div className="absolute top-[35%] left-[28%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
         </div>
       );
@@ -167,27 +167,27 @@ export default function ContactAndLocations({ title }) {
           {/* North America Pins */}
           {/* Sunnyvale */}
           <div className="absolute top-[52%] left-[22%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* Toronto */}
           <div className="absolute top-[42%] left-[62%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* Boston */}
           <div className="absolute top-[40%] left-[76%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* New Jersey */}
           <div className="absolute top-[48%] left-[72%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* Dallas */}
           <div className="absolute top-[68%] left-[42%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
           {/* Chicago */}
           <div className="absolute top-[50%] left-[55%] animate-fade-in">
-            <div className="w-3.5 h-3.5 rounded-full bg-white border border-xoriant-green flex items-center justify-center text-[8px] font-black text-xoriant-green shadow-sm select-none">x</div>
+            <div className="w-3.5 h-3.5 rounded-full bg-white border border-ossisto-blue flex items-center justify-center text-[8px] font-black text-ossisto-blue shadow-sm select-none">x</div>
           </div>
         </div>
       );
@@ -209,16 +209,16 @@ export default function ContactAndLocations({ title }) {
 
         {/* regional badges */}
         <div className="absolute top-[38%] left-[16%] flex items-center justify-center group">
-          <span className="absolute w-6 h-6 rounded-full bg-xoriant-green/20 animate-ping duration-1000" />
-          <div className="w-5.5 h-5.5 rounded-full bg-white border border-xoriant-green text-[9px] font-black text-black flex items-center justify-center shadow-md relative z-10 hover:scale-110 transition-transform">6</div>
+          <span className="absolute w-6 h-6 rounded-full bg-ossisto-blue/20 animate-ping duration-1000" />
+          <div className="w-5.5 h-5.5 rounded-full bg-white border border-ossisto-blue text-[9px] font-black text-black flex items-center justify-center shadow-md relative z-10 hover:scale-110 transition-transform">6</div>
         </div>
         <div className="absolute top-[34%] left-[46%] flex items-center justify-center group">
-          <span className="absolute w-6 h-6 rounded-full bg-xoriant-green/20 animate-ping duration-1000" />
-          <div className="w-5.5 h-5.5 rounded-full bg-white border border-xoriant-green text-[9px] font-black text-black flex items-center justify-center shadow-md relative z-10 hover:scale-110 transition-transform">2</div>
+          <span className="absolute w-6 h-6 rounded-full bg-ossisto-blue/20 animate-ping duration-1000" />
+          <div className="w-5.5 h-5.5 rounded-full bg-white border border-ossisto-blue text-[9px] font-black text-black flex items-center justify-center shadow-md relative z-10 hover:scale-110 transition-transform">2</div>
         </div>
         <div className="absolute top-[55%] left-[64%] flex items-center justify-center group">
-          <span className="absolute w-6 h-6 rounded-full bg-xoriant-green/20 animate-ping duration-1000" />
-          <div className="w-5.5 h-5.5 rounded-full bg-white border border-xoriant-green text-[9px] font-black text-black flex items-center justify-center shadow-md relative z-10 hover:scale-110 transition-transform">9</div>
+          <span className="absolute w-6 h-6 rounded-full bg-ossisto-blue/20 animate-ping duration-1000" />
+          <div className="w-5.5 h-5.5 rounded-full bg-white border border-ossisto-blue text-[9px] font-black text-black flex items-center justify-center shadow-md relative z-10 hover:scale-110 transition-transform">9</div>
         </div>
       </div>
     );
@@ -241,7 +241,7 @@ export default function ContactAndLocations({ title }) {
 
           {submitted ? (
             <div className="bg-[#f8fafc] border border-gray-150 rounded-2xl p-8 text-center space-y-3 animate-fade-in">
-              <div className="w-12 h-12 bg-xoriant-green/10 text-xoriant-green rounded-full flex items-center justify-center mx-auto text-xl font-bold">✓</div>
+              <div className="w-12 h-12 bg-ossisto-blue/10 text-ossisto-blue rounded-full flex items-center justify-center mx-auto text-xl font-bold">✓</div>
               <h3 className="text-base font-extrabold text-black">Message Sent!</h3>
               <p className="text-xs text-slate-500 max-w-xs mx-auto">
                 Thank you for reaching out. An engineering cell consultant will connect with you shortly.
@@ -261,7 +261,7 @@ export default function ContactAndLocations({ title }) {
                       type="text" 
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-transparent border-b border-gray-300 focus:border-xoriant-green py-1.5 text-xs text-black focus:outline-none transition-colors"
+                      className="w-full bg-transparent border-b border-gray-300 focus:border-ossisto-blue py-1.5 text-xs text-black focus:outline-none transition-colors"
                     />
                     {errors.name && <span className="block text-[10px] text-red-500 font-semibold">{errors.name}</span>}
                   </div>
@@ -273,7 +273,7 @@ export default function ContactAndLocations({ title }) {
                       type="text" 
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full bg-transparent border-b border-gray-300 focus:border-xoriant-green py-1.5 text-xs text-black focus:outline-none transition-colors"
+                      className="w-full bg-transparent border-b border-gray-300 focus:border-ossisto-blue py-1.5 text-xs text-black focus:outline-none transition-colors"
                     />
                   </div>
 
@@ -284,7 +284,7 @@ export default function ContactAndLocations({ title }) {
                       type="text" 
                       value={formData.lookingFor}
                       onChange={(e) => setFormData({ ...formData, lookingFor: e.target.value })}
-                      className="w-full bg-transparent border-b border-gray-300 focus:border-xoriant-green py-1.5 text-xs text-black focus:outline-none transition-colors"
+                      className="w-full bg-transparent border-b border-gray-300 focus:border-ossisto-blue py-1.5 text-xs text-black focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
@@ -298,7 +298,7 @@ export default function ContactAndLocations({ title }) {
                       type="email" 
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full bg-transparent border-b border-gray-300 focus:border-xoriant-green py-1.5 text-xs text-black focus:outline-none transition-colors"
+                      className="w-full bg-transparent border-b border-gray-300 focus:border-ossisto-blue py-1.5 text-xs text-black focus:outline-none transition-colors"
                     />
                     {errors.email && <span className="block text-[10px] text-red-500 font-semibold">{errors.email}</span>}
                   </div>
@@ -310,7 +310,7 @@ export default function ContactAndLocations({ title }) {
                       type="text" 
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full bg-transparent border-b border-gray-300 focus:border-xoriant-green py-1.5 text-xs text-black focus:outline-none transition-colors"
+                      className="w-full bg-transparent border-b border-gray-300 focus:border-ossisto-blue py-1.5 text-xs text-black focus:outline-none transition-colors"
                     />
                   </div>
 
@@ -321,7 +321,7 @@ export default function ContactAndLocations({ title }) {
                       type="text" 
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full bg-transparent border-b border-gray-300 focus:border-xoriant-green py-1.5 text-xs text-black focus:outline-none transition-colors"
+                      className="w-full bg-transparent border-b border-gray-300 focus:border-ossisto-blue py-1.5 text-xs text-black focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
@@ -334,10 +334,10 @@ export default function ContactAndLocations({ title }) {
                   id="agree-checkbox"
                   checked={formData.agree}
                   onChange={(e) => setFormData({ ...formData, agree: e.target.checked })}
-                  className="rounded border-gray-300 text-xoriant-green focus:ring-xoriant-green w-3.5 h-3.5"
+                  className="rounded border-gray-300 text-ossisto-blue focus:ring-ossisto-blue w-3.5 h-3.5"
                 />
                 <label htmlFor="agree-checkbox" className="text-[11px] font-bold text-slate-700">
-                  I agree to your <a href="#privacy" className="text-xoriant-green hover:underline">privacy</a> and <a href="#cookies" className="text-xoriant-green hover:underline">cookie</a> policies.
+                  I agree to your <a href="#privacy" className="text-ossisto-blue hover:underline">privacy</a> and <a href="#cookies" className="text-ossisto-blue hover:underline">cookie</a> policies.
                 </label>
               </div>
               {errors.agree && <span className="block text-[10px] text-red-500 font-semibold">{errors.agree}</span>}
@@ -351,7 +351,7 @@ export default function ContactAndLocations({ title }) {
                   type="number" 
                   value={formData.captchaInput}
                   onChange={(e) => setFormData({ ...formData, captchaInput: e.target.value })}
-                  className="w-32 bg-transparent border border-gray-300 rounded-lg py-2 px-3 text-center text-xs font-bold text-black focus:outline-none focus:border-xoriant-green"
+                  className="w-32 bg-transparent border border-gray-300 rounded-lg py-2 px-3 text-center text-xs font-bold text-black focus:outline-none focus:border-ossisto-blue"
                   placeholder="Answer"
                 />
                 {errors.captchaInput && <span className="text-[10px] text-red-500 font-semibold">{errors.captchaInput}</span>}
@@ -361,7 +361,7 @@ export default function ContactAndLocations({ title }) {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-1.5 bg-xoriant-green hover:bg-[#009632] text-white font-extrabold text-xs tracking-wider uppercase py-3 px-6 rounded-md shadow-sm transition-colors"
+                  className="inline-flex items-center gap-1.5 bg-ossisto-blue hover:bg-[#236CB1] text-white font-extrabold text-xs tracking-wider uppercase py-3 px-6 rounded-md shadow-sm transition-colors"
                 >
                   SUBMIT <span className="text-[10px] select-none">▶</span>
                 </button>
@@ -377,7 +377,7 @@ export default function ContactAndLocations({ title }) {
         {/* Right Panel: Global Locations */}
         <div className="lg:col-span-5 space-y-6">
           <div className="space-y-1.5">
-            <span className="block text-xs font-bold text-xoriant-green uppercase tracking-wider">
+            <span className="block text-xs font-bold text-ossisto-blue uppercase tracking-wider">
               Globally Presence
             </span>
             <h3 className="text-2xl font-black text-black leading-tight tracking-tight">
@@ -399,7 +399,7 @@ export default function ContactAndLocations({ title }) {
                 >
                   {reg.name}
                   {isActive && (
-                    <div className="absolute bottom-[-10px] left-0 right-0 h-[2.5px] bg-xoriant-green rounded-full" />
+                    <div className="absolute bottom-[-10px] left-0 right-0 h-[2.5px] bg-ossisto-blue rounded-full" />
                   )}
                 </button>
               );

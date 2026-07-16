@@ -83,7 +83,7 @@ export default function ContactModal({ isOpen, onClose }) {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-slate-800 pb-4">
           <div>
-            <h2 className="text-xl font-bold text-white tracking-wide">Connect With Xoriant</h2>
+            <h2 className="text-xl font-bold text-white tracking-wide">Connect With Ossisto</h2>
             <p className="text-xs text-gray-400 mt-1">Our engineering consultants will respond within 24 hours.</p>
           </div>
           <button 
@@ -98,10 +98,10 @@ export default function ContactModal({ isOpen, onClose }) {
         <div className="flex-1 overflow-y-auto py-6 pr-2">
           {submitted ? (
             <div className="flex flex-col items-center justify-center text-center h-full space-y-4 animate-fade-in">
-              <CheckCircle className="w-16 h-16 text-xoriant-green animate-bounce" />
+              <CheckCircle className="w-16 h-16 text-ossisto-blue animate-bounce" />
               <h3 className="text-lg font-bold text-white">Inquiry Received Successfully!</h3>
               <p className="text-sm text-gray-400 max-w-sm">
-                Thank you for reaching out. A representative from the Xoriant engineering cell will get back to you shortly.
+                Thank you for reaching out. A representative from the Ossisto engineering cell will get back to you shortly.
               </p>
             </div>
           ) : (
@@ -114,7 +114,7 @@ export default function ContactModal({ isOpen, onClose }) {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="e.g. John Doe"
-                  className={`w-full bg-slate-950 border ${errors.name ? 'border-red-500' : 'border-slate-800 focus:border-xoriant-green'} text-white rounded-lg p-3 text-sm focus:outline-none transition-colors`}
+                  className={`w-full bg-slate-950 border ${errors.name ? 'border-red-500' : 'border-slate-800 focus:border-ossisto-blue'} text-white rounded-lg p-3 text-sm focus:outline-none transition-colors`}
                 />
                 {errors.name && <p className="text-xs text-red-500 mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors.name}</p>}
               </div>
@@ -127,7 +127,7 @@ export default function ContactModal({ isOpen, onClose }) {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="e.g. john@company.com"
-                    className={`w-full bg-slate-950 border ${errors.email ? 'border-red-500' : 'border-slate-800 focus:border-xoriant-green'} text-white rounded-lg p-3 text-sm focus:outline-none transition-colors`}
+                    className={`w-full bg-slate-950 border ${errors.email ? 'border-red-500' : 'border-slate-800 focus:border-ossisto-blue'} text-white rounded-lg p-3 text-sm focus:outline-none transition-colors`}
                   />
                   {errors.email && <p className="text-xs text-red-500 mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors.email}</p>}
                 </div>
@@ -138,7 +138,7 @@ export default function ContactModal({ isOpen, onClose }) {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="e.g. +1 555-0199"
-                    className="w-full bg-slate-950 border border-slate-800 focus:border-xoriant-green text-white rounded-lg p-3 text-sm focus:outline-none transition-colors"
+                    className="w-full bg-slate-950 border border-slate-800 focus:border-ossisto-blue text-white rounded-lg p-3 text-sm focus:outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -151,7 +151,7 @@ export default function ContactModal({ isOpen, onClose }) {
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     placeholder="e.g. Enterprise Ltd"
-                    className="w-full bg-slate-950 border border-slate-800 focus:border-xoriant-green text-white rounded-lg p-3 text-sm focus:outline-none transition-colors"
+                    className="w-full bg-slate-950 border border-slate-800 focus:border-ossisto-blue text-white rounded-lg p-3 text-sm focus:outline-none transition-colors"
                   />
                 </div>
                 <div>
@@ -159,7 +159,7 @@ export default function ContactModal({ isOpen, onClose }) {
                   <select 
                     value={formData.purpose}
                     onChange={(e) => setFormData({ ...formData, purpose: e.target.value })}
-                    className="w-full bg-slate-950 border border-slate-800 focus:border-xoriant-green text-white rounded-lg p-3 text-sm focus:outline-none transition-colors"
+                    className="w-full bg-slate-950 border border-slate-800 focus:border-ossisto-blue text-white rounded-lg p-3 text-sm focus:outline-none transition-colors"
                   >
                     <option>Business Inquiries</option>
                     <option>Careers & Jobs</option>
@@ -176,7 +176,7 @@ export default function ContactModal({ isOpen, onClose }) {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="How can we help your business engineer capability?"
                   rows={4}
-                  className={`w-full bg-slate-950 border ${errors.message ? 'border-red-500' : 'border-slate-800 focus:border-xoriant-green'} text-white rounded-lg p-3 text-sm focus:outline-none transition-colors resize-none`}
+                  className={`w-full bg-slate-950 border ${errors.message ? 'border-red-500' : 'border-slate-800 focus:border-ossisto-blue'} text-white rounded-lg p-3 text-sm focus:outline-none transition-colors resize-none`}
                 />
                 {errors.message && <p className="text-xs text-red-500 mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors.message}</p>}
               </div>
@@ -193,7 +193,7 @@ export default function ContactModal({ isOpen, onClose }) {
                     value={formData.captchaInput}
                     onChange={(e) => setFormData({ ...formData, captchaInput: e.target.value })}
                     placeholder="Your Answer"
-                    className={`w-28 bg-slate-900 border ${errors.captchaInput ? 'border-red-500' : 'border-slate-800 focus:border-xoriant-green'} text-white text-center rounded-lg p-2.5 text-sm focus:outline-none transition-colors`}
+                    className={`w-28 bg-slate-900 border ${errors.captchaInput ? 'border-red-500' : 'border-slate-800 focus:border-ossisto-blue'} text-white text-center rounded-lg p-2.5 text-sm focus:outline-none transition-colors`}
                   />
                   {errors.captchaInput && <p className="text-[10px] text-red-500 mt-1 text-center font-semibold">{errors.captchaInput}</p>}
                 </div>
@@ -201,7 +201,7 @@ export default function ContactModal({ isOpen, onClose }) {
 
               <button 
                 type="submit"
-                className="w-full bg-xoriant-green hover:bg-[#009632] text-white font-bold py-3 rounded-lg text-sm transition-all duration-300 shadow-lg shadow-xoriant-green/10"
+                className="w-full bg-ossisto-blue hover:bg-[#236CB1] text-white font-bold py-3 rounded-lg text-sm transition-all duration-300 shadow-lg shadow-ossisto-blue/10"
               >
                 Submit Inquiry
               </button>
@@ -213,7 +213,7 @@ export default function ContactModal({ isOpen, onClose }) {
         {/* Footer info */}
         <div className="border-t border-slate-800 pt-4 text-center">
           <span className="text-[10px] text-gray-500 tracking-wider font-semibold block">
-            © 2026 XORIANT CORPORATION. ALL COMPLIANCES ACTIVE.
+            © 2026 OSSISTO CORPORATION. ALL COMPLIANCES ACTIVE.
           </span>
         </div>
 

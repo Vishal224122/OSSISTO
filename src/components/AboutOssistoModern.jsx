@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Play, X } from 'lucide-react';
 
-export default function AboutXoriantModern() {
+export default function AboutOssistoModern() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const stats = [
     { value: "200 +", label: "Clients" },
@@ -14,10 +14,10 @@ export default function AboutXoriantModern() {
     <section className="bg-white py-20 px-6 md:px-12 lg:px-24 border-b border-gray-100 font-sans flex flex-col items-center text-center">
       <div className="max-w-7xl mx-auto space-y-16 flex flex-col items-center w-full">
         
-        {/* About Xoriant Text Container (Centered) */}
+        {/* About Ossisto Text Container (Centered) */}
         <div className="space-y-4 max-w-4xl mx-auto flex flex-col items-center">
           <div className="text-sm md:text-base font-bold text-black tracking-wide text-center">
-            About <span className="text-xoriant-green">Xoriant</span>
+            About <span className="text-ossisto-blue always-blue">Ossisto</span>
           </div>
           <h2 className="text-2xl md:text-3.5xl lg:text-4xl font-black text-black leading-tight tracking-tight text-center animate-fade-in-up">
             We engineer the convergence of applied intelligence and business ambition, accelerating value realization and shaping the AI-native enterprise
@@ -25,7 +25,7 @@ export default function AboutXoriantModern() {
           <div className="pt-2 text-center">
             <a 
               href="#contact" 
-              className="inline-flex items-center gap-1.5 text-xs md:text-sm font-bold text-xoriant-green hover:underline uppercase tracking-wider justify-center"
+              className="inline-flex items-center gap-1.5 text-xs md:text-sm font-bold text-ossisto-blue hover:underline uppercase tracking-wider justify-center always-blue"
             >
               Know More <span className="text-[10px] select-none">▶</span>
             </a>
@@ -36,7 +36,7 @@ export default function AboutXoriantModern() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-4xl w-full justify-center">
           {stats.map((stat, index) => (
             <div key={index} className="space-y-1.5 flex flex-col items-center text-center">
-              <span className="block text-2xl md:text-3xl font-black text-xoriant-green tracking-tight">
+              <span className="block text-2xl md:text-3xl font-black text-ossisto-blue tracking-tight always-blue">
                 {stat.value}
               </span>
               <span className="block text-[10px] md:text-xs font-bold text-black uppercase tracking-wider leading-relaxed">
@@ -48,7 +48,7 @@ export default function AboutXoriantModern() {
 
         {/* Bottom Centered Headings */}
         <div className="pt-12 text-center space-y-2.5 w-full">
-          <span className="block text-xl md:text-2xl font-black text-xoriant-green tracking-wide">
+          <span className="block text-xl md:text-2xl font-black text-ossisto-blue tracking-wide always-blue">
             Applying Intelligence
           </span>
           <h3 className="text-3xl md:text-4.5xl font-black text-black leading-none">
@@ -68,8 +68,8 @@ export default function AboutXoriantModern() {
           {/* Top-Right Logo Overlay */}
           <div className="absolute top-2.5 right-2.5 md:top-4 md:right-4 z-20">
             <img 
-              src="https://www.xoriant.com/cdn/ff/F71b10FRNa0RU2jATbQpCPM8vDUBGt8N8AkCT1IeuVg/1692609954/public/Xoriant-Logo_0.png"
-              alt="Xoriant Logo"
+              src="https://ossisto.com/wp-content/uploads/2023/04/Ossisto_Logo.png"
+              alt="Ossisto Logo"
               className="h-3.5 md:h-4.5 object-contain filter brightness-0 invert" 
             />
           </div>
@@ -78,9 +78,9 @@ export default function AboutXoriantModern() {
           <div className="absolute inset-y-0 left-0 w-[45%] bg-gradient-to-r from-slate-950/80 via-slate-950/45 to-transparent flex flex-col justify-center pl-3 md:pl-5 space-y-1 md:space-y-2 z-20">
             {/* Item 1 */}
             <div className="flex items-center gap-1.5 md:gap-2">
-              <div className="relative w-3 h-3 md:w-4 md:h-4 rounded-full border border-xoriant-green flex items-center justify-center shrink-0">
-                <div className="w-1 h-1 rounded-full bg-xoriant-green animate-ping absolute" />
-                <div className="w-1 h-1 rounded-full bg-xoriant-green" />
+              <div className="relative w-3 h-3 md:w-4 md:h-4 rounded-full border border-ossisto-blue flex items-center justify-center shrink-0">
+                <div className="w-1 h-1 rounded-full bg-ossisto-blue animate-ping absolute" />
+                <div className="w-1 h-1 rounded-full bg-ossisto-blue" />
               </div>
               <div className="bg-white text-black text-[7.5px] md:text-[9.5px] font-bold px-1.5 py-0.5 rounded shadow-sm tracking-tight whitespace-nowrap">
                 High-resolution Imaging
@@ -89,9 +89,9 @@ export default function AboutXoriantModern() {
 
             {/* Item 2 */}
             <div className="flex items-center gap-1.5 md:gap-2">
-              <div className="relative w-3 h-3 md:w-4 md:h-4 rounded-full border border-xoriant-green flex items-center justify-center shrink-0">
-                <div className="w-1 h-1 rounded-full bg-xoriant-green animate-ping absolute" />
-                <div className="w-1 h-1 rounded-full bg-xoriant-green" />
+              <div className="relative w-3 h-3 md:w-4 md:h-4 rounded-full border border-ossisto-blue flex items-center justify-center shrink-0">
+                <div className="w-1 h-1 rounded-full bg-ossisto-blue animate-ping absolute" />
+                <div className="w-1 h-1 rounded-full bg-ossisto-blue" />
               </div>
               <div className="bg-white text-black text-[7.5px] md:text-[9.5px] font-bold px-1.5 py-0.5 rounded shadow-sm tracking-tight whitespace-nowrap">
                 IoT
@@ -100,9 +100,9 @@ export default function AboutXoriantModern() {
 
             {/* Item 3 */}
             <div className="flex items-center gap-1.5 md:gap-2">
-              <div className="relative w-3 h-3 md:w-4 md:h-4 rounded-full border border-xoriant-green flex items-center justify-center shrink-0">
-                <div className="w-1 h-1 rounded-full bg-xoriant-green animate-ping absolute" />
-                <div className="w-1 h-1 rounded-full bg-xoriant-green" />
+              <div className="relative w-3 h-3 md:w-4 md:h-4 rounded-full border border-ossisto-blue flex items-center justify-center shrink-0">
+                <div className="w-1 h-1 rounded-full bg-ossisto-blue animate-ping absolute" />
+                <div className="w-1 h-1 rounded-full bg-ossisto-blue" />
               </div>
               <div className="bg-white text-black text-[7.5px] md:text-[9.5px] font-bold px-1.5 py-0.5 rounded shadow-sm tracking-tight whitespace-nowrap italic">
                 Microsoft Azure
@@ -113,7 +113,7 @@ export default function AboutXoriantModern() {
           {/* Centered Green Play Button */}
           <button 
             onClick={() => setIsVideoOpen(true)}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-xoriant-green hover:bg-[#009632] text-white w-9 h-7 md:w-12 md:h-9 rounded md:rounded-lg flex items-center justify-center shadow-xl shadow-xoriant-green/30 hover:scale-110 active:scale-95 transition-all duration-300 z-30 group"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-ossisto-blue hover:bg-[#236CB1] text-white w-9 h-7 md:w-12 md:h-9 rounded md:rounded-lg flex items-center justify-center shadow-xl shadow-ossisto-blue/30 hover:scale-110 active:scale-95 transition-all duration-300 z-30 group"
             aria-label="Play case study video"
           >
             <Play className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 fill-white stroke-none ml-0.5 group-hover:scale-105 transition-transform" />
@@ -133,7 +133,7 @@ export default function AboutXoriantModern() {
             {/* Close Button */}
             <button 
               onClick={() => setIsVideoOpen(false)}
-              className="absolute top-4 right-4 text-white hover:text-xoriant-green z-50 p-2 bg-slate-950/60 rounded-full border border-slate-800 hover:border-xoriant-green transition-all"
+              className="absolute top-4 right-4 text-white hover:text-ossisto-blue z-50 p-2 bg-slate-950/60 rounded-full border border-slate-800 hover:border-ossisto-blue transition-all"
               aria-label="Close video player"
             >
               <X className="w-5 h-5" />

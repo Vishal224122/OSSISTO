@@ -76,10 +76,10 @@ export default function GlobalLocations() {
 
   // Vector continent graphics based on active select tab
   const mapBackgrounds = {
-    "All": "https://www.xoriant.com/sites/default/files/styles/webp/public/2023-04/Client-Value-Co-Creation.png.webp?itok=1",
-    "North America": "https://www.xoriant.com/sites/default/files/styles/webp/public/2023-04/Global-Presence.png.webp?itok=2",
-    "Asia": "https://www.xoriant.com/sites/default/files/styles/webp/public/2023-04/Global-Talent-Pool.png.webp?itok=3",
-    "Europe": "https://www.xoriant.com/sites/default/files/styles/webp/public/2023-04/IP-Co-Creation.png.webp?itok=4"
+    "All": "__OSSISTO_URL_PLACEHOLDER_0__",
+    "North America": "__OSSISTO_URL_PLACEHOLDER_1__",
+    "Asia": "__OSSISTO_URL_PLACEHOLDER_2__",
+    "Europe": "__OSSISTO_URL_PLACEHOLDER_3__"
   };
 
   const filteredOffices = offices.filter(office => activeRegion === 'All' || office.region === activeRegion);
@@ -90,7 +90,7 @@ export default function GlobalLocations() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="text-xoriant-green text-xs font-bold uppercase tracking-widest block">Global Engineering Cell</span>
+          <span className="text-ossisto-blue text-xs font-bold uppercase tracking-widest block">Global Engineering Cell</span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white">
             Our Delivery Centers & <span className="text-gradient font-black">Locations</span>
           </h2>
@@ -111,7 +111,7 @@ export default function GlobalLocations() {
                 }}
                 className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-colors ${
                   activeRegion === region 
-                    ? 'bg-xoriant-green text-white shadow-md' 
+                    ? 'bg-ossisto-blue text-white shadow-md' 
                     : 'bg-transparent text-gray-400 hover:text-white'
                 }`}
               >
@@ -153,10 +153,10 @@ export default function GlobalLocations() {
                     className="relative flex items-center justify-center p-1 group/pin"
                     aria-label={`Select ${office.name} office`}
                   >
-                    <span className={`absolute inline-flex h-6 w-6 rounded-full bg-xoriant-green/30 animate-ping opacity-75 ${isActive ? 'scale-125' : 'scale-75'}`} />
+                    <span className={`absolute inline-flex h-6 w-6 rounded-full bg-ossisto-blue/30 animate-ping opacity-75 ${isActive ? 'scale-125' : 'scale-75'}`} />
                     <MapPin className={`w-6 h-6 shrink-0 relative transition-transform duration-300 ${
                       isActive 
-                        ? 'text-xoriant-green scale-110 shadow-lg' 
+                        ? 'text-ossisto-blue scale-110 shadow-lg' 
                         : 'text-gray-400 group-hover/pin:text-white'
                     }`} />
                     
@@ -177,7 +177,7 @@ export default function GlobalLocations() {
                 
                 {/* Header */}
                 <div className="space-y-2">
-                  <span className="inline-flex items-center gap-1 bg-xoriant-green/10 text-xoriant-green text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
+                  <span className="inline-flex items-center gap-1 bg-ossisto-blue/10 text-ossisto-blue text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
                     <Building className="w-3 h-3" />
                     {filteredOffices[selectedOffice].region}
                   </span>
@@ -220,7 +220,7 @@ export default function GlobalLocations() {
                     onClick={() => setSelectedOffice(idx)}
                     className={`text-[10px] font-bold uppercase tracking-wider py-2 px-3 rounded-lg border text-center transition-all ${
                       selectedOffice === idx 
-                        ? 'bg-xoriant-green/10 border-xoriant-green text-xoriant-green font-black' 
+                        ? 'bg-ossisto-blue/10 border-ossisto-blue text-ossisto-blue font-black' 
                         : 'bg-slate-900 border-slate-900 text-slate-400 hover:border-slate-800'
                     }`}
                   >

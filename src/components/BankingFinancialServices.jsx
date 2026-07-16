@@ -62,14 +62,14 @@ export default function BankingFinancialServices() {
       color: "bg-[#1e2d5a]"
     },
     {
-      name: "Xoriant CDi",
+      name: "Ossisto CDi",
       desc: "Data Enrichment and Governance solution",
       color: "bg-[#2575fc]"
     },
     {
       name: "Xonnect",
       desc: "Composable Banking Solution for Corporate Payments, Lending, Trade Finance",
-      color: "bg-[#00b23b]"
+      color: "bg-[#236CB1]"
     }
   ];
 
@@ -220,13 +220,13 @@ export default function BankingFinancialServices() {
         <div className="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <span className="text-xoriant-green text-xs md:text-sm font-extrabold uppercase tracking-widest block font-sans">
+            <span className="text-ossisto-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block font-sans">
               Banking & Financial Services
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight">
               The Future of Finance is Here
             </h1>
-            <button className="bg-[#00b23b] hover:bg-[#009632] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-xoriant-green/10 hover:scale-105 active:scale-95 duration-200">
+            <button className="bg-[#236CB1] hover:bg-[#236CB1] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
               LET'S CONNECT <span className="text-[10px]">▶</span>
             </button>
           </div>
@@ -234,7 +234,7 @@ export default function BankingFinancialServices() {
           {/* Right Image */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-xs md:max-w-md">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-xoriant-green to-transparent opacity-20 blur-xl" />
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-ossisto-blue to-transparent opacity-20 blur-xl" />
               <img 
                 src="/banking_hero.png" 
                 alt="Banking analytics visualization hero" 
@@ -264,7 +264,7 @@ export default function BankingFinancialServices() {
                 >
                   {tab.name}
                   {activeTab === tab.id && (
-                    <span className="absolute bottom-0 left-0 w-full h-[3px] bg-xoriant-green rounded-full animate-fade-in" />
+                    <span className="absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full animate-fade-in" />
                   )}
                 </button>
               ))}
@@ -279,7 +279,7 @@ export default function BankingFinancialServices() {
           {/* Main Content centered */}
           <div className="space-y-8 text-center max-w-4xl mx-auto flex flex-col items-center">
             <div className="space-y-4">
-              <span className="text-xoriant-green text-xs font-black uppercase tracking-wider block">
+              <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
                 Futurifying Finance
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-2xl font-sans mx-auto">
@@ -288,7 +288,7 @@ export default function BankingFinancialServices() {
               
               <div className="space-y-4 text-slate-500 text-sm leading-relaxed max-w-3xl font-medium mx-auto">
                 <p>
-                  Xoriant brings together strong engineering expertise and the latest technology know-how to drive digital transformation and update applications. We are here to support the world's leading financial services providers in achieving better revenue, operational efficiency, and a competitive advantage. Our commitment lies in helping these providers grow, cut costs, and stay ahead in the market. By infusing innovation into everything we do, we're playing a key role in shaping a brighter and more advanced future for the financial industry.
+                  Ossisto brings together strong engineering expertise and the latest technology know-how to drive digital transformation and update applications. We are here to support the world's leading financial services providers in achieving better revenue, operational efficiency, and a competitive advantage. Our commitment lies in helping these providers grow, cut costs, and stay ahead in the market. By infusing innovation into everything we do, we're playing a key role in shaping a brighter and more advanced future for the financial industry.
                 </p>
               </div>
             </div>
@@ -298,7 +298,7 @@ export default function BankingFinancialServices() {
               {/* Left text */}
               <div className="w-full md:w-3/5 p-8 flex flex-col justify-between">
                 <div>
-                  <span className="text-xoriant-green text-xs font-bold tracking-widest uppercase block mb-3">
+                  <span className="text-ossisto-blue text-xs font-bold tracking-widest uppercase block mb-3">
                     Featured Insight
                   </span>
                   <h3 className="text-black text-base md:text-lg font-black leading-snug mb-4 max-w-sm">
@@ -308,7 +308,7 @@ export default function BankingFinancialServices() {
                 <div className="pt-4">
                   <a 
                     href="#keeping-updated" 
-                    className="inline-flex items-center gap-1.5 text-xs font-extrabold text-black hover:text-xoriant-green transition-colors uppercase tracking-widest"
+                    className="inline-flex items-center gap-1.5 text-xs font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-widest"
                   >
                     Let's Find Out <span className="text-[10px]">▶</span>
                   </a>
@@ -332,7 +332,7 @@ export default function BankingFinancialServices() {
       {/* 4. BFS Factsheet Section (Screenshot 3 Part A: Statistics) */}
       <section id="factsheet" className="py-16 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-slate-50">
         <div className="max-w-5xl mx-auto space-y-12 text-left">
-          <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+          <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
             Facts for BFS
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight leading-tight">
@@ -343,7 +343,7 @@ export default function BankingFinancialServices() {
             {/* Stat 1 */}
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
-                <svg viewBox="0 0 24 24" className="w-6 h-6 text-xoriant-green fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 24 24" className="w-6 h-6 text-ossisto-blue fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
                 </svg>
               </div>
@@ -356,7 +356,7 @@ export default function BankingFinancialServices() {
             {/* Stat 2 */}
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
-                <svg viewBox="0 0 24 24" className="w-6 h-6 text-xoriant-green fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 24 24" className="w-6 h-6 text-ossisto-blue fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9s2.015-9 4.5-9m0 0a9.003 9.003 0 018.716 6.747M12 3a9.003 9.003 0 00-8.716 6.747M12 9h.008v.008H12V9zm0 3h.008v.008H12V12zm0 3h.008v.008H12V15z" />
                 </svg>
               </div>
@@ -369,7 +369,7 @@ export default function BankingFinancialServices() {
             {/* Stat 3 */}
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
-                <svg viewBox="0 0 24 24" className="w-6 h-6 text-xoriant-green fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 24 24" className="w-6 h-6 text-ossisto-blue fill-none stroke-current stroke-2" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6L9 12.75l4.286-4.286L21.75 15M2.25 6h4.5M21.75 15V10.5m0 4.5h-4.5" />
                 </svg>
               </div>
@@ -386,7 +386,7 @@ export default function BankingFinancialServices() {
       <section id="those-we-serve" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
         <div className="max-w-6xl mx-auto space-y-12 text-left">
           <div>
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Those We Serve
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight leading-tight">
@@ -418,7 +418,7 @@ export default function BankingFinancialServices() {
                   </div>
                   <a 
                     href="#dream-details" 
-                    className="text-[10px] font-black text-black hover:text-xoriant-green uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
+                    className="text-[10px] font-black text-black hover:text-ossisto-blue uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
                   >
                     Know More <span className="text-[9px]">▶</span>
                   </a>
@@ -433,7 +433,7 @@ export default function BankingFinancialServices() {
       <section id="accelerators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b border-gray-150 relative">
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="text-left space-y-3">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Accelerators
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight">
@@ -506,7 +506,7 @@ export default function BankingFinancialServices() {
                     onClick={() => setActiveStoryIdx(idx)}
                     className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black border transition-all ${
                       activeStoryIdx === idx 
-                        ? 'bg-xoriant-green border-xoriant-green text-white' 
+                        ? 'bg-ossisto-blue border-ossisto-blue text-white' 
                         : 'bg-white border-gray-300 text-slate-500 hover:border-slate-500'
                     }`}
                   >
@@ -548,7 +548,7 @@ export default function BankingFinancialServices() {
               <button 
                 onClick={() => setActiveResourceTab('thought')}
                 className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'thought' ? 'text-black border-b-2 border-xoriant-green' : 'text-slate-400 hover:text-black'
+                  activeResourceTab === 'thought' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
                 }`}
               >
                 Thought Leadership
@@ -556,7 +556,7 @@ export default function BankingFinancialServices() {
               <button 
                 onClick={() => setActiveResourceTab('insights')}
                 className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'insights' ? 'text-black border-b-2 border-xoriant-green' : 'text-slate-400 hover:text-black'
+                  activeResourceTab === 'insights' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
                 }`}
               >
                 Insights
@@ -580,7 +580,7 @@ export default function BankingFinancialServices() {
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <span className="text-xoriant-green text-[10px] font-bold uppercase tracking-wider block">
+                    <span className="text-ossisto-blue text-[10px] font-bold uppercase tracking-wider block">
                       {item.category}
                     </span>
                     <h4 className="text-slate-900 font-extrabold text-xs leading-snug line-clamp-3">
@@ -589,7 +589,7 @@ export default function BankingFinancialServices() {
                   </div>
                   <a 
                     href={item.href} 
-                    className="text-[10px] font-black text-black hover:text-xoriant-green uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
+                    className="text-[10px] font-black text-black hover:text-ossisto-blue uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
                   >
                     Know More <span className="text-[9px]">▶</span>
                   </a>
@@ -614,7 +614,7 @@ export default function BankingFinancialServices() {
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <span className="text-xoriant-green text-[10px] font-bold uppercase tracking-wider block">
+                    <span className="text-ossisto-blue text-[10px] font-bold uppercase tracking-wider block">
                       {item.category}
                     </span>
                     <h4 className="text-slate-900 font-extrabold text-xs leading-snug line-clamp-3">
@@ -623,7 +623,7 @@ export default function BankingFinancialServices() {
                   </div>
                   <a 
                     href={item.href} 
-                    className="text-[10px] font-black text-black hover:text-xoriant-green uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
+                    className="text-[10px] font-black text-black hover:text-ossisto-blue uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
                   >
                     Know More <span className="text-[9px]">▶</span>
                   </a>

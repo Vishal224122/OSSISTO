@@ -9,19 +9,19 @@ export default function CSRSection() {
       title: "Supporting Education for Underprivileged Children",
       desc: "We sponsor smart classrooms, libraries, and science labs across municipal schools, enabling access to quality tech education.",
       category: "Education",
-      image: "https://www.xoriant.com/sites/default/files/styles/webp/public/2023-04/Client-Value-Co-Creation.png.webp?itok=1"
+      image: "__OSSISTO_URL_PLACEHOLDER_0__"
     },
     {
       title: "Primary Healthcare & Vaccination Camps",
       desc: "Establishing mobile clinics and hosting diagnostic screening camps to assist localized rural neighborhoods with essential wellness support.",
       category: "Healthcare",
-      image: "https://www.xoriant.com/sites/default/files/styles/webp/public/2023-04/Global-Talent-Pool.png.webp?itok=2"
+      image: "__OSSISTO_URL_PLACEHOLDER_1__"
     },
     {
       title: "Afforestation & Renewable Energy Commitments",
       desc: "Contributing to carbon neutrality by planting trees and converting delivery center servers to run on sustainable grid systems.",
       category: "Environment",
-      image: "https://www.xoriant.com/sites/default/files/styles/webp/public/2023-04/Global-Presence.png.webp?itok=3"
+      image: "__OSSISTO_URL_PLACEHOLDER_2__"
     }
   ];
 
@@ -40,7 +40,7 @@ export default function CSRSection() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-4 max-w-2xl">
-            <span className="inline-flex items-center gap-1 bg-xoriant-green/10 text-xoriant-green text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-md">
+            <span className="inline-flex items-center gap-1 bg-ossisto-blue/10 text-ossisto-blue text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-md">
               <Heart className="w-3 h-3 animate-pulse" />
               Social Impact
             </span>
@@ -56,14 +56,14 @@ export default function CSRSection() {
           <div className="flex items-center space-x-3 shrink-0">
             <button 
               onClick={handlePrev}
-              className="bg-slate-950 hover:bg-xoriant-green/20 text-gray-400 hover:text-white p-2.5 rounded-lg border border-slate-900 hover:border-xoriant-green transition-all"
+              className="bg-slate-950 hover:bg-ossisto-blue/20 text-gray-400 hover:text-white p-2.5 rounded-lg border border-slate-900 hover:border-ossisto-blue transition-all"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button 
               onClick={handleNext}
-              className="bg-slate-950 hover:bg-xoriant-green/20 text-gray-400 hover:text-white p-2.5 rounded-lg border border-slate-900 hover:border-xoriant-green transition-all"
+              className="bg-slate-950 hover:bg-ossisto-blue/20 text-gray-400 hover:text-white p-2.5 rounded-lg border border-slate-900 hover:border-ossisto-blue transition-all"
               aria-label="Next slide"
             >
               <ChevronRight className="w-5 h-5" />
@@ -89,7 +89,7 @@ export default function CSRSection() {
 
           {/* Right panel: text info */}
           <div className="p-8 md:p-12 space-y-4">
-            <span className="text-[10px] font-bold text-xoriant-green uppercase tracking-widest block">
+            <span className="text-[10px] font-bold text-ossisto-blue uppercase tracking-widest block">
               {slides[activeSlide].category} Campaign
             </span>
             <h3 className="text-xl font-bold text-white tracking-wide">
@@ -103,7 +103,7 @@ export default function CSRSection() {
                 <button 
                   key={idx}
                   onClick={() => setActiveSlide(idx)}
-                  className={`h-1 rounded-full transition-all ${idx === activeSlide ? 'w-6 bg-xoriant-green' : 'w-2 bg-gray-700'}`}
+                  className={`h-1 rounded-full transition-all ${idx === activeSlide ? 'w-6 bg-ossisto-blue' : 'w-2 bg-gray-700'}`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />
               ))}

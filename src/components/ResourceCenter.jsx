@@ -71,7 +71,7 @@ export default function ResourceCenter() {
                   onClick={() => setActiveType(type)}
                   className={`text-[10px] md:text-xs font-bold px-4 py-1.5 rounded-full border transition-all ${
                     isActive 
-                      ? 'bg-xoriant-green border-xoriant-green text-white shadow-sm' 
+                      ? 'bg-ossisto-blue border-ossisto-blue text-white shadow-sm' 
                       : 'bg-white border-gray-250 text-slate-700 hover:border-slate-400 hover:text-black'
                   }`}
                 >
@@ -91,7 +91,7 @@ export default function ResourceCenter() {
                   onClick={() => setActiveTopic(topic)}
                   className={`text-[10px] md:text-xs font-bold px-4 py-1.5 rounded-full border transition-all ${
                     isActive 
-                      ? 'bg-xoriant-green border-xoriant-green text-white shadow-sm' 
+                      ? 'bg-ossisto-blue border-ossisto-blue text-white shadow-sm' 
                       : 'bg-white border-gray-250 text-slate-700 hover:border-slate-400 hover:text-black'
                   }`}
                 >
@@ -116,7 +116,7 @@ export default function ResourceCenter() {
             </div>
             <div className="p-6 flex-1 flex flex-col justify-between">
               <div className="space-y-2">
-                <span className="text-[10px] md:text-xs font-extrabold text-xoriant-green uppercase tracking-wider">
+                <span className="text-[10px] md:text-xs font-extrabold text-ossisto-blue uppercase tracking-wider">
                   {resources[0].type}
                 </span>
                 <h3 className="text-base md:text-lg font-extrabold text-black leading-snug">
@@ -126,7 +126,7 @@ export default function ResourceCenter() {
               <div className="pt-6">
                 <a 
                   href="#resource"
-                  className="inline-flex items-center gap-1 text-[11px] font-extrabold text-black hover:text-xoriant-green uppercase tracking-wider transition-colors"
+                  className="inline-flex items-center gap-1 text-[11px] font-extrabold text-black hover:text-ossisto-blue uppercase tracking-wider transition-colors"
                 >
                   Know More <span className="text-[10px] select-none">▶</span>
                 </a>
@@ -145,7 +145,7 @@ export default function ResourceCenter() {
             </div>
             <div className="p-6 flex-1 flex flex-col justify-between">
               <div className="space-y-2">
-                <span className="text-[10px] md:text-xs font-extrabold text-xoriant-green uppercase tracking-wider">
+                <span className="text-[10px] md:text-xs font-extrabold text-ossisto-blue uppercase tracking-wider">
                   {resources[1].type}
                 </span>
                 <h3 className="text-base md:text-lg font-extrabold text-black leading-snug">
@@ -155,7 +155,7 @@ export default function ResourceCenter() {
               <div className="pt-6">
                 <a 
                   href="#resource"
-                  className="inline-flex items-center gap-1 text-[11px] font-extrabold text-black hover:text-xoriant-green uppercase tracking-wider transition-colors"
+                  className="inline-flex items-center gap-1 text-[11px] font-extrabold text-black hover:text-ossisto-blue uppercase tracking-wider transition-colors"
                 >
                   Know More <span className="text-[10px] select-none">▶</span>
                 </a>
@@ -177,7 +177,7 @@ export default function ResourceCenter() {
               </div>
               <div className="p-5 flex flex-col justify-between">
                 <div className="space-y-1.5">
-                  <span className="text-[10px] font-extrabold text-xoriant-green uppercase tracking-wider">
+                  <span className="text-[10px] font-extrabold text-ossisto-blue uppercase tracking-wider">
                     {resources[2].type}
                   </span>
                   <h3 className="text-sm font-extrabold text-black leading-snug line-clamp-3">
@@ -187,7 +187,7 @@ export default function ResourceCenter() {
                 <div className="pt-4">
                   <a 
                     href="#resource"
-                    className="inline-flex items-center gap-1 text-[10px] font-extrabold text-black hover:text-xoriant-green uppercase tracking-wider transition-colors"
+                    className="inline-flex items-center gap-1 text-[10px] font-extrabold text-black hover:text-ossisto-blue uppercase tracking-wider transition-colors"
                   >
                     Know More <span className="text-[9px] select-none">▶</span>
                   </a>
@@ -206,7 +206,7 @@ export default function ResourceCenter() {
               </div>
               <div className="p-5 flex flex-col justify-between">
                 <div className="space-y-1.5">
-                  <span className="text-[10px] font-extrabold text-xoriant-green uppercase tracking-wider">
+                  <span className="text-[10px] font-extrabold text-ossisto-blue uppercase tracking-wider">
                     {resources[3].type}
                   </span>
                   <h3 className="text-sm font-extrabold text-black leading-snug line-clamp-3">
@@ -216,7 +216,7 @@ export default function ResourceCenter() {
                 <div className="pt-4">
                   <a 
                     href="#resource"
-                    className="inline-flex items-center gap-1 text-[10px] font-extrabold text-black hover:text-xoriant-green uppercase tracking-wider transition-colors"
+                    className="inline-flex items-center gap-1 text-[10px] font-extrabold text-black hover:text-ossisto-blue uppercase tracking-wider transition-colors"
                   >
                     Know More <span className="text-[9px] select-none">▶</span>
                   </a>

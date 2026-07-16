@@ -42,7 +42,7 @@ export default function DreamDetails() {
       render: () => (
         <div className="flex items-center gap-1 font-sans font-black text-slate-900 shrink-0 select-none">
           <div className="w-5.5 h-5.5 rounded-md bg-[#111625] flex items-center justify-center text-white font-serif text-[10px]">D</div>
-          <span className="text-[13px] font-bold">Digital<span className="text-xoriant-green font-black">Ex</span></span>
+          <span className="text-[13px] font-bold">Digital<span className="text-ossisto-blue font-black">Ex</span></span>
         </div>
       )
     },
@@ -120,7 +120,7 @@ export default function DreamDetails() {
             { title: "Experience Transformation", desc: "Unlock new opportunities through intelligent experiences engineered for evolving user expectations." },
             { title: "API & Integrations", desc: "Enable applications and systems to connect, orchestrate, and exchange data seamlessly." },
             { title: "Global Capability Centers", desc: "Build and scale high-performance GCCs powered by top engineering talent." },
-            { title: "Engineering Platforms For Growth", desc: "Xoriant: Engineering Scalable Platforms for Business Growth." }
+            { title: "Engineering Platforms For Growth", desc: "Ossisto: Engineering Scalable Platforms for Business Growth." }
           ]
         },
         {
@@ -174,7 +174,7 @@ export default function DreamDetails() {
       letter: "ACCELERATE",
       subtitle: "Value",
       icon: Zap,
-      description: "Accelerating time-to-value with Xoriant accelerators, proven frameworks, and automated delivery pipelines.",
+      description: "Accelerating time-to-value with Ossisto accelerators, proven frameworks, and automated delivery pipelines.",
       cards: [
         {
           title: "CORE Accelerator Frameworks",
@@ -254,20 +254,20 @@ export default function DreamDetails() {
           {/* Top Dot in the center */}
           <div className="absolute right-[-4px] top-0 w-2 h-2 rounded-full bg-black" />
           {/* Right curve (vertical down to left) */}
-          <div className="absolute right-0 top-0 w-1/2 h-1/2 border-r-2 border-b-2 border-xoriant-green rounded-br-[24px]" />
+          <div className="absolute right-0 top-0 w-1/2 h-1/2 border-r-2 border-b-2 border-ossisto-blue rounded-br-[24px]" />
           {/* Left curve (horizontal left to down) */}
-          <div className="absolute left-0 bottom-0 w-1/2 h-1/2 border-l-2 border-t-2 border-xoriant-green rounded-tl-[24px]" />
+          <div className="absolute left-0 bottom-0 w-1/2 h-1/2 border-l-2 border-t-2 border-ossisto-blue rounded-tl-[24px]" />
         </div>
 
         {/* Continuous Vertical Timeline Line */}
-        <div className="hidden md:block absolute left-[39px] top-0 bottom-0 w-0.5 bg-xoriant-green" />
+        <div className="hidden md:block absolute left-[39px] top-0 bottom-0 w-0.5 bg-ossisto-blue" />
 
         {/* S-curve Connector at the very bottom (Responsive HTML/CSS) */}
         <div className="hidden md:block absolute bottom-0 left-[39px] right-1/2 h-[100px] pointer-events-none z-0">
           {/* Left curve (vertical down to right) */}
-          <div className="absolute left-0 top-0 w-1/2 h-1/2 border-l-2 border-b-2 border-xoriant-green rounded-bl-[24px]" />
+          <div className="absolute left-0 top-0 w-1/2 h-1/2 border-l-2 border-b-2 border-ossisto-blue rounded-bl-[24px]" />
           {/* Right curve (horizontal right to down) */}
-          <div className="absolute right-0 bottom-0 w-1/2 h-1/2 border-r-2 border-t-2 border-xoriant-green rounded-tr-[24px]" />
+          <div className="absolute right-0 bottom-0 w-1/2 h-1/2 border-r-2 border-t-2 border-ossisto-blue rounded-tr-[24px]" />
           {/* Bottom Dot in the center */}
           <div className="absolute right-[-4px] bottom-0 w-2 h-2 rounded-full bg-black" />
         </div>
@@ -283,14 +283,14 @@ export default function DreamDetails() {
               <div key={idx} className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
                 {/* Node circle on the timeline */}
-                <div className="hidden md:flex absolute left-[-57px] top-1.5 w-8 h-8 rounded-full bg-black border-2 border-xoriant-green items-center justify-center z-10 shadow-md">
+                <div className="hidden md:flex absolute left-[-57px] top-1.5 w-8 h-8 rounded-full bg-black border-2 border-ossisto-blue items-center justify-center z-10 shadow-md">
                   <Icon className="w-4 h-4 text-white" />
                 </div>
 
                 {/* Left part: Heading details */}
                 <div className="lg:col-span-4 space-y-5 pr-4">
                   <div className="space-y-2">
-                    <span className="block text-4xl lg:text-5xl font-black text-xoriant-green tracking-tight uppercase leading-none">
+                    <span className="block text-4xl lg:text-5xl font-black text-ossisto-blue tracking-tight uppercase leading-none">
                       {step.letter}
                     </span>
                     <h3 className="text-2xl lg:text-3.5xl font-extrabold text-black tracking-tight leading-none">
@@ -311,13 +311,16 @@ export default function DreamDetails() {
                           <button
                             key={tIdx}
                             onClick={() => setEngineerTab(tIdx)}
-                            className={`flex items-center gap-2 text-left font-extrabold text-lg md:text-xl py-1 transition-all ${
+                            className={`flex items-center gap-2 text-left font-extrabold text-lg md:text-xl py-1 transition-all always-blue ${
                               isActive 
-                                ? 'text-black pl-0' 
-                                : 'text-slate-400 hover:text-slate-600 pl-5'
+                                ? 'pl-0' 
+                                : 'pl-5'
                             }`}
+                            style={{
+                              color: isActive ? '#236CB1' : 'rgba(35, 108, 177, 0.5)'
+                            }}
                           >
-                            {isActive && <span className="text-xoriant-green text-sm">▶</span>}
+                            {isActive && <span className="text-ossisto-blue text-sm">▶</span>}
                             {tab.name}
                           </button>
                         );
@@ -333,7 +336,7 @@ export default function DreamDetails() {
                     <div className="space-y-8">
                       {/* Highlighted Domain Card */}
                       <div className="bg-[#f8fafc] border border-slate-100 p-6 md:p-8 rounded-2xl space-y-4 shadow-sm">
-                        <h4 className="text-2xl font-black text-xoriant-green">
+                        <h4 className="text-2xl font-black text-ossisto-blue">
                           {step.tabs[engineerTab].title}
                         </h4>
                         <p className="text-xs md:text-sm text-slate-600 font-medium leading-relaxed">
@@ -341,7 +344,7 @@ export default function DreamDetails() {
                         </p>
                         <a 
                           href="#contact"
-                          className="inline-flex items-center gap-1.5 text-xs font-bold text-xoriant-green hover:text-[#009632] uppercase tracking-wider transition-colors pt-1"
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-ossisto-blue hover:text-[#236CB1] uppercase tracking-wider transition-colors pt-1"
                         >
                           Learn More <span className="text-[10px]">▶</span>
                         </a>
@@ -401,7 +404,7 @@ export default function DreamDetails() {
                             {card.hasPlayButton && (
                               <button 
                                 onClick={() => setIsVideoOpen(true)}
-                                className="absolute top-4 left-4 bg-xoriant-green hover:bg-[#009632] text-white p-2.5 rounded-lg shadow-md hover:scale-110 active:scale-95 transition-all duration-200 z-10"
+                                className="absolute top-4 left-4 bg-ossisto-blue hover:bg-[#236CB1] text-white p-2.5 rounded-lg shadow-md hover:scale-110 active:scale-95 transition-all duration-200 z-10"
                                 aria-label="Play case study"
                               >
                                 <Play className="w-4 h-4 fill-white stroke-none ml-0.5" />
@@ -421,7 +424,7 @@ export default function DreamDetails() {
                       {/* Collaborators / Partners Widget for DEFINE Tomorrow */}
                       {idx === 0 && (
                         <div className="mt-12 border-t border-slate-100 pt-8 space-y-4">
-                          <span className="block text-sm font-bold text-xoriant-green uppercase tracking-wider">
+                          <span className="block text-sm font-bold text-ossisto-blue uppercase tracking-wider">
                             Our Collaborators
                           </span>
                           <h4 className="text-xl md:text-2xl font-extrabold text-black leading-tight tracking-tight">
@@ -452,7 +455,7 @@ export default function DreamDetails() {
                           <div className="pt-2">
                             <a 
                               href="#contact"
-                              className="inline-flex items-center gap-1 text-xs md:text-sm font-bold text-black hover:text-xoriant-green uppercase tracking-wider transition-colors"
+                              className="inline-flex items-center gap-1 text-xs md:text-sm font-bold text-black hover:text-ossisto-blue uppercase tracking-wider transition-colors"
                             >
                               All Partners <span className="text-[10px] select-none">▶</span>
                             </a>
@@ -481,7 +484,7 @@ export default function DreamDetails() {
             {/* Close Button */}
             <button 
               onClick={() => setIsVideoOpen(false)}
-              className="absolute top-4 right-4 text-white hover:text-xoriant-green z-50 p-2 bg-slate-950/60 rounded-full border border-slate-800 hover:border-xoriant-green transition-all"
+              className="absolute top-4 right-4 text-white hover:text-ossisto-blue z-50 p-2 bg-slate-950/60 rounded-full border border-slate-800 hover:border-ossisto-blue transition-all"
               aria-label="Close video player"
             >
               <X className="w-5 h-5" />

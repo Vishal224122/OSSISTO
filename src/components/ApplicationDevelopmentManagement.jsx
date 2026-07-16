@@ -55,7 +55,7 @@ export default function ApplicationDevelopmentManagement() {
       render: () => (
         <div className="flex items-center gap-1 font-sans font-black text-slate-900 shrink-0 select-none">
           <div className="w-5.5 h-5.5 rounded-md bg-[#111625] flex items-center justify-center text-white font-serif text-[10px]">D</div>
-          <span className="text-[13px] font-bold">Digital<span className="text-xoriant-green font-black">Ex</span></span>
+          <span className="text-[13px] font-bold">Digital<span className="text-ossisto-blue font-black">Ex</span></span>
         </div>
       )
     },
@@ -149,15 +149,15 @@ export default function ApplicationDevelopmentManagement() {
   const deliveryModels = [
     {
       phase: "BUILD (Innovation)",
-      desc: "Capitalize on new opportunities with timely app innovation and best-in-class solutioning. Xoriant BUILD services position us as your future-ready engineering partner."
+      desc: "Capitalize on new opportunities with timely app innovation and best-in-class solutioning. Ossisto BUILD services position us as your future-ready engineering partner."
     },
     {
       phase: "RUN (Efficiency)",
-      desc: "Drive peak efficiency for your IT operations. Xoriant RUN Services don’t just keep the lights on; we unlock value at every step by maximizing your resources and our expertise."
+      desc: "Drive peak efficiency for your IT operations. Ossisto RUN Services don’t just keep the lights on; we unlock value at every step by maximizing your resources and our expertise."
     },
     {
       phase: "TRANSFORM (Transformation)",
-      desc: "Innovation doesn’t sleep and with Xoriant TRANSFORM Services, you are inspired to keep pace. Our frameworks and accelerators help execute large-scale digital transformation."
+      desc: "Innovation doesn’t sleep and with Ossisto TRANSFORM Services, you are inspired to keep pace. Our frameworks and accelerators help execute large-scale digital transformation."
     }
   ];
 
@@ -195,11 +195,11 @@ export default function ApplicationDevelopmentManagement() {
     },
     {
       title: "How a Global Bank Achieved 60% Faster Deployments",
-      desc: "Xoriant empowered the bank to achieve agile, error-free releases by engineering a scalable RelOps automation framework."
+      desc: "Ossisto empowered the bank to achieve agile, error-free releases by engineering a scalable RelOps automation framework."
     },
     {
       title: "Smarter Procurement Platform for a Global Software Leader",
-      desc: "Discover how Xoriant enabled a global software leader transform its procurement experience with a smart, web-based platform—enabling seamless supplier management, sourcing, and compliance."
+      desc: "Discover how Ossisto enabled a global software leader transform its procurement experience with a smart, web-based platform—enabling seamless supplier management, sourcing, and compliance."
     }
   ];
 
@@ -268,12 +268,12 @@ export default function ApplicationDevelopmentManagement() {
 
   const faqs = [
     {
-      q: "Why choose Xoriant for web application development?",
-      a: "Xoriant delivers enterprise-grade web applications that are secure, scalable, and aligned with modern digital business needs. As a digital engineering services company, we focus on building solutions that are not just functional but also optimized for performance, user experience, and long-term maintainability."
+      q: "Why choose Ossisto for web application development?",
+      a: "Ossisto delivers enterprise-grade web applications that are secure, scalable, and aligned with modern digital business needs. As a digital engineering services company, we focus on building solutions that are not just functional but also optimized for performance, user experience, and long-term maintainability."
     },
     {
       q: "Why is web app security important?",
-      a: "Web application security is critical because modern applications handle sensitive business and customer data that can be targeted by cyber threats. Xoriant’s digital engineering services embed security into every phase of development to reduce vulnerabilities and ensure compliance."
+      a: "Web application security is critical because modern applications handle sensitive business and customer data that can be targeted by cyber threats. Ossisto’s digital engineering services embed security into every phase of development to reduce vulnerabilities and ensure compliance."
     },
     {
       q: "How long does it take to develop a web application?",
@@ -281,31 +281,31 @@ export default function ApplicationDevelopmentManagement() {
     },
     {
       q: "What factors influence the cost of web app development?",
-      a: "Several elements impact overall development cost, including feature complexity, technology stack, and scalability requirements. Xoriant’s digital engineering service approach ensures optimized cost through efficient architecture and reusable components."
+      a: "Several elements impact overall development cost, including feature complexity, technology stack, and scalability requirements. Ossisto’s digital engineering service approach ensures optimized cost through efficient architecture and reusable components."
     },
     {
       q: "How long does enterprise web app development take?",
-      a: "Enterprise applications require more structured planning due to security, scalability, and compliance requirements. With Xoriant’s digital engineering services, delivery is typically phased to ensure stability and faster incremental releases."
+      a: "Enterprise applications require more structured planning due to security, scalability, and compliance requirements. With Ossisto’s digital engineering services, delivery is typically phased to ensure stability and faster incremental releases."
     },
     {
       q: "What factors influence web development cost estimation?",
-      a: "Cost estimation is shaped by both technical and business considerations. As a digital engineering services company, Xoriant evaluates requirements holistically to provide realistic and transparent estimates."
+      a: "Cost estimation is shaped by both technical and business considerations. As a digital engineering services company, Ossisto evaluates requirements holistically to provide realistic and transparent estimates."
     },
     {
       q: "How do you ensure the security of web applications?",
-      a: "Security is ensured through secure architecture design, code reviews, penetration testing, and continuous monitoring. Xoriant’s digital engineering solutions integrate DevSecOps practices to minimize vulnerabilities throughout the application lifecycle."
+      a: "Security is ensured through secure architecture design, code reviews, penetration testing, and continuous monitoring. Ossisto’s digital engineering solutions integrate DevSecOps practices to minimize vulnerabilities throughout the application lifecycle."
     },
     {
       q: "How can web applications benefit businesses?",
-      a: "Web applications enable businesses to improve accessibility, scalability, and operational efficiency. With Xoriant’s digital engineering services, organizations can modernize legacy systems and deliver seamless digital experiences."
+      a: "Web applications enable businesses to improve accessibility, scalability, and operational efficiency. With Ossisto’s digital engineering services, organizations can modernize legacy systems and deliver seamless digital experiences."
     },
     {
       q: "How to optimize web app performance?",
-      a: "Performance optimization includes caching strategies, code optimization, load balancing, and cloud scaling. Xoriant applies digital engineering service best practices to ensure fast, responsive, and highly available applications."
+      a: "Performance optimization includes caching strategies, code optimization, load balancing, and cloud scaling. Ossisto applies digital engineering service best practices to ensure fast, responsive, and highly available applications."
     },
     {
       q: "What are the 7 stages of web development?",
-      a: "Web development follows a structured lifecycle to ensure quality and scalability. Xoriant’s digital engineering services ensure disciplined execution across each phase: requirement gathering, system analysis/design, UI/UX design, development, testing, deployment, and maintenance."
+      a: "Web development follows a structured lifecycle to ensure quality and scalability. Ossisto’s digital engineering services ensure disciplined execution across each phase: requirement gathering, system analysis/design, UI/UX design, development, testing, deployment, and maintenance."
     }
   ];
 
@@ -379,13 +379,13 @@ export default function ApplicationDevelopmentManagement() {
         <div className="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <span className="text-xoriant-green text-xs md:text-sm font-extrabold uppercase tracking-widest block">
+            <span className="text-ossisto-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block">
               Application Development & Modernization
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight">
               Modernize faster, build smarter, lead with AI.
             </h1>
-            <button className="bg-[#00b23b] hover:bg-[#009632] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-xoriant-green/10 hover:scale-105 active:scale-95 duration-200">
+            <button className="bg-[#236CB1] hover:bg-[#236CB1] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
               LET'S CONNECT <span className="text-[10px]">▶</span>
             </button>
           </div>
@@ -393,7 +393,7 @@ export default function ApplicationDevelopmentManagement() {
           {/* Right Image */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-xs">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-xoriant-green to-transparent opacity-20 blur-xl" />
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-ossisto-blue to-transparent opacity-20 blur-xl" />
               <img 
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" 
                 alt="Modern ADM Engineering" 
@@ -423,7 +423,7 @@ export default function ApplicationDevelopmentManagement() {
                 >
                   {tab.name}
                   {activeTab === tab.id && (
-                    <span className="absolute bottom-0 left-0 w-full h-[3px] bg-xoriant-green rounded-full" />
+                    <span className="absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full" />
                   )}
                 </button>
               ))}
@@ -448,14 +448,14 @@ export default function ApplicationDevelopmentManagement() {
           
           {/* Right Text */}
           <div className="md:col-span-9 lg:col-span-8 space-y-4 text-left">
-            <span className="text-xoriant-green text-xs font-black uppercase tracking-wider block">
+            <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
               Future Ready Apps
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-xl">
               Modern apps must evolve faster and smarter with AI.
             </h2>
             <p className="text-slate-500 text-sm leading-relaxed max-w-2xl font-medium">
-              Enterprise software landscapes require quick releases, deep data integrations, and scalable cloud setups. To stay ahead of disruption, traditional architectures must evolve. Xoriant transforms core applications with custom cloud-native engineering, migrating monoliths into containerized microservices, setting up unified DevSecOps pipelines, and integrating enterprise-grade cognitive layers to prepare your apps for the age of AI.
+              Enterprise software landscapes require quick releases, deep data integrations, and scalable cloud setups. To stay ahead of disruption, traditional architectures must evolve. Ossisto transforms core applications with custom cloud-native engineering, migrating monoliths into containerized microservices, setting up unified DevSecOps pipelines, and integrating enterprise-grade cognitive layers to prepare your apps for the age of AI.
             </p>
           </div>
         </div>
@@ -465,7 +465,7 @@ export default function ApplicationDevelopmentManagement() {
       <section id="capabilities" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-slate-50">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Our Capabilities
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight max-w-2xl mx-auto leading-tight">
@@ -477,7 +477,7 @@ export default function ApplicationDevelopmentManagement() {
             {capabilities.map((item, idx) => (
               <div 
                 key={idx}
-                className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-xoriant-green/40 transition-all duration-300 border-t-4 border-t-xoriant-green flex flex-col justify-between text-left"
+                className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-ossisto-blue/40 transition-all duration-300 border-t-4 border-t-ossisto-blue flex flex-col justify-between text-left"
               >
                 <h3 className="font-bold text-slate-900 text-base mb-3 leading-snug">
                   {item.title}
@@ -495,11 +495,11 @@ export default function ApplicationDevelopmentManagement() {
       <section id="differentiators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Our Key Differentiators
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight leading-tight">
-              Why leading enterprises partner with Xoriant
+              Why leading enterprises partner with Ossisto
             </h2>
           </div>
 
@@ -522,7 +522,7 @@ export default function ApplicationDevelopmentManagement() {
             {/* Left Content */}
             <div className="w-full md:w-3/5 p-8 lg:p-10 flex flex-col justify-between text-left">
               <div>
-                <span className="text-xoriant-green text-xs font-bold tracking-widest uppercase block mb-3">
+                <span className="text-ossisto-blue text-xs font-bold tracking-widest uppercase block mb-3">
                   Featured Insight
                 </span>
                 <h3 className="text-black text-xl md:text-2xl font-black leading-snug mb-4 max-w-md">
@@ -535,7 +535,7 @@ export default function ApplicationDevelopmentManagement() {
                 </span>
                 <a 
                   href="#keeping-updated" 
-                  className="inline-flex items-center gap-1 text-xs font-extrabold text-black hover:text-xoriant-green transition-colors uppercase tracking-widest"
+                  className="inline-flex items-center gap-1 text-xs font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-widest"
                 >
                   Let's Find Out <span className="text-[10px]">▶</span>
                 </a>
@@ -543,7 +543,7 @@ export default function ApplicationDevelopmentManagement() {
             </div>
 
             {/* Right Graphic Banner */}
-            <div className="w-full md:w-2/5 bg-gradient-to-br from-[#00b23b] to-[#009632] flex items-center justify-center p-8 relative overflow-hidden">
+            <div className="w-full md:w-2/5 bg-gradient-to-br from-[#236CB1] to-[#236CB1] flex items-center justify-center p-8 relative overflow-hidden">
               <span className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl" />
               <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-black/10 rounded-full blur-xl" />
@@ -562,7 +562,7 @@ export default function ApplicationDevelopmentManagement() {
       <section id="delivery" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               How We Deliver
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight leading-tight">
@@ -573,7 +573,7 @@ export default function ApplicationDevelopmentManagement() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto pt-4">
             {deliveryModels.map((item, idx) => (
               <div key={idx} className="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-left flex flex-col justify-between min-h-[180px] hover:scale-[1.02] transition-transform duration-300">
-                <h3 className="font-extrabold text-slate-900 text-[15px] mb-3 border-b-2 border-xoriant-green pb-1.5 w-fit">{item.phase}</h3>
+                <h3 className="font-extrabold text-slate-900 text-[15px] mb-3 border-b-2 border-ossisto-blue pb-1.5 w-fit">{item.phase}</h3>
                 <p className="text-slate-500 text-xs leading-relaxed font-medium flex-1 pt-2">{item.desc}</p>
               </div>
             ))}
@@ -586,7 +586,7 @@ export default function ApplicationDevelopmentManagement() {
         <div className="max-w-7xl mx-auto space-y-16">
           
           <div className="text-left space-y-3">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Accelerators In House
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-2xl">
@@ -602,7 +602,7 @@ export default function ApplicationDevelopmentManagement() {
                       {acc.desc}
                     </p>
                   </div>
-                  <a href="#dream-details" className="text-[11px] font-bold text-xoriant-green uppercase tracking-wider hover:underline flex items-center gap-1 mt-4">
+                  <a href="#dream-details" className="text-[11px] font-bold text-ossisto-blue uppercase tracking-wider hover:underline flex items-center gap-1 mt-4">
                     Know More <span className="text-[9px]">▶</span>
                   </a>
                 </div>
@@ -612,7 +612,7 @@ export default function ApplicationDevelopmentManagement() {
 
           {/* Our Collaborators Marquee */}
           <div className="text-left space-y-4 pt-8 border-t border-gray-200">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Our Collaborators
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight leading-tight">
@@ -654,7 +654,7 @@ export default function ApplicationDevelopmentManagement() {
             </div>
 
             <div className="pt-4">
-              <a href="#ecosystem" className="inline-flex items-center gap-1 text-xs font-extrabold text-black hover:text-xoriant-green transition-colors uppercase tracking-widest">
+              <a href="#ecosystem" className="inline-flex items-center gap-1 text-xs font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-widest">
                 All Partners <span className="text-[10px]">▶</span>
               </a>
             </div>
@@ -673,7 +673,7 @@ export default function ApplicationDevelopmentManagement() {
         
         <div className="max-w-7xl mx-auto relative z-10 text-left space-y-8">
           <div className="space-y-3">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Incredible Numbers
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight max-w-xl">
@@ -682,14 +682,14 @@ export default function ApplicationDevelopmentManagement() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
-            <div className="bg-[#00b23b] text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center min-h-[160px] text-left hover:scale-[1.02] transition-transform duration-300">
+            <div className="bg-[#236CB1] text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center min-h-[160px] text-left hover:scale-[1.02] transition-transform duration-300">
               <span className="text-4xl font-black tracking-tight mb-2">40%</span>
               <p className="text-xs font-semibold leading-relaxed opacity-95">
                 Faster time-to-market for custom applications
               </p>
             </div>
 
-            <div className="bg-[#00b23b] text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center min-h-[160px] text-left hover:scale-[1.02] transition-transform duration-300">
+            <div className="bg-[#236CB1] text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center min-h-[160px] text-left hover:scale-[1.02] transition-transform duration-300">
               <span className="text-4xl font-black tracking-tight mb-2">35%</span>
               <p className="text-xs font-semibold leading-relaxed opacity-95">
                 OpEx reduction through automated application management
@@ -703,7 +703,7 @@ export default function ApplicationDevelopmentManagement() {
               </p>
             </div>
 
-            <div className="bg-[#00b23b] text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center min-h-[160px] text-left hover:scale-[1.02] transition-transform duration-300">
+            <div className="bg-[#236CB1] text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center min-h-[160px] text-left hover:scale-[1.02] transition-transform duration-300">
               <span className="text-4xl font-black tracking-tight mb-2">70%</span>
               <p className="text-xs font-semibold leading-relaxed opacity-95">
                 Decrease in application deployment cycle times
@@ -717,7 +717,7 @@ export default function ApplicationDevelopmentManagement() {
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b border-gray-150">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-left space-y-2">
-            <span className="text-xoriant-green text-xs uppercase tracking-widest font-black block">
+            <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Our Success Stories
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight leading-tight">
@@ -732,7 +732,7 @@ export default function ApplicationDevelopmentManagement() {
                   <h3 className="text-slate-900 font-extrabold text-[15px] leading-snug">{story.title}</h3>
                   <p className="text-slate-500 text-xs leading-relaxed font-medium">{story.desc}</p>
                 </div>
-                <a href="#case-studies" className="text-xoriant-green text-xs font-extrabold uppercase hover:underline mt-4 block">
+                <a href="#case-studies" className="text-ossisto-blue text-xs font-extrabold uppercase hover:underline mt-4 block">
                   Read Case Study
                 </a>
               </div>
@@ -745,14 +745,14 @@ export default function ApplicationDevelopmentManagement() {
       <section id="updates" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b border-gray-150">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-3">
-            <span className="text-xoriant-green text-xs font-black uppercase tracking-wider block">
+            <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
               Keeping You Updated
             </span>
             <div className="flex justify-center space-x-6 text-sm font-bold border-b border-gray-150 pb-2 max-w-xs mx-auto">
               <button 
                 onClick={() => setActiveResourceTab('thought')}
                 className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'thought' ? 'text-black border-b-2 border-xoriant-green' : 'text-slate-400 hover:text-black'
+                  activeResourceTab === 'thought' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
                 }`}
               >
                 Thought Leadership
@@ -760,7 +760,7 @@ export default function ApplicationDevelopmentManagement() {
               <button 
                 onClick={() => setActiveResourceTab('insights')}
                 className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'insights' ? 'text-black border-b-2 border-xoriant-green' : 'text-slate-400 hover:text-black'
+                  activeResourceTab === 'insights' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
                 }`}
               >
                 Insights
@@ -783,7 +783,7 @@ export default function ApplicationDevelopmentManagement() {
                 </div>
                 <div className="p-4 flex-1 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <span className="text-xoriant-green text-[10px] font-bold uppercase tracking-wider block">
+                    <span className="text-ossisto-blue text-[10px] font-bold uppercase tracking-wider block">
                       {item.category}
                     </span>
                     <h4 className="text-slate-900 font-extrabold text-xs leading-snug line-clamp-3">
@@ -792,7 +792,7 @@ export default function ApplicationDevelopmentManagement() {
                   </div>
                   <a 
                     href={item.href} 
-                    className="text-[10px] font-black text-black hover:text-xoriant-green uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
+                    className="text-[10px] font-black text-black hover:text-ossisto-blue uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
                   >
                     Know More <span className="text-[9px]">▶</span>
                   </a>
@@ -844,7 +844,7 @@ export default function ApplicationDevelopmentManagement() {
           <h2 className="text-2xl md:text-3xl font-black text-black tracking-tight mb-4">
             Application Development & Management - Questions frequently asked
           </h2>
-          <div className="w-full h-[2px] bg-xoriant-green mb-8" />
+          <div className="w-full h-[2px] bg-ossisto-blue mb-8" />
 
           <div className="divide-y divide-gray-200">
             {faqs.map((faq, idx) => {
@@ -855,12 +855,12 @@ export default function ApplicationDevelopmentManagement() {
                     onClick={() => toggleFaq(idx)}
                     className="w-full py-2 flex items-center justify-between text-left focus:outline-none group select-none"
                   >
-                    <span className="text-xs md:text-[13px] font-black text-slate-900 group-hover:text-xoriant-green transition-colors leading-snug pr-6">
+                    <span className="text-xs md:text-[13px] font-black text-slate-900 group-hover:text-ossisto-blue transition-colors leading-snug pr-6">
                       {faq.q}
                     </span>
                     <div className={`w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center text-slate-400 group-hover:border-slate-500 group-hover:text-slate-700 transition-all shrink-0`}>
                       {isOpen ? (
-                        <Minus className="w-3.5 h-3.5 text-xoriant-green stroke-[3px]" />
+                        <Minus className="w-3.5 h-3.5 text-ossisto-blue stroke-[3px]" />
                       ) : (
                         <Plus className="w-3.5 h-3.5 stroke-[3px]" />
                       )}

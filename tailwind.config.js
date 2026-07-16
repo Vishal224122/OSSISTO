@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        xoriant: {
-          green: "#00b23b",
+        ossisto: {
+          blue: "#236CB1",
           dark: "#0b0f19",
           slate: "#111827",
           gray: "#1f2937",
-          lightGreen: "#e6f8ec",
-          accent: "#00c853",
+          lightBlue: "#e9f2fa",
+          accent: "#236CB1",
         }
       },
       fontFamily: {

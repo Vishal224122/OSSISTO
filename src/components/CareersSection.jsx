@@ -7,16 +7,16 @@ export default function CareersSection() {
       
       {/* Decorative vector overlays */}
       <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-grid-pattern opacity-10 pointer-events-none hidden md:block" />
-      <div className="absolute -left-12 top-1/4 w-96 h-96 bg-xoriant-green/5 rounded-full filter blur-3xl pointer-events-none" />
+      <div className="absolute -left-12 top-1/4 w-96 h-96 bg-ossisto-blue/5 rounded-full filter blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         {/* Left Side: Callout text */}
         <div className="lg:col-span-7 space-y-6">
           <div className="space-y-4">
-            <span className="inline-flex items-center gap-1.5 bg-xoriant-green/10 border border-xoriant-green/20 text-xoriant-green text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+            <span className="inline-flex items-center gap-1.5 bg-ossisto-blue/10 border border-ossisto-blue/20 text-ossisto-blue text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
               <Sparkles className="w-3.5 h-3.5" />
-              Careers At Xoriant
+              Careers At Ossisto
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
               Discover the <span className="text-gradient font-black">XFactor</span>. Build Your Engineering Legacy.
@@ -44,7 +44,7 @@ export default function CareersSection() {
           <div className="pt-2">
             <a 
               href="#contact"
-              className="inline-flex items-center gap-2 bg-xoriant-green hover:bg-[#009632] text-white font-bold text-xs md:text-sm px-6 py-3.5 rounded-lg transition-all duration-300 shadow-lg shadow-xoriant-green/10"
+              className="inline-flex items-center gap-2 bg-ossisto-blue hover:bg-[#236CB1] text-white font-bold text-xs md:text-sm px-6 py-3.5 rounded-lg transition-all duration-300 shadow-lg shadow-ossisto-blue/10"
             >
               Explore Open Positions
               <ArrowRight className="w-4 h-4" />
@@ -56,8 +56,8 @@ export default function CareersSection() {
         <div className="lg:col-span-5 relative">
           <div className="relative aspect-video lg:aspect-square rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-900">
             <img 
-              src="https://www.xoriant.com/cdn/ff/15m_4GscW-0jXG1z-Fm9H8rV4_P5Q2c-90hS23g_QoE/1771476515/public/styles/webp/public/2026-02/Board-Announcement-banner-Desktop.jpg.webp?itok=38s4e1_Q" 
-              alt="Xoriant Employees Collaborating" 
+              src="__OSSISTO_URL_PLACEHOLDER_0__" 
+              alt="Ossisto Employees Collaborating" 
               className="w-full h-full object-cover opacity-80"
               onError={(e) => {
                 e.target.style.display = 'none';
@@ -65,7 +65,7 @@ export default function CareersSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex items-end p-6">
               <div className="space-y-1">
-                <span className="text-[10px] text-xoriant-green font-bold uppercase tracking-wider">Xoriant Life</span>
+                <span className="text-[10px] text-ossisto-blue font-bold uppercase tracking-wider">Ossisto Life</span>
                 <p className="text-xs md:text-sm text-white font-bold">"Building SaaS platforms that power modern digital commerce."</p>
               </div>
             </div>
