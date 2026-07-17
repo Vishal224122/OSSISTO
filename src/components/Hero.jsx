@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function Hero() {
-  const [hoveredIdx, setHoveredIdx] = useState(1); // Defaults to R expanded to match the user screenshot exactly
+  const [hoveredIdx, setHoveredIdx] = useState(null); // Defaults to null (all panels equal width)
   const [searchQuery, setSearchQuery] = useState('');
 
   const panels = [
@@ -27,7 +27,7 @@ export default function Hero() {
   return (
     <div
       className="relative h-screen w-full overflow-hidden bg-ossisto-dark"
-      onMouseLeave={() => setHoveredIdx(1)} // Reset to match screenshot state (R expanded)
+      onMouseLeave={() => setHoveredIdx(null)} // Reset to null (all panels equal width) when mouse leaves
     >
 
       {/* 4 Vertical Columns Panels */}
