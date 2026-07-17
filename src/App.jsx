@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import AnnouncementBar from './components/AnnouncementBar';
 import Navbar from './components/Navbar';
 import ContactModal from './components/ContactModal';
 import Hero from './components/Hero';
@@ -9,7 +8,6 @@ import SuccessStories from './components/SuccessStories';
 import CareersSectionModern from './components/CareersSectionModern';
 import CSRSectionModern from './components/CSRSectionModern';
 import ResourceCenter from './components/ResourceCenter';
-import ContactAndLocations from './components/ContactAndLocations';
 import Footer from './components/Footer';
 import ProductPlatformEngineering from './components/ProductPlatformEngineering';
 import ApplicationDevelopmentManagement from './components/ApplicationDevelopmentManagement';
@@ -79,8 +77,7 @@ function App() {
 
   return (
     <div className="bg-[#0b0f19] text-gray-200 min-h-screen font-sans selection:bg-ossisto-blue selection:text-white overflow-x-hidden antialiased">
-      {/* Top Banner Alert */}
-      <AnnouncementBar />
+
 
       {/* Navigation Header */}
       <Navbar
@@ -115,8 +112,7 @@ function App() {
           {/* Applied Intelligence Resource Center */}
           <ResourceCenter />
 
-          {/* Get Started Contact Form & Global Locations Map */}
-          <ContactAndLocations title="Get Started" />
+
         </>
       ) : currentView === 'product-engineering' ? (
         <ProductPlatformEngineering />

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, Search, Linkedin, Instagram, Facebook, Twitter, Youtube, ArrowRight } from 'lucide-react';
 
 export default function Navbar({ onContactClick, onNavigate, currentView }) {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const isScrolled = true;
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [timeoutId, setTimeoutId] = useState(null);
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
@@ -27,12 +27,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
       if (timeoutId) clearTimeout(timeoutId);
     };
   }, [timeoutId]);
@@ -91,8 +86,8 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
       }
     },
     {
-      title: "Industry 4.0 Solutions",
-      headerTitle: "Industry 4.0 Solutions",
+      title: "Industry 4.0",
+      headerTitle: "Industry 4.0 ",
       desc: "Bridge physical manufacturing assets with cognitive cloud frameworks to build connected, smart industrial spaces.",
       links: [
         { name: "Smart factory", href: "#dream-details" },
@@ -241,7 +236,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
           </div>
 
           {/* Desktop Menu links exactly as requested */}
-          <div className="hidden lg:flex items-center space-x-3.5 xl:space-x-5.5 ml-8 xl:ml-16">
+          <div className="hidden lg:flex items-center space-x-5 xl:space-x-8 ml-8 xl:ml-16">
             {menuItems.map((item, index) => (
               <div
                 key={index}
@@ -397,51 +392,13 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
             ))}
           </div>
 
-          {/* Right section: Sidebar Hamburger, Search Icon, and CONTACT button */}
-          <div className="flex items-center space-x-3.5">
-
-            {/* Sidebar Toggle Burger (☰) */}
-            <button
-              onClick={() => setIsSidePanelOpen(true)}
-              className={`p-2 transition-colors group flex items-center justify-center ${isScrolled ? 'text-slate-900 hover:text-ossisto-blue' : 'text-white hover:text-ossisto-blue'
-                }`}
-              aria-label="Open sidebar menu"
-            >
-              <svg
-                className="w-6 h-5"
-                viewBox="0 0 24 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect y="0" width="24" height="2.5" rx="1.25" className={`${isScrolled ? 'fill-slate-900' : 'fill-white'} group-hover:fill-ossisto-blue transition-colors duration-200`} />
-                <rect y="7.5" width="24" height="2.5" rx="1.25" className={`${isScrolled ? 'fill-slate-900' : 'fill-white'} group-hover:fill-ossisto-blue transition-colors duration-200`} />
-                <rect y="15" width="24" height="2.5" rx="1.25" className={`${isScrolled ? 'fill-slate-900' : 'fill-white'} group-hover:fill-ossisto-blue transition-colors duration-200`} />
-              </svg>
-            </button>
-
-            {/* Search Box / Icon */}
-            <div className="relative flex items-center">
-              <input
-                type="text"
-                placeholder="Search..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className={`bg-slate-900/60 border border-slate-700/50 text-white text-xs rounded-full py-1.5 pl-4 pr-10 focus:outline-none focus:border-ossisto-blue transition-all duration-300 ${isSearchExpanded ? 'w-40 opacity-100' : 'w-0 opacity-0 pointer-events-none'
-                  }`}
-              />
-              <button
-                onClick={() => setIsSearchExpanded(!isSearchExpanded)}
-                className={`p-2 transition-colors relative ${isScrolled ? 'text-slate-700 hover:text-ossisto-blue' : 'text-white hover:text-ossisto-blue'
-                  }`}
-              >
-                <Search className="w-4.5 h-4.5" />
-              </button>
-            </div>
+          {/* Right section: CONTACT button */}
+          <div className="flex items-center lg:-mr-4">
 
             {/* CONTACT ▶ Button */}
             <button
               onClick={onContactClick}
-              className="bg-ossisto-blue always-blue-bg hover:bg-[#236CB1] text-white font-bold py-2 px-4.5 text-xs rounded uppercase tracking-wider flex items-center gap-1.5 transition-all duration-300 shadow-md shadow-ossisto-blue/10 shrink-0"
+              className="bg-ossisto-blue always-blue-bg hover:bg-[#236CB1] text-white font-black py-2.5 px-7 text-xs rounded-md uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 shadow-md shadow-ossisto-blue/10 shrink-0"
             >
               CONTACT <span className="text-[9px] select-none">▶</span>
             </button>

@@ -337,7 +337,7 @@ export default function ContactAndLocations({ title }) {
                   className="rounded border-gray-300 text-ossisto-blue focus:ring-ossisto-blue w-3.5 h-3.5"
                 />
                 <label htmlFor="agree-checkbox" className="text-[11px] font-bold text-slate-700">
-                  I agree to your <a href="#privacy" className="text-ossisto-blue hover:underline">privacy</a> and <a href="#cookies" className="text-ossisto-blue hover:underline">cookie</a> policies.
+                  I agree to your <a href="#privacy" className="text-ossisto-blue hover:underline">privacy policy</a>.
                 </label>
               </div>
               {errors.agree && <span className="block text-[10px] text-red-500 font-semibold">{errors.agree}</span>}

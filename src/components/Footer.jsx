@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUp, Mail, CheckCircle, Cookie, Linkedin, Instagram, Facebook, Youtube } from 'lucide-react';
+import { ArrowUp, Linkedin, Instagram, Facebook, Youtube } from 'lucide-react';
 
 const XIcon = () => (
   <svg className="w-4.5 h-4.5 fill-current" viewBox="0 0 24 24">
@@ -8,22 +8,9 @@ const XIcon = () => (
 );
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [captchaVal, setCaptchaVal] = useState('');
-  const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, result: 0 });
-  const [subscribed, setSubscribed] = useState(false);
-  const [error, setError] = useState('');
   const [showScroll, setShowScroll] = useState(false);
 
-  const generateCaptcha = () => {
-    const num1 = Math.floor(Math.random() * 6); // 0 to 5
-    const num2 = Math.floor(Math.random() * 6); // 0 to 5
-    setCaptcha({ num1, num2, result: num1 + num2 });
-  };
-
   useEffect(() => {
-    generateCaptcha();
-
     const handleScrollButton = () => {
       setShowScroll(window.scrollY > 300);
     };
@@ -32,177 +19,16 @@ export default function Footer() {
     return () => window.removeEventListener('scroll', handleScrollButton);
   }, []);
 
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (!email.trim() || !/\S+@\S+\.\S+/.test(email)) {
-      setError('Enter a valid email address');
-      return;
-    }
-    if (parseInt(captchaVal) !== captcha.result) {
-      setError('Captcha solver answer is incorrect');
-      generateCaptcha();
-      return;
-    }
-    setError('');
-    setSubscribed(true);
-    setEmail('');
-    setCaptchaVal('');
-  };
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="bg-white pt-16 pb-28 px-4 sm:px-6 lg:px-8 relative select-none">
-      <div className="max-w-7xl mx-auto space-y-12">
-
-        {/* Top Section: Newsletter Subscribe & Columns Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-
-          {/* Left Column: Newsletter Subscribe */}
-          <div className="lg:col-span-7 space-y-4">
-            <h3 className="text-2xl sm:text-3xl font-black text-black tracking-tight">
-              Subscribe to our Newsletter
-            </h3>
-
-            {subscribed ? (
-              <div className="flex items-center gap-2 text-ossisto-blue bg-green-50 border border-green-200 py-3 px-6 rounded-md text-xs font-bold uppercase tracking-wider animate-fade-in w-fit">
-                <CheckCircle className="w-4 h-4" /> Subscription Activated Successfully
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="space-y-4">
-                {/* Email input field wrapper */}
-                <div className="flex items-center bg-white border border-gray-300 rounded-md p-1.5 w-full max-w-md shadow-sm focus-within:border-ossisto-blue focus-within:ring-1 focus-within:ring-ossisto-blue transition-all">
-                  <input
-                    type="email"
-                    placeholder="Enter Your Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 bg-transparent px-3 py-2 text-sm text-black outline-none placeholder-gray-400"
-                    required
-                  />
-                  <button
-                    type="submit"
-                    className="bg-[#236CB1] hover:bg-[#1A5185] text-white font-extrabold text-xs py-2.5 px-6 rounded flex items-center gap-1.5 shrink-0 transition-colors uppercase tracking-wider"
-                  >
-                    Subscribe <span className="text-[10px]">▶</span>
-                  </button>
-                </div>
-
-                {/* Math Solver Block */}
-                <div className="flex items-center gap-2 mt-3">
-                  <div className="flex items-stretch rounded border border-gray-300 overflow-hidden w-fit h-9 bg-white shadow-sm">
-                    <span className="bg-black text-white px-3 flex items-center text-xs font-bold select-none font-mono">
-                      {captcha.num1} + {captcha.num2} =
-                    </span>
-                    <input
-                      type="number"
-                      value={captchaVal}
-                      onChange={(e) => setCaptchaVal(e.target.value)}
-                      placeholder=""
-                      className="w-16 text-center text-sm font-semibold text-black bg-white focus:outline-none"
-                      required
-                    />
-                  </div>
-                </div>
-
-                {error && <p className="text-xs text-red-500 font-semibold">{error}</p>}
-              </form>
-            )}
-          </div>
-
-          {/* Right Columns: Services & Quick Links */}
-          <div className="lg:col-span-5 grid grid-cols-2 gap-8 lg:gap-12">
-
-            {/* Column 1: Services */}
-            <div className="space-y-4">
-              <h4 className="text-sm font-extrabold text-black uppercase tracking-wider">
-                Services
-              </h4>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#dream-details"
-                    className="text-sm text-zinc-500 hover:text-ossisto-blue transition-colors font-semibold"
-                  >
-                    Digital
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#dream-details"
-                    className="text-sm text-zinc-500 hover:text-ossisto-blue transition-colors font-semibold"
-                  >
-                    Cloud
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#dream-details"
-                    className="text-sm text-zinc-500 hover:text-ossisto-blue transition-colors font-semibold"
-                  >
-                    Data
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#dream-details"
-                    className="text-sm text-zinc-500 hover:text-ossisto-blue transition-colors font-semibold"
-                  >
-                    Security
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Column 2: Quick Links */}
-            <div className="space-y-4">
-              <h4 className="text-sm font-extrabold text-black uppercase tracking-wider">
-                Quick Links
-              </h4>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#dream-details"
-                    className="text-sm text-zinc-500 hover:text-ossisto-blue transition-colors font-semibold"
-                  >
-                    Industries
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#about-ossisto"
-                    className="text-sm text-zinc-500 hover:text-ossisto-blue transition-colors font-semibold"
-                  >
-                    Company
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#careers"
-                    className="text-sm text-zinc-500 hover:text-ossisto-blue transition-colors font-semibold"
-                  >
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#contact"
-                    className="text-sm text-zinc-500 hover:text-ossisto-blue transition-colors font-semibold"
-                  >
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-
-        </div>
+    <footer className="bg-white pt-10 pb-36 px-4 sm:px-6 lg:px-8 relative select-none">
+      <div className="max-w-7xl mx-auto">
 
         {/* Bottom Section: Policies, Copyright, Social Icons & Certifications */}
-        <div className="flex flex-col xl:flex-row justify-between items-center gap-8 pt-8 border-t border-gray-200 mt-12">
+        <div className="flex flex-col xl:flex-row justify-between items-center gap-8">
 
           {/* Left Side: Compliance Certifications */}
           <div className="flex items-center gap-4 flex-wrap justify-start">
@@ -236,8 +62,6 @@ export default function Footer() {
           <div className="flex flex-col items-center gap-2 text-center">
             <div className="flex flex-wrap justify-center gap-x-2 gap-y-1 text-[10px] font-bold text-gray-400 tracking-wider">
               <a href="#contact" className="hover:text-ossisto-blue transition-colors underline">TERMS OF USE</a>
-              <span>|</span>
-              <a href="#contact" className="hover:text-ossisto-blue transition-colors underline">COOKIE POLICY</a>
               <span>|</span>
               <a href="#contact" className="hover:text-ossisto-blue transition-colors underline">PRIVACY POLICY</a>
               <span>|</span>
@@ -306,14 +130,7 @@ export default function Footer() {
 
       </div>
 
-      {/* Fixed Cookie settings button on bottom left corner */}
-      <button
-        onClick={() => alert("Cookie settings saved!")}
-        className="fixed bottom-6 left-6 z-40 bg-[#236CB1] hover:bg-[#1A5185] text-white p-2.5 rounded-full hover:scale-105 active:scale-95 transition-all shadow-lg flex items-center justify-center w-10 h-10"
-        aria-label="Cookie Settings"
-      >
-        <Cookie className="w-5 h-5" />
-      </button>
+
 
       {/* Floating Scroll to Top button */}
       {showScroll && (
