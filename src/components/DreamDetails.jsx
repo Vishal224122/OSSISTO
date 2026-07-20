@@ -1,97 +1,32 @@
 import React, { useState } from 'react';
-import { Play, X, Monitor, RefreshCw, Cpu, Zap, Settings, TrendingUp, HeartPulse, Store, Factory } from 'lucide-react';
+import { Play, X, Monitor, RefreshCw, Cpu, Zap, Settings, TrendingUp, HeartPulse, Store, Factory, Car, Pill, Utensils, Hammer, Package } from 'lucide-react';
 
 export default function DreamDetails() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [engineerTab, setEngineerTab] = useState(0);
-
-  const partnerLogos = [
-    {
-      name: "Salesforce",
-      type: "image",
-      src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg"
-    },
-    {
-      name: "Matilda Cloud",
-      type: "custom",
-      render: () => (
-        <div className="flex items-center gap-1.5 text-slate-850 shrink-0 select-none">
-          <svg viewBox="0 0 24 24" className="w-5.5 h-5.5 text-blue-600 fill-current" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 18V6c0-1.1.9-2 2-2h2.5c1.1 0 2 .9 2 2v12h-2V6H5v12H3zm8 0V6c0-1.1.9-2 2-2h2.5c1.1 0 2 .9 2 2v12h-2V6h-2.5v12h-2z" />
-          </svg>
-          <div className="flex flex-col leading-none font-sans">
-            <span className="text-[12px] font-black tracking-tight text-slate-900">matilda</span>
-            <span className="text-[9px] font-medium text-slate-500">cloud</span>
-          </div>
-        </div>
-      )
-    },
-    {
-      name: "Ab Initio",
-      type: "custom",
-      render: () => (
-        <div className="flex items-center gap-0.5 text-[#2272b4] font-semibold text-[14px] italic font-sans tracking-tight shrink-0 select-none">
-          <span className="text-red-500 text-base font-black not-italic">ab</span>
-          <span className="text-slate-800 font-extrabold not-italic">initio</span>
-        </div>
-      )
-    },
-    {
-      name: "DigitalEx",
-      type: "custom",
-      render: () => (
-        <div className="flex items-center gap-1 font-sans font-black text-slate-900 shrink-0 select-none">
-          <div className="w-5.5 h-5.5 rounded-md bg-[#111625] flex items-center justify-center text-white font-serif text-[10px]">D</div>
-          <span className="text-[13px] font-bold">Digital<span className="text-ossisto-blue font-black">Ex</span></span>
-        </div>
-      )
-    },
-    {
-      name: "Snowflake",
-      type: "image",
-      src: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Snowflake_Logo.svg"
-    },
-    {
-      name: "AWS",
-      type: "image",
-      src: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-    },
-    {
-      name: "Google Cloud",
-      type: "image",
-      src: "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg"
-    },
-    {
-      name: "Microsoft Azure",
-      type: "image",
-      src: "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg"
-    }
-  ];
+  const [engineerTab, setEngineerTab] = useState(3);
 
   const steps = [
     {
-      letter: "DEFINE",
-      subtitle: "Tomorrow",
-      icon: Monitor,
-      description: "We translate your vision into an intelligent roadmap, engineering adaptive, AI-native platforms built for measurable outcomes.",
+      letter: "SERVICES",
+      subtitle: "One Partner for your complete manufacturing Stack",
+      isServicesSection: true,
       cards: [
         {
-          title: "Engineering For The Intelligent Enterprise",
-          image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=600&auto=format&fit=crop",
-          hasPlayButton: true
+          title: "Legacy Migration & Re-platforming",
+          image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=600&auto=format&fit=crop"
         },
         {
-          title: "Process & AI Consulting",
-          image: "https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?q=80&w=600&auto=format&fit=crop"
-        }
-      ]
-    },
-    {
-      letter: "REVITALIZE",
-      subtitle: "Today",
-      icon: RefreshCw,
-      description: "Revitalizing systems with AI and data readiness, modernizing legacy foundations for cognitive operations.",
-      cards: [
+          title: "Data Platform Engineering",
+          image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop"
+        },
+        {
+          title: "Legacy Migration & Re-platforming",
+          image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=600&auto=format&fit=crop"
+        },
+        {
+          title: "Data Platform Engineering",
+          image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop"
+        },
         {
           title: "Legacy Migration & Re-platforming",
           image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=600&auto=format&fit=crop"
@@ -103,14 +38,16 @@ export default function DreamDetails() {
       ]
     },
     {
-      letter: "ENGINEER",
-      subtitle: "Next",
+      letter: "SERVICES IN DETAIL",
+      subtitle: "We serve your IT and Digital needs in a comprehensive manner",
+      isEngineerSection: true,
       icon: Cpu,
       description: "A complete spectrum of modern engineering services built on a strong foundation of AI and deep technology expertise.",
       tabs: [
         {
           name: "Digital",
           title: "Digital Engineering",
+          image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=800&auto=format&fit=crop",
           text: "From emerging possibilities to an agile cycle of intelligent solution development – discover how everything connects through our strong engineering DNA, product engineering expertise, and trusted partner ecosystem.",
           services: [
             { title: "Product & Platform Engineering", desc: "Next-generation solutions engineered through software innovation, built and scaled at speed." },
@@ -126,6 +63,7 @@ export default function DreamDetails() {
         {
           name: "Cloud",
           title: "Cloud & Infrastructure",
+          image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=800&auto=format&fit=crop",
           text: "Accelerate your transition to cloud-native systems with engineered pipelines, zero-trust cloud architectures, and proactive FinOps governance.",
           services: [
             { title: "Cloud Migration & Re-platforming", desc: "Re-host, re-platform, and decouple workloads to AWS, Azure, and Google Cloud." },
@@ -141,6 +79,7 @@ export default function DreamDetails() {
         {
           name: "Data & AI",
           title: "Data Foundations & Applied AI",
+          image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
           text: "Transition from raw analytics to cognitive operations. We design agentic workflows, clean data warehouses, and secure enterprise LLMs.",
           services: [
             { title: "Agentic AI Orchestration", desc: "Deploy intelligent agents that execute tasks and workflows autonomously." },
@@ -156,6 +95,7 @@ export default function DreamDetails() {
         {
           name: "Security",
           title: "Cyber Security & Compliance",
+          image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
           text: "Enforce zero-trust principles across all applications, APIs, and infrastructure. Continuous auditing to secure your digital core.",
           services: [
             { title: "Identity & Access Management", desc: "Enforce zero-trust controls, single sign-on (SSO), and role-based permissions." },
@@ -164,39 +104,26 @@ export default function DreamDetails() {
             { title: "24/7 Security Operations (SOC)", desc: "Proactive threat hunting and incident response handled by experts." },
             { title: "Penetration Testing", desc: "Simulate cyber attacks to find vulnerabilities before adversaries do." },
             { title: "Cloud Security Posture (CSPM)", desc: "Audit container configurations and cloud permissions in real-time." },
-            { title: "Vulnerability Auditing", desc: "Automate package scanning to block supply-chain dependencies risks." },
-            { title: "Disaster Recovery Operations", desc: "Guarantee data redundancy and fast recovery times for critical workloads." }
+            { title: "Vulnerability Auditing", desc: "" },
+            { title: "Disaster Recovery Operations", desc: "" }
           ]
         }
       ]
     },
     {
-      letter: "ACCELERATE",
-      subtitle: "Value",
-      icon: Zap,
-      description: "Accelerating time-to-value with Ossisto accelerators, proven frameworks, and automated delivery pipelines.",
-      cards: [
-        {
-          title: "CORE Accelerator Frameworks",
-          image: "https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=600&auto=format&fit=crop"
-        },
-        {
-          title: "DevSecOps Pipeline Automation",
-          image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=600&auto=format&fit=crop"
-        }
-      ]
-    },
-    {
-      letter: "MANAGE",
-      subtitle: "Change",
-      icon: Settings,
-      description: "Industries are experiencing rapid technology shifts as AI reshapes how businesses operate. We help bridge the gap between today’s systems and tomorrow’s capabilities through structured transformation and continuous innovation.",
-      industries: [
-        { name: "Banking & Financial Services", icon: TrendingUp },
-        { name: "Hi-Tech", icon: Cpu },
-        { name: "Healthcare & Life Sciences", icon: HeartPulse },
-        { name: "Retail & CPG", icon: Store },
-        { name: "Manufacturing", icon: Factory }
+      letter: "FOCUS SECTORS",
+      isFocusSectorsSection: true,
+      description: [
+        "Focus creates specialization.",
+        "We have created niche expertise in several manufacturing sectors.",
+        "However, we stay dedicated to all sectors."
+      ],
+      sectors: [
+        { name: "Automotive", icon: Car, bg: "bg-[#3292C3]", text: "text-white" },
+        { name: "Pharma", icon: Pill, bg: "bg-[#66B6E0]", text: "text-slate-900" },
+        { name: "Food processing", icon: Utensils, bg: "bg-[#8ED0EE]", text: "text-slate-900" },
+        { name: "Speciality Steel", icon: Hammer, bg: "bg-[#CEE8F5]", text: "text-slate-900" },
+        { name: "Packaging Industry", icon: Package, bg: "bg-[#E2F2FC]", text: "text-slate-900" }
       ]
     }
   ];
@@ -249,58 +176,70 @@ export default function DreamDetails() {
 
       <div className="max-w-6xl mx-auto relative mt-20 pb-20">
         
-        {/* S-curve Connector at the very top (Responsive HTML/CSS) */}
-        <div className="hidden md:block absolute top-[-100px] left-[39px] right-1/2 h-[100px] pointer-events-none z-0">
-          {/* Top Dot in the center */}
-          <div className="absolute right-[-4px] top-0 w-2 h-2 rounded-full bg-black" />
-          {/* Right curve (vertical down to left) */}
-          <div className="absolute right-0 top-0 w-1/2 h-1/2 border-r-2 border-b-2 border-ossisto-blue rounded-br-[24px]" />
-          {/* Left curve (horizontal left to down) */}
-          <div className="absolute left-0 bottom-0 w-1/2 h-1/2 border-l-2 border-t-2 border-ossisto-blue rounded-tl-[24px]" />
-        </div>
-
-        {/* Continuous Vertical Timeline Line */}
-        <div className="hidden md:block absolute left-[39px] top-0 bottom-0 w-0.5 bg-ossisto-blue" />
-
-        {/* S-curve Connector at the very bottom (Responsive HTML/CSS) */}
-        <div className="hidden md:block absolute bottom-0 left-[39px] right-1/2 h-[100px] pointer-events-none z-0">
-          {/* Left curve (vertical down to right) */}
-          <div className="absolute left-0 top-0 w-1/2 h-1/2 border-l-2 border-b-2 border-ossisto-blue rounded-bl-[24px]" />
-          {/* Right curve (horizontal right to down) */}
-          <div className="absolute right-0 bottom-0 w-1/2 h-1/2 border-r-2 border-t-2 border-ossisto-blue rounded-tr-[24px]" />
-          {/* Bottom Dot in the center */}
-          <div className="absolute right-[-4px] bottom-0 w-2 h-2 rounded-full bg-black" />
-        </div>
-
         {/* Roadmap Steps */}
         <div className="space-y-24 pl-0 md:pl-20">
           {steps.map((step, idx) => {
             const Icon = step.icon;
-            const isEngineer = step.letter === "ENGINEER";
-            const isManage = step.letter === "MANAGE";
+            const isEngineer = step.letter === "SERVICES IN DETAIL" || step.letter === "ENGINEER";
+            const isFocusSectors = step.isFocusSectorsSection;
+            const isServices = step.isServicesSection;
 
             return (
               <div key={idx} className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
                 {/* Node circle on the timeline */}
-                <div className="hidden md:flex absolute left-[-57px] top-1.5 w-8 h-8 rounded-full bg-black border-2 border-ossisto-blue items-center justify-center z-10 shadow-md">
-                  <Icon className="w-4 h-4 text-white" />
-                </div>
+                {!isServices && !isEngineer && !isFocusSectors && Icon && (
+                  <div className="hidden md:flex absolute left-[-57px] top-1.5 w-8 h-8 rounded-full bg-black border-2 border-ossisto-blue items-center justify-center z-10 shadow-md">
+                    <Icon className="w-4 h-4 text-white" />
+                  </div>
+                )}
 
                 {/* Left part: Heading details */}
                 <div className="lg:col-span-4 space-y-5 pr-4">
-                  <div className="space-y-2">
-                    <span className="block text-4xl lg:text-5xl font-black text-ossisto-blue tracking-tight uppercase leading-none">
-                      {step.letter}
-                    </span>
-                    <h3 className="text-2xl lg:text-3.5xl font-extrabold text-black tracking-tight leading-none">
-                      {step.subtitle}
-                    </h3>
-                  </div>
-                  
-                  <p className="text-[15px] font-bold text-slate-800 leading-relaxed pt-1">
-                    {step.description}
-                  </p>
+                  {isServices ? (
+                    <div className="space-y-4">
+                      <span className="block text-lg font-black text-ossisto-blue tracking-wider uppercase">
+                        SERVICES
+                      </span>
+                      <h3 className="text-2xl lg:text-3.5xl font-black text-black tracking-tight leading-tight">
+                        One Partner for your complete manufacturing Stack
+                      </h3>
+                    </div>
+                  ) : isEngineer ? (
+                    <div className="space-y-4">
+                      <span className="block text-lg font-black text-ossisto-blue tracking-wider uppercase">
+                        SERVICES IN DETAIL
+                      </span>
+                      <h3 className="text-2xl lg:text-3.5xl font-black text-black tracking-tight leading-tight">
+                        We serve your IT and Digital needs in a comprehensive manner
+                      </h3>
+                    </div>
+                  ) : isFocusSectors ? (
+                    <div className="space-y-4">
+                      <span className="block text-lg font-black text-ossisto-blue tracking-wider uppercase">
+                        FOCUS SECTORS
+                      </span>
+                      <div className="space-y-4 text-[15px] font-bold text-slate-800 leading-relaxed pt-1">
+                        <p>Focus creates specialization.</p>
+                        <p>We have created niche expertise in several manufacturing sectors.</p>
+                        <p>However, we stay dedicated to all sectors.</p>
+                      </div>
+                    </div>
+                  ) : (
+                    <>
+                      <div className="space-y-2">
+                        <span className="block text-4xl lg:text-5xl font-black text-ossisto-blue tracking-tight uppercase leading-none">
+                          {step.letter}
+                        </span>
+                        <h3 className="text-2xl lg:text-3.5xl font-extrabold text-black tracking-tight leading-none">
+                          {step.subtitle}
+                        </h3>
+                      </div>
+                      <p className="text-[15px] font-bold text-slate-800 leading-relaxed pt-1">
+                        {step.description}
+                      </p>
+                    </>
+                  )}
 
                   {/* Vertical domain selectors for ENGINEER Next */}
                   {isEngineer && (
@@ -334,24 +273,23 @@ export default function DreamDetails() {
                   {isEngineer ? (
                     // ENGINEER Next Dashboard layout
                     <div className="space-y-8">
-                      {/* Highlighted Domain Card */}
-                      <div className="bg-[#f8fafc] border border-slate-100 p-6 md:p-8 rounded-2xl space-y-4 shadow-sm">
-                        <h4 className="text-2xl font-black text-ossisto-blue">
-                          {step.tabs[engineerTab].title}
-                        </h4>
-                        <p className="text-xs md:text-sm text-slate-600 font-medium leading-relaxed">
-                          {step.tabs[engineerTab].text}
-                        </p>
-                        <a 
-                          href="#contact"
-                          className="inline-flex items-center gap-1.5 text-xs font-bold text-ossisto-blue hover:text-[#236CB1] uppercase tracking-wider transition-colors pt-1"
-                        >
-                          Learn More <span className="text-[10px]">▶</span>
-                        </a>
+                      {/* Highlighted Domain Card (Rounded Card Banner) */}
+                      <div className="relative w-full h-44 sm:h-52 md:h-60 rounded-2xl overflow-hidden shadow-md bg-slate-950">
+                        <img 
+                          src={step.tabs[engineerTab].image} 
+                          alt={step.tabs[engineerTab].title}
+                          className="w-full h-full object-cover opacity-80"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
+                        <div className="absolute bottom-5 left-6 right-6">
+                          <h4 className="text-xl md:text-2xl font-black text-white leading-tight tracking-tight">
+                            {step.tabs[engineerTab].title}
+                          </h4>
+                        </div>
                       </div>
 
                       {/* Services Grid (8 offerings) */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 border-t border-slate-100 pt-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 pt-2">
                         {step.tabs[engineerTab].services.map((service, sIdx) => (
                           <div key={sIdx} className="space-y-1">
                             <h5 className="text-sm font-extrabold text-black">
@@ -364,19 +302,21 @@ export default function DreamDetails() {
                         ))}
                       </div>
                     </div>
-                  ) : isManage ? (
-                    // MANAGE Change Industries grid
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-12 pt-4">
-                      {step.industries.map((ind, iIdx) => {
-                        const IndIcon = ind.icon;
+                  ) : isFocusSectors ? (
+                    // FOCUS SECTORS horizontal stack
+                    <div className="flex flex-col gap-3.5 max-w-xl">
+                      {step.sectors.map((sec, sIdx) => {
+                        const SecIcon = sec.icon;
                         return (
-                          <div key={iIdx} className="flex flex-col items-start space-y-4 max-w-[200px]">
-                            <div className="w-12 h-12 flex items-center justify-center text-black shrink-0">
-                              <IndIcon className="w-10 h-10 stroke-[1.25]" />
+                          <div key={sIdx} className="flex items-center gap-6">
+                            {/* Icon column */}
+                            <div className="w-10 h-10 flex items-center justify-center text-slate-900 shrink-0">
+                              {SecIcon && <SecIcon className="w-8 h-8 stroke-[1.75] text-slate-900" />}
                             </div>
-                            <h4 className="text-sm font-extrabold text-black leading-tight">
-                              {ind.name}
-                            </h4>
+                            {/* Colored rectangle */}
+                            <div className={`flex-1 flex items-center justify-start pl-8 h-12 rounded-lg font-black text-lg md:text-xl tracking-wide shadow-sm hover:shadow-md transition-shadow duration-300 ${sec.bg} ${sec.text}`}>
+                              {sec.name}
+                            </div>
                           </div>
                         );
                       })}
@@ -421,47 +361,6 @@ export default function DreamDetails() {
                         ))}
                       </div>
 
-                      {/* Collaborators / Partners Widget for DEFINE Tomorrow */}
-                      {idx === 0 && (
-                        <div className="mt-12 border-t border-slate-100 pt-8 space-y-4">
-                          <span className="block text-sm font-bold text-ossisto-blue uppercase tracking-wider">
-                            Our Collaborators
-                          </span>
-                          <h4 className="text-xl md:text-2xl font-extrabold text-black leading-tight tracking-tight">
-                            Partners in our Digital Engineering Footsteps
-                          </h4>
-                          
-                          {/* Infinite Horizontal Logo Marquee */}
-                          <div className="relative flex overflow-hidden w-full bg-[#f8fafc] py-5 rounded-xl border border-slate-100 mt-4 select-none">
-                            <div className="flex gap-12 shrink-0 items-center animate-marquee-slow">
-                              {[...partnerLogos, ...partnerLogos].map((logo, lIdx) => (
-                                <div key={lIdx} className="h-6 md:h-8 flex items-center justify-center px-2 shrink-0">
-                                  {logo.type === "image" ? (
-                                    <img 
-                                      src={logo.src} 
-                                      alt={logo.name} 
-                                      className="h-full object-contain filter opacity-80 hover:opacity-100 transition-opacity duration-300"
-                                      style={{ maxWidth: '90px' }}
-                                    />
-                                  ) : (
-                                    logo.render()
-                                  )}
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-
-                          {/* All Partners Button */}
-                          <div className="pt-2">
-                            <a 
-                              href="#contact"
-                              className="inline-flex items-center gap-1 text-xs md:text-sm font-bold text-black hover:text-ossisto-blue uppercase tracking-wider transition-colors"
-                            >
-                              All Partners <span className="text-[10px] select-none">▶</span>
-                            </a>
-                          </div>
-                        </div>
-                      )}
                     </div>
                   )}
                 </div>

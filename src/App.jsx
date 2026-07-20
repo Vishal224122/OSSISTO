@@ -4,10 +4,6 @@ import ContactModal from './components/ContactModal';
 import Hero from './components/Hero';
 import AboutOssistoModern from './components/AboutOssistoModern';
 import DreamDetails from './components/DreamDetails';
-import SuccessStories from './components/SuccessStories';
-import CareersSectionModern from './components/CareersSectionModern';
-import CSRSectionModern from './components/CSRSectionModern';
-import ResourceCenter from './components/ResourceCenter';
 import Footer from './components/Footer';
 import ProductPlatformEngineering from './components/ProductPlatformEngineering';
 import ApplicationDevelopmentManagement from './components/ApplicationDevelopmentManagement';
@@ -99,18 +95,6 @@ function App() {
 
           {/* Capabilities Grids */}
           <DreamDetails />
-
-          {/* Case studies & Marquee */}
-          <SuccessStories />
-
-          {/* Careers modern banner */}
-          <CareersSectionModern />
-
-          {/* CSR modern section */}
-          <CSRSectionModern />
-
-          {/* Applied Intelligence Resource Center */}
-          <ResourceCenter />
 
 
         </>

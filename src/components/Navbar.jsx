@@ -210,7 +210,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
   };
 
   return (
-    <nav className={`fixed w-full top-0 z-40 transition-all duration-500 ${isScrolled
+    <nav className={`fixed w-screen top-0 z-40 transition-all duration-500 ${isScrolled
       ? 'bg-white shadow-md border-b border-slate-100 py-3'
       : 'bg-black/20 backdrop-blur-[2px] border-b border-white/10 py-5'
       }`}>

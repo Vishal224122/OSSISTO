@@ -3,23 +3,22 @@ import { ArrowUpRight } from 'lucide-react';
 
 export default function Hero() {
   const [hoveredIdx, setHoveredIdx] = useState(null); // Defaults to null (all panels equal width)
-  const [searchQuery, setSearchQuery] = useState('');
 
   const panels = [
     {
-      image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=800&auto=format&fit=crop",
+      image: "/1.png",
       link: "#dream-details"
     },
     {
-      image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?q=80&w=800&auto=format&fit=crop",
+      image: "/2.png",
       link: "#dream-details"
     },
     {
-      image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=800&auto=format&fit=crop",
+      image: "/3.png",
       link: "#dream-details"
     },
     {
-      image: "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=800&auto=format&fit=crop",
+      image: "/4.png",
       link: "#dream-details"
     }
   ];
@@ -99,30 +98,31 @@ export default function Hero() {
         })}
       </div>
 
-      {/* Floating Center Search Bar Overlay (Fixed viewport position) */}
-      <div className="fixed bottom-12 left-1/2 -translate-x-1/2 z-30 w-full max-w-lg px-4 hidden md:block">
-        {/* Custom Search Box */}
-        <div className="bg-slate-950/85 backdrop-blur-md border border-ossisto-blue/30 px-5 py-3 rounded-full flex items-center justify-between gap-3 shadow-2xl">
-          <div className="flex items-center gap-2.5 flex-1">
+      {/* Floating Left Search Button Overlay (Fixed viewport position) */}
+      <div className="fixed bottom-12 left-8 md:left-12 z-30 w-full max-w-[285px] hidden md:block">
+        {/* Custom Search Box converted to a button */}
+        <button
+          onClick={() => {
+            const el = document.getElementById('dream-details');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="w-full bg-slate-950/85 backdrop-blur-md border border-ossisto-blue/30 px-4 py-2.5 rounded-full flex items-center justify-between gap-2 shadow-2xl hover:bg-slate-900/90 transition-all duration-200 cursor-pointer text-left"
+        >
+          <div className="flex items-center gap-2 flex-1">
             {/* Sparkle star icon */}
-            <span className="text-ossisto-blue text-sm font-bold animate-pulse">✦</span>
-            <input
-              type="text"
-              placeholder="Search the intelligent future..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="bg-transparent border-0 text-white placeholder-gray-500 text-xs md:text-sm focus:outline-none w-full font-medium"
-            />
+            <span className="text-ossisto-blue text-xs font-bold animate-pulse">✦</span>
+            <span className="text-gray-300 text-[11px] font-semibold tracking-wide">
+              Search the intelligent future...
+            </span>
           </div>
 
-          {/* Green Go Button */}
-          <button
-            className="w-8 h-8 rounded-full bg-ossisto-blue hover:bg-[#236CB1] flex items-center justify-center text-white shrink-0 shadow-md shadow-ossisto-blue/10 transition-colors duration-200"
-            aria-label="Submit search query"
+          {/* Arrow icon container */}
+          <div
+            className="w-7 h-7 rounded-full bg-ossisto-blue flex items-center justify-center text-white shrink-0 shadow-md shadow-ossisto-blue/10"
           >
-            <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
-          </button>
-        </div>
+            <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />
+          </div>
+        </button>
       </div>
 
       {/* Bullet Indicators aligned to panels (Absolute to Hero, scrolls away) */}

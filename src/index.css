@@ -19,6 +19,8 @@
 
 html {
   scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 body {
@@ -29,19 +31,9 @@ body {
   color: #f3f4f6;
 }
 
-/* Custom scrollbar */
+/* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #0b0f19;
-}
-::-webkit-scrollbar-thumb {
-  background: #1f2937;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #236CB1;
+  display: none;
 }
 
 /* Add custom animations keyframe overrides for slide ins and scrolls */
