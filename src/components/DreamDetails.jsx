@@ -129,7 +129,7 @@ export default function DreamDetails() {
   ];
 
   return (
-    <section id="dream-details" className="bg-white py-16 px-6 md:px-12 lg:px-24 border-b border-gray-100 font-sans relative overflow-hidden">
+    <section id="dream-details" className="bg-white py-16 px-6 md:px-12 lg:px-24 font-sans relative overflow-hidden">
       
       {/* Inline styles for the horizontal logo marquee */}
       <style dangerouslySetInnerHTML={{__html: `
@@ -147,32 +147,7 @@ export default function DreamDetails() {
         }
       `}} />
 
-      {/* Decorative Top-Left Dots Grid */}
-      <div className="absolute top-8 left-8 hidden lg:grid grid-cols-4 gap-1.5 opacity-20 pointer-events-none">
-        {Array.from({ length: 16 }).map((_, i) => (
-          <div key={i} className="w-1.5 h-1.5 rounded-full bg-slate-500" />
-        ))}
-      </div>
 
-      {/* Decorative Right-Side Dots Columns */}
-      <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden lg:grid grid-cols-2 gap-2 opacity-20 pointer-events-none">
-        {Array.from({ length: 16 }).map((_, i) => (
-          <div key={i} className="w-1.5 h-1.5 rounded-full bg-slate-500" />
-        ))}
-      </div>
-
-      {/* Decorative Bottom-Right Arrowheads Grid */}
-      <div className="absolute bottom-16 right-16 hidden lg:flex flex-col gap-2 items-end opacity-20 pointer-events-none">
-        {[1, 2, 3, 4, 5].map((count, rIdx) => (
-          <div key={rIdx} className="flex gap-2">
-            {Array.from({ length: count }).map((_, cIdx) => (
-              <svg key={cIdx} className="w-2.5 h-2.5 text-slate-400" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            ))}
-          </div>
-        ))}
-      </div>
 
       <div className="max-w-6xl mx-auto relative mt-20 pb-20">
         
