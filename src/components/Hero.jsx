@@ -66,10 +66,10 @@ export default function Hero() {
 
               {/* Top-left Orange Text Overlay for the first panel (Automotive) */}
               {idx === 0 && (
-                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left transition-all duration-500 ${isHovered ? 'max-w-xs md:max-w-sm' : 'max-w-[150px]'
-                  }`}>
-                  <h3 className={`font-normal leading-tight font-sans tracking-tight transition-all duration-500 ${isHovered ? 'text-2xl md:text-3.5xl lg:text-4xl text-[#f05a28]' : 'text-lg md:text-xl lg:text-[22px] text-[#f05a28]/90'
-                    }`}>
+                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
+                  isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                }`}>
+                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-[#f05a28] leading-tight font-sans tracking-tight">
                     Solutions for mobility<br />ecosystems
                   </h3>
                 </div>
@@ -77,10 +77,10 @@ export default function Hero() {
 
               {/* Top-left Blue/Cyan Text Overlay for the second panel (Pharma) */}
               {idx === 1 && (
-                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left transition-all duration-500 ${isHovered ? 'max-w-xs md:max-w-sm' : 'max-w-[150px]'
-                  }`}>
-                  <h3 className={`font-normal leading-tight font-sans tracking-tight transition-all duration-500 ${isHovered ? 'text-2xl md:text-3.5xl lg:text-4xl text-[#00aeef]' : 'text-lg md:text-xl lg:text-[22px] text-[#00aeef]/90'
-                    }`}>
+                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
+                  isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                }`}>
+                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-[#00aeef] leading-tight font-sans tracking-tight">
                     Pharma DX & compliance<br />management
                   </h3>
                 </div>
@@ -88,56 +88,55 @@ export default function Hero() {
 
               {/* Text Overlay for the third panel (Electronics / Manufacturing Sectors) */}
               {idx === 2 && (
-                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left transition-all duration-500 ${isHovered ? 'max-w-xs md:max-w-sm' : 'max-w-[150px]'
-                  }`}>
+                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
+                  isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                }`}>
                   {/* Top Header */}
-                  <h3 className={`font-normal leading-tight font-sans tracking-tight transition-all duration-500 ${isHovered ? 'text-2xl md:text-3.5xl lg:text-4xl' : 'text-lg md:text-xl lg:text-[22px]'
-                    }`}>
+                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight">
                     <span className="text-[#c084fc]">Serving across all</span><br />
                     <span className="text-[#00aeef]">manufacturing sectors</span>
                   </h3>
 
                   {/* Service List */}
-                  <div className={`mt-6 md:mt-10 space-y-1.5 font-bold font-sans text-white transition-all duration-500 leading-tight ${isHovered ? 'text-xl md:text-2xl opacity-100' : 'text-xs md:text-sm opacity-85'
-                    }`}>
+                  <div className="mt-6 md:mt-10 space-y-1.5 font-bold font-sans text-white text-xl md:text-2xl leading-tight">
                     <div>Electronics</div>
                     <div>Specialty Steel</div>
                     <div>Food processing</div>
                     <div>Construction material</div>
-                    <div className="opacity-60 text-xs md:text-sm mt-0.5">... etc.</div>
+                    <div className="opacity-60 text-sm mt-0.5">... etc.</div>
                   </div>
                 </div>
               )}
 
               {/* Text Overlay for the fourth panel (Global / Value addition) */}
               {idx === 3 && (
-                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left transition-all duration-500 ${isHovered ? 'max-w-xs md:max-w-sm' : 'max-w-[150px]'
-                  }`}>
-                  <h3 className={`font-normal leading-tight font-sans tracking-tight transition-all duration-500 ${isHovered ? 'text-2xl md:text-3.5xl lg:text-4xl' : 'text-lg md:text-xl lg:text-[22px]'
-                    }`}>
+                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
+                  isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                }`}>
+                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight">
                     <span className="text-gray-500">Aspiring to add value</span><br />
                     <span className="text-slate-800">to manufacturing sector</span>
                   </h3>
                 </div>
               )}
 
-              {/* Dark Overlay Gradient (ensures crisp white text readability over background) */}
-              <div className={`absolute inset-0 transition-opacity duration-500 ${isHovered ? 'bg-gradient-to-t from-black/95 via-black/40 to-transparent' : 'bg-gradient-to-t from-black/90 via-black/50 to-black/20'
-                }`} />
+
 
               {/* Content Box (Keeps expanding titles: AUTOMOTIVE, PHARMA, etc.) */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 z-10">
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 pb-16 md:pb-20 z-10">
                 <div className="space-y-2.5 max-w-xl md:max-w-2xl">
 
                   {/* Letter Header: Displays single letter when normal (A, P, E, G), expands to full word on hover */}
                   <div className="flex flex-col leading-none">
                     <div className="flex items-baseline leading-none">
-                      <span className={`font-black text-white select-none tracking-tight transition-all duration-500 ${isHovered ? 'text-5xl md:text-6xl lg:text-7xl' : 'text-3xl md:text-4xl lg:text-[42px]'
-                        }`}>
+                      <span className={`font-black select-none tracking-tight transition-all duration-500 text-slate-300 ${
+                        isHovered ? 'text-5xl md:text-6xl lg:text-7xl' : 'text-3xl md:text-4xl lg:text-[42px]'
+                      }`}>
                         {panel.letter}
                       </span>
-                      <span className={`font-black text-white tracking-tight transition-all duration-500 origin-left overflow-hidden max-w-2xl opacity-100 ${isHovered ? 'text-4xl md:text-5xl lg:text-6xl' : 'text-2xl md:text-3xl lg:text-[32px]'
-                        }`}>
+                      <span className={`font-black tracking-tight transition-all duration-500 origin-left overflow-hidden max-w-2xl opacity-100 text-slate-300 ${
+                        isHovered ? 'text-4xl md:text-5xl lg:text-6xl' : 'text-2xl md:text-3xl lg:text-[32px]'
+                      }`}>
                         {panel.wordSuffix}
                       </span>
                     </div>
@@ -152,16 +151,16 @@ export default function Hero() {
       </div>
 
       {/* Floating Left Search Button Overlay (Fixed viewport position) */}
-      <div className="fixed bottom-12 left-8 md:left-12 z-30 w-full max-w-[210px] hidden md:block">
+      <div className="fixed bottom-6 left-8 md:left-12 z-30 w-full max-w-[210px] hidden md:block">
         {/* Custom Search Box converted to a button */}
         <button
           onClick={() => {
             const el = document.getElementById('dream-details');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="w-full bg-slate-950/85 backdrop-blur-md border border-ossisto-blue/30 px-5 py-2.5 rounded-full flex items-center justify-center shadow-2xl hover:bg-slate-900/90 transition-all duration-200 cursor-pointer text-center"
+          className="w-full bg-ossisto-blue border border-ossisto-blue px-5 py-2.5 rounded-full flex items-center justify-center shadow-2xl hover:bg-[#236CB1] transition-all duration-200 cursor-pointer text-center"
         >
-          <span className="text-gray-300 text-[11px] font-semibold tracking-wide">
+          <span className="text-white text-[11px] font-bold tracking-wide">
             Open positions – Apply
           </span>
         </button>
