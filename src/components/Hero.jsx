@@ -1,8 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function Hero() {
   const [hoveredIdx, setHoveredIdx] = useState(null); // Defaults to null (all panels equal width)
+  const hoverTimeout = useRef(null);
+
+  const handleMouseEnter = (idx) => {
+    if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
+    hoverTimeout.current = setTimeout(() => {
+      setHoveredIdx(idx);
+    }, 800); // 800ms hover delay
+  };
+
+  const handleMouseLeave = () => {
+    if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
+    setHoveredIdx(null);
+  };
 
   const panels = [
     {
@@ -42,7 +55,7 @@ export default function Hero() {
   return (
     <div
       className="relative h-screen w-full overflow-hidden bg-ossisto-dark"
-      onMouseLeave={() => setHoveredIdx(null)} // Reset to null (all panels equal width) when mouse leaves
+      onMouseLeave={handleMouseLeave} // Reset to null (all panels equal width) when mouse leaves
     >
 
       {/* 4 Vertical Columns Panels */}
@@ -52,7 +65,7 @@ export default function Hero() {
           return (
             <div
               key={idx}
-              onMouseEnter={() => setHoveredIdx(idx)}
+              onMouseEnter={() => handleMouseEnter(idx)}
               className={`relative h-1/5 lg:h-full transition-all duration-700 ease-in-out overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-900/40 cursor-pointer ${isHovered ? 'flex-[2] lg:flex-[2.2]' : 'flex-1 lg:flex-[0.7]'
                 }`}
             >
@@ -88,17 +101,17 @@ export default function Hero() {
 
               {/* Text Overlay for the third panel (Electronics / Manufacturing Sectors) */}
               {idx === 2 && (
-                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
+                <div className={`absolute top-20 left-1/2 -translate-x-1/2 z-20 pointer-events-none select-none text-center max-w-md md:max-w-lg lg:max-w-xl w-[90%] transition-all duration-500 ${
                   isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}>
                   {/* Top Header */}
-                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight">
+                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight text-center">
                     <span className="text-[#c084fc]">Serving across all</span><br />
                     <span className="text-[#00aeef]">manufacturing sectors</span>
                   </h3>
 
                   {/* Service List */}
-                  <div className="mt-6 md:mt-10 space-y-1.5 font-bold font-sans text-white text-xl md:text-2xl leading-tight">
+                  <div className="mt-6 md:mt-10 space-y-1.5 font-bold font-sans text-white text-xl md:text-2xl leading-tight text-center">
                     <div>Electronics</div>
                     <div>Specialty Steel</div>
                     <div>Food processing</div>
@@ -110,10 +123,10 @@ export default function Hero() {
 
               {/* Text Overlay for the fourth panel (Global / Value addition) */}
               {idx === 3 && (
-                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
+                <div className={`absolute top-20 left-1/2 -translate-x-1/2 z-20 pointer-events-none select-none text-center max-w-md md:max-w-lg lg:max-w-xl w-[90%] transition-all duration-500 ${
                   isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}>
-                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight">
+                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight text-center">
                     <span className="text-gray-500">Aspiring to add value</span><br />
                     <span className="text-slate-800">to manufacturing sector</span>
                   </h3>
@@ -121,6 +134,15 @@ export default function Hero() {
               )}
 
 
+
+              {/* Dynamic Overlay Gradient based on hover state (Opposite: dim by default, bright on hover) */}
+              <div className={`absolute inset-0 transition-all duration-500 ${
+                hoveredIdx === null 
+                  ? 'bg-black/40 opacity-100' 
+                  : isHovered 
+                    ? 'bg-transparent opacity-0' 
+                    : 'bg-black/70 opacity-100'
+              }`} />
 
               {/* Content Box (Keeps expanding titles: AUTOMOTIVE, PHARMA, etc.) */}
               <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 pb-16 md:pb-20 z-10">
@@ -151,7 +173,7 @@ export default function Hero() {
       </div>
 
       {/* Floating Left Search Button Overlay (Fixed viewport position) */}
-      <div className="fixed bottom-6 left-8 md:left-12 z-30 w-full max-w-[210px] hidden md:block">
+      <div className="fixed bottom-6 right-20 md:right-24 z-30 w-full max-w-[210px] hidden md:block">
         {/* Custom Search Box converted to a button */}
         <button
           onClick={() => {
