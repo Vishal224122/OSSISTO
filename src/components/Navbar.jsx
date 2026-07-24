@@ -228,7 +228,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
               className="flex items-center"
             >
               <img
-                src="https://ossisto.com/wp-content/uploads/2023/04/Ossisto_Logo.png"
+                src="/logoos.jpeg"
                 alt="Ossisto Logo"
                 className={`h-8 md:h-10 object-contain transition-all duration-300 ${isScrolled ? '' : 'brightness-0 invert'}`}
               />
@@ -423,7 +423,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-slate-100 pb-4">
               <img
-                src="https://ossisto.com/wp-content/uploads/2023/04/Ossisto_Logo.png"
+                src="/logoos.jpeg"
                 alt="Ossisto Logo"
                 className="h-7 object-contain"
               />
