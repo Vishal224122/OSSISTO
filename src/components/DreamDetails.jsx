@@ -37,67 +37,60 @@ export default function DreamDetails() {
       description: "A complete spectrum of modern engineering services built on a strong foundation of AI and deep technology expertise.",
       tabs: [
         {
-          name: "Digital",
-          title: "Digital Engineering",
+          name: "ENTERPRISE DIGITAL & IT",
+          title: "Enterprise Digital & IT",
           image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=800&auto=format&fit=crop",
           text: "From emerging possibilities to an agile cycle of intelligent solution development – discover how everything connects through our strong engineering DNA, product engineering expertise, and trusted partner ecosystem.",
           services: [
-            { title: "Product & Platform Engineering", desc: "Next-generation solutions engineered through software innovation, built and scaled at speed." },
-            { title: "Application Development & Management", desc: "AI-native application architectures designed while systematically reducing legacy technical debt." },
-            { title: "Modernization", desc: "Build resilient, AI-ready IT environments with improved efficiency, adaptability, and scalability." },
-            { title: "Quality Engineering", desc: "Achieve engineering excellence through AI assurance and automation." },
-            { title: "Experience Transformation", desc: "Unlock new opportunities through intelligent experiences engineered for evolving user expectations." },
-            { title: "API & Integrations", desc: "Enable applications and systems to connect, orchestrate, and exchange data seamlessly." },
-            { title: "Global Capability Centers", desc: "Build and scale high-performance GCCs powered by top engineering talent." },
-            { title: "Engineering Platforms For Growth", desc: "Ossisto: Engineering Scalable Platforms for Business Growth." }
+            { title: "Digital Transformation Consulting", desc: "Consulting strategies for scaling enterprise software ecosystems." },
+            { title: "SAP Consulting & Services", desc: "Resilient systems, custom implementations, and SAP ecosystem maintenance." },
+            { title: "Application Development & Modernization", desc: "Build modular, cloud-native apps while systematically reducing technical debt." },
+            { title: "Cloud, DevOps & Infra", desc: "CI/CD automated pipelines, zero-trust cloud orchestration, and cloud audit paths." },
+            { title: "Enterprise integration", desc: "Connecting distinct software applications and pipelines securely." },
+            { title: "PLM Services", desc: "Deploying secure lifecycle management systems for engineering platforms." },
+            { title: "Quality engineering and test automation", desc: "Next-gen test automation using AI-native testing architectures." }
           ]
         },
         {
-          name: "Cloud",
-          title: "Cloud & Infrastructure",
-          image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=800&auto=format&fit=crop",
-          text: "Accelerate your transition to cloud-native systems with engineered pipelines, zero-trust cloud architectures, and proactive FinOps governance.",
-          services: [
-            { title: "Cloud Migration & Re-platforming", desc: "Re-host, re-platform, and decouple workloads to AWS, Azure, and Google Cloud." },
-            { title: "FinOps & Infrastructure Audit", desc: "Audit compute workloads and reduce unnecessary multi-cloud overheads." },
-            { title: "DevSecOps Pipeline Automation", desc: "Automate security scanning directly into your CI/CD delivery pipelines." },
-            { title: "Site Reliability (SRE)", desc: "Maintain 99.99% availability with automated alerts and auto-healing services." },
-            { title: "Serverless Architectures", desc: "Optimize compute scaling and pay only for actual execution runtime." },
-            { title: "Multi-Cloud Governance", desc: "Centralize access control, security policies, and resource logging." },
-            { title: "Infrastructure as Code (IaC)", desc: "Define and provision infrastructure using Terraform and Ansible." },
-            { title: "Managed Cloud Services", desc: "24/7 proactive monitoring, backup management, and environment patching." }
-          ]
-        },
-        {
-          name: "Data & AI",
-          title: "Data Foundations & Applied AI",
+          name: "AI & DATA",
+          title: "AI & Data Solutions",
           image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
           text: "Transition from raw analytics to cognitive operations. We design agentic workflows, clean data warehouses, and secure enterprise LLMs.",
           services: [
-            { title: "Agentic AI Orchestration", desc: "Deploy intelligent agents that execute tasks and workflows autonomously." },
-            { title: "Data Foundation & Pipelines", desc: "Consolidate databases using Snowflake, Databricks, and dbt." },
-            { title: "Cognitive Document Audits", desc: "Automate mortgage, invoice, and contract processing using custom LLMs." },
-            { title: "MLOps & Model Protection", desc: "Train, validate, deploy, and safeguard models against prompt injection." },
-            { title: "Business Intelligence & Reporting", desc: "Build real-time dashboards to drive data-informed decisions." },
-            { title: "Vector DB & RAG Setup", desc: "Enable semantic search across internal corporate knowledge bases." },
-            { title: "Predictive Data Science", desc: "Forecast user churn, asset failures, and sales trends using regression models." },
-            { title: "Data Governance & Quality", desc: "Track lineage, enforce compliance, and maintain clean master data catalogs." }
+            { title: "Data Engineering & integration", desc: "Extracting, transforming, and loading clean datasets via modern pipelines." },
+            { title: "Analytics, BI and dashboards", desc: "Visualizing analytics, metrics, and shopfloor KPIs in real-time." },
+            { title: "Gen AI solutions", desc: "Building, fine-tuning, and scaling generative enterprise systems." },
+            { title: "Intelligent Automation", desc: "Automating administrative and production tasks with cognitive agents." },
+            { title: "Applied AI and Machine Learning", desc: "Deploying production ML models to optimize business operations." },
+            { title: "Computer & Machine Vision", desc: "Defect inspection, visual auditing, and spatial analytics using smart cameras." }
           ]
         },
         {
-          name: "Security",
-          title: "Cyber Security & Compliance",
-          image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
-          text: "Enforce zero-trust principles across all applications, APIs, and infrastructure. Continuous auditing to secure your digital core.",
+          name: "ENGINEERING SERVICES",
+          title: "Engineering Services",
+          image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=800&auto=format&fit=crop",
+          text: "Modular resource planning, custom support pipelines, and hardware-software system engineering.",
           services: [
-            { title: "Identity & Access Management", desc: "Enforce zero-trust controls, single sign-on (SSO), and role-based permissions." },
-            { title: "Application & API Shielding", desc: "Block API scraping and application threats using dynamic firewalls." },
-            { title: "Compliance & Drift Monitoring", desc: "Continuous auditing to track compliance drift against SOC2/ISO metrics." },
-            { title: "24/7 Security Operations (SOC)", desc: "Proactive threat hunting and incident response handled by experts." },
-            { title: "Penetration Testing", desc: "Simulate cyber attacks to find vulnerabilities before adversaries do." },
-            { title: "Cloud Security Posture (CSPM)", desc: "Audit container configurations and cloud permissions in real-time." },
-            { title: "Vulnerability Auditing", desc: "" },
-            { title: "Disaster Recovery Operations", desc: "" }
+            { title: "Product Engineering Support", desc: "Tailored co-engineering and support systems for digital products." },
+            { title: "Embedded Software & Firmware", desc: "Embedded coding, firmware flashing, and RTOS configurations." },
+            { title: "E/E Systems Engineering Support", desc: "Electrical and electronic systems engineering for modern vehicles." },
+            { title: "Product Sustenance & Lifecycle Support", desc: "Auditing, patching, updating, and scaling mature software products." },
+            { title: "Testing and validation support", desc: "Assurance pipelines and regulatory audits for mission-critical apps." },
+            { title: "Engineering documentation & drafting support", desc: "Technical documentation, standards compilation, and drafting." }
+          ]
+        },
+        {
+          name: "Industry 4.0",
+          title: "Smart Factory & Industry 4.0",
+          image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
+          text: "Bridge physical manufacturing assets with cognitive cloud frameworks to build connected, smart industrial spaces.",
+          services: [
+            { title: "MES services", desc: "Implementing and optimizing Manufacturing Execution Systems." },
+            { title: "Connected Factory (IIOT)", desc: "Integrating plant sensors, legacy machines, and cloud storage." },
+            { title: "Connected Workforce", desc: "Empowering plant floor workers with digital analytics and logs." },
+            { title: "Manufacturing analytics & OEE", desc: "Optimizing overall equipment effectiveness via cognitive dashboards." },
+            { title: "Predictive maintenance", desc: "Predicting asset and component failure before they happen." },
+            { title: "Supply Chain Digitization", desc: "Zero-latency supply chain traceability, shipping, and routing." }
           ]
         }
       ]
@@ -151,6 +144,79 @@ export default function DreamDetails() {
             const isFocusSectors = step.isFocusSectorsSection;
             const isServices = step.isServicesSection;
 
+            if (isEngineer) {
+              return (
+                <div key={idx} className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                  
+                  {/* Top Row: Left Heading & Right Video */}
+                  <div className="lg:col-span-4 space-y-4 pr-4">
+                    <span className="block text-lg font-black text-ossisto-blue tracking-wider uppercase">
+                      SERVICES IN DETAIL
+                    </span>
+                    <h3 className="text-2xl lg:text-3.5xl font-black text-black tracking-tight leading-tight">
+                      We serve your IT and Digital needs in a comprehensive manner
+                    </h3>
+                  </div>
+
+                  <div className="lg:col-span-8">
+                    <div className="relative w-full md:w-3/4 aspect-video rounded-2xl overflow-hidden shadow-md bg-slate-950">
+                      <video 
+                        src="/Services in detail video.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        controls
+                        className="w-full h-full object-cover opacity-80"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Bottom Row: Left Tab selectors & Right Services Grid */}
+                  <div className="lg:col-span-4 pr-4 mt-6">
+                    <div className="flex flex-col gap-3 pt-6 border-t border-slate-100">
+                      {step.tabs.map((tab, tIdx) => {
+                        const isActive = engineerTab === tIdx;
+                        return (
+                          <button
+                            key={tIdx}
+                            onClick={() => setEngineerTab(tIdx)}
+                            className={`flex items-center gap-2 text-left font-extrabold text-[11px] sm:text-xs md:text-sm py-1 transition-all always-blue ${
+                              isActive 
+                                ? 'pl-0' 
+                                : 'pl-4'
+                            }`}
+                            style={{
+                              color: isActive ? '#236CB1' : 'rgba(35, 108, 177, 0.5)'
+                            }}
+                          >
+                            {isActive && <span className="text-ossisto-blue text-xs">▶</span>}
+                            {tab.name}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-8 mt-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+                      {step.tabs[engineerTab].services.map((service, sIdx) => (
+                        <div key={sIdx} className="space-y-1">
+                          <h5 className="text-sm font-extrabold text-black">
+                            {service.title}
+                          </h5>
+                          <p className="text-xs text-slate-500 font-medium leading-relaxed">
+                            {service.desc}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                </div>
+              );
+            }
+
             return (
               <div key={idx} className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
@@ -170,15 +236,6 @@ export default function DreamDetails() {
                       </span>
                       <h3 className="text-2xl lg:text-3.5xl font-black text-black tracking-tight leading-tight">
                         One Partner for your complete manufacturing Stack
-                      </h3>
-                    </div>
-                  ) : isEngineer ? (
-                    <div className="space-y-4">
-                      <span className="block text-lg font-black text-ossisto-blue tracking-wider uppercase">
-                        SERVICES IN DETAIL
-                      </span>
-                      <h3 className="text-2xl lg:text-3.5xl font-black text-black tracking-tight leading-tight">
-                        We serve your IT and Digital needs in a comprehensive manner
                       </h3>
                     </div>
                   ) : isFocusSectors ? (
@@ -207,52 +264,11 @@ export default function DreamDetails() {
                       </p>
                     </>
                   )}
-
-                  {/* Vertical domain selectors for ENGINEER Next */}
-                  {isEngineer && (
-                    <div className="flex flex-col gap-3 pt-6 border-t border-slate-100 mt-4">
-                      {step.tabs.map((tab, tIdx) => {
-                        const isActive = engineerTab === tIdx;
-                        return (
-                          <button
-                            key={tIdx}
-                            onClick={() => setEngineerTab(tIdx)}
-                            className={`flex items-center gap-2 text-left font-extrabold text-lg md:text-xl py-1 transition-all always-blue ${
-                              isActive 
-                                ? 'pl-0' 
-                                : 'pl-5'
-                            }`}
-                            style={{
-                              color: isActive ? '#236CB1' : 'rgba(35, 108, 177, 0.5)'
-                            }}
-                          >
-                            {isActive && <span className="text-ossisto-blue text-sm">▶</span>}
-                            {tab.name}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  )}
                 </div>
 
-                {/* Right part: Cards Grid or Engineer Dashboard or Manage Industries */}
+                {/* Right part: Cards Grid or Manage Industries */}
                 <div className="lg:col-span-8">
-                  {isEngineer ? (
-                    // ENGINEER Next Dashboard layout
-                    <div className="space-y-8">
-                      {/* Highlighted Domain Card (Rounded Card Banner) */}
-                      <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-md bg-slate-950">
-                        <video 
-                          src="/Services in detail video.mp4"
-                          loop
-                          playsInline
-                          controls
-                          className="w-full h-full object-cover opacity-80"
-                        />
-                      </div>
-
-                    </div>
-                  ) : isFocusSectors ? (
+                  {isFocusSectors ? (
                     // FOCUS SECTORS horizontal stack
                     <div className="flex flex-col gap-3.5 max-w-xl">
                       {step.sectors.map((sec, sIdx) => {
