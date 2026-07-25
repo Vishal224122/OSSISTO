@@ -9,7 +9,7 @@ export default function Hero() {
     if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
     hoverTimeout.current = setTimeout(() => {
       setHoveredIdx(idx);
-    }, 800); // 800ms hover delay
+    }, 700); // 700ms hover delay
   };
 
   const handleMouseLeave = () => {
@@ -36,10 +36,10 @@ export default function Hero() {
     },
     {
       image: "/3.png",
-      letter: "E",
-      wordSuffix: "lectronics",
+      letter: "M",
+      wordSuffix: "anufacturing",
       greenWord: "Specialty Steel",
-      description: "Niche engineering expertise across electronics, steel, and food processing.",
+      description: "Niche engineering expertise across manufacturing, steel, and food processing.",
       link: "#dream-details"
     },
     {
@@ -101,17 +101,17 @@ export default function Hero() {
 
               {/* Text Overlay for the third panel (Electronics / Manufacturing Sectors) */}
               {idx === 2 && (
-                <div className={`absolute top-20 left-1/2 -translate-x-1/2 z-20 pointer-events-none select-none text-center max-w-md md:max-w-lg lg:max-w-xl w-[90%] transition-all duration-500 ${
+                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
                   isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}>
                   {/* Top Header */}
-                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight text-center">
+                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight text-left">
                     <span className="text-[#c084fc]">Serving across all</span><br />
                     <span className="text-[#00aeef]">manufacturing sectors</span>
                   </h3>
 
                   {/* Service List */}
-                  <div className="mt-6 md:mt-10 space-y-1.5 font-bold font-sans text-white text-xl md:text-2xl leading-tight text-center">
+                  <div className="mt-6 md:mt-10 space-y-1.5 font-bold font-sans text-white text-xl md:text-2xl leading-tight text-left">
                     <div>Electronics</div>
                     <div>Specialty Steel</div>
                     <div>Food processing</div>
@@ -123,12 +123,12 @@ export default function Hero() {
 
               {/* Text Overlay for the fourth panel (Global / Value addition) */}
               {idx === 3 && (
-                <div className={`absolute top-20 left-1/2 -translate-x-1/2 z-20 pointer-events-none select-none text-center max-w-md md:max-w-lg lg:max-w-xl w-[90%] transition-all duration-500 ${
+                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
                   isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}>
-                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight text-center">
-                    <span className="text-gray-500">Aspiring to add value</span><br />
-                    <span className="text-slate-800">to manufacturing sector</span>
+                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight text-left">
+                    <span className="text-white">Adding value to</span><br />
+                    <span className="text-white">global manufacturing</span>
                   </h3>
                 </div>
               )}
@@ -148,21 +148,23 @@ export default function Hero() {
               <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 pb-16 md:pb-20 z-10">
                 <div className="space-y-2.5 max-w-xl md:max-w-2xl">
 
-                  {/* Letter Header: Displays single letter when normal (A, P, E, G), expands to full word on hover */}
-                  <div className="flex flex-col leading-none">
-                    <div className="flex items-baseline leading-none">
-                      <span className={`font-black select-none tracking-tight transition-all duration-500 text-slate-300 ${
-                        isHovered ? 'text-5xl md:text-6xl lg:text-7xl' : 'text-3xl md:text-4xl lg:text-[42px]'
-                      }`}>
-                        {panel.letter}
-                      </span>
-                      <span className={`font-black tracking-tight transition-all duration-500 origin-left overflow-hidden max-w-2xl opacity-100 text-slate-300 ${
-                        isHovered ? 'text-4xl md:text-5xl lg:text-6xl' : 'text-2xl md:text-3xl lg:text-[32px]'
-                      }`}>
-                        {panel.wordSuffix}
-                      </span>
+                  {/* Letter Header: Displays single letter when normal (A, P, M), expands to full word on hover */}
+                  {idx !== 3 && (
+                    <div className="flex flex-col leading-none">
+                      <div className="flex items-baseline leading-none">
+                        <span className={`font-black select-none tracking-tight transition-all duration-500 text-white ${
+                          isHovered ? 'text-5xl md:text-6xl lg:text-7xl' : 'text-3xl md:text-4xl lg:text-[42px]'
+                        }`}>
+                          {panel.letter}
+                        </span>
+                        <span className={`font-black tracking-tight transition-all duration-500 origin-left overflow-hidden max-w-2xl opacity-100 text-white ${
+                          isHovered ? 'text-4xl md:text-5xl lg:text-6xl' : 'text-2xl md:text-3xl lg:text-[32px]'
+                        }`}>
+                          {panel.wordSuffix}
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                 </div>
               </div>

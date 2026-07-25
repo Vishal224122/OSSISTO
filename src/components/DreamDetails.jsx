@@ -12,28 +12,20 @@ export default function DreamDetails() {
       isServicesSection: true,
       cards: [
         {
-          title: "Legacy Migration & Re-platforming",
-          image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=600&auto=format&fit=crop"
+          title: "AI & Data",
+          image: "/AI & Data.png"
         },
         {
-          title: "Data Platform Engineering",
-          image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop"
+          title: "Engineering Services",
+          image: "/Engineering Services.png"
         },
         {
-          title: "Legacy Migration & Re-platforming",
-          image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=600&auto=format&fit=crop"
+          title: "Enterprise Digital & IT",
+          image: "/Enterprise Digital & IT_v02.jpg"
         },
         {
-          title: "Data Platform Engineering",
-          image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop"
-        },
-        {
-          title: "Legacy Migration & Re-platforming",
-          image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=600&auto=format&fit=crop"
-        },
-        {
-          title: "Data Platform Engineering",
-          image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop"
+          title: "Industry 4.0",
+          image: "/Industry 4.0_ver3.png"
         }
       ]
     },
@@ -249,33 +241,16 @@ export default function DreamDetails() {
                     // ENGINEER Next Dashboard layout
                     <div className="space-y-8">
                       {/* Highlighted Domain Card (Rounded Card Banner) */}
-                      <div className="relative w-full h-44 sm:h-52 md:h-60 rounded-2xl overflow-hidden shadow-md bg-slate-950">
-                        <img 
-                          src={step.tabs[engineerTab].image} 
-                          alt={step.tabs[engineerTab].title}
+                      <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-md bg-slate-950">
+                        <video 
+                          src="/Services in detail video.mp4"
+                          loop
+                          playsInline
+                          controls
                           className="w-full h-full object-cover opacity-80"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
-                        <div className="absolute bottom-5 left-6 right-6">
-                          <h4 className="text-xl md:text-2xl font-black text-white leading-tight tracking-tight">
-                            {step.tabs[engineerTab].title}
-                          </h4>
-                        </div>
                       </div>
 
-                      {/* Services Grid (8 offerings) */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 pt-2">
-                        {step.tabs[engineerTab].services.map((service, sIdx) => (
-                          <div key={sIdx} className="space-y-1">
-                            <h5 className="text-sm font-extrabold text-black">
-                              {service.title}
-                            </h5>
-                            <p className="text-xs text-slate-500 font-medium leading-relaxed">
-                              {service.desc}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
                     </div>
                   ) : isFocusSectors ? (
                     // FOCUS SECTORS horizontal stack
@@ -303,17 +278,20 @@ export default function DreamDetails() {
                         {step.cards.map((card, cidx) => (
                           <div 
                             key={cidx} 
-                            className="relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 group aspect-[4/3] bg-slate-950 transition-all duration-300 hover:-translate-y-1"
+                            className="relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl group aspect-[4/3] bg-slate-950 transition-all duration-300 hover:-translate-y-1"
                           >
                             {/* Background Thumbnail Image */}
                             <img 
                               src={card.image} 
                               alt={card.title}
-                              className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                              className="w-full h-full object-cover scale-[1.04] group-hover:scale-110 transition-transform duration-700"
                             />
 
                             {/* Dark Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+
+                            {/* Border Overlay */}
+                            <div className="absolute inset-0 border-2 border-slate-300/90 group-hover:border-[#236CB1] rounded-2xl pointer-events-none z-20 transition-colors duration-300" />
 
                             {/* Play Button if active */}
                             {card.hasPlayButton && (
@@ -326,8 +304,8 @@ export default function DreamDetails() {
                               </button>
                             )}
 
-                            {/* Title Text bottom aligned */}
-                            <div className="absolute bottom-5 left-5 right-5 z-10">
+                            {/* Title Text centered at the bottom */}
+                            <div className="absolute bottom-5 left-5 right-5 text-center z-10">
                               <h4 className="text-base md:text-lg font-bold text-white leading-tight tracking-tight">
                                 {card.title}
                               </h4>

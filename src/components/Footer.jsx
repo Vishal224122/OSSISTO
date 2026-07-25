@@ -27,36 +27,11 @@ export default function Footer() {
     <footer className="bg-white pt-10 pb-36 px-4 sm:px-6 lg:px-8 relative select-none">
       <div className="max-w-7xl mx-auto">
 
-        {/* Bottom Section: Policies, Copyright, Social Icons & Certifications */}
+        {/* Bottom Section: Policies, Copyright, Social Icons */}
         <div className="flex flex-col xl:flex-row justify-between items-center gap-8">
 
-          {/* Left Side: Compliance Certifications */}
-          <div className="flex items-center gap-4 flex-wrap justify-start">
-            {/* Certification Badges */}
-            <div className="flex items-center gap-2">
-              <div className="h-9 flex items-center justify-center p-1">
-                <img
-                  src="https://www.xoriant.com/sites/default/files/styles/webp/public/Bodhi-Images/SOC.png.webp?itok=hII8CyXk"
-                  alt="SOC2 Compliance"
-                  className="max-h-full object-contain filter contrast-125"
-                />
-              </div>
-              <div className="h-9 flex items-center justify-center p-1">
-                <img
-                  src="https://www.xoriant.com/sites/default/files/styles/webp/public/Bodhi-Images/PSI.png.webp?itok=XFTiaMiT"
-                  alt="PCI DSS Certification"
-                  className="max-h-full object-contain filter contrast-125"
-                />
-              </div>
-              <div className="h-9 flex items-center justify-center p-1">
-                <img
-                  src="https://www.xoriant.com/sites/default/files/styles/webp/public/Bodhi-Images/CDP.png.webp?itok=gI9-sgy-"
-                  alt="CDP Rating"
-                  className="max-h-full object-contain filter contrast-125"
-                />
-              </div>
-            </div>
-          </div>
+          {/* Left Side: Empty space / placeholder to balance the layout if needed, or simply left empty to let Center stay centered or justified */}
+          <div className="hidden xl:block w-36"></div>
 
           {/* Center: Policies & Copyright */}
           <div className="flex flex-col items-center gap-2 text-center">
@@ -64,10 +39,6 @@ export default function Footer() {
               <a href="#contact" className="hover:text-ossisto-blue transition-colors underline">TERMS OF USE</a>
               <span>|</span>
               <a href="#contact" className="hover:text-ossisto-blue transition-colors underline">PRIVACY POLICY</a>
-              <span>|</span>
-              <a href="#contact" className="hover:text-ossisto-blue transition-colors underline">SITEMAP</a>
-              <span>|</span>
-              <a href="#contact" className="hover:text-ossisto-blue transition-colors underline">ETHICS</a>
               <span>|</span>
               <a href="#contact" className="hover:text-ossisto-blue transition-colors underline">BRAND POLICY</a>
             </div>

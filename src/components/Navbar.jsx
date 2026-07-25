@@ -34,13 +34,19 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
 
   const menuItems = [
     {
-      title: "DIGITAL",
+      title: "ENTERPRISE DIGITAL & IT",
       headerTitle: "Digital Engineering",
-      desc: "From digital possibilities to an agile cycle of digital solution development - explore how everything connects under our robust technology DNA, product engineering footprint, and dependable partner network.",
+      desc: `The industrial world is changing at a pace that paper-based processes, disconnected systems, and on-premise-only thinking simply cannot match.
+
+Ossisto Global brings together cloud infrastructure, digital twin technology, and industrial IoT to give asset-heavy and engineering-led businesses a single, connected view of their operations — in real time, at scale, from anywhere. We don't digitise for the sake of it. We build digital capability that makes your physical operations faster, smarter, and harder to disrupt.`,
       links: [
-        { name: "Cloud", href: "#dream-details" },
-        { name: "Digital twin", href: "#dream-details" },
-        { name: "IIoT", href: "#dream-details" }
+        { name: "Digital Transformation Consulting", href: "#dream-details" },
+        { name: "SAP Consulting & Services", href: "#dream-details" },
+        { name: "Application Development & Modernization", href: "#dream-details" },
+        { name: "Cloud, DevOps & Infra", href: "#dream-details" },
+        { name: "Enterprise integration", href: "#dream-details" },
+        { name: "PLM Services", href: "#dream-details" },
+        { name: "Quality engineering and test automation", href: "#dream-details" }
       ],
       featured: {
         category: "News",
@@ -54,12 +60,12 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
       headerTitle: "AI & Data Solutions",
       desc: "Harness cognitive engineering frameworks to build enterprise-scale intelligent automation pipelines and models.",
       links: [
-        { name: "Generative AI", href: "#dream-details" },
-        { name: "Machine learning", href: "#dream-details" },
-        { name: "Computer vision", href: "#dream-details" },
-        { name: "Data engineering", href: "#dream-details" },
-        { name: "AI agents", href: "#dream-details" },
-        { name: "Responsible AI", href: "#dream-details" }
+        { name: "Data Engineering & integration", href: "#dream-details" },
+        { name: "Analytics, BI and dashboards", href: "#dream-details" },
+        { name: "Gen AI solutions", href: "#dream-details" },
+        { name: "Intelligent Automation", href: "#dream-details" },
+        { name: "Applied AI and Machine Learning", href: "#dream-details" },
+        { name: "Computer & Machine Vision", href: "#dream-details" }
       ],
       featured: {
         category: "POV",
@@ -69,14 +75,16 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
       }
     },
     {
-      title: "IT SERVICES",
-      headerTitle: "Enterprise IT Services",
+      title: "ENGINEERING SERVICES",
+      headerTitle: "Engineering Services",
       desc: "Implement scalable and resilient database management architectures, modular resource planning systems, and customized support pipelines.",
       links: [
-        { name: "SAP", href: "#dream-details" },
-        { name: "ERP", href: "#dream-details" },
-        { name: "Manufacturing IT", href: "#dream-details" },
-        { name: "Development", href: "#dream-details" }
+        { name: "Product Engineering Support", href: "#dream-details" },
+        { name: "Embedded Software & Firmware", href: "#dream-details" },
+        { name: "E/E Systems Engineering Support", href: "#dream-details" },
+        { name: "Product Sustenance & Lifecycle Support", href: "#dream-details" },
+        { name: "Testing and validation support", href: "#dream-details" },
+        { name: "Engineering documentation & drafting support", href: "#dream-details" }
       ],
       featured: {
         category: "Case Study",
@@ -90,12 +98,12 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
       headerTitle: "Industry 4.0 ",
       desc: "Bridge physical manufacturing assets with cognitive cloud frameworks to build connected, smart industrial spaces.",
       links: [
-        { name: "Smart factory", href: "#dream-details" },
+        { name: "MES services", href: "#dream-details" },
+        { name: "Connected Factory (IIOT)", href: "#dream-details" },
+        { name: "Connected Workforce", href: "#dream-details" },
+        { name: "Manufacturing analytics & OEE", href: "#dream-details" },
         { name: "Predictive maintenance", href: "#dream-details" },
-        { name: "Supply chain x.x", href: "#dream-details" },
-        { name: "Quality 4.0", href: "#dream-details" },
-        { name: "AR/MR", href: "#dream-details" },
-        { name: "Lean & sustainability", href: "#dream-details" }
+        { name: "Supply Chain Digitization", href: "#dream-details" }
       ],
       featured: {
         category: "Overview",
@@ -142,23 +150,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
         image: "https://www.xoriant.com/cdn/ff/mdvIcgUZhbbMQczMvbsjbPz6X0qrifA-bXuSpv-nBi4/1735031350/public/Bodhi-Images/Banner%20Image.jpg"
       }
     },
-    {
-      title: "COE",
-      headerTitle: "Ossisto Centers of Excellence",
-      desc: "Core capabilities that power next-generation software development across embedded systems, AI, and cybersecurity platforms.",
-      links: [
-        { name: "Embedded systems", href: "#dream-details" },
-        { name: "AI & ML", href: "#dream-details" },
-        { name: "Cybersecurity", href: "#dream-details" },
-        { name: "Testing & validation", href: "#dream-details" }
-      ],
-      featured: {
-        category: "Resources",
-        title: "Applied Intelligence Research Publications",
-        desc: "Review our engineering manuals, white papers, and guides.",
-        image: "https://www.xoriant.com/cdn/ff/GtZ1Doo7yII823_hfAETiQaeuDlL0YFKW4GbC9hQ3tA/1781711862/public/styles/webp/public/2026-06/Home%20Page%20Banner%20Orian.png.webp?itok=_etsdsBM"
-      }
-    },
+
     {
       title: "CAREER",
       headerTitle: "Careers at Ossisto",
@@ -214,7 +206,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
       ? 'bg-white shadow-md border-b border-slate-100 py-3'
       : 'bg-black/20 backdrop-blur-[2px] border-b border-white/10 py-5'
       }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
 
           {/* Logo */}
@@ -264,7 +256,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={handleMouseLeave}
                   >
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-12">
+                    <div className="w-full px-4 sm:px-6 lg:px-8 grid grid-cols-12">
 
                       {/* Column 1: Featured Insights (Green background with left bleed) */}
                       <div className="col-span-3 bg-[#236CB1] [box-shadow:-100vw_0_0_100vw_#236CB1] p-6 lg:p-8 text-white flex flex-col justify-between relative z-10">
@@ -354,7 +346,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
                                     e.preventDefault();
                                     onNavigate('application-development');
                                     setActiveDropdown(null);
-                                  } else if (link.name === "Cloud") {
+                                  } else if (link.name === "Cloud" || link.name === "Data Engineering & integration" || link.name === "Cloud, DevOps & Infra" || link.name === "Digital Transformation Consulting") {
                                     e.preventDefault();
                                     onNavigate('cloud-modernization');
                                     setActiveDropdown(null);
@@ -421,7 +413,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
           <div className="relative w-80 bg-white border-l border-slate-100 h-full flex flex-col justify-between p-6 shadow-2xl z-10">
 
             {/* Header */}
-            <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div className="flex-shrink-0 flex items-center justify-between border-b border-slate-100 pb-4">
               <img
                 src="/logoos.jpeg"
                 alt="Ossisto Logo"
