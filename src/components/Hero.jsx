@@ -9,7 +9,7 @@ export default function Hero() {
     if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
     hoverTimeout.current = setTimeout(() => {
       setHoveredIdx(idx);
-    }, 700); // 700ms hover delay
+    }, 350); // 350ms hover delay
   };
 
   const handleMouseLeave = () => {
@@ -20,32 +20,32 @@ export default function Hero() {
   const panels = [
     {
       image: "/1.png",
-      letter: "A",
-      wordSuffix: "utomotive",
+      letter: "D",
+      wordSuffix: "igital",
       greenWord: "Manufacturing",
       description: "Accelerating the digital transformation journey of your manufacturing enterprise.",
       link: "#dream-details"
     },
     {
       image: "/2.png",
-      letter: "P",
-      wordSuffix: "harma",
+      letter: "T",
+      wordSuffix: "ransformation",
       greenWord: "Healthcare",
       description: "Cognitive AI operations and data platform engineering for life sciences.",
       link: "#dream-details"
     },
     {
       image: "/3.png",
-      letter: "M",
-      wordSuffix: "anufacturing",
+      letter: "T",
+      wordSuffix: "hat",
       greenWord: "Specialty Steel",
       description: "Niche engineering expertise across manufacturing, steel, and food processing.",
       link: "#dream-details"
     },
     {
       image: "/4.png",
-      letter: "G",
-      wordSuffix: "lobal",
+      letter: "W",
+      wordSuffix: "orks",
       greenWord: "Capabilities",
       description: "Empowering global enterprises with adaptive AI and cloud solutions.",
       link: "#dream-details"
@@ -82,6 +82,9 @@ export default function Hero() {
                 <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
                   isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}>
+                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-white leading-tight font-sans tracking-tight mb-2">
+                    Automotive
+                  </h3>
                   <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-[#f05a28] leading-tight font-sans tracking-tight">
                     Solutions for mobility<br />ecosystems
                   </h3>
@@ -93,6 +96,9 @@ export default function Hero() {
                 <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
                   isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}>
+                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-white leading-tight font-sans tracking-tight mb-2">
+                    Pharma
+                  </h3>
                   <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-[#00aeef] leading-tight font-sans tracking-tight">
                     Pharma DX & compliance<br />management
                   </h3>
@@ -104,20 +110,12 @@ export default function Hero() {
                 <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
                   isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}>
-                  {/* Top Header */}
-                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight text-left">
-                    <span className="text-[#c084fc]">Serving across all</span><br />
-                    <span className="text-[#00aeef]">manufacturing sectors</span>
+                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-white leading-tight font-sans tracking-tight mb-2">
+                    Chemicals
                   </h3>
-
-                  {/* Service List */}
-                  <div className="mt-6 md:mt-10 space-y-1.5 font-bold font-sans text-white text-xl md:text-2xl leading-tight text-left">
-                    <div>Electronics</div>
-                    <div>Specialty Steel</div>
-                    <div>Food processing</div>
-                    <div>Construction material</div>
-                    <div className="opacity-60 text-sm mt-0.5">... etc.</div>
-                  </div>
+                   <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-[#8bc53f] leading-tight font-sans tracking-tight">
+                    Process Digital<br />transformation
+                  </h3>
                 </div>
               )}
 
@@ -126,10 +124,20 @@ export default function Hero() {
                 <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
                   isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}>
-                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight text-left">
-                    <span className="text-white">Adding value to</span><br />
-                    <span className="text-white">global manufacturing</span>
+                  <h3 className="text-2.5xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight text-left text-white mb-4">
+                    Serving across all sectors
                   </h3>
+                  <div className="space-y-1 font-normal font-sans text-[#c084fc] text-lg md:text-xl lg:text-[22px] tracking-tight leading-normal text-left">
+                    <div>✓ Food processing</div>
+                    <div>✓ Electronics</div>
+                    <div>✓ Machinery</div>
+                    <div>✓ Metals</div>
+                    <div>✓ Appliances</div>
+                    <div>✓ Plastic</div>
+                    <div>✓ Rubber</div>
+                    <div>✓ Packaging</div>
+                    <div className="pl-4">etc.</div>
+                  </div>
                 </div>
               )}
 
@@ -138,7 +146,7 @@ export default function Hero() {
               {/* Dynamic Overlay Gradient based on hover state (Opposite: dim by default, bright on hover) */}
               <div className={`absolute inset-0 transition-all duration-500 ${
                 hoveredIdx === null 
-                  ? 'bg-black/40 opacity-100' 
+                  ? 'bg-black/65 opacity-100' 
                   : isHovered 
                     ? 'bg-transparent opacity-0' 
                     : 'bg-black/70 opacity-100'
@@ -148,8 +156,7 @@ export default function Hero() {
               <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 pb-16 md:pb-20 z-10">
                 <div className="space-y-2.5 max-w-xl md:max-w-2xl">
 
-                  {/* Letter Header: Displays single letter when normal (A, P, M), expands to full word on hover */}
-                  {idx !== 3 && (
+                   {/* Letter Header: Displays single letter when normal (D, T, T, W), expands to full word on hover */}
                     <div className="flex flex-col leading-none">
                       <div className="flex items-baseline leading-none">
                         <span className={`font-black select-none tracking-tight transition-all duration-500 text-white ${
@@ -164,7 +171,6 @@ export default function Hero() {
                         </span>
                       </div>
                     </div>
-                  )}
 
                 </div>
               </div>

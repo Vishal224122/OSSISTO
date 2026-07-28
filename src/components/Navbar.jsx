@@ -58,7 +58,9 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
     {
       title: "AI & DATA",
       headerTitle: "AI & Data Solutions",
-      desc: "Harness cognitive engineering frameworks to build enterprise-scale intelligent automation pipelines and models.",
+      desc: `Governed Data foundations, trusted analytics, business intelligence, grounded Gen AI, intelligent automation, applied machine learning and machine vision.
+
+Applied AI scoped by measurable payback and validated against the method you use today.`,
       links: [
         { name: "Data Engineering & integration", href: "#dream-details" },
         { name: "Analytics, BI and dashboards", href: "#dream-details" },
@@ -258,80 +260,34 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                   >
                     <div className="w-full px-4 sm:px-6 lg:px-8 grid grid-cols-12">
 
-                      {/* Column 1: Featured Insights (Green background with left bleed) */}
-                      <div className="col-span-3 bg-[#236CB1] [box-shadow:-100vw_0_0_100vw_#236CB1] p-6 lg:p-8 text-white flex flex-col justify-between relative z-10">
-                        <div>
-                          <h3 className="text-sm lg:text-base font-extrabold tracking-wider mb-5 uppercase text-white">
-                            Featured Insights
-                          </h3>
-
-                          <div className="space-y-4">
-                            {/* Insight 1 */}
-                            <div className="flex gap-3 items-start text-left">
-                              <img
-                                src="https://www.xoriant.com/cdn/ff/5hii6a26ufChGUjvX3c1n1H8r-6QIlwHLpZONHr00_Q/1771476515/public/styles/100/public/2026-02/Acquisition%20news%20%281%29.png_100x50_2.jpg.webp?itok=pf_clXkg"
-                                alt="Acquisition News"
-                                className="w-16 h-10 object-cover rounded bg-white/10 shrink-0 mt-0.5"
-                              />
-                              <div>
-                                <span className="block text-[8px] font-extrabold uppercase text-green-100 tracking-wider">News</span>
-                                <a href="#keeping-updated" className="block text-[11px] font-bold leading-tight hover:underline line-clamp-2">
-                                  Ossisto Acquires TestDevLab to Expand European Reach
-                                </a>
-                              </div>
-                            </div>
-
-                            {/* Insight 2 */}
-                            <div className="flex gap-3 items-start text-left">
-                              <img
-                                src="https://www.xoriant.com/cdn/ff/mWUn7udaliJWNZOZU5lSTqdazMIBoo7U9P54qTpL73o/1771476514/public/styles/100/public/2026-02/Webpage%20Banner-Desktop.jpg_100x50_2.jpg.webp?itok=hcBXFAEN"
-                                alt="Gen AI POV"
-                                className="w-16 h-10 object-cover rounded bg-white/10 shrink-0 mt-0.5"
-                              />
-                              <div>
-                                <span className="block text-[8px] font-extrabold uppercase text-green-100 tracking-wider">Thought Leadership POV</span>
-                                <a href="#keeping-updated" className="block text-[11px] font-bold leading-tight hover:underline line-clamp-2">
-                                  Gen AI: A Reality Check
-                                </a>
-                              </div>
-                            </div>
-
-                            {/* Insight 3 */}
-                            <div className="flex gap-3 items-start text-left">
-                              <img
-                                src="https://www.xoriant.com/cdn/ff/caTR1zNKWw-48WXXuCHM7xARmfsJvEbyLdj-0ccie_8/1771476514/public/styles/100/public/2026-02/Xoriant-Document-Automation-Platform-Development-for-Mortgage-ISV_100x50_2.jpg.webp?itok=G_aoqKyR"
-                                alt="Document Automation"
-                                className="w-16 h-10 object-cover rounded bg-white/10 shrink-0 mt-0.5"
-                              />
-                              <div>
-                                <span className="block text-[8px] font-extrabold uppercase text-green-100 tracking-wider">Case Study</span>
-                                <a href="#keeping-updated" className="block text-[11px] font-bold leading-tight hover:underline line-clamp-2">
-                                  Accelerating Mortgage Processing with Document Automation
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Column 2: Digital Engineering Narrative */}
-                      <div className="col-span-5 bg-white p-8 lg:p-12 flex flex-col justify-center relative z-10 text-left">
-                        <h2 className="text-2xl lg:text-3xl font-black text-black tracking-tight mb-4">
+                       {/* Column 2: Digital Engineering Narrative (now Column 1) */}
+                      <div className={`col-span-7 p-8 flex flex-col justify-center relative z-10 text-left transition-colors duration-300 ${
+                        item.title === "AI & DATA" 
+                          ? "bg-[#236CB1] text-white lg:py-12 lg:pl-36 lg:pr-12 [box-shadow:-100vw_0_0_100vw_#236CB1]" 
+                          : "bg-white text-black lg:p-12"
+                      }`}>
+                        <h2 className={`text-2xl lg:text-3xl font-black tracking-tight mb-4 ${
+                          item.title === "AI & DATA" ? "text-white" : "text-black"
+                        }`}>
                           {item.headerTitle}
                         </h2>
-                        <p className="text-xs lg:text-sm text-gray-600 leading-relaxed mb-6 max-w-md font-medium">
+                        <p className={`text-xs lg:text-sm leading-relaxed font-medium whitespace-pre-line ${
+                          item.title === "AI & DATA" ? "text-slate-300 max-w-xl" : "text-gray-600 mb-6 max-w-md"
+                        }`}>
                           {item.desc}
                         </p>
-                        <a
-                          href="#dream-details"
-                          className="inline-flex items-center gap-1.5 text-xs lg:text-sm font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-wider"
-                        >
-                          Know More <span className="text-[10px]">▶</span>
-                        </a>
+                        {item.title !== "AI & DATA" && (
+                          <a
+                            href="#dream-details"
+                            className="inline-flex items-center gap-1.5 text-xs lg:text-sm font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-wider"
+                          >
+                            Know More <span className="text-[10px]">▶</span>
+                          </a>
+                        )}
                       </div>
 
-                      {/* Column 3: Sub-links Services List */}
-                      <div className="col-span-4 bg-white p-8 lg:p-12 border-l border-gray-100 flex flex-col justify-center relative z-10 text-left">
+                      {/* Column 3: Sub-links Services List (now Column 2) */}
+                      <div className="col-span-5 bg-white p-8 lg:py-12 lg:pl-32 lg:pr-12 border-l border-gray-100 flex flex-col justify-center relative z-10 text-left">
                         <ul className="space-y-4">
                           {item.links.map((link, idx) => (
                             <li key={idx}>
@@ -368,7 +324,7 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                                     setActiveDropdown(null);
                                   }
                                 }}
-                                className="text-xs lg:text-sm font-bold text-slate-800 hover:text-ossisto-blue flex items-center justify-between group/sublink transition-colors"
+                                className="text-xs lg:text-sm font-bold text-slate-800 hover:text-ossisto-blue grid grid-cols-[280px_auto] items-center group/sublink transition-colors"
                               >
                                 <span>{link.name}</span>
                                 <span className="text-[9px] text-slate-400 group-hover/sublink:text-ossisto-blue transition-colors">▶</span>
