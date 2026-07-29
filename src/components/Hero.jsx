@@ -153,18 +153,18 @@ export default function Hero() {
               }`} />
 
               {/* Content Box (Keeps expanding titles: AUTOMOTIVE, PHARMA, etc.) */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 pb-16 md:pb-20 z-10">
-                <div className="space-y-2.5 max-w-xl md:max-w-2xl">
+              <div className="absolute inset-0 flex flex-col justify-end items-center p-6 md:p-8 pb-16 md:pb-20 z-10 text-center">
+                <div className="space-y-2.5 w-full flex flex-col items-center justify-center">
 
                    {/* Letter Header: Displays single letter when normal (D, T, T, W), expands to full word on hover */}
-                    <div className="flex flex-col leading-none">
-                      <div className="flex items-baseline leading-none">
-                        <span className={`font-black select-none tracking-tight transition-all duration-500 text-white ${
+                    <div className="flex flex-col items-center justify-center leading-normal pb-2">
+                      <div className="flex items-baseline justify-center leading-normal">
+                        <span className={`font-black select-none tracking-wide transition-all duration-500 text-white ${
                           isHovered ? 'text-5xl md:text-6xl lg:text-7xl' : 'text-3xl md:text-4xl lg:text-[42px]'
                         }`}>
                           {panel.letter}
                         </span>
-                        <span className={`font-black tracking-tight transition-all duration-500 origin-left overflow-hidden max-w-2xl opacity-100 text-white ${
+                        <span className={`font-black tracking-wide transition-all duration-500 origin-left overflow-hidden max-w-2xl opacity-100 text-white pb-3 ${
                           isHovered ? 'text-4xl md:text-5xl lg:text-6xl' : 'text-2xl md:text-3xl lg:text-[32px]'
                         }`}>
                           {panel.wordSuffix}
@@ -188,27 +188,44 @@ export default function Hero() {
             const el = document.getElementById('dream-details');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="w-full bg-ossisto-blue border border-ossisto-blue px-5 py-2.5 rounded-full flex items-center justify-center shadow-2xl hover:bg-[#236CB1] transition-all duration-200 cursor-pointer text-center"
+          className="w-full bg-[#0019EB] border border-[#0019EB] px-5 py-2.5 rounded-full flex items-center justify-center shadow-2xl hover:bg-[#0014bd] transition-all duration-200 cursor-pointer text-center"
         >
           <span className="text-white text-[11px] font-bold tracking-wide">
-            Open positions – Apply
+            Apply to Open positions
           </span>
         </button>
       </div>
 
-      {/* Bullet Indicators aligned to panels (Absolute to Hero, scrolls away) */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex justify-center items-center space-x-2 hidden md:flex">
-        {panels.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setHoveredIdx(idx)}
-            className={`h-2 rounded-full transition-all duration-300 border ${hoveredIdx === idx
-              ? 'w-6 bg-white border-white'
-              : 'w-2 bg-transparent border-gray-600 hover:border-white'
-              }`}
-            aria-label={`Go to panel ${idx + 1}`}
-          />
-        ))}
+      {/* Bullet Indicators aligned to panels with downward pointed scroll arrow */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col justify-center items-center space-y-2.5 hidden md:flex">
+        {/* Pagination Dots */}
+        <div className="flex justify-center items-center space-x-2">
+          {panels.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setHoveredIdx(idx)}
+              className={`h-2 rounded-full transition-all duration-300 border ${hoveredIdx === idx
+                ? 'w-6 bg-white border-white'
+                : 'w-2 bg-transparent border-gray-600 hover:border-white'
+                }`}
+              aria-label={`Go to panel ${idx + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Scroll Down Arrow */}
+        <button
+          onClick={() => {
+            const el = document.getElementById('dream-details');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="animate-bounce transition-colors duration-200 cursor-pointer text-[#D9D9D9] hover:text-white"
+          aria-label="Scroll down"
+        >
+          <svg className="w-5 h-5 stroke-[2.5px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+          </svg>
+        </button>
       </div>
 
     </div>

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { X, Search, Linkedin, Instagram, Facebook, Twitter, Youtube, ArrowRight } from 'lucide-react';
 
 export default function Navbar({ onContactClick, onNavigate, currentView }) {
   const isScrolled = true;
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [timeoutId, setTimeoutId] = useState(null);
+  const timeoutRef = useRef(null);
+  const enterTimeoutRef = useRef(null);
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [isSidePanelOpen, setIsSidePanelOpen] = useState(false);
@@ -12,25 +13,35 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
   const [activeTab, setActiveTab] = useState('DIGITAL');
 
   const handleMouseEnter = (index) => {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-      setTimeoutId(null);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
     }
-    setActiveDropdown(index);
+    if (enterTimeoutRef.current) {
+      clearTimeout(enterTimeoutRef.current);
+      enterTimeoutRef.current = null;
+    }
+    enterTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(index);
+    }, 500); // 500ms hover open delay
   };
 
   const handleMouseLeave = () => {
-    const id = setTimeout(() => {
+    if (enterTimeoutRef.current) {
+      clearTimeout(enterTimeoutRef.current);
+      enterTimeoutRef.current = null;
+    }
+    timeoutRef.current = setTimeout(() => {
       setActiveDropdown(null);
     }, 150); // 150ms delay to bridge the transition gap
-    setTimeoutId(id);
   };
 
   useEffect(() => {
     return () => {
-      if (timeoutId) clearTimeout(timeoutId);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      if (enterTimeoutRef.current) clearTimeout(enterTimeoutRef.current);
     };
-  }, [timeoutId]);
+  }, []);
 
   const menuItems = [
     {
@@ -254,17 +265,17 @@ Applied AI scoped by measurable payback and validated against the method you use
                 {/* Mega Dropdown Drawer */}
                 {activeDropdown === index && (
                   <div
-                    className="absolute left-0 right-0 top-full w-screen bg-white border-b border-slate-200 shadow-2xl animate-slide-down-menu z-50 overflow-hidden"
+                    className="absolute left-0 right-0 top-full w-screen bg-white shadow-2xl animate-slide-down-menu z-50 overflow-hidden"
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={handleMouseLeave}
                   >
                     <div className="w-full px-4 sm:px-6 lg:px-8 grid grid-cols-12">
 
                        {/* Column 2: Digital Engineering Narrative (now Column 1) */}
-                      <div className={`col-span-7 p-8 flex flex-col justify-center relative z-10 text-left transition-colors duration-300 ${
+                      <div className={`col-span-7 p-8 flex flex-col justify-center relative z-10 text-left transition-colors duration-300 border-b ${
                         item.title === "AI & DATA" 
-                          ? "bg-[#236CB1] text-white lg:py-12 lg:pl-36 lg:pr-12 [box-shadow:-100vw_0_0_100vw_#236CB1]" 
-                          : "bg-white text-black lg:p-12"
+                          ? "bg-[#236CB1] text-white lg:py-12 lg:pl-36 lg:pr-12 [box-shadow:-100vw_0_0_100vw_#236CB1] border-[#236CB1]" 
+                          : "bg-white text-black lg:p-12 border-slate-200"
                       }`}>
                         <h2 className={`text-2xl lg:text-3xl font-black tracking-tight mb-4 ${
                           item.title === "AI & DATA" ? "text-white" : "text-black"
@@ -287,7 +298,7 @@ Applied AI scoped by measurable payback and validated against the method you use
                       </div>
 
                       {/* Column 3: Sub-links Services List (now Column 2) */}
-                      <div className="col-span-5 bg-white p-8 lg:py-12 lg:pl-32 lg:pr-12 border-l border-gray-100 flex flex-col justify-center relative z-10 text-left">
+                      <div className="col-span-5 bg-white p-8 lg:py-12 lg:pl-32 lg:pr-12 border-l border-b border-gray-100 flex flex-col justify-center relative z-10 text-left">
                         <ul className="space-y-4">
                           {item.links.map((link, idx) => (
                             <li key={idx}>

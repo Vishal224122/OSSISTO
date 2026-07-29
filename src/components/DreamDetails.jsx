@@ -146,7 +146,7 @@ export default function DreamDetails() {
 
             if (isEngineer) {
               return (
-                <div key={idx} className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div key={idx} className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-start !mt-[18rem] !mb-[18rem]">
                   
                   {/* Top Row: Left Heading & Right Video */}
                   <div className="lg:col-span-4 space-y-4 pr-4">
@@ -158,7 +158,7 @@ export default function DreamDetails() {
                     </h3>
                   </div>
 
-                  <div className="lg:col-span-8">
+                  <div className="lg:col-span-8 flex justify-end">
                     <div className="relative w-full md:w-3/4 aspect-video rounded-2xl overflow-hidden shadow-md bg-slate-950">
                       <video 
                         src="/Services in detail video.mp4"
