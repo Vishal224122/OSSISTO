@@ -79,13 +79,13 @@ export default function Hero() {
 
               {/* Top-left Orange Text Overlay for the first panel (Automotive) */}
               {idx === 0 && (
-                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
+                <div className={`absolute top-10 left-5 sm:top-20 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
                   isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}>
-                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-white leading-tight font-sans tracking-tight mb-2">
+                  <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal text-white leading-tight font-sans tracking-tight mb-1 sm:mb-2">
                     Automotive
                   </h3>
-                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-[#f05a28] leading-tight font-sans tracking-tight">
+                  <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal text-[#f05a28] leading-tight font-sans tracking-tight">
                     Solutions for mobility<br />ecosystems
                   </h3>
                 </div>
@@ -93,13 +93,13 @@ export default function Hero() {
 
               {/* Top-left Blue/Cyan Text Overlay for the second panel (Pharma) */}
               {idx === 1 && (
-                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
+                <div className={`absolute top-10 left-5 sm:top-20 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
                   isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}>
-                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-white leading-tight font-sans tracking-tight mb-2">
+                  <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal text-white leading-tight font-sans tracking-tight mb-1 sm:mb-2">
                     Pharma
                   </h3>
-                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-[#00aeef] leading-tight font-sans tracking-tight">
+                  <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal text-[#00aeef] leading-tight font-sans tracking-tight">
                     Pharma DX & compliance<br />management
                   </h3>
                 </div>
@@ -107,13 +107,13 @@ export default function Hero() {
 
               {/* Text Overlay for the third panel (Electronics / Manufacturing Sectors) */}
               {idx === 2 && (
-                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
+                <div className={`absolute top-10 left-5 sm:top-20 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
                   isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}>
-                  <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-white leading-tight font-sans tracking-tight mb-2">
+                  <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal text-white leading-tight font-sans tracking-tight mb-1 sm:mb-2">
                     Chemicals
                   </h3>
-                   <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-normal text-[#8bc53f] leading-tight font-sans tracking-tight">
+                   <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal text-[#8bc53f] leading-tight font-sans tracking-tight">
                     Process Digital<br />transformation
                   </h3>
                 </div>
