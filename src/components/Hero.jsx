@@ -66,7 +66,7 @@ export default function Hero() {
             <div
               key={idx}
               onMouseEnter={() => handleMouseEnter(idx)}
-              className={`relative h-1/5 lg:h-full transition-all duration-700 ease-in-out overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-900/40 cursor-pointer ${isHovered ? 'flex-[2] lg:flex-[2.2]' : 'flex-1 lg:flex-[0.7]'
+              className={`relative h-1/5 lg:h-full transition-all duration-700 ease-in-out overflow-hidden border-b-0 lg:border-r border-slate-900/40 cursor-pointer ${isHovered ? 'flex-[2] lg:flex-[2.2]' : 'flex-1 lg:flex-[0.7]'
                 }`}
             >
 
@@ -121,13 +121,13 @@ export default function Hero() {
 
               {/* Text Overlay for the fourth panel (Global / Value addition) */}
               {idx === 3 && (
-                <div className={`absolute top-20 left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
+                <div className={`absolute top-10 left-5 sm:top-20 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
                   isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}>
-                  <h3 className="text-2.5xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight text-left text-white mb-4">
+                  <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight text-left text-white mb-2 sm:mb-4">
                     Serving across all sectors
                   </h3>
-                  <div className="space-y-1 font-normal font-sans text-[#c084fc] text-lg md:text-xl lg:text-[22px] tracking-tight leading-normal text-left">
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-1 sm:block sm:space-y-1 font-normal font-sans text-[#c084fc] text-xs sm:text-lg md:text-xl lg:text-[22px] tracking-tight leading-snug sm:leading-normal text-left">
                     <div>✓ Food processing</div>
                     <div>✓ Electronics</div>
                     <div>✓ Machinery</div>
@@ -136,7 +136,7 @@ export default function Hero() {
                     <div>✓ Plastic</div>
                     <div>✓ Rubber</div>
                     <div>✓ Packaging</div>
-                    <div className="pl-4">etc.</div>
+                    <div className="pl-2 sm:pl-4">etc.</div>
                   </div>
                 </div>
               )}
@@ -216,7 +216,7 @@ export default function Hero() {
         {/* Scroll Down Arrow */}
         <button
           onClick={() => {
-            const el = document.getElementById('dream-details');
+            const el = document.getElementById('about-ossisto-modern');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }}
           className="animate-bounce transition-colors duration-200 cursor-pointer text-[#D9D9D9] hover:text-white"

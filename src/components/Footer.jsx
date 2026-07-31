@@ -24,11 +24,11 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white pt-10 pb-36 px-4 sm:px-6 lg:px-8 relative select-none">
-      <div className="max-w-7xl mx-auto">
+    <footer className="bg-white pt-6 pb-24 px-4 sm:px-6 lg:px-8 relative select-none" style={{ borderTop: 'none', border: 'none', boxShadow: 'none' }}>
+      <div className="max-w-7xl mx-auto" style={{ borderTop: 'none', border: 'none' }}>
 
         {/* Bottom Section: Policies, Copyright, Social Icons */}
-        <div className="flex flex-col xl:flex-row justify-between items-center gap-8">
+        <div className="flex flex-col xl:flex-row justify-between items-center gap-8" style={{ borderTop: 'none', border: 'none' }}>
 
           {/* Left Side: Empty space / placeholder to balance the layout if needed, or simply left empty to let Center stay centered or justified */}
           <div className="hidden xl:block w-36"></div>

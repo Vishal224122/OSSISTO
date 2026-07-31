@@ -406,7 +406,7 @@ export default function ApplicationDevelopmentManagement() {
 
       {/* 2. Sub-Navbar Tab Menu Wrapper (Anchor-Relative Docking) */}
       <div id="subnav-anchor" className="w-full h-[56px] relative z-30">
-        <div className={`bg-white border-b border-gray-200 shadow-sm transition-all duration-150 ${
+        <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${
           isSticky 
             ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}` 
             : 'absolute top-0 left-0 w-full'
@@ -433,7 +433,7 @@ export default function ApplicationDevelopmentManagement() {
       </div>
 
       {/* 3. Future Ready Apps Section */}
-      <section id="future-ready" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
+      <section id="future-ready" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Left dots decoration */}
           <div className="hidden md:flex md:col-span-3 lg:col-span-4 justify-center">
@@ -462,7 +462,7 @@ export default function ApplicationDevelopmentManagement() {
       </section>
 
       {/* 4. Our Capabilities */}
-      <section id="capabilities" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-slate-50">
+      <section id="capabilities" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-slate-50">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -492,7 +492,7 @@ export default function ApplicationDevelopmentManagement() {
       </section>
 
       {/* 5. Our Key Differentiators */}
-      <section id="differentiators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
+      <section id="differentiators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -515,7 +515,7 @@ export default function ApplicationDevelopmentManagement() {
       </section>
 
       {/* 6. Featured Insights */}
-      <section id="insights" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-slate-50">
+      <section id="insights" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           
           <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-xl border border-slate-150 flex flex-col md:flex-row bg-white min-h-[280px]">
@@ -559,7 +559,7 @@ export default function ApplicationDevelopmentManagement() {
       </section>
 
       {/* 7. How We Deliver */}
-      <section id="delivery" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
+      <section id="delivery" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -582,7 +582,7 @@ export default function ApplicationDevelopmentManagement() {
       </section>
 
       {/* 8. Accelerators In House */}
-      <section id="accelerators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b border-gray-150">
+      <section id="accelerators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b-0 lg:border-b border-gray-150">
         <div className="max-w-7xl mx-auto space-y-16">
           
           <div className="text-left space-y-3">
@@ -664,7 +664,7 @@ export default function ApplicationDevelopmentManagement() {
       </section>
 
       {/* 9. Incredible Numbers Section */}
-      <section className="relative py-20 px-6 md:px-12 lg:px-24 overflow-hidden border-b border-gray-150">
+      <section className="relative py-20 px-6 md:px-12 lg:px-24 overflow-hidden border-b-0 lg:border-b border-gray-150">
         <div 
           className="absolute inset-0 bg-cover bg-center z-0" 
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop')` }}
@@ -714,7 +714,7 @@ export default function ApplicationDevelopmentManagement() {
       </section>
 
       {/* 10. Success Stories */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b border-gray-150">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b-0 lg:border-b border-gray-150">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-left space-y-2">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -742,13 +742,13 @@ export default function ApplicationDevelopmentManagement() {
       </section>
 
       {/* 11. Keeping You Updated */}
-      <section id="updates" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b border-gray-150">
+      <section id="updates" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b-0 lg:border-b border-gray-150">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-3">
             <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
               Keeping You Updated
             </span>
-            <div className="flex justify-center space-x-6 text-sm font-bold border-b border-gray-150 pb-2 max-w-xs mx-auto">
+            <div className="flex justify-center space-x-6 text-sm font-bold border-b-0 lg:border-b border-gray-150 pb-2 max-w-xs mx-auto">
               <button 
                 onClick={() => setActiveResourceTab('thought')}
                 className={`pb-2 transition-all cursor-pointer ${
@@ -804,7 +804,7 @@ export default function ApplicationDevelopmentManagement() {
       </section>
 
       {/* 12. Our other key areas for Digital Engineering Services */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b border-gray-150">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b-0 lg:border-b border-gray-150">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-5 space-y-4 text-left relative">
             <div className="absolute -left-8 -top-12 flex flex-col gap-1.5 opacity-40">
@@ -838,7 +838,7 @@ export default function ApplicationDevelopmentManagement() {
       </section>
 
       {/* 13. Questions frequently asked (FAQ Section) */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b border-gray-150">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-none">
         <div className="max-w-3xl mx-auto text-left">
           
           <h2 className="text-2xl md:text-3xl font-black text-black tracking-tight mb-4">

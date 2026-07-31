@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AboutOssistoModern() {
   return (
-    <section className="bg-white pt-40 pb-20 px-6 md:px-12 lg:px-24 font-sans flex flex-col items-center text-center">
+    <section id="about-ossisto-modern" className="bg-white pt-16 sm:pt-24 md:pt-40 pb-10 sm:pb-14 md:pb-20 px-6 md:px-12 lg:px-24 font-sans flex flex-col items-center text-center border-none border-b-0 border-t-0 outline-none">
       <div className="max-w-7xl mx-auto flex flex-col items-center w-full">
         
         {/* About Ossisto Text Container (Centered) */}

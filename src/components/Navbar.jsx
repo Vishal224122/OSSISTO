@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { X, Search, Linkedin, Instagram, Facebook, Twitter, Youtube, ArrowRight } from 'lucide-react';
+import { Menu, X, Search, Linkedin, Instagram, Facebook, Twitter, Youtube, ArrowRight } from 'lucide-react';
 
 export default function Navbar({ onContactClick, onNavigate, currentView }) {
   const isScrolled = true;
@@ -45,25 +45,41 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
 
   const menuItems = [
     {
-      title: "ENTERPRISE DIGITAL & IT",
-      headerTitle: "Digital Engineering",
-      desc: `The industrial world is changing at a pace that paper-based processes, disconnected systems, and on-premise-only thinking simply cannot match.
-
-Ossisto Global brings together cloud infrastructure, digital twin technology, and industrial IoT to give asset-heavy and engineering-led businesses a single, connected view of their operations — in real time, at scale, from anywhere. We don't digitise for the sake of it. We build digital capability that makes your physical operations faster, smarter, and harder to disrupt.`,
+      title: "Industry 4.0",
+      headerTitle: "Industry 4.0 ",
+      desc: "Bridge physical manufacturing assets with cognitive cloud frameworks to build connected, smart industrial spaces.",
       links: [
-        { name: "Digital Transformation Consulting", href: "#dream-details" },
-        { name: "SAP Consulting & Services", href: "#dream-details" },
-        { name: "Application Development & Modernization", href: "#dream-details" },
-        { name: "Cloud, DevOps & Infra", href: "#dream-details" },
-        { name: "Enterprise integration", href: "#dream-details" },
-        { name: "PLM Services", href: "#dream-details" },
-        { name: "Quality engineering and test automation", href: "#dream-details" }
+        { name: "MES services", href: "#dream-details" },
+        { name: "Connected Factory (IIOT)", href: "#dream-details" },
+        { name: "Connected Workforce", href: "#dream-details" },
+        { name: "Manufacturing analytics & OEE", href: "#dream-details" },
+        { name: "Predictive maintenance", href: "#dream-details" },
+        { name: "Supply Chain Digitization", href: "#dream-details" }
       ],
       featured: {
-        category: "News",
-        title: "Ossisto Acquires TestDevLab to Expand European Reach",
-        desc: "Expanding presence in EU for AI-driven Quality Engineering.",
-        image: "https://www.xoriant.com/cdn/ff/5hii6a26ufChGUjvX3c1n1H8r-6QIlwHLpZONHr00_Q/1771476515/public/styles/100/public/2026-02/Acquisition%20news%20%281%29.png_100x50_2.jpg.webp?itok=pf_clXkg"
+        category: "Overview",
+        title: "Smart Manufacturing Blueprint",
+        desc: "A framework guide to digital twin and shopfloor automation.",
+        image: "https://www.xoriant.com/cdn/ff/mdvIcgUZhbbMQczMvbsjbPz6X0qrifA-bXuSpv-nBi4/1735031350/public/Bodhi-Images/Banner%20Image.jpg"
+      }
+    },
+    {
+      title: "ENGINEERING SERVICES",
+      headerTitle: "Engineering Services",
+      desc: "Implement scalable and resilient database management architectures, modular resource planning systems, and customized support pipelines.",
+      links: [
+        { name: "Product Engineering Support", href: "#dream-details" },
+        { name: "Embedded Software & Firmware", href: "#dream-details" },
+        { name: "E/E Systems Engineering Support", href: "#dream-details" },
+        { name: "Product Sustenance & Lifecycle Support", href: "#dream-details" },
+        { name: "Testing and validation support", href: "#dream-details" },
+        { name: "Engineering documentation & drafting support", href: "#dream-details" }
+      ],
+      featured: {
+        category: "Case Study",
+        title: "Accelerating Mortgage Processing with Document Automation",
+        desc: "Reducing lifecycle overheads by 70% with intelligent processing.",
+        image: "https://www.xoriant.com/cdn/ff/caTR1zNKWw-48WXXuCHM7xARmfsJvEbyLdj-0ccie_8/1771476514/public/styles/100/public/2026-02/Xoriant-Document-Automation-Platform-Development-for-Mortgage-ISV_100x50_2.jpg.webp?itok=G_aoqKyR"
       }
     },
     {
@@ -88,41 +104,25 @@ Applied AI scoped by measurable payback and validated against the method you use
       }
     },
     {
-      title: "ENGINEERING SERVICES",
-      headerTitle: "Engineering Services",
-      desc: "Implement scalable and resilient database management architectures, modular resource planning systems, and customized support pipelines.",
+      title: "ENTERPRISE DIGITAL & IT",
+      headerTitle: "Digital Engineering",
+      desc: `The industrial world is changing at a pace that paper-based processes, disconnected systems, and on-premise-only thinking simply cannot match.
+
+Ossisto Global brings together cloud infrastructure, digital twin technology, and industrial IoT to give asset-heavy and engineering-led businesses a single, connected view of their operations — in real time, at scale, from anywhere. We don't digitise for the sake of it. We build digital capability that makes your physical operations faster, smarter, and harder to disrupt.`,
       links: [
-        { name: "Product Engineering Support", href: "#dream-details" },
-        { name: "Embedded Software & Firmware", href: "#dream-details" },
-        { name: "E/E Systems Engineering Support", href: "#dream-details" },
-        { name: "Product Sustenance & Lifecycle Support", href: "#dream-details" },
-        { name: "Testing and validation support", href: "#dream-details" },
-        { name: "Engineering documentation & drafting support", href: "#dream-details" }
+        { name: "Digital Transformation Consulting", href: "#dream-details" },
+        { name: "SAP Consulting & Services", href: "#dream-details" },
+        { name: "Application Development & Modernization", href: "#dream-details" },
+        { name: "Cloud, DevOps & Infra", href: "#dream-details" },
+        { name: "Enterprise integration", href: "#dream-details" },
+        { name: "PLM Services", href: "#dream-details" },
+        { name: "Quality engineering and test automation", href: "#dream-details" }
       ],
       featured: {
-        category: "Case Study",
-        title: "Accelerating Mortgage Processing with Document Automation",
-        desc: "Reducing lifecycle overheads by 70% with intelligent processing.",
-        image: "https://www.xoriant.com/cdn/ff/caTR1zNKWw-48WXXuCHM7xARmfsJvEbyLdj-0ccie_8/1771476514/public/styles/100/public/2026-02/Xoriant-Document-Automation-Platform-Development-for-Mortgage-ISV_100x50_2.jpg.webp?itok=G_aoqKyR"
-      }
-    },
-    {
-      title: "Industry 4.0",
-      headerTitle: "Industry 4.0 ",
-      desc: "Bridge physical manufacturing assets with cognitive cloud frameworks to build connected, smart industrial spaces.",
-      links: [
-        { name: "MES services", href: "#dream-details" },
-        { name: "Connected Factory (IIOT)", href: "#dream-details" },
-        { name: "Connected Workforce", href: "#dream-details" },
-        { name: "Manufacturing analytics & OEE", href: "#dream-details" },
-        { name: "Predictive maintenance", href: "#dream-details" },
-        { name: "Supply Chain Digitization", href: "#dream-details" }
-      ],
-      featured: {
-        category: "Overview",
-        title: "Smart Manufacturing Blueprint",
-        desc: "A framework guide to digital twin and shopfloor automation.",
-        image: "https://www.xoriant.com/cdn/ff/mdvIcgUZhbbMQczMvbsjbPz6X0qrifA-bXuSpv-nBi4/1735031350/public/Bodhi-Images/Banner%20Image.jpg"
+        category: "News",
+        title: "Ossisto Acquires TestDevLab to Expand European Reach",
+        desc: "Expanding presence in EU for AI-driven Quality Engineering.",
+        image: "https://www.xoriant.com/cdn/ff/5hii6a26ufChGUjvX3c1n1H8r-6QIlwHLpZONHr00_Q/1771476515/public/styles/100/public/2026-02/Acquisition%20news%20%281%29.png_100x50_2.jpg.webp?itok=pf_clXkg"
       }
     },
     {
@@ -216,8 +216,8 @@ Applied AI scoped by measurable payback and validated against the method you use
 
   return (
     <nav className={`fixed w-screen top-0 z-40 transition-all duration-500 ${isScrolled
-      ? 'bg-white shadow-md border-b border-slate-100 py-3'
-      : 'bg-black/20 backdrop-blur-[2px] border-b border-white/10 py-5'
+      ? 'bg-white shadow-none lg:shadow-md border-b-0 lg:border-b border-slate-100 py-3'
+      : 'bg-black/20 backdrop-blur-[2px] border-b-0 lg:border-b border-white/10 py-5'
       }`}>
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -351,15 +351,24 @@ Applied AI scoped by measurable payback and validated against the method you use
             ))}
           </div>
 
-          {/* Right section: CONTACT button */}
-          <div className="flex items-center lg:-mr-4">
+          {/* Right section: CONTACT button & Mobile Hamburger Toggle */}
+          <div className="flex items-center gap-3 lg:-mr-4">
 
             {/* CONTACT ▶ Button */}
             <button
               onClick={onContactClick}
-              className="bg-ossisto-blue always-blue-bg hover:bg-[#236CB1] text-white font-black py-2.5 px-7 text-xs rounded-md uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 shadow-md shadow-ossisto-blue/10 shrink-0"
+              className="bg-ossisto-blue always-blue-bg hover:bg-[#236CB1] text-white font-black py-2 px-4 sm:py-2.5 sm:px-7 text-[11px] sm:text-xs rounded-md uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all duration-300 shadow-md shadow-ossisto-blue/10 shrink-0"
             >
               CONTACT <span className="text-[9px] select-none">▶</span>
+            </button>
+
+            {/* Mobile Hamburger Toggle Button */}
+            <button
+              onClick={() => setIsSidePanelOpen(!isSidePanelOpen)}
+              className="lg:hidden p-2 text-slate-800 hover:text-ossisto-blue focus:outline-none transition-colors"
+              aria-label="Toggle mobile menu"
+            >
+              <Menu className="w-6 h-6 stroke-[2.2]" />
             </button>
 
           </div>
@@ -377,105 +386,121 @@ Applied AI scoped by measurable payback and validated against the method you use
           />
 
           {/* Sidebar Drawer container */}
-          <div className="relative w-80 bg-white border-l border-slate-100 h-full flex flex-col justify-between p-6 shadow-2xl z-10">
+          <div className="relative w-80 sm:w-96 bg-white border-l border-slate-100 h-full flex flex-col justify-between p-6 shadow-2xl z-10 overflow-hidden">
 
             {/* Header */}
-            <div className="flex-shrink-0 flex items-center justify-between border-b border-slate-100 pb-4">
+            <div className="flex-shrink-0 flex items-center justify-between pb-4">
               <img
                 src="/logoos.jpeg"
                 alt="Ossisto Logo"
-                className="h-7 object-contain"
+                className="h-7 sm:h-8 object-contain"
               />
               <button
                 onClick={() => setIsSidePanelOpen(false)}
-                className="text-slate-400 hover:text-slate-800 p-2 rounded-full hover:bg-slate-50 transition-colors"
+                className="text-slate-500 hover:text-slate-900 p-2 rounded-full hover:bg-slate-100 transition-colors"
               >
-                <X className="w-5 h-5" />
+                <X className="w-6 h-6" />
               </button>
             </div>
 
-            {/* Menu Sections */}
-            <div className="flex-1 overflow-y-auto py-6 space-y-6">
+            {/* Menu Items List */}
+            <div className="flex-1 overflow-y-auto py-6 space-y-3 pr-1">
 
-              {/* Category 1: Thought Leadership */}
-              <div className="space-y-2">
-                <button
-                  onClick={() => setActiveSideSub(activeSideSub === 'thought' ? null : 'thought')}
-                  className="w-full flex items-center justify-between text-base font-bold text-slate-900 hover:text-ossisto-blue transition-colors text-left"
-                >
-                  <span>Thought Leadership</span>
-                  <span className="text-xs text-slate-400 font-mono">{activeSideSub === 'thought' ? '[-]' : '[+]'}</span>
-                </button>
-                {activeSideSub === 'thought' && (
-                  <div className="pl-4 space-y-2 border-l border-slate-100 mt-2 animate-fade-in">
-                    {sidebarGroups.thoughtLeadership.map((item, idx) => (
-                      <a
-                        key={idx}
-                        href={item.href}
-                        onClick={() => setIsSidePanelOpen(false)}
-                        className="block text-sm text-slate-600 hover:text-ossisto-blue py-1 transition-colors font-medium"
-                      >
-                        {item.name}
-                      </a>
-                    ))}
+              {/* Main Services Navigation Links */}
+              {menuItems.map((item, idx) => {
+                const isOpen = activeSideSub === idx;
+                return (
+                  <div key={idx} className="pb-2.5">
+                    <button
+                      onClick={() => setActiveSideSub(isOpen ? null : idx)}
+                      className="w-full flex items-center justify-between text-xs sm:text-sm font-extrabold text-slate-900 hover:text-ossisto-blue transition-colors text-left uppercase tracking-wider py-1"
+                    >
+                      <span>{item.title}</span>
+                      <span className="text-xs text-ossisto-blue font-mono font-bold">
+                        {isOpen ? '−' : '+'}
+                      </span>
+                    </button>
+
+                    {/* Sub-links dropdown */}
+                    {isOpen && (
+                      <div className="mt-3 space-y-3 animate-fade-in">
+
+                        {/* Narrative Header Box */}
+                        <div className={`p-4 rounded-xl text-left transition-all ${
+                          item.title === "AI & DATA"
+                            ? "bg-[#236CB1] text-white shadow-md"
+                            : "bg-slate-50 text-slate-900 border border-slate-100"
+                        }`}>
+                          <h4 className={`text-sm sm:text-base font-black tracking-tight mb-1.5 ${
+                            item.title === "AI & DATA" ? "text-white" : "text-black"
+                          }`}>
+                            {item.headerTitle}
+                          </h4>
+                          <p className={`text-[11px] sm:text-xs leading-relaxed font-medium whitespace-pre-line ${
+                            item.title === "AI & DATA" ? "text-slate-100" : "text-slate-600"
+                          }`}>
+                            {item.desc}
+                          </p>
+                        </div>
+
+                        {/* Sub-links List */}
+                        <div className="pl-2 space-y-2 border-l-2 border-ossisto-blue/30 pt-1">
+                          {item.links.map((link, lIdx) => (
+                            <a
+                              key={lIdx}
+                              href={link.href}
+                              onClick={(e) => {
+                                setIsSidePanelOpen(false);
+                                if (link.name === "IIoT") {
+                                  e.preventDefault();
+                                  onNavigate('product-engineering');
+                                } else if (link.name === "Development") {
+                                  e.preventDefault();
+                                  onNavigate('application-development');
+                                } else if (link.name === "Cloud" || link.name === "Data Engineering & integration" || link.name === "Cloud, DevOps & Infra" || link.name === "Digital Transformation Consulting") {
+                                  e.preventDefault();
+                                  onNavigate('cloud-modernization');
+                                } else if (link.name === "Data engineering") {
+                                  e.preventDefault();
+                                  onNavigate('data-modernization');
+                                } else if (link.name === "Cybersecurity") {
+                                  e.preventDefault();
+                                  onNavigate('data-security');
+                                } else if (link.name === "Banking & Financial Services") {
+                                  e.preventDefault();
+                                  onNavigate('banking-services');
+                                } else {
+                                  onNavigate('home');
+                                }
+                              }}
+                              className="flex items-center justify-between text-xs font-bold text-slate-800 hover:text-ossisto-blue py-1 transition-colors group/m-link"
+                            >
+                              <span>{link.name}</span>
+                              <span className="text-[9px] text-slate-400 group-hover/m-link:text-ossisto-blue transition-colors">▶</span>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-
-              {/* Category 2: Company */}
-              <div className="space-y-2">
-                <button
-                  onClick={() => setActiveSideSub(activeSideSub === 'company' ? null : 'company')}
-                  className="w-full flex items-center justify-between text-base font-bold text-slate-900 hover:text-ossisto-blue transition-colors text-left"
-                >
-                  <span>Company</span>
-                  <span className="text-xs text-slate-400 font-mono">{activeSideSub === 'company' ? '[-]' : '[+]'}</span>
-                </button>
-                {activeSideSub === 'company' && (
-                  <div className="pl-4 space-y-2 border-l border-slate-100 mt-2 animate-fade-in">
-                    {sidebarGroups.company.map((item, idx) => (
-                      <a
-                        key={idx}
-                        href={item.href}
-                        onClick={() => setIsSidePanelOpen(false)}
-                        className="block text-sm text-slate-600 hover:text-ossisto-blue py-1 transition-colors font-medium"
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Category 3: Direct Career & Contact pages */}
-              <div className="space-y-3 pt-4 border-t border-slate-100">
-                <a
-                  href="#contact"
-                  onClick={() => setIsSidePanelOpen(false)}
-                  className="block text-base font-bold text-slate-900 hover:text-ossisto-blue transition-colors"
-                >
-                  Careers
-                </a>
-                <a
-                  href="#contact"
-                  onClick={() => {
-                    setIsSidePanelOpen(false);
-                    onContactClick();
-                  }}
-                  className="block text-base font-bold text-slate-900 hover:text-ossisto-blue transition-colors"
-                >
-                  Contact Us
-                </a>
-              </div>
+                );
+              })}
 
             </div>
 
-            {/* Footer with social media channels */}
-            <div className="border-t border-slate-100 pt-4 space-y-4">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block font-sans">
-                Follow Ossisto Life
-              </span>
-              <div className="flex justify-between text-slate-400">
+            {/* Footer with Contact Us button & Social media links */}
+            <div className="pt-4 space-y-4">
+              <button
+                onClick={() => {
+                  setIsSidePanelOpen(false);
+                  onContactClick();
+                }}
+                className="w-full bg-ossisto-blue always-blue-bg text-white font-black py-2.5 rounded-md text-xs uppercase tracking-wider transition-colors shadow-sm"
+              >
+                CONTACT US ▶
+              </button>
+
+              <div className="flex justify-between text-slate-400 pt-1">
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-ossisto-blue transition-colors"><Linkedin className="w-5 h-5" /></a>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-ossisto-blue transition-colors"><Instagram className="w-5 h-5" /></a>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-ossisto-blue transition-colors"><Facebook className="w-5 h-5" /></a>

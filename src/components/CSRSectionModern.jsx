@@ -22,7 +22,7 @@ export default function CSRSectionModern() {
   ];
 
   return (
-    <section className="bg-white py-20 px-6 md:px-12 lg:px-24 border-b border-gray-100 font-sans flex flex-col items-center">
+    <section className="bg-white py-20 px-6 md:px-12 lg:px-24 border-b-0 md:border-b border-gray-100 font-sans flex flex-col items-center">
       <div className="max-w-5xl w-full mx-auto space-y-12">
         
         {/* Section Header */}

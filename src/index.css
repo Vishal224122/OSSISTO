@@ -90,5 +90,14 @@ body {
   background-color: #236CB1 !important;
 }
 
+footer, footer *, #dream-details, #dream-details * {
+  border-top: 0 !important;
+  border-top-width: 0 !important;
+  border-top-style: none !important;
+  border-top-color: transparent !important;
+  box-shadow: none !important;
+}
+
+
 
 

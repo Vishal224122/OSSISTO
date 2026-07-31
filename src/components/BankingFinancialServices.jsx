@@ -247,7 +247,7 @@ export default function BankingFinancialServices() {
 
       {/* 2. Sub-Navbar Tab Menu Wrapper (Anchor-Relative Docking) */}
       <div id="subnav-anchor" className="w-full h-[56px] relative z-30">
-        <div className={`bg-white border-b border-gray-200 shadow-sm transition-all duration-150 ${
+        <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${
           isSticky 
             ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}` 
             : 'absolute top-0 left-0 w-full'
@@ -274,7 +274,7 @@ export default function BankingFinancialServices() {
       </div>
 
       {/* 3. Futurifying Finance & Featured Insight (Screenshot 1 & 2 details) */}
-      <section id="futurifying-finance" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
+      <section id="futurifying-finance" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Main Content centered */}
           <div className="space-y-8 text-center max-w-4xl mx-auto flex flex-col items-center">
@@ -330,7 +330,7 @@ export default function BankingFinancialServices() {
       </section>
 
       {/* 4. BFS Factsheet Section (Screenshot 3 Part A: Statistics) */}
-      <section id="factsheet" className="py-16 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-slate-50">
+      <section id="factsheet" className="py-16 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-slate-50">
         <div className="max-w-5xl mx-auto space-y-12 text-left">
           <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
             Facts for BFS
@@ -383,7 +383,7 @@ export default function BankingFinancialServices() {
       </section>
 
       {/* 5. Those We Serve Section (Screenshot 3 Part B: Capability Grids) */}
-      <section id="those-we-serve" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
+      <section id="those-we-serve" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
         <div className="max-w-6xl mx-auto space-y-12 text-left">
           <div>
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -430,7 +430,7 @@ export default function BankingFinancialServices() {
       </section>
 
       {/* 6. BFS Accelerators Section (Screenshot 4 Part A: Cards) */}
-      <section id="accelerators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b border-gray-150 relative">
+      <section id="accelerators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b-0 lg:border-b border-gray-150 relative">
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="text-left space-y-3">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -477,7 +477,7 @@ export default function BankingFinancialServices() {
       </section>
 
       {/* 7. Success Stories Section (Screenshot 4 Part B: Banking active default) */}
-      <section id="success-stories" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b border-gray-150 relative">
+      <section id="success-stories" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b-0 lg:border-b border-gray-150 relative">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="text-left space-y-2">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight leading-tight font-sans">
@@ -537,7 +537,7 @@ export default function BankingFinancialServices() {
       </section>
 
       {/* 8. Keeping You Updated Section (Screenshot 5: Resource Articles) */}
-      <section id="updates" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b border-gray-150">
+      <section id="updates" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-none">
         <div className="max-w-7xl mx-auto space-y-12">
           {/* Section Header */}
           <div className="text-left space-y-3">

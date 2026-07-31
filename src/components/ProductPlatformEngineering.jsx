@@ -352,7 +352,7 @@ export default function ProductPlatformEngineering() {
 
       {/* 2. Sub-Navbar Tab Menu Wrapper (Anchor-Relative Docking) */}
       <div id="subnav-anchor" className="w-full h-[56px] relative z-30">
-        <div className={`bg-white border-b border-gray-200 shadow-sm transition-all duration-150 ${
+        <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${
           isSticky 
             ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}` 
             : 'absolute top-0 left-0 w-full'
@@ -379,7 +379,7 @@ export default function ProductPlatformEngineering() {
       </div>
 
       {/* 3. Winning The Digital Race Section */}
-      <section id="winning" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
+      <section id="winning" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Left dots decoration */}
           <div className="hidden md:flex md:col-span-3 lg:col-span-4 justify-center">
@@ -408,7 +408,7 @@ export default function ProductPlatformEngineering() {
       </section>
 
       {/* 4. Our Capabilities */}
-      <section id="capabilities" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-slate-50">
+      <section id="capabilities" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-slate-50">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -438,7 +438,7 @@ export default function ProductPlatformEngineering() {
       </section>
 
       {/* 5. Featured Insight */}
-      <section id="insights" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
+      <section id="insights" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto">
           
           <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-xl border border-slate-150 flex flex-col md:flex-row bg-white min-h-[280px]">
@@ -483,7 +483,7 @@ export default function ProductPlatformEngineering() {
       </section>
 
       {/* 6. Accelerators In House & Collaborators */}
-      <section id="accelerators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b border-gray-150">
+      <section id="accelerators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b-0 lg:border-b border-gray-150">
         <div className="max-w-7xl mx-auto space-y-16">
           
           {/* Part A: Accelerators */}
@@ -603,7 +603,7 @@ export default function ProductPlatformEngineering() {
       </section>
 
       {/* 7. Incredible Numbers Section */}
-      <section id="outcomes" className="relative py-20 px-6 md:px-12 lg:px-24 overflow-hidden border-b border-gray-150">
+      <section id="outcomes" className="relative py-20 px-6 md:px-12 lg:px-24 overflow-hidden border-b-0 lg:border-b border-gray-150">
         {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center z-0" 
@@ -658,7 +658,7 @@ export default function ProductPlatformEngineering() {
       </section>
 
       {/* 8. Keeping You Updated (Positioned below Incredible Numbers) */}
-      <section id="updates" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b border-gray-150">
+      <section id="updates" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b-0 lg:border-b border-gray-150">
         <div className="max-w-7xl mx-auto space-y-12">
           {/* Section Header */}
           <div className="text-center space-y-3">
@@ -722,7 +722,7 @@ export default function ProductPlatformEngineering() {
       </section>
 
       {/* 9. Our other key areas for Digital Engineering Services (Positioned below Keeping You Updated) */}
-      <section id="other-services" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b border-gray-150">
+      <section id="other-services" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b-0 lg:border-b border-gray-150">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Left Heading */}
           <div className="md:col-span-5 space-y-4 text-left relative">
@@ -759,7 +759,7 @@ export default function ProductPlatformEngineering() {
       </section>
 
       {/* 10. Platform Engineering - Questions frequently asked (FAQ Section) */}
-      <section id="faq" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b border-gray-150">
+      <section id="faq" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-none">
         <div className="max-w-3xl mx-auto text-left">
           
           <h2 className="text-2xl md:text-3xl font-black text-black tracking-tight mb-4">

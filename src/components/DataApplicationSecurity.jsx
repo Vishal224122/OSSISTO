@@ -373,7 +373,7 @@ export default function DataApplicationSecurity() {
 
       {/* 2. Sub-Navbar Tab Menu Wrapper (Anchor-Relative Docking) */}
       <div id="subnav-anchor" className="w-full h-[56px] relative z-30">
-        <div className={`bg-white border-b border-gray-200 shadow-sm transition-all duration-150 ${
+        <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${
           isSticky 
             ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}` 
             : 'absolute top-0 left-0 w-full'
@@ -400,7 +400,7 @@ export default function DataApplicationSecurity() {
       </div>
 
       {/* 3. Your Digital Armor / Secure Your Applications and Data by Design (Screenshot 1 details) */}
-      <section id="digital-armor" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
+      <section id="digital-armor" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Left pattern decoration */}
           <div className="hidden md:flex md:col-span-3 lg:col-span-4 flex-col items-center justify-center gap-6">
@@ -440,7 +440,7 @@ export default function DataApplicationSecurity() {
       </section>
 
       {/* 4. Our Capabilities Section (Screenshot 2: 8 cards grid) */}
-      <section id="capabilities" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-slate-50 relative">
+      <section id="capabilities" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-slate-50 relative">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -483,7 +483,7 @@ export default function DataApplicationSecurity() {
       </section>
 
       {/* 5. Key Differentiators Section (Screenshot 3 Part A) */}
-      <section id="differentiators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
+      <section id="differentiators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -518,7 +518,7 @@ export default function DataApplicationSecurity() {
       </section>
 
       {/* 6. Featured Insight Section (Screenshot 3 Part B) */}
-      <section id="insight" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-slate-50">
+      <section id="insight" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-xl border border-slate-150 flex flex-col md:flex-row bg-white min-h-[280px]">
             {/* Left Content */}
@@ -554,7 +554,7 @@ export default function DataApplicationSecurity() {
       </section>
 
       {/* 7. How We Deliver Section (Screenshot 4 Part A) */}
-      <section id="delivery" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white relative">
+      <section id="delivery" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white relative">
         <div className="max-w-5xl mx-auto space-y-10">
           {/* Header */}
           <div className="text-left space-y-2">
@@ -592,7 +592,7 @@ export default function DataApplicationSecurity() {
       </section>
 
       {/* 8. Our Collaborators Section (New Screenshot 1 Part A: Logo Slider) */}
-      <section id="collaborators" className="py-16 px-6 md:px-12 lg:px-24 bg-slate-50 border-b border-gray-150">
+      <section id="collaborators" className="py-16 px-6 md:px-12 lg:px-24 bg-slate-50 border-b-0 lg:border-b border-gray-150">
         <div className="max-w-5xl mx-auto text-left space-y-4">
           <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
             Our Collaborators
@@ -629,7 +629,7 @@ export default function DataApplicationSecurity() {
       </section>
 
       {/* 9. Our Success Stories Section (New Screenshot 1 Part B: Banking active default) */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b border-gray-150 relative">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b-0 lg:border-b border-gray-150 relative">
         {/* Left and right decorations */}
         <div className="hidden xl:block absolute left-8 top-1/2 transform -translate-y-1/2">
           <svg className="w-12 h-20 text-slate-200 fill-current opacity-70" viewBox="0 0 50 100">
@@ -706,7 +706,7 @@ export default function DataApplicationSecurity() {
       </section>
 
       {/* 10. Keeping You Updated Section (New Screenshot 2: Resource Articles) */}
-      <section id="updates" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b border-gray-150">
+      <section id="updates" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-b-0 lg:border-b border-gray-150">
         <div className="max-w-7xl mx-auto space-y-12">
           {/* Section Header */}
           <div className="text-left space-y-3">
@@ -804,7 +804,7 @@ export default function DataApplicationSecurity() {
       </section>
 
       {/* 11. FAQAccordion Section (New Screenshot 3: 9 FAQ items) */}
-      <section id="faq" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b border-gray-150">
+      <section id="faq" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-none">
         <div className="max-w-3xl mx-auto text-left">
           <h2 className="text-xl md:text-2xl font-black text-black tracking-tight mb-4">
             Data and Application Security - Questions Frequently Asked

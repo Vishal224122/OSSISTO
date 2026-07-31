@@ -294,7 +294,7 @@ export default function DataAnalyticsModernization() {
 
       {/* 2. Sub-Navbar Tab Menu Wrapper (Anchor-Relative Docking) */}
       <div id="subnav-anchor" className="w-full h-[56px] relative z-30">
-        <div className={`bg-white border-b border-gray-200 shadow-sm transition-all duration-150 ${
+        <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${
           isSticky 
             ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}` 
             : 'absolute top-0 left-0 w-full'
@@ -321,7 +321,7 @@ export default function DataAnalyticsModernization() {
       </div>
 
       {/* 3. Future Ready / Confidence You Can Trust Section */}
-      <section id="future-ready" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
+      <section id="future-ready" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Left pattern decoration */}
           <div className="hidden md:flex md:col-span-3 lg:col-span-4 flex-col items-center justify-center gap-6">
@@ -364,7 +364,7 @@ export default function DataAnalyticsModernization() {
       </section>
 
       {/* 4. Our Key Differentiators Section (Screenshot 2 Part A) */}
-      <section id="differentiators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-slate-50">
+      <section id="differentiators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-slate-50">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-2">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -399,7 +399,7 @@ export default function DataAnalyticsModernization() {
       </section>
 
       {/* 5. Our Services Section (Screenshot 2 Part B: Interactive Tabs) */}
-      <section id="services" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-white">
+      <section id="services" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
         <div className="max-w-6xl mx-auto space-y-10">
           {/* Header */}
           <div className="text-left space-y-2">
@@ -471,7 +471,7 @@ export default function DataAnalyticsModernization() {
       </section>
 
       {/* 6. How it Works Section (Screenshot 3 Part A) */}
-      <section id="how-it-works" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b border-gray-150 bg-slate-50">
+      <section id="how-it-works" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-slate-50">
         <div className="max-w-5xl mx-auto space-y-10">
           {/* Header */}
           <div className="text-left space-y-2">
@@ -521,7 +521,7 @@ export default function DataAnalyticsModernization() {
       </section>
 
       {/* 7. Our Accelerators Section (Screenshot 3 Part B) */}
-      <section id="accelerators" className="py-16 md:py-20 px-6 md:px-12 lg:px-24 bg-white border-b border-gray-150">
+      <section id="accelerators" className="py-16 md:py-20 px-6 md:px-12 lg:px-24 bg-white border-b-0 lg:border-b border-gray-150">
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="text-left space-y-3">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -559,7 +559,7 @@ export default function DataAnalyticsModernization() {
       </section>
 
       {/* 8. Collaborators Section (Screenshot 4 Part A: Continuous Scrolling Marquee) */}
-      <section id="collaborators" className="py-16 px-6 md:px-12 lg:px-24 bg-slate-50 border-b border-gray-150">
+      <section id="collaborators" className="py-16 px-6 md:px-12 lg:px-24 bg-slate-50 border-b-0 lg:border-b border-gray-150">
         <div className="max-w-5xl mx-auto text-left space-y-4">
           <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
             Our Collaborators
@@ -597,7 +597,7 @@ export default function DataAnalyticsModernization() {
       </section>
 
       {/* 9. Success Stories Section (Screenshot 4 Part B: Basel III active default) */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b border-gray-150 relative">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-none relative">
         {/* Left and right decorations */}
         <div className="hidden xl:block absolute left-8 top-1/2 transform -translate-y-1/2">
           <svg className="w-12 h-20 text-slate-200 fill-current opacity-70" viewBox="0 0 50 100">

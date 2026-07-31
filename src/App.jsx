@@ -86,7 +86,7 @@ function App() {
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
 
       {currentView === 'home' ? (
-        <>
+        <div className="bg-white text-slate-900 w-full">
           {/* Hero Banner Slider */}
           <Hero />
 
@@ -95,25 +95,37 @@ function App() {
 
           {/* Capabilities Grids */}
           <DreamDetails />
-
-
-        </>
+        </div>
       ) : currentView === 'product-engineering' ? (
-        <ProductPlatformEngineering />
+        <div className="bg-white text-slate-900 w-full">
+          <ProductPlatformEngineering />
+        </div>
       ) : currentView === 'application-development' ? (
-        <ApplicationDevelopmentManagement />
+        <div className="bg-white text-slate-900 w-full">
+          <ApplicationDevelopmentManagement />
+        </div>
       ) : currentView === 'cloud-modernization' ? (
-        <CloudApplicationModernization />
+        <div className="bg-white text-slate-900 w-full">
+          <CloudApplicationModernization />
+        </div>
       ) : currentView === 'data-modernization' ? (
-        <DataAnalyticsModernization />
+        <div className="bg-white text-slate-900 w-full">
+          <DataAnalyticsModernization />
+        </div>
       ) : currentView === 'data-security' ? (
-        <DataApplicationSecurity />
+        <div className="bg-white text-slate-900 w-full">
+          <DataApplicationSecurity />
+        </div>
       ) : (
-        <BankingFinancialServices />
+        <div className="bg-white text-slate-900 w-full">
+          <BankingFinancialServices />
+        </div>
       )}
 
-      {/* Newsletter, Badge Certs, Footer columns */}
-      <Footer />
+      {/* Footer wrapped in white container to prevent dark subpixel line leakage */}
+      <div className="bg-white w-full -mt-px relative z-10">
+        <Footer />
+      </div>
     </div>
   );
 }

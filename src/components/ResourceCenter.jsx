@@ -49,7 +49,7 @@ export default function ResourceCenter() {
   ];
 
   return (
-    <section id="keeping-updated" className="bg-white py-12 md:py-16 px-6 md:px-12 lg:px-24 border-b border-gray-100 font-sans flex flex-col items-center">
+    <section id="keeping-updated" className="bg-white py-12 md:py-16 px-6 md:px-12 lg:px-24 border-b-0 md:border-b border-gray-100 font-sans flex flex-col items-center">
       <div className="max-w-4xl w-full mx-auto space-y-10">
         
         {/* Section Title */}

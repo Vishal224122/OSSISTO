@@ -1,9 +1,74 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Play, X, Monitor, RefreshCw, Cpu, Zap, Settings, TrendingUp, HeartPulse, Store, Factory, Car, Pill, Utensils, Hammer, Package } from 'lucide-react';
+
+function ServiceCard({ card }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const videoRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {});
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  };
+
+  return (
+    <div 
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl group aspect-[4/3] bg-slate-950 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+    >
+      {/* Background Thumbnail Image */}
+      <img 
+        src={card.image} 
+        alt={card.title}
+        className={`w-full h-full object-cover scale-[1.04] group-hover:scale-110 transition-all duration-500 ${
+          isHovered && card.video ? 'opacity-0' : 'opacity-100'
+        }`}
+      />
+
+      {/* Hover Video */}
+      {card.video && (
+        <video 
+          ref={videoRef}
+          src={card.video}
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+            isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}
+        />
+      )}
+
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none z-10" />
+
+      {/* Border Overlay */}
+      <div className="absolute inset-0 border-2 border-slate-300/90 group-hover:border-[#236CB1] rounded-2xl pointer-events-none z-20 transition-colors duration-300" />
+
+      {/* Title Text centered at the bottom */}
+      <div className="absolute bottom-5 left-5 right-5 text-center z-10 pointer-events-none">
+        <h4 className="text-base md:text-lg font-bold text-white leading-tight tracking-tight drop-shadow-md">
+          {card.title}
+        </h4>
+      </div>
+    </div>
+  );
+}
 
 export default function DreamDetails() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [engineerTab, setEngineerTab] = useState(3);
+  const [engineerTab, setEngineerTab] = useState(0);
 
   const steps = [
     {
@@ -12,20 +77,24 @@ export default function DreamDetails() {
       isServicesSection: true,
       cards: [
         {
-          title: "AI & Data",
-          image: "/AI & Data.png"
+          title: "Industry 4.0",
+          image: "/Industry 4.0_ver3.png",
+          video: "/Ossisto - Industry 4.0.mp4"
         },
         {
           title: "Engineering Services",
-          image: "/Engineering Services.png"
+          image: "/Engineering Services.png",
+          video: "/Ossisto - Engineering Services.mp4"
+        },
+        {
+          title: "AI & Data",
+          image: "/AI & Data.png",
+          video: "/Ossisto - AI & Data.mp4"
         },
         {
           title: "Enterprise Digital & IT",
-          image: "/Enterprise Digital & IT_v02.jpg"
-        },
-        {
-          title: "Industry 4.0",
-          image: "/Industry 4.0_ver3.png"
+          image: "/Enterprise Digital & IT_v02.jpg",
+          video: "/Ossisto - Enterprise Digital & IT.mp4"
         }
       ]
     },
@@ -37,32 +106,17 @@ export default function DreamDetails() {
       description: "A complete spectrum of modern engineering services built on a strong foundation of AI and deep technology expertise.",
       tabs: [
         {
-          name: "ENTERPRISE DIGITAL & IT",
-          title: "Enterprise Digital & IT",
-          image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=800&auto=format&fit=crop",
-          text: "From emerging possibilities to an agile cycle of intelligent solution development – discover how everything connects through our strong engineering DNA, product engineering expertise, and trusted partner ecosystem.",
+          name: "Industry 4.0",
+          title: "Smart Factory & Industry 4.0",
+          image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
+          text: "Bridge physical manufacturing assets with cognitive cloud frameworks to build connected, smart industrial spaces.",
           services: [
-            { title: "Digital Transformation Consulting", desc: "Consulting strategies for scaling enterprise software ecosystems." },
-            { title: "SAP Consulting & Services", desc: "Resilient systems, custom implementations, and SAP ecosystem maintenance." },
-            { title: "Application Development & Modernization", desc: "Build modular, cloud-native apps while systematically reducing technical debt." },
-            { title: "Cloud, DevOps & Infra", desc: "CI/CD automated pipelines, zero-trust cloud orchestration, and cloud audit paths." },
-            { title: "Enterprise integration", desc: "Connecting distinct software applications and pipelines securely." },
-            { title: "PLM Services", desc: "Deploying secure lifecycle management systems for engineering platforms." },
-            { title: "Quality engineering and test automation", desc: "Next-gen test automation using AI-native testing architectures." }
-          ]
-        },
-        {
-          name: "AI & DATA",
-          title: "AI & Data Solutions",
-          image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
-          text: "Transition from raw analytics to cognitive operations. We design agentic workflows, clean data warehouses, and secure enterprise LLMs.",
-          services: [
-            { title: "Data Engineering & integration", desc: "Extracting, transforming, and loading clean datasets via modern pipelines." },
-            { title: "Analytics, BI and dashboards", desc: "Visualizing analytics, metrics, and shopfloor KPIs in real-time." },
-            { title: "Gen AI solutions", desc: "Building, fine-tuning, and scaling generative enterprise systems." },
-            { title: "Intelligent Automation", desc: "Automating administrative and production tasks with cognitive agents." },
-            { title: "Applied AI and Machine Learning", desc: "Deploying production ML models to optimize business operations." },
-            { title: "Computer & Machine Vision", desc: "Defect inspection, visual auditing, and spatial analytics using smart cameras." }
+            { title: "MES services", desc: "Implementing and optimizing Manufacturing Execution Systems." },
+            { title: "Connected Factory (IIOT)", desc: "Integrating plant sensors, legacy machines, and cloud storage." },
+            { title: "Connected Workforce", desc: "Empowering plant floor workers with digital analytics and logs." },
+            { title: "Manufacturing analytics & OEE", desc: "Optimizing overall equipment effectiveness via cognitive dashboards." },
+            { title: "Predictive maintenance", desc: "Predicting asset and component failure before they happen." },
+            { title: "Supply Chain Digitization", desc: "Zero-latency supply chain traceability, shipping, and routing." }
           ]
         },
         {
@@ -80,17 +134,32 @@ export default function DreamDetails() {
           ]
         },
         {
-          name: "Industry 4.0",
-          title: "Smart Factory & Industry 4.0",
-          image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
-          text: "Bridge physical manufacturing assets with cognitive cloud frameworks to build connected, smart industrial spaces.",
+          name: "AI & DATA",
+          title: "AI & Data Solutions",
+          image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
+          text: "Transition from raw analytics to cognitive operations. We design agentic workflows, clean data warehouses, and secure enterprise LLMs.",
           services: [
-            { title: "MES services", desc: "Implementing and optimizing Manufacturing Execution Systems." },
-            { title: "Connected Factory (IIOT)", desc: "Integrating plant sensors, legacy machines, and cloud storage." },
-            { title: "Connected Workforce", desc: "Empowering plant floor workers with digital analytics and logs." },
-            { title: "Manufacturing analytics & OEE", desc: "Optimizing overall equipment effectiveness via cognitive dashboards." },
-            { title: "Predictive maintenance", desc: "Predicting asset and component failure before they happen." },
-            { title: "Supply Chain Digitization", desc: "Zero-latency supply chain traceability, shipping, and routing." }
+            { title: "Data Engineering & integration", desc: "Extracting, transforming, and loading clean datasets via modern pipelines." },
+            { title: "Analytics, BI and dashboards", desc: "Visualizing analytics, metrics, and shopfloor KPIs in real-time." },
+            { title: "Gen AI solutions", desc: "Building, fine-tuning, and scaling generative enterprise systems." },
+            { title: "Intelligent Automation", desc: "Automating administrative and production tasks with cognitive agents." },
+            { title: "Applied AI and Machine Learning", desc: "Deploying production ML models to optimize business operations." },
+            { title: "Computer & Machine Vision", desc: "Defect inspection, visual auditing, and spatial analytics using smart cameras." }
+          ]
+        },
+        {
+          name: "ENTERPRISE DIGITAL & IT",
+          title: "Enterprise Digital & IT",
+          image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=800&auto=format&fit=crop",
+          text: "From emerging possibilities to an agile cycle of intelligent solution development – discover how everything connects through our strong engineering DNA, product engineering expertise, and trusted partner ecosystem.",
+          services: [
+            { title: "Digital Transformation Consulting", desc: "Consulting strategies for scaling enterprise software ecosystems." },
+            { title: "SAP Consulting & Services", desc: "Resilient systems, custom implementations, and SAP ecosystem maintenance." },
+            { title: "Application Development & Modernization", desc: "Build modular, cloud-native apps while systematically reducing technical debt." },
+            { title: "Cloud, DevOps & Infra", desc: "CI/CD automated pipelines, zero-trust cloud orchestration, and cloud audit paths." },
+            { title: "Enterprise integration", desc: "Connecting distinct software applications and pipelines securely." },
+            { title: "PLM Services", desc: "Deploying secure lifecycle management systems for engineering platforms." },
+            { title: "Quality engineering and test automation", desc: "Next-gen test automation using AI-native testing architectures." }
           ]
         }
       ]
@@ -114,7 +183,7 @@ export default function DreamDetails() {
   ];
 
   return (
-    <section id="dream-details" className="bg-white py-16 px-6 md:px-12 lg:px-24 font-sans relative overflow-hidden">
+    <section id="dream-details" className="bg-white py-16 px-6 md:px-12 lg:px-24 font-sans relative overflow-hidden border-none border-b-0 border-t-0 outline-none">
       
       {/* Inline styles for the horizontal logo marquee */}
       <style dangerouslySetInnerHTML={{__html: `
@@ -149,16 +218,16 @@ export default function DreamDetails() {
                 <div key={idx} className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-start !mt-[18rem] !mb-[18rem]">
                   
                   {/* Top Row: Left Heading & Right Video */}
-                  <div className="lg:col-span-4 space-y-4 pr-4">
+                  <div className="lg:col-span-5 space-y-4 pr-4">
                     <span className="block text-lg font-black text-ossisto-blue tracking-wider uppercase">
                       SERVICES IN DETAIL
                     </span>
                     <h3 className="text-2xl lg:text-3.5xl font-black text-black tracking-tight leading-tight">
-                      We serve your IT and Digital needs in a comprehensive manner
+                      We serve your IT and Digital <br className="hidden lg:inline" />needs in a comprehensive manner
                     </h3>
                   </div>
 
-                  <div className="lg:col-span-8 flex justify-end">
+                  <div className="lg:col-span-7 flex justify-end lg:pr-14">
                     <div className="relative w-full md:w-3/4 aspect-video rounded-2xl overflow-hidden shadow-md bg-slate-950">
                       <video 
                         src="/Services in detail video.mp4"
@@ -174,7 +243,7 @@ export default function DreamDetails() {
 
                   {/* Bottom Row: Left Tab selectors & Right Services Grid */}
                   <div className="lg:col-span-4 pr-4 mt-6">
-                    <div className="flex flex-col gap-3 pt-6 border-t border-slate-100">
+                    <div className="flex flex-col gap-3 pt-6">
                       {step.tabs.map((tab, tIdx) => {
                         const isActive = engineerTab === tIdx;
                         return (
@@ -246,7 +315,6 @@ export default function DreamDetails() {
                       <div className="space-y-4 text-[15px] font-bold text-slate-800 leading-relaxed pt-1">
                         <p>Focus creates specialization.</p>
                         <p>We have created niche expertise in several manufacturing sectors.</p>
-                        <p>However, we stay dedicated to all sectors.</p>
                       </div>
                     </div>
                   ) : (
@@ -292,47 +360,23 @@ export default function DreamDetails() {
                     <div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {step.cards.map((card, cidx) => (
-                          <div 
-                            key={cidx} 
-                            className="relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl group aspect-[4/3] bg-slate-950 transition-all duration-300 hover:-translate-y-1"
-                          >
-                            {/* Background Thumbnail Image */}
-                            <img 
-                              src={card.image} 
-                              alt={card.title}
-                              className="w-full h-full object-cover scale-[1.04] group-hover:scale-110 transition-transform duration-700"
-                            />
-
-                            {/* Dark Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-
-                            {/* Border Overlay */}
-                            <div className="absolute inset-0 border-2 border-slate-300/90 group-hover:border-[#236CB1] rounded-2xl pointer-events-none z-20 transition-colors duration-300" />
-
-                            {/* Play Button if active */}
-                            {card.hasPlayButton && (
-                              <button 
-                                onClick={() => setIsVideoOpen(true)}
-                                className="absolute top-4 left-4 bg-ossisto-blue hover:bg-[#236CB1] text-white p-2.5 rounded-lg shadow-md hover:scale-110 active:scale-95 transition-all duration-200 z-10"
-                                aria-label="Play case study"
-                              >
-                                <Play className="w-4 h-4 fill-white stroke-none ml-0.5" />
-                              </button>
-                            )}
-
-                            {/* Title Text centered at the bottom */}
-                            <div className="absolute bottom-5 left-5 right-5 text-center z-10">
-                              <h4 className="text-base md:text-lg font-bold text-white leading-tight tracking-tight">
-                                {card.title}
-                              </h4>
-                            </div>
-                          </div>
+                          <ServiceCard key={cidx} card={card} />
                         ))}
                       </div>
 
                     </div>
                   )}
                 </div>
+
+                {/* Full-width banner for FOCUS SECTORS */}
+                {isFocusSectors && (
+                  <div className="lg:col-span-12 pt-10 pb-4 text-center flex flex-col items-center justify-center border-none border-b-0 outline-none shadow-none">
+                    <h3 className="text-2xl md:text-3.5xl lg:text-4xl font-black text-black leading-tight tracking-tight text-center max-w-3xl">
+                      However, we provide services across<br className="hidden sm:inline" />{" "}
+                      <span className="text-ossisto-blue always-blue font-black">all manufacturing sectors</span>
+                    </h3>
+                  </div>
+                )}
 
               </div>
             );
