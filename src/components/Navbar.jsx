@@ -45,7 +45,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
 
   const menuItems = [
     {
-      title: "Industry 4.0",
+      title: "INDUSTRY 4.0",
       headerTitle: "Industry 4.0 ",
       desc: "Bridge physical manufacturing assets with cognitive cloud frameworks to build connected, smart industrial spaces.",
       links: [
@@ -357,7 +357,7 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
             {/* CONTACT ▶ Button */}
             <button
               onClick={onContactClick}
-              className="bg-ossisto-blue always-blue-bg hover:bg-[#236CB1] text-white font-black py-2 px-4 sm:py-2.5 sm:px-7 text-[11px] sm:text-xs rounded-md uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all duration-300 shadow-md shadow-ossisto-blue/10 shrink-0"
+              className="bg-ossisto-blue always-blue-bg hover:bg-[#236CB1] text-white font-normal sm:font-black py-1.5 px-3 sm:py-2.5 sm:px-7 text-[10px] sm:text-xs rounded-md uppercase tracking-wider flex items-center justify-center gap-1 transition-all duration-300 shadow-md shadow-ossisto-blue/10 shrink-0"
             >
               CONTACT <span className="text-[9px] select-none">▶</span>
             </button>
@@ -488,27 +488,7 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
 
             </div>
 
-            {/* Footer with Contact Us button & Social media links */}
-            <div className="pt-4 space-y-4">
-              <button
-                onClick={() => {
-                  setIsSidePanelOpen(false);
-                  onContactClick();
-                }}
-                className="w-full bg-ossisto-blue always-blue-bg text-white font-black py-2.5 rounded-md text-xs uppercase tracking-wider transition-colors shadow-sm"
-              >
-                CONTACT US ▶
-              </button>
-
-              <div className="flex justify-between text-slate-400 pt-1">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-ossisto-blue transition-colors"><Linkedin className="w-5 h-5" /></a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-ossisto-blue transition-colors"><Instagram className="w-5 h-5" /></a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-ossisto-blue transition-colors"><Facebook className="w-5 h-5" /></a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-ossisto-blue transition-colors"><Twitter className="w-5 h-5" /></a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-ossisto-blue transition-colors"><Youtube className="w-5 h-5" /></a>
-              </div>
-            </div>
-
+            {/* Footer space removed as requested */}
           </div>
         </div>
       )}

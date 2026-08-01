@@ -8,7 +8,7 @@ function ServiceCard({ card }) {
   const handleMouseEnter = () => {
     setIsHovered(true);
     if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
+      videoRef.current.play().catch(() => { });
     }
   };
 
@@ -21,32 +21,30 @@ function ServiceCard({ card }) {
   };
 
   return (
-    <div 
+    <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className="relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl group aspect-[4/3] bg-slate-950 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
     >
       {/* Background Thumbnail Image */}
-      <img 
-        src={card.image} 
+      <img
+        src={card.image}
         alt={card.title}
-        className={`w-full h-full object-cover scale-[1.04] group-hover:scale-110 transition-all duration-500 ${
-          isHovered && card.video ? 'opacity-0' : 'opacity-100'
-        }`}
+        className={`w-full h-full object-cover scale-[1.04] group-hover:scale-110 transition-all duration-500 ${isHovered && card.video ? 'opacity-0' : 'opacity-100'
+          }`}
       />
 
       {/* Hover Video */}
       {card.video && (
-        <video 
+        <video
           ref={videoRef}
           src={card.video}
           muted
           loop
           playsInline
           preload="auto"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-            isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          }`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            }`}
         />
       )}
 
@@ -106,7 +104,7 @@ export default function DreamDetails() {
       description: "A complete spectrum of modern engineering services built on a strong foundation of AI and deep technology expertise.",
       tabs: [
         {
-          name: "Industry 4.0",
+          name: "INDUSTRY 4.0",
           title: "Smart Factory & Industry 4.0",
           image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
           text: "Bridge physical manufacturing assets with cognitive cloud frameworks to build connected, smart industrial spaces.",
@@ -184,9 +182,10 @@ export default function DreamDetails() {
 
   return (
     <section id="dream-details" className="bg-white py-16 px-6 md:px-12 lg:px-24 font-sans relative overflow-hidden border-none border-b-0 border-t-0 outline-none">
-      
+
       {/* Inline styles for the horizontal logo marquee */}
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes marquee-scroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
@@ -203,10 +202,10 @@ export default function DreamDetails() {
 
 
 
-      <div className="max-w-6xl mx-auto relative mt-20 pb-20">
-        
+      <div className="max-w-6xl mx-auto relative mt-6 sm:mt-10 md:mt-12 pb-12 sm:pb-16">
+
         {/* Roadmap Steps */}
-        <div className="space-y-24 pl-0 md:pl-20">
+        <div className="space-y-10 lg:space-y-24 pl-0 md:pl-20">
           {steps.map((step, idx) => {
             const Icon = step.icon;
             const isEngineer = step.letter === "SERVICES IN DETAIL" || step.letter === "ENGINEER";
@@ -215,8 +214,8 @@ export default function DreamDetails() {
 
             if (isEngineer) {
               return (
-                <div key={idx} className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-start !mt-[18rem] !mb-[18rem]">
-                  
+                <div key={idx} className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-start !mt-16 lg:!mt-32 !mb-8 lg:!mb-24">
+
                   {/* Top Row: Left Heading & Right Video */}
                   <div className="lg:col-span-5 space-y-4 pr-4">
                     <span className="block text-lg font-black text-ossisto-blue tracking-wider uppercase">
@@ -229,7 +228,7 @@ export default function DreamDetails() {
 
                   <div className="lg:col-span-7 flex justify-end lg:pr-14">
                     <div className="relative w-full md:w-3/4 aspect-video rounded-2xl overflow-hidden shadow-md bg-slate-950">
-                      <video 
+                      <video
                         src="/Services in detail video.mp4"
                         autoPlay
                         loop
@@ -242,19 +241,18 @@ export default function DreamDetails() {
                   </div>
 
                   {/* Bottom Row: Left Tab selectors & Right Services Grid */}
-                  <div className="lg:col-span-4 pr-4 mt-6">
-                    <div className="flex flex-col gap-3 pt-6">
+                  <div className="lg:col-span-4 pr-4 mt-3">
+                    <div className="flex flex-col gap-2 pt-2">
                       {step.tabs.map((tab, tIdx) => {
                         const isActive = engineerTab === tIdx;
                         return (
                           <button
                             key={tIdx}
                             onClick={() => setEngineerTab(tIdx)}
-                            className={`flex items-center gap-2 text-left font-extrabold text-[11px] sm:text-xs md:text-sm py-1 transition-all always-blue ${
-                              isActive 
-                                ? 'pl-0' 
-                                : 'pl-4'
-                            }`}
+                            className={`flex items-center gap-2 text-left font-extrabold text-[11px] sm:text-xs md:text-sm py-1 transition-all always-blue ${isActive
+                                ? 'pl-0'
+                                : 'pl-6 sm:pl-8'
+                              }`}
                             style={{
                               color: isActive ? '#236CB1' : 'rgba(35, 108, 177, 0.5)'
                             }}
@@ -267,14 +265,14 @@ export default function DreamDetails() {
                     </div>
                   </div>
 
-                  <div className="lg:col-span-8 mt-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+                  <div className="lg:col-span-8 mt-4 lg:mt-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
                       {step.tabs[engineerTab].services.map((service, sIdx) => (
-                        <div key={sIdx} className="space-y-1">
+                        <div key={sIdx} className="space-y-0.5">
                           <h5 className="text-sm font-extrabold text-black">
                             {service.title}
                           </h5>
-                          <p className="text-xs text-slate-500 font-medium leading-relaxed">
+                          <p className="text-xs text-slate-500 font-medium leading-snug">
                             {service.desc}
                           </p>
                         </div>
@@ -288,7 +286,7 @@ export default function DreamDetails() {
 
             return (
               <div key={idx} className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
+
                 {/* Node circle on the timeline */}
                 {!isServices && !isEngineer && !isFocusSectors && Icon && (
                   <div className="hidden md:flex absolute left-[-57px] top-1.5 w-8 h-8 rounded-full bg-black border-2 border-ossisto-blue items-center justify-center z-10 shadow-md">
@@ -299,20 +297,20 @@ export default function DreamDetails() {
                 {/* Left part: Heading details */}
                 <div className="lg:col-span-4 space-y-5 pr-4">
                   {isServices ? (
-                    <div className="space-y-4">
-                      <span className="block text-lg font-black text-ossisto-blue tracking-wider uppercase">
+                    <div className="space-y-4 text-center lg:text-left">
+                      <span className="block text-lg font-black text-ossisto-blue tracking-wider uppercase text-center lg:text-left">
                         SERVICES
                       </span>
-                      <h3 className="text-2xl lg:text-3.5xl font-black text-black tracking-tight leading-tight">
-                        One Partner for your complete manufacturing Stack
+                      <h3 className="text-2xl lg:text-3.5xl font-black text-black tracking-tight leading-tight text-center lg:text-left">
+                        One Partner for complete manufacturing Stack
                       </h3>
                     </div>
                   ) : isFocusSectors ? (
-                    <div className="space-y-4">
-                      <span className="block text-lg font-black text-ossisto-blue tracking-wider uppercase">
+                    <div className="space-y-4 text-center lg:text-left">
+                      <span className="block text-lg font-black text-ossisto-blue tracking-wider uppercase text-center lg:text-left">
                         FOCUS SECTORS
                       </span>
-                      <div className="space-y-4 text-[15px] font-bold text-slate-800 leading-relaxed pt-1">
+                      <div className="space-y-3 text-[15px] font-bold text-slate-800 leading-relaxed pt-1 text-center lg:text-left">
                         <p>Focus creates specialization.</p>
                         <p>We have created niche expertise in several manufacturing sectors.</p>
                       </div>
@@ -388,13 +386,13 @@ export default function DreamDetails() {
       {/* Video Modal Player */}
       {isVideoOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          <div 
+          <div
             className="absolute inset-0 bg-black/90 backdrop-blur-sm"
             onClick={() => setIsVideoOpen(false)}
           />
           <div className="relative w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden aspect-video shadow-2xl z-50 animate-fade-in">
             {/* Close Button */}
-            <button 
+            <button
               onClick={() => setIsVideoOpen(false)}
               className="absolute top-4 right-4 text-white hover:text-ossisto-blue z-50 p-2 bg-slate-950/60 rounded-full border border-slate-800 hover:border-ossisto-blue transition-all"
               aria-label="Close video player"
@@ -403,7 +401,7 @@ export default function DreamDetails() {
             </button>
 
             {/* Video Player Element */}
-            <video 
+            <video
               src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
               controls
               autoPlay

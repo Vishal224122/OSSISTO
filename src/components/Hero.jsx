@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ChevronDown } from 'lucide-react';
 
 export default function Hero() {
   const [hoveredIdx, setHoveredIdx] = useState(null); // Defaults to null (all panels equal width)
@@ -15,6 +15,11 @@ export default function Hero() {
   const handleMouseLeave = () => {
     if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
     setHoveredIdx(null);
+  };
+
+  const handlePanelClick = (idx) => {
+    if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
+    setHoveredIdx((prev) => (prev === idx ? null : idx));
   };
 
   const panels = [
@@ -66,6 +71,7 @@ export default function Hero() {
             <div
               key={idx}
               onMouseEnter={() => handleMouseEnter(idx)}
+              onClick={() => handlePanelClick(idx)}
               className={`relative h-1/5 lg:h-full transition-all duration-700 ease-in-out overflow-hidden border-b-0 lg:border-r border-slate-900/40 cursor-pointer ${isHovered ? 'flex-[2] lg:flex-[2.2]' : 'flex-1 lg:flex-[0.7]'
                 }`}
             >
@@ -77,15 +83,23 @@ export default function Hero() {
                 style={{ backgroundImage: `url(${panel.image})` }}
               />
 
+              {/* Mobile Drop Arrow (Reverses direction on row expanding/shrinking) */}
+              <div className="lg:hidden absolute top-3 right-4 z-30 pointer-events-none">
+                <div className={`p-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white transition-transform duration-300 ${
+                  isHovered ? 'rotate-180 text-ossisto-blue border-ossisto-blue' : 'rotate-0'
+                }`}>
+                  <ChevronDown className="w-3.5 h-3.5" />
+                </div>
+              </div>
+
               {/* Top-left Orange Text Overlay for the first panel (Automotive) */}
               {idx === 0 && (
-                <div className={`absolute top-10 left-5 sm:top-20 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
-                  isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
-                }`}>
-                  <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal text-white leading-tight font-sans tracking-tight mb-1 sm:mb-2">
+                <div className={`absolute top-20 left-4 sm:top-24 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-[52vw] sm:max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                  }`}>
+                  <h3 className="text-sm sm:text-lg md:text-2.5xl lg:text-4xl font-bold text-white leading-tight font-sans tracking-tight mb-0.5 sm:mb-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     Automotive
                   </h3>
-                  <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal text-[#f05a28] leading-tight font-sans tracking-tight">
+                  <h3 className="text-xs sm:text-base md:text-2xl lg:text-3.5xl font-bold text-[#f05a28] leading-tight font-sans tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     Solutions for mobility<br />ecosystems
                   </h3>
                 </div>
@@ -93,27 +107,25 @@ export default function Hero() {
 
               {/* Top-left Blue/Cyan Text Overlay for the second panel (Pharma) */}
               {idx === 1 && (
-                <div className={`absolute top-10 left-5 sm:top-20 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
-                  isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
-                }`}>
-                  <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal text-white leading-tight font-sans tracking-tight mb-1 sm:mb-2">
+                <div className={`absolute top-20 left-4 sm:top-24 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-[52vw] sm:max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                  }`}>
+                  <h3 className="text-sm sm:text-lg md:text-2.5xl lg:text-4xl font-bold text-white leading-tight font-sans tracking-tight mb-0.5 sm:mb-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     Pharma
                   </h3>
-                  <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal text-[#00aeef] leading-tight font-sans tracking-tight">
-                    Pharma DX & compliance<br />management
+                  <h3 className="text-xs sm:text-base md:text-2xl lg:text-3.5xl font-bold text-[#00aeef] leading-tight font-sans tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
+                    Pharma DX &<br />compliance management
                   </h3>
                 </div>
               )}
 
               {/* Text Overlay for the third panel (Electronics / Manufacturing Sectors) */}
               {idx === 2 && (
-                <div className={`absolute top-10 left-5 sm:top-20 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
-                  isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
-                }`}>
-                  <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal text-white leading-tight font-sans tracking-tight mb-1 sm:mb-2">
+                <div className={`absolute top-20 left-4 sm:top-24 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-[52vw] sm:max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                  }`}>
+                  <h3 className="text-sm sm:text-lg md:text-2.5xl lg:text-4xl font-bold text-white leading-tight font-sans tracking-tight mb-0.5 sm:mb-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     Chemicals
                   </h3>
-                   <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal text-[#8bc53f] leading-tight font-sans tracking-tight">
+                  <h3 className="text-xs sm:text-base md:text-2xl lg:text-3.5xl font-bold text-[#8bc53f] leading-tight font-sans tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     Process Digital<br />transformation
                   </h3>
                 </div>
@@ -121,13 +133,12 @@ export default function Hero() {
 
               {/* Text Overlay for the fourth panel (Global / Value addition) */}
               {idx === 3 && (
-                <div className={`absolute top-10 left-5 sm:top-20 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${
-                  isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
-                }`}>
-                  <h3 className="text-xl sm:text-2.5xl md:text-3.5xl lg:text-4xl font-normal leading-tight font-sans tracking-tight text-left text-white mb-2 sm:mb-4">
+                <div className={`absolute top-20 left-4 sm:top-24 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-[52vw] sm:max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                  }`}>
+                  <h3 className="text-sm sm:text-lg md:text-2.5xl lg:text-4xl font-bold leading-tight font-sans tracking-tight text-left text-white mb-1 sm:mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     Serving across all sectors
                   </h3>
-                  <div className="grid grid-cols-2 gap-x-4 gap-y-1 sm:block sm:space-y-1 font-normal font-sans text-[#c084fc] text-xs sm:text-lg md:text-xl lg:text-[22px] tracking-tight leading-snug sm:leading-normal text-left">
+                  <div className="grid grid-cols-2 gap-x-2 gap-y-0.5 sm:block sm:space-y-1 font-normal font-sans text-[#c084fc] text-[10px] sm:text-lg md:text-xl lg:text-[22px] tracking-tight leading-snug sm:leading-normal text-left drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     <div>✓ Food processing</div>
                     <div>✓ Electronics</div>
                     <div>✓ Machinery</div>
@@ -136,36 +147,34 @@ export default function Hero() {
                     <div>✓ Plastic</div>
                     <div>✓ Rubber</div>
                     <div>✓ Packaging</div>
-                    <div className="pl-2 sm:pl-4">etc.</div>
+                    <div className="pl-1 sm:pl-4">etc.</div>
                   </div>
                 </div>
               )}
 
-
-
-              {/* Dynamic Overlay Gradient based on hover state (Opposite: dim by default, bright on hover) */}
-              <div className={`absolute inset-0 transition-all duration-500 ${
-                hoveredIdx === null 
-                  ? 'bg-black/65 opacity-100' 
-                  : isHovered 
-                    ? 'bg-transparent opacity-0' 
+              {/* Dynamic Overlay Gradient based on hover state (Opposite: dim by default, bright on hover, soft dark scrim on mobile) */}
+              <div className={`absolute inset-0 transition-all duration-500 ${hoveredIdx === null
+                  ? 'bg-black/65 opacity-100'
+                  : isHovered
+                    ? 'bg-gradient-to-b from-black/80 via-black/50 to-black/75 lg:bg-transparent lg:opacity-0'
                     : 'bg-black/70 opacity-100'
-              }`} />
+                }`} />
 
               {/* Content Box (Keeps expanding titles: AUTOMOTIVE, PHARMA, etc.) */}
-              <div className="absolute inset-0 flex flex-col justify-end items-center p-6 md:p-8 pb-16 md:pb-20 z-10 text-center">
-                <div className="space-y-2.5 w-full flex flex-col items-center justify-center">
+              <div className={`absolute inset-0 flex flex-col justify-end items-end p-4 md:p-8 z-10 text-right ${idx === 0 ? 'pb-1 sm:pb-2 lg:pb-20' : 'pb-3 sm:pb-6 lg:pb-20'
+                }`}>
+                <div className="space-y-2.5 w-full flex flex-col items-end justify-end text-right">
 
                    {/* Letter Header: Displays single letter when normal (D, T, T, W), expands to full word on hover */}
-                    <div className="flex flex-col items-center justify-center leading-normal pb-2">
-                      <div className="flex items-baseline justify-center leading-normal">
-                        <span className={`font-black select-none tracking-wide transition-all duration-500 text-white ${
-                          isHovered ? 'text-5xl md:text-6xl lg:text-7xl' : 'text-3xl md:text-4xl lg:text-[42px]'
+                    <div className={`flex flex-col items-end justify-end text-right leading-normal ${idx === 0 ? 'pb-0' : 'pb-2'
+                    }`}>
+                      <div className="flex items-baseline justify-end text-right leading-normal">
+                        <span className={`font-black select-none tracking-wide transition-all duration-500 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] ${isHovered ? 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl' : 'text-2xl sm:text-3xl md:text-4xl lg:text-[42px]'
                         }`}>
                           {panel.letter}
                         </span>
-                        <span className={`font-black tracking-wide transition-all duration-500 origin-left overflow-hidden max-w-2xl opacity-100 text-white pb-3 ${
-                          isHovered ? 'text-4xl md:text-5xl lg:text-6xl' : 'text-2xl md:text-3xl lg:text-[32px]'
+                        <span className={`font-black tracking-wide transition-all duration-500 origin-left overflow-hidden max-w-2xl opacity-100 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] ${idx === 0 ? 'pb-0' : 'pb-3'
+                        } ${isHovered ? 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl' : 'text-xl sm:text-2xl md:text-3xl lg:text-[32px]'
                         }`}>
                           {panel.wordSuffix}
                         </span>

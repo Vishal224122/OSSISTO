@@ -258,12 +258,12 @@ export default function DataAnalyticsModernization() {
 
   return (
     <div className="bg-white min-h-screen text-slate-900 font-sans select-none">
-      
-      {/* 1. Hero Section (Screenshot 1: Banner + Let's Connect) */}
-      <section className="relative bg-slate-950 pt-28 md:pt-36 pb-16 md:pb-24 px-6 sm:px-12 lg:px-24 border-b border-slate-900 overflow-hidden min-h-[65vh] flex items-center">
+
+      {/* 1. Hero Section */}
+      <section className="relative bg-slate-950 pt-20 md:pt-28 pb-12 md:pb-16 pl-12 pr-6 sm:pl-16 sm:pr-12 lg:px-24 border-b border-slate-900 overflow-hidden min-h-[52vh] flex items-center">
         <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/75 to-transparent z-0" />
-        
+
         <div className="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
@@ -273,41 +273,42 @@ export default function DataAnalyticsModernization() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight">
               From Legacy to AI-Ready Data Ecosystems
             </h1>
-            <button className="bg-[#236CB1] hover:bg-[#236CB1] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
+            <button className="bg-[#236CB1] hover:bg-[#236CB1] text-white text-[11px] sm:text-xs font-black uppercase py-2.5 px-5 sm:py-4 sm:px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
               LET'S CONNECT <span className="text-[10px]">▶</span>
             </button>
           </div>
 
-          {/* Right Image */}
+          {/* Right Video */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-xs md:max-w-sm">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-ossisto-blue to-transparent opacity-20 blur-xl" />
-              <img 
-                src="/data_modernization_hero.png" 
-                alt="Data Ecosystem Visualization" 
-                className="relative w-full h-auto object-contain max-h-[245px] lg:max-h-[315px] filter drop-shadow-2xl rounded-2xl" 
+            <div className="relative w-full max-w-xs md:max-w-sm aspect-video rounded-2xl overflow-hidden shadow-2xl bg-slate-900 border border-slate-800">
+              <video
+                src="/Ossisto - AI & Data.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. Sub-Navbar Tab Menu Wrapper (Anchor-Relative Docking) */}
-      <div id="subnav-anchor" className="w-full h-[56px] relative z-30">
-        <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${
-          isSticky 
-            ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}` 
+      {/* 2. Sub-Navbar Tab Menu Wrapper (Hidden as requested) */}
+      <div id="subnav-anchor" className="hidden w-full h-[56px] relative z-30">
+        <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${isSticky
+            ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}`
             : 'absolute top-0 left-0 w-full'
-        }`}>
+          }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex space-x-8 md:space-x-12 overflow-x-auto scrollbar-none py-4 justify-start sm:justify-center">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => scrollToSection(tab.id)}
-                  className={`relative py-2 font-extrabold text-xs md:text-sm whitespace-nowrap transition-colors ${
-                    activeTab === tab.id ? 'text-black font-black' : 'text-slate-500 hover:text-black font-bold'
-                  }`}
+                  className={`relative py-2 font-extrabold text-xs md:text-sm whitespace-nowrap transition-colors ${activeTab === tab.id ? 'text-black font-black' : 'text-slate-500 hover:text-black font-bold'
+                    }`}
                 >
                   {tab.name}
                   {activeTab === tab.id && (
@@ -331,14 +332,14 @@ export default function DataAnalyticsModernization() {
               <div className="w-3 h-3 border-b-2 border-r-2 border-slate-300 transform rotate-45" />
             </div>
             <svg className="w-24 h-24 text-slate-200 fill-current opacity-70" viewBox="0 0 100 100">
-              {Array.from({ length: 6 }).map((_, r) => 
+              {Array.from({ length: 6 }).map((_, r) =>
                 Array.from({ length: 6 }).map((_, c) => (
                   <circle key={`${r}-${c}`} cx={15 + c * 14} cy={15 + r * 14} r="2.5" />
                 ))
               )}
             </svg>
           </div>
-          
+
           {/* Right Content */}
           <div className="md:col-span-9 lg:col-span-8 space-y-5 text-left">
             <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
@@ -350,8 +351,8 @@ export default function DataAnalyticsModernization() {
             <p className="text-slate-900 font-extrabold text-xs tracking-tight">
               Data is your enterprise's most powerful asset, it harnessed right.
             </p>
-            
-            <div className="space-y-4 text-slate-500 text-sm leading-relaxed max-w-3xl font-medium">
+
+            <div className="space-y-4 text-slate-500 text-sm leading-relaxed max-w-3xl font-medium text-justify">
               <p>
                 Yet legacy systems, fragmented pipelines, and reactive reporting often stand in the way of agility and innovation. Data & Analytics Modernization empowers you to migrate, optimize, and elevate your data ecosystem, unlocking real-time insights, embedded AI observability, and scalable intelligence.
               </p>
@@ -377,7 +378,7 @@ export default function DataAnalyticsModernization() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto pt-4">
             {differentiators.map((item, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-ossisto-blue/40 transition-all duration-300 flex flex-col justify-between text-left min-h-[220px]"
               >
@@ -418,11 +419,10 @@ export default function DataAnalyticsModernization() {
                 <button
                   key={key}
                   onClick={() => setActiveService(key)}
-                  className={`w-full py-3.5 px-4 font-bold text-sm text-left transition-all rounded-lg flex items-center justify-between ${
-                    activeService === key
+                  className={`w-full py-3.5 px-4 font-bold text-sm text-left transition-all rounded-lg flex items-center justify-between ${activeService === key
                       ? 'text-slate-900 bg-slate-50'
                       : 'text-slate-400 hover:text-slate-900'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-2">
                     {activeService === key && (
@@ -488,10 +488,10 @@ export default function DataAnalyticsModernization() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative w-full max-w-sm overflow-hidden rounded-3xl shadow-lg border border-slate-100 bg-slate-950 p-6 flex items-center justify-center min-h-[220px]">
                 <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
-                <img 
-                  src="/data_modernization_hero.png" 
-                  alt="Modernization Network flow" 
-                  className="w-full h-auto object-contain max-h-[180px] rounded-lg" 
+                <img
+                  src="/data_modernization_hero.png"
+                  alt="Modernization Network flow"
+                  className="w-full h-auto object-contain max-h-[180px] rounded-lg"
                 />
               </div>
             </div>
@@ -509,7 +509,7 @@ export default function DataAnalyticsModernization() {
             {/* Matrix decoration on the right */}
             <div className="hidden xl:block absolute -right-16 top-1/2 transform -translate-y-1/2">
               <svg className="w-12 h-20 text-slate-200 fill-current opacity-70" viewBox="0 0 50 100">
-                {Array.from({ length: 7 }).map((_, r) => 
+                {Array.from({ length: 7 }).map((_, r) =>
                   Array.from({ length: 3 }).map((_, c) => (
                     <circle key={`${r}-${c}`} cx={10 + c * 14} cy={10 + r * 14} r="2" />
                   ))
@@ -530,11 +530,11 @@ export default function DataAnalyticsModernization() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight">
               Frameworks & Accelerators
             </h2>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6">
               {accelerators.map((fw, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className={`${fw.color} text-white p-6 rounded-2xl shadow-sm flex flex-col justify-between min-h-[220px] hover:scale-[1.02] transition-transform duration-300 text-left`}
                 >
                   <div className="space-y-4">
@@ -544,8 +544,8 @@ export default function DataAnalyticsModernization() {
                     </p>
                   </div>
                   {fw.hasLink && (
-                    <a 
-                      href="#dream-details" 
+                    <a
+                      href="#dream-details"
                       className="text-[11px] font-bold uppercase tracking-wider hover:underline flex items-center gap-1 mt-4"
                     >
                       Know More <span className="text-[9px]">▶</span>
@@ -577,10 +577,10 @@ export default function DataAnalyticsModernization() {
                   {p.type === "custom" ? (
                     p.render()
                   ) : (
-                    <img 
-                      src={p.src} 
-                      alt={p.name} 
-                      className="h-full object-contain filter opacity-80 hover:opacity-100 transition-opacity duration-300 max-w-[110px]" 
+                    <img
+                      src={p.src}
+                      alt={p.name}
+                      className="h-full object-contain filter opacity-80 hover:opacity-100 transition-opacity duration-300 max-w-[110px]"
                     />
                   )}
                 </div>
@@ -601,7 +601,7 @@ export default function DataAnalyticsModernization() {
         {/* Left and right decorations */}
         <div className="hidden xl:block absolute left-8 top-1/2 transform -translate-y-1/2">
           <svg className="w-12 h-20 text-slate-200 fill-current opacity-70" viewBox="0 0 50 100">
-            {Array.from({ length: 7 }).map((_, r) => 
+            {Array.from({ length: 7 }).map((_, r) =>
               Array.from({ length: 3 }).map((_, c) => (
                 <circle key={`${r}-${c}`} cx={10 + c * 14} cy={10 + r * 14} r="2" />
               ))
@@ -638,14 +638,13 @@ export default function DataAnalyticsModernization() {
               {/* Selector dots */}
               <div className="flex space-x-2 mt-8 items-center">
                 {successStories.map((_, idx) => (
-                  <button 
+                  <button
                     key={idx}
                     onClick={() => setActiveStoryIdx(idx)}
-                    className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black border transition-all ${
-                      activeStoryIdx === idx 
-                        ? 'bg-ossisto-blue border-ossisto-blue text-white' 
+                    className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black border transition-all ${activeStoryIdx === idx
+                        ? 'bg-ossisto-blue border-ossisto-blue text-white'
                         : 'bg-white border-gray-300 text-slate-500 hover:border-slate-500'
-                    }`}
+                      }`}
                   >
                     {idx + 1}
                   </button>
@@ -655,9 +654,9 @@ export default function DataAnalyticsModernization() {
 
             {/* Right column with Image */}
             <div className="w-full md:w-1/2 relative min-h-[220px] md:min-h-auto bg-slate-900">
-              <img 
-                src="/financial_success_globe.png" 
-                alt="Success Globe Visualization" 
+              <img
+                src="/financial_success_globe.png"
+                alt="Success Globe Visualization"
                 className="w-full h-full object-cover absolute inset-0 opacity-90"
               />
             </div>

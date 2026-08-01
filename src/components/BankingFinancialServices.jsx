@@ -211,12 +211,12 @@ export default function BankingFinancialServices() {
 
   return (
     <div className="bg-white min-h-screen text-slate-900 font-sans select-none">
-      
-      {/* 1. Hero Section (Screenshot 1: Banner + Let's Connect) */}
-      <section className="relative bg-slate-950 pt-28 md:pt-36 pb-16 md:pb-24 px-6 sm:px-12 lg:px-24 border-b border-slate-900 overflow-hidden min-h-[65vh] flex items-center">
+
+      {/* 1. Hero Section */}
+      <section className="relative bg-slate-950 pt-20 md:pt-28 pb-12 md:pb-16 pl-12 pr-6 sm:pl-16 sm:pr-12 lg:px-24 border-b border-slate-900 overflow-hidden min-h-[52vh] flex items-center">
         <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/75 to-transparent z-0" />
-        
+
         <div className="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
@@ -226,41 +226,42 @@ export default function BankingFinancialServices() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight">
               The Future of Finance is Here
             </h1>
-            <button className="bg-[#236CB1] hover:bg-[#236CB1] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
+            <button className="bg-[#236CB1] hover:bg-[#236CB1] text-white text-[11px] sm:text-xs font-black uppercase py-2.5 px-5 sm:py-4 sm:px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
               LET'S CONNECT <span className="text-[10px]">▶</span>
             </button>
           </div>
 
-          {/* Right Image */}
+          {/* Right Video */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-xs md:max-w-md">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-ossisto-blue to-transparent opacity-20 blur-xl" />
-              <img 
-                src="/banking_hero.png" 
-                alt="Banking analytics visualization hero" 
-                className="relative w-full h-auto object-contain max-h-[245px] lg:max-h-[315px] filter drop-shadow-2xl rounded-2xl" 
+            <div className="relative w-full max-w-xs md:max-w-sm aspect-video rounded-2xl overflow-hidden shadow-2xl bg-slate-900 border border-slate-800">
+              <video
+                src="/Ossisto - Enterprise Digital & IT.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. Sub-Navbar Tab Menu Wrapper (Anchor-Relative Docking) */}
-      <div id="subnav-anchor" className="w-full h-[56px] relative z-30">
-        <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${
-          isSticky 
-            ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}` 
+      {/* 2. Sub-Navbar Tab Menu Wrapper (Hidden as requested) */}
+      <div id="subnav-anchor" className="hidden w-full h-[56px] relative z-30">
+        <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${isSticky
+            ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}`
             : 'absolute top-0 left-0 w-full'
-        }`}>
+          }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex space-x-8 md:space-x-12 overflow-x-auto scrollbar-none py-4 justify-start sm:justify-center">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => scrollToSection(tab.id)}
-                  className={`relative py-2 font-extrabold text-xs md:text-sm whitespace-nowrap transition-colors ${
-                    activeTab === tab.id ? 'text-black font-black' : 'text-slate-500 hover:text-black font-bold'
-                  }`}
+                  className={`relative py-2 font-extrabold text-xs md:text-sm whitespace-nowrap transition-colors ${activeTab === tab.id ? 'text-black font-black' : 'text-slate-500 hover:text-black font-bold'
+                    }`}
                 >
                   {tab.name}
                   {activeTab === tab.id && (
@@ -285,7 +286,7 @@ export default function BankingFinancialServices() {
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-2xl font-sans mx-auto">
                 Financial firms are dealing with big changes. They must save money, manage risks & invest in digital services for delivering hyper-personalized financial services.
               </h2>
-              
+
               <div className="space-y-4 text-slate-500 text-sm leading-relaxed max-w-3xl font-medium mx-auto">
                 <p>
                   Ossisto brings together strong engineering expertise and the latest technology know-how to drive digital transformation and update applications. We are here to support the world's leading financial services providers in achieving better revenue, operational efficiency, and a competitive advantage. Our commitment lies in helping these providers grow, cut costs, and stay ahead in the market. By infusing innovation into everything we do, we're playing a key role in shaping a brighter and more advanced future for the financial industry.
@@ -306,8 +307,8 @@ export default function BankingFinancialServices() {
                   </h3>
                 </div>
                 <div className="pt-4">
-                  <a 
-                    href="#keeping-updated" 
+                  <a
+                    href="#keeping-updated"
                     className="inline-flex items-center gap-1.5 text-xs font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-widest"
                   >
                     Let's Find Out <span className="text-[10px]">▶</span>
@@ -317,10 +318,10 @@ export default function BankingFinancialServices() {
 
               {/* Right image */}
               <div className="w-full md:w-2/5 relative overflow-hidden min-h-[200px] md:min-h-auto bg-slate-900">
-                <img 
-                  src="/banking_insight.png" 
-                  alt="Banking Cloud Highrise Insight" 
-                  className="w-full h-full object-cover absolute inset-0" 
+                <img
+                  src="/banking_insight.png"
+                  alt="Banking Cloud Highrise Insight"
+                  className="w-full h-full object-cover absolute inset-0"
                 />
               </div>
             </div>
@@ -396,15 +397,15 @@ export default function BankingFinancialServices() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto pt-4">
             {serveAreas.map((area, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-white border border-slate-150 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between text-left min-h-[300px]"
               >
                 <div className="w-full h-40 overflow-hidden bg-slate-100">
-                  <img 
-                    src={area.image} 
-                    alt={area.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+                  <img
+                    src={area.image}
+                    alt={area.title}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between">
@@ -416,8 +417,8 @@ export default function BankingFinancialServices() {
                       {area.desc}
                     </p>
                   </div>
-                  <a 
-                    href="#dream-details" 
+                  <a
+                    href="#dream-details"
                     className="text-[10px] font-black text-black hover:text-ossisto-blue uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
                   >
                     Know More <span className="text-[9px]">▶</span>
@@ -439,11 +440,11 @@ export default function BankingFinancialServices() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight">
               Technical Edge Driving Digital Financial Services
             </h2>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6">
               {accelerators.map((fw, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className={`${fw.color} text-white p-6 rounded-2xl shadow-sm flex flex-col justify-between min-h-[220px] hover:scale-[1.02] transition-transform duration-300 text-left`}
                 >
                   <div className="space-y-4">
@@ -452,8 +453,8 @@ export default function BankingFinancialServices() {
                       {fw.desc}
                     </p>
                   </div>
-                  <a 
-                    href="#dream-details" 
+                  <a
+                    href="#dream-details"
                     className="text-[11px] font-bold uppercase tracking-wider hover:underline flex items-center gap-1 mt-4"
                   >
                     Know More <span className="text-[9px]">▶</span>
@@ -467,7 +468,7 @@ export default function BankingFinancialServices() {
         {/* Matrix decoration on the right */}
         <div className="hidden xl:block absolute -right-4 top-1/2 transform -translate-y-1/2">
           <svg className="w-12 h-20 text-slate-200 fill-current opacity-70" viewBox="0 0 50 100">
-            {Array.from({ length: 7 }).map((_, r) => 
+            {Array.from({ length: 7 }).map((_, r) =>
               Array.from({ length: 3 }).map((_, c) => (
                 <circle key={`${r}-${c}`} cx={10 + c * 14} cy={10 + r * 14} r="2" />
               ))
@@ -501,14 +502,13 @@ export default function BankingFinancialServices() {
               {/* Selector dots */}
               <div className="flex space-x-2 mt-8 items-center">
                 {successStories.map((_, idx) => (
-                  <button 
+                  <button
                     key={idx}
                     onClick={() => setActiveStoryIdx(idx)}
-                    className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black border transition-all ${
-                      activeStoryIdx === idx 
-                        ? 'bg-ossisto-blue border-ossisto-blue text-white' 
+                    className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black border transition-all ${activeStoryIdx === idx
+                        ? 'bg-ossisto-blue border-ossisto-blue text-white'
                         : 'bg-white border-gray-300 text-slate-500 hover:border-slate-500'
-                    }`}
+                      }`}
                   >
                     {idx + 1}
                   </button>
@@ -519,15 +519,15 @@ export default function BankingFinancialServices() {
             {/* Right column with Image */}
             <div className="w-full md:w-1/2 relative min-h-[220px] md:min-h-auto bg-slate-900">
               {activeStoryIdx === 1 ? (
-                <img 
-                  src="/security_success_banking.png" 
-                  alt="Banking Corridor Security visual" 
+                <img
+                  src="/security_success_banking.png"
+                  alt="Banking Corridor Security visual"
                   className="w-full h-full object-cover absolute inset-0 opacity-95"
                 />
               ) : (
-                <img 
-                  src="/financial_success_globe.png" 
-                  alt="Success Globe Visualization" 
+                <img
+                  src="/financial_success_globe.png"
+                  alt="Success Globe Visualization"
                   className="w-full h-full object-cover absolute inset-0 opacity-90"
                 />
               )}
@@ -545,19 +545,17 @@ export default function BankingFinancialServices() {
               Keeping You Updated
             </h2>
             <div className="flex space-x-6 text-sm font-bold border-b border-gray-100 pb-2 max-w-xs text-left justify-start">
-              <button 
+              <button
                 onClick={() => setActiveResourceTab('thought')}
-                className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'thought' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
-                }`}
+                className={`pb-2 transition-all cursor-pointer ${activeResourceTab === 'thought' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
+                  }`}
               >
                 Thought Leadership
               </button>
-              <button 
+              <button
                 onClick={() => setActiveResourceTab('insights')}
-                className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'insights' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
-                }`}
+                className={`pb-2 transition-all cursor-pointer ${activeResourceTab === 'insights' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
+                  }`}
               >
                 Insights
               </button>
@@ -567,15 +565,15 @@ export default function BankingFinancialServices() {
           {/* Grid of Articles - 3 Cards in first row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto pt-4">
             {activeArticles.slice(0, 3).map((item, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="bg-white border border-slate-150 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-all duration-300 text-left min-h-[320px]"
               >
                 <div className="w-full h-40 overflow-hidden bg-slate-100">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between">
@@ -587,8 +585,8 @@ export default function BankingFinancialServices() {
                       {item.title}
                     </h4>
                   </div>
-                  <a 
-                    href={item.href} 
+                  <a
+                    href={item.href}
                     className="text-[10px] font-black text-black hover:text-ossisto-blue uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
                   >
                     Know More <span className="text-[9px]">▶</span>
@@ -601,15 +599,15 @@ export default function BankingFinancialServices() {
           {/* Row 2 of Articles grid: showing 4th and 5th article */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto mt-6">
             {activeArticles.slice(3, 5).map((item, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="bg-white border border-slate-150 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-all duration-300 text-left min-h-[320px]"
               >
                 <div className="w-full h-40 overflow-hidden bg-slate-100">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between">
@@ -621,8 +619,8 @@ export default function BankingFinancialServices() {
                       {item.title}
                     </h4>
                   </div>
-                  <a 
-                    href={item.href} 
+                  <a
+                    href={item.href}
                     className="text-[10px] font-black text-black hover:text-ossisto-blue uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
                   >
                     Know More <span className="text-[9px]">▶</span>

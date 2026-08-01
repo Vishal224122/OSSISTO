@@ -337,12 +337,12 @@ export default function DataApplicationSecurity() {
 
   return (
     <div className="bg-white min-h-screen text-slate-900 font-sans select-none">
-      
-      {/* 1. Hero Section (Screenshot 1: Banner + Let's Connect) */}
-      <section className="relative bg-slate-950 pt-28 md:pt-36 pb-16 md:pb-24 px-6 sm:px-12 lg:px-24 border-b border-slate-900 overflow-hidden min-h-[65vh] flex items-center">
+
+      {/* 1. Hero Section */}
+      <section className="relative bg-slate-950 pt-20 md:pt-28 pb-12 md:pb-16 pl-12 pr-6 sm:pl-16 sm:pr-12 lg:px-24 border-b border-slate-900 overflow-hidden min-h-[52vh] flex items-center">
         <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/75 to-transparent z-0" />
-        
+
         <div className="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
@@ -352,41 +352,42 @@ export default function DataApplicationSecurity() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight uppercase">
               Secure by Design, Protected by Intelligence
             </h1>
-            <button className="bg-[#236CB1] hover:bg-[#236CB1] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
+            <button className="bg-[#236CB1] hover:bg-[#236CB1] text-white text-[11px] sm:text-xs font-black uppercase py-2.5 px-5 sm:py-4 sm:px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
               LET'S CONNECT <span className="text-[10px]">▶</span>
             </button>
           </div>
 
-          {/* Right Image */}
+          {/* Right Video */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-xs md:max-w-md">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-ossisto-blue to-transparent opacity-20 blur-xl" />
-              <img 
-                src="/data_security_hero.png" 
-                alt="Cyber Security Lock Visualization" 
-                className="relative w-full h-auto object-contain max-h-[245px] lg:max-h-[315px] filter drop-shadow-2xl rounded-2xl" 
+            <div className="relative w-full max-w-xs md:max-w-sm aspect-video rounded-2xl overflow-hidden shadow-2xl bg-slate-900 border border-slate-800">
+              <video
+                src="/Ossisto - AI & Data.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. Sub-Navbar Tab Menu Wrapper (Anchor-Relative Docking) */}
-      <div id="subnav-anchor" className="w-full h-[56px] relative z-30">
-        <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${
-          isSticky 
-            ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}` 
+      {/* 2. Sub-Navbar Tab Menu Wrapper (Hidden as requested) */}
+      <div id="subnav-anchor" className="hidden w-full h-[56px] relative z-30">
+        <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${isSticky
+            ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}`
             : 'absolute top-0 left-0 w-full'
-        }`}>
+          }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex space-x-8 md:space-x-12 overflow-x-auto scrollbar-none py-4 justify-start sm:justify-center">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => scrollToSection(tab.id)}
-                  className={`relative py-2 font-extrabold text-xs md:text-sm whitespace-nowrap transition-colors ${
-                    activeTab === tab.id ? 'text-black font-black' : 'text-slate-500 hover:text-black font-bold'
-                  }`}
+                  className={`relative py-2 font-extrabold text-xs md:text-sm whitespace-nowrap transition-colors ${activeTab === tab.id ? 'text-black font-black' : 'text-slate-500 hover:text-black font-bold'
+                    }`}
                 >
                   {tab.name}
                   {activeTab === tab.id && (
@@ -410,14 +411,14 @@ export default function DataApplicationSecurity() {
               <div className="w-3 h-3 border-b-2 border-r-2 border-slate-300 transform rotate-45" />
             </div>
             <svg className="w-24 h-24 text-slate-200 fill-current opacity-70" viewBox="0 0 100 100">
-              {Array.from({ length: 6 }).map((_, r) => 
+              {Array.from({ length: 6 }).map((_, r) =>
                 Array.from({ length: 6 }).map((_, c) => (
                   <circle key={`${r}-${c}`} cx={15 + c * 14} cy={15 + r * 14} r="2.5" />
                 ))
               )}
             </svg>
           </div>
-          
+
           {/* Right Content */}
           <div className="md:col-span-9 lg:col-span-8 space-y-5 text-left">
             <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
@@ -426,7 +427,7 @@ export default function DataApplicationSecurity() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-2xl font-sans">
               Secure Your Applications and Data by Design
             </h2>
-            
+
             <div className="space-y-4 text-slate-500 text-sm leading-relaxed max-w-3xl font-medium">
               <p className="text-slate-900 font-extrabold text-xs tracking-tight">
                 In a world of GenAI, APIs, and distributed cloud systems, the application perimeter no longer exists. Data flows through code, pipelines, and models at machine speed. Securing it after deployment is too late.
@@ -453,7 +454,7 @@ export default function DataApplicationSecurity() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-4 max-w-7xl mx-auto">
             {capabilities.map((item, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-white border-2 border-ossisto-blue rounded-2xl p-6 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 flex flex-col justify-between text-left min-h-[220px]"
               >
@@ -473,7 +474,7 @@ export default function DataApplicationSecurity() {
         {/* Right decoration grid */}
         <div className="hidden xl:block absolute right-8 top-1/3">
           <svg className="w-12 h-20 text-slate-200 fill-current opacity-70" viewBox="0 0 50 100">
-            {Array.from({ length: 7 }).map((_, r) => 
+            {Array.from({ length: 7 }).map((_, r) =>
               Array.from({ length: 3 }).map((_, c) => (
                 <circle key={`${r}-${c}`} cx={10 + c * 14} cy={10 + r * 14} r="2" />
               ))
@@ -496,7 +497,7 @@ export default function DataApplicationSecurity() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto pt-4">
             {differentiators.map((item, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-slate-50 border border-slate-150 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300 flex flex-col justify-between text-left min-h-[240px]"
               >
@@ -532,8 +533,8 @@ export default function DataApplicationSecurity() {
                 </h3>
               </div>
               <div className="pt-4">
-                <a 
-                  href="#keeping-updated" 
+                <a
+                  href="#keeping-updated"
                   className="inline-flex items-center gap-1.5 text-xs font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-widest"
                 >
                   Let's Find Out <span className="text-[10px]">▶</span>
@@ -543,9 +544,9 @@ export default function DataApplicationSecurity() {
 
             {/* Right Graphic Banner */}
             <div className="w-full md:w-2/5 relative overflow-hidden min-h-[240px] md:min-h-auto bg-slate-900">
-              <img 
-                src="/security_insight.png" 
-                alt="Security Shield Spotlight Graphic" 
+              <img
+                src="/security_insight.png"
+                alt="Security Shield Spotlight Graphic"
                 className="w-full h-full object-cover absolute inset-0 opacity-90"
               />
             </div>
@@ -570,10 +571,10 @@ export default function DataApplicationSecurity() {
             {/* Left Column Image */}
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative w-full max-w-sm overflow-hidden rounded-3xl shadow-lg border border-slate-100 min-h-[220px]">
-                <img 
-                  src="/security_deliver.png" 
-                  alt="Security engineering dashboards" 
-                  className="w-full h-full object-cover" 
+                <img
+                  src="/security_deliver.png"
+                  alt="Security engineering dashboards"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -607,10 +608,10 @@ export default function DataApplicationSecurity() {
               {[...partners, ...partners, ...partners, ...partners].map((p, idx) => (
                 <div key={idx} className="h-8 flex items-center justify-center shrink-0 px-2 min-w-[110px]">
                   {p.type === "image" ? (
-                    <img 
-                      src={p.src} 
-                      alt={p.name} 
-                      className="h-full object-contain filter opacity-80 hover:opacity-100 transition-opacity duration-300 max-w-[110px]" 
+                    <img
+                      src={p.src}
+                      alt={p.name}
+                      className="h-full object-contain filter opacity-80 hover:opacity-100 transition-opacity duration-300 max-w-[110px]"
                     />
                   ) : (
                     p.render()
@@ -633,7 +634,7 @@ export default function DataApplicationSecurity() {
         {/* Left and right decorations */}
         <div className="hidden xl:block absolute left-8 top-1/2 transform -translate-y-1/2">
           <svg className="w-12 h-20 text-slate-200 fill-current opacity-70" viewBox="0 0 50 100">
-            {Array.from({ length: 7 }).map((_, r) => 
+            {Array.from({ length: 7 }).map((_, r) =>
               Array.from({ length: 3 }).map((_, c) => (
                 <circle key={`${r}-${c}`} cx={10 + c * 14} cy={10 + r * 14} r="2" />
               ))
@@ -670,14 +671,13 @@ export default function DataApplicationSecurity() {
               {/* Selector dots */}
               <div className="flex space-x-2 mt-8 items-center">
                 {successStories.map((_, idx) => (
-                  <button 
+                  <button
                     key={idx}
                     onClick={() => setActiveStoryIdx(idx)}
-                    className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black border transition-all ${
-                      activeStoryIdx === idx 
-                        ? 'bg-ossisto-blue border-ossisto-blue text-white' 
+                    className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-black border transition-all ${activeStoryIdx === idx
+                        ? 'bg-ossisto-blue border-ossisto-blue text-white'
                         : 'bg-white border-gray-300 text-slate-500 hover:border-slate-500'
-                    }`}
+                      }`}
                   >
                     {idx + 1}
                   </button>
@@ -688,15 +688,15 @@ export default function DataApplicationSecurity() {
             {/* Right column with Image */}
             <div className="w-full md:w-1/2 relative min-h-[220px] md:min-h-auto bg-slate-900">
               {activeStoryIdx === 1 ? (
-                <img 
-                  src="/security_success_banking.png" 
-                  alt="Banking Corridor Security visual" 
+                <img
+                  src="/security_success_banking.png"
+                  alt="Banking Corridor Security visual"
                   className="w-full h-full object-cover absolute inset-0 opacity-95"
                 />
               ) : (
-                <img 
-                  src="/financial_success_globe.png" 
-                  alt="Success Globe Visualization" 
+                <img
+                  src="/financial_success_globe.png"
+                  alt="Success Globe Visualization"
                   className="w-full h-full object-cover absolute inset-0 opacity-90"
                 />
               )}
@@ -714,19 +714,17 @@ export default function DataApplicationSecurity() {
               Keeping You Updated
             </h2>
             <div className="flex space-x-6 text-sm font-bold border-b border-gray-100 pb-2 max-w-xs text-left justify-start">
-              <button 
+              <button
                 onClick={() => setActiveResourceTab('thought')}
-                className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'thought' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
-                }`}
+                className={`pb-2 transition-all cursor-pointer ${activeResourceTab === 'thought' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
+                  }`}
               >
                 Thought Leadership
               </button>
-              <button 
+              <button
                 onClick={() => setActiveResourceTab('insights')}
-                className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'insights' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
-                }`}
+                className={`pb-2 transition-all cursor-pointer ${activeResourceTab === 'insights' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
+                  }`}
               >
                 Insights
               </button>
@@ -736,15 +734,15 @@ export default function DataApplicationSecurity() {
           {/* Grid of Articles - 5 Cards exactly as in layout screenshot */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto pt-4">
             {activeArticles.slice(0, 3).map((item, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="bg-white border border-slate-150 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-all duration-300 text-left min-h-[320px]"
               >
                 <div className="w-full h-40 overflow-hidden bg-slate-100">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between">
@@ -756,8 +754,8 @@ export default function DataApplicationSecurity() {
                       {item.title}
                     </h4>
                   </div>
-                  <a 
-                    href={item.href} 
+                  <a
+                    href={item.href}
                     className="text-[10px] font-black text-black hover:text-ossisto-blue uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
                   >
                     Know More <span className="text-[9px]">▶</span>
@@ -770,15 +768,15 @@ export default function DataApplicationSecurity() {
           {/* Row 2 of Articles grid: showing 4th and 5th article */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto mt-6">
             {activeArticles.slice(3, 5).map((item, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="bg-white border border-slate-150 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-all duration-300 text-left min-h-[320px]"
               >
                 <div className="w-full h-40 overflow-hidden bg-slate-100">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between">
@@ -790,8 +788,8 @@ export default function DataApplicationSecurity() {
                       {item.title}
                     </h4>
                   </div>
-                  <a 
-                    href={item.href} 
+                  <a
+                    href={item.href}
                     className="text-[10px] font-black text-black hover:text-ossisto-blue uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
                   >
                     Know More <span className="text-[9px]">▶</span>
@@ -832,10 +830,9 @@ export default function DataApplicationSecurity() {
                     </div>
                   </button>
 
-                  <div 
-                    className={`overflow-hidden transition-all duration-300 ${
-                      isOpen ? 'max-h-[300px] mt-2 pb-4 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
-                    }`}
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[300px] mt-2 pb-4 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
+                      }`}
                   >
                     <p className="text-slate-600 text-xs leading-relaxed font-semibold pl-1 pr-12">
                       {faq.a}

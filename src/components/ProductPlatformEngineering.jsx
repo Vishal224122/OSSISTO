@@ -316,12 +316,12 @@ export default function ProductPlatformEngineering() {
 
   return (
     <div className="bg-white min-h-screen text-slate-900 font-sans select-none">
-      
+
       {/* 1. Hero Section */}
-      <section className="relative bg-slate-950 pt-28 md:pt-36 pb-16 md:pb-24 px-6 sm:px-12 lg:px-24 border-b border-slate-900 overflow-hidden min-h-[65vh] flex items-center">
+      <section className="relative bg-slate-950 pt-20 md:pt-28 pb-12 md:pb-16 pl-12 pr-6 sm:pl-16 sm:pr-12 lg:px-24 border-b border-slate-900 overflow-hidden min-h-[52vh] flex items-center">
         <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/75 to-transparent z-0" />
-        
+
         <div className="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
@@ -331,41 +331,42 @@ export default function ProductPlatformEngineering() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight">
               Engineer AI-native product and platforms
             </h1>
-            <button className="bg-[#236CB1] hover:bg-[#236CB1] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
+            <button className="bg-[#236CB1] hover:bg-[#236CB1] text-white text-[11px] sm:text-xs font-black uppercase py-2.5 px-5 sm:py-4 sm:px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
               LET'S CONNECT <span className="text-[10px]">▶</span>
             </button>
           </div>
 
-          {/* Right Image */}
+          {/* Right Video */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-xs">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-ossisto-blue to-transparent opacity-20 blur-xl" />
-              <img 
-                src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=800&auto=format&fit=crop" 
-                alt="AR Headset Engineering" 
-                className="relative w-full h-auto object-contain max-h-[245px] lg:max-h-[315px] filter drop-shadow-2xl rounded-2xl" 
+            <div className="relative w-full max-w-xs md:max-w-sm aspect-video rounded-2xl overflow-hidden shadow-2xl bg-slate-900 border border-slate-800">
+              <video
+                src="/Ossisto - Engineering Services.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. Sub-Navbar Tab Menu Wrapper (Anchor-Relative Docking) */}
-      <div id="subnav-anchor" className="w-full h-[56px] relative z-30">
-        <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${
-          isSticky 
-            ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}` 
+      {/* 2. Sub-Navbar Tab Menu Wrapper (Hidden as requested) */}
+      <div id="subnav-anchor" className="hidden w-full h-[56px] relative z-30">
+        <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${isSticky
+            ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}`
             : 'absolute top-0 left-0 w-full'
-        }`}>
+          }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex space-x-8 md:space-x-12 overflow-x-auto scrollbar-none py-4 justify-start sm:justify-center">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => scrollToSection(tab.id)}
-                  className={`relative py-2 font-extrabold text-xs md:text-sm whitespace-nowrap transition-colors ${
-                    activeTab === tab.id ? 'text-black' : 'text-slate-500 hover:text-black'
-                  }`}
+                  className={`relative py-2 font-extrabold text-xs md:text-sm whitespace-nowrap transition-colors ${activeTab === tab.id ? 'text-black' : 'text-slate-500 hover:text-black'
+                    }`}
                 >
                   {tab.name}
                   {activeTab === tab.id && (
@@ -384,14 +385,14 @@ export default function ProductPlatformEngineering() {
           {/* Left dots decoration */}
           <div className="hidden md:flex md:col-span-3 lg:col-span-4 justify-center">
             <svg className="w-24 h-24 text-slate-200 fill-current opacity-70" viewBox="0 0 100 100">
-              {Array.from({ length: 6 }).map((_, r) => 
+              {Array.from({ length: 6 }).map((_, r) =>
                 Array.from({ length: 6 }).map((_, c) => (
                   <circle key={`${r}-${c}`} cx={15 + c * 14} cy={15 + r * 14} r="2.5" />
                 ))
               )}
             </svg>
           </div>
-          
+
           {/* Right Text */}
           <div className="md:col-span-9 lg:col-span-8 space-y-4 text-left">
             <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
@@ -421,7 +422,7 @@ export default function ProductPlatformEngineering() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto pt-4">
             {capabilities.map((item, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-ossisto-blue/40 transition-all duration-300 border-t-4 border-t-ossisto-blue flex flex-col justify-between text-left"
               >
@@ -440,7 +441,7 @@ export default function ProductPlatformEngineering() {
       {/* 5. Featured Insight */}
       <section id="insights" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto">
-          
+
           <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-xl border border-slate-150 flex flex-col md:flex-row bg-white min-h-[280px]">
             {/* Left Content */}
             <div className="w-full md:w-3/5 p-8 lg:p-10 flex flex-col justify-between text-left">
@@ -456,8 +457,8 @@ export default function ProductPlatformEngineering() {
                 <span className="block text-slate-400 text-xs font-semibold">
                   By Karthik Pillai | July 8, 2023
                 </span>
-                <a 
-                  href="#keeping-updated" 
+                <a
+                  href="#keeping-updated"
                   className="inline-flex items-center gap-1 text-xs font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-widest"
                 >
                   Let's Find Out <span className="text-[10px]">▶</span>
@@ -485,7 +486,7 @@ export default function ProductPlatformEngineering() {
       {/* 6. Accelerators In House & Collaborators */}
       <section id="accelerators" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-b-0 lg:border-b border-gray-150">
         <div className="max-w-7xl mx-auto space-y-16">
-          
+
           {/* Part A: Accelerators */}
           <div className="text-left space-y-3">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -494,7 +495,7 @@ export default function ProductPlatformEngineering() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-2xl">
               Product Engineering Accelerators for Digital Journey
             </h2>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6">
               {/* iPerform */}
               <div className="bg-[#236CB1] text-white p-6 rounded-2xl shadow-sm flex flex-col justify-between min-h-[200px] hover:scale-[1.02] transition-transform duration-300 text-left">
@@ -557,7 +558,8 @@ export default function ProductPlatformEngineering() {
             </h2>
 
             {/* Inline styles for the horizontal logo marquee */}
-            <style dangerouslySetInnerHTML={{__html: `
+            <style dangerouslySetInnerHTML={{
+              __html: `
               @keyframes marquee-scroll {
                 0% { transform: translateX(0); }
                 100% { transform: translateX(-50%); }
@@ -578,9 +580,9 @@ export default function ProductPlatformEngineering() {
                 {[...partnerLogos, ...partnerLogos].map((logo, lIdx) => (
                   <div key={lIdx} className="h-6 md:h-8 flex items-center justify-center px-2 shrink-0">
                     {logo.type === "image" ? (
-                      <img 
-                        src={logo.src} 
-                        alt={logo.name} 
+                      <img
+                        src={logo.src}
+                        alt={logo.name}
                         className="h-full object-contain filter opacity-85 hover:opacity-100 transition-opacity duration-300"
                         style={{ maxWidth: '90px' }}
                       />
@@ -605,12 +607,12 @@ export default function ProductPlatformEngineering() {
       {/* 7. Incredible Numbers Section */}
       <section id="outcomes" className="relative py-20 px-6 md:px-12 lg:px-24 overflow-hidden border-b-0 lg:border-b border-gray-150">
         {/* Background Image with Overlay */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center z-0" 
+        <div
+          className="absolute inset-0 bg-cover bg-center z-0"
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop')` }}
         />
         <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-[1px] z-0" />
-        
+
         <div className="max-w-7xl mx-auto relative z-10 text-left space-y-8">
           <div className="space-y-3">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -666,19 +668,17 @@ export default function ProductPlatformEngineering() {
               Keeping You Updated
             </span>
             <div className="flex justify-center space-x-6 text-sm font-bold border-b border-gray-100 pb-2 max-w-xs mx-auto">
-              <button 
+              <button
                 onClick={() => setActiveResourceTab('thought')}
-                className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'thought' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
-                }`}
+                className={`pb-2 transition-all cursor-pointer ${activeResourceTab === 'thought' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
+                  }`}
               >
                 Thought Leadership
               </button>
-              <button 
+              <button
                 onClick={() => setActiveResourceTab('insights')}
-                className={`pb-2 transition-all cursor-pointer ${
-                  activeResourceTab === 'insights' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
-                }`}
+                className={`pb-2 transition-all cursor-pointer ${activeResourceTab === 'insights' ? 'text-black border-b-2 border-ossisto-blue' : 'text-slate-400 hover:text-black'
+                  }`}
               >
                 Insights
               </button>
@@ -688,15 +688,15 @@ export default function ProductPlatformEngineering() {
           {/* 5-Column Responsive Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto pt-4">
             {activeArticles.map((item, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="bg-[#f8fafc] border border-slate-100 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition-all duration-300 text-left min-h-[300px]"
               >
                 <div className="w-full h-36 overflow-hidden bg-slate-100">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <div className="p-4 flex-1 flex flex-col justify-between">
@@ -708,8 +708,8 @@ export default function ProductPlatformEngineering() {
                       {item.title}
                     </h4>
                   </div>
-                  <a 
-                    href={item.href} 
+                  <a
+                    href={item.href}
                     className="text-[10px] font-black text-black hover:text-ossisto-blue uppercase tracking-wider flex items-center gap-1 mt-4 transition-colors"
                   >
                     Know More <span className="text-[9px]">▶</span>
@@ -736,7 +736,7 @@ export default function ProductPlatformEngineering() {
                 </div>
               ))}
             </div>
-            
+
             <h2 className="text-2xl sm:text-3xl font-black text-black tracking-tight leading-tight max-w-sm relative z-10 pt-4">
               Our other key areas for Digital Engineering Services
             </h2>
@@ -761,7 +761,7 @@ export default function ProductPlatformEngineering() {
       {/* 10. Platform Engineering - Questions frequently asked (FAQ Section) */}
       <section id="faq" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white border-none">
         <div className="max-w-3xl mx-auto text-left">
-          
+
           <h2 className="text-2xl md:text-3xl font-black text-black tracking-tight mb-4">
             Platform Engineering - Questions frequently asked
           </h2>
@@ -788,10 +788,9 @@ export default function ProductPlatformEngineering() {
                     </div>
                   </button>
 
-                  <div 
-                    className={`overflow-hidden transition-all duration-350 ${
-                      isOpen ? 'max-h-[300px] mt-2 pb-4 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
-                    }`}
+                  <div
+                    className={`overflow-hidden transition-all duration-350 ${isOpen ? 'max-h-[300px] mt-2 pb-4 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
+                      }`}
                   >
                     <p className="text-slate-650 text-xs leading-relaxed font-medium pl-1 pr-12">
                       {faq.a}

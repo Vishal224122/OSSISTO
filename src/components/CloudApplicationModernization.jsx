@@ -321,7 +321,7 @@ export default function CloudApplicationModernization() {
     <div className="bg-white min-h-screen text-slate-900 font-sans select-none">
 
       {/* 1. Hero Section */}
-      <section className="relative bg-slate-950 pt-20 md:pt-28 pb-12 md:pb-16 px-6 sm:px-12 lg:px-24 border-b border-slate-900 overflow-hidden min-h-[52vh] flex items-center">
+      <section className="relative bg-slate-950 pt-20 md:pt-28 pb-12 md:pb-16 pl-12 pr-6 sm:pl-16 sm:pr-12 lg:px-24 border-b border-slate-900 overflow-hidden min-h-[52vh] flex items-center">
         <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/75 to-transparent z-0" />
 
@@ -334,27 +334,30 @@ export default function CloudApplicationModernization() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight">
               FIX The Data Foundation
             </h1>
-            <button className="bg-[#236CB1] hover:bg-[#1A5185] text-white text-xs font-black uppercase py-4 px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
+            <button className="bg-[#236CB1] hover:bg-[#1A5185] text-white text-[11px] sm:text-xs font-black uppercase py-2.5 px-5 sm:py-4 sm:px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
               LET'S CONNECT <span className="text-[10px]">▶</span>
             </button>
           </div>
 
-          {/* Right Image */}
+          {/* Right Video */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-xs">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-ossisto-blue to-transparent opacity-20 blur-xl" />
-              <img
-                src="/cloud_modernization_hero.png"
-                alt="Cloud Modernization Hover Model"
-                className="relative w-full h-auto object-contain max-h-[245px] lg:max-h-[315px] filter drop-shadow-2xl rounded-2xl"
+            <div className="relative w-full max-w-xs md:max-w-sm aspect-video rounded-2xl overflow-hidden shadow-2xl bg-slate-900 border border-slate-800">
+              <video
+                src="/Ossisto - AI & Data.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. Sub-Navbar Tab Menu Wrapper (Anchor-Relative Docking) */}
-      <div id="subnav-anchor" className="w-full h-[56px] relative z-30">
+      {/* 2. Sub-Navbar Tab Menu Wrapper (Hidden as requested) */}
+      <div id="subnav-anchor" className="hidden w-full h-[56px] relative z-30">
         <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${isSticky
           ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}`
           : 'absolute top-0 left-0 w-full'
@@ -380,7 +383,7 @@ export default function CloudApplicationModernization() {
       </div>
 
       {/* 3. Modernize, Optimize, Excel Section */}
-      <section id="intro" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
+      <section id="intro" className="py-16 md:py-24 px-12 sm:px-16 md:px-24 lg:px-32 border-b-0 lg:border-b border-gray-150 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Right Text Block matching the screenshot mockup exactly */}
           <div className="md:col-span-12 lg:col-span-12 space-y-5 text-center">
@@ -390,7 +393,7 @@ export default function CloudApplicationModernization() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-2xl mx-auto">
               Pipelines,models and governance
             </h2>
-            <div className="space-y-4 text-slate-500 text-sm leading-relaxed max-w-3xl font-medium mx-auto">
+            <div className="space-y-4 text-slate-500 text-sm leading-relaxed max-w-3xl font-medium mx-auto text-justify">
               <p>
                 Analytics and AI depend on reliable data. Ossisto helps organizations unify scattered information across ERP, MES, CRM, plant historians and machine systems into a governed, queryable data layer.
               </p>
@@ -410,7 +413,7 @@ export default function CloudApplicationModernization() {
 
 
       {/* 6. Featured Insight */}
-      <section id="insights" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-slate-50">
+      <section id="insights" className="py-6 md:py-8 lg:py-10 px-12 sm:px-16 md:px-24 lg:px-32 border-b-0 lg:border-b border-gray-150 bg-slate-50">
         <div className="max-w-7xl mx-auto">
 
           <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-xl border border-slate-150 flex flex-col md:flex-row bg-white min-h-[280px]">
@@ -421,20 +424,25 @@ export default function CloudApplicationModernization() {
                 <h3 className="text-black text-xl md:text-2xl font-black leading-snug mb-4 max-w-md">
                   Importance of data foundation
                 </h3>
-                <p className="text-slate-500 text-xs leading-relaxed font-medium max-w-md">
+                <p className="text-slate-500 text-xs leading-relaxed font-medium max-w-md text-justify">
                   Data integration is the tax every digital initiative pays, and paying it repeatedly is what makes transformation programmes expensive. When each new dashboard, planning tool or AI model requires its own extract, the cost of the tenth use case is as high as the first. A governed data layer inverts that, because the marginal cost of each new question falls once the joins, definitions and quality rules already exist. There are direct operational effects too. Reconciled master data reduces incorrect BOMs, duplicate part numbers and inventory discrepancies. Consistent definitions end the meetings spent debating whose number is right. And machine learning is largely a data-quality exercise in practice, since models trained on inconsistent, poorly labelled manufacturing data fail quietly and then get blamed on the algorithm.
                 </p>
               </div>
 
             </div>
 
-            {/* Right Graphic Banner */}
-            <div className="w-full md:w-2/5 relative overflow-hidden min-h-[240px] md:min-h-auto">
-              <img
-                src="/cloud_spending_dashboard.png"
-                alt="Cloud Spending Analysis"
-                className="w-full h-full object-cover absolute inset-0"
-              />
+            {/* Right Graphic Banner Video */}
+            <div className="w-full md:w-2/5 p-4 sm:p-5 flex items-center justify-center bg-white">
+              <div className="relative w-full h-full min-h-[200px] rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-950 p-2.5 sm:p-3 aspect-video md:aspect-auto">
+                <video
+                  src="/1.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </div>
             </div>
           </div>
 
@@ -442,8 +450,8 @@ export default function CloudApplicationModernization() {
       </section>
 
       {/* 4. Our Capabilities */}
-      <section id="capabilities" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-slate-50">
-        <div className="max-w-7xl mx-auto space-y-12">
+      <section id="capabilities" className="py-16 md:py-24 px-12 sm:px-16 md:px-24 lg:px-32 border-b-0 lg:border-b border-gray-150 bg-slate-50">
+        <div className="max-w-7xl mx-auto space-y-6">
           <div className="text-center space-y-2">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
               Our Capabilities
@@ -453,7 +461,7 @@ export default function CloudApplicationModernization() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto pt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto pt-0">
             {capabilities.map((item, idx) => (
               <div
                 key={idx}
@@ -469,8 +477,8 @@ export default function CloudApplicationModernization() {
       </section>
 
       {/* 7. How We Deliver (Playbook Section) */}
-      <section id="delivery" className="py-12 md:py-20 px-6 md:px-12 lg:px-24 border-b-0 lg:border-b border-gray-150 bg-white">
-        <div className="max-w-5xl mx-auto space-y-10">
+      <section id="delivery" className="py-12 md:py-20 px-12 sm:px-16 md:px-24 lg:px-32 border-b-0 lg:border-b border-gray-150 bg-white">
+        <div className="max-w-5xl mx-auto space-y-4">
           {/* Header */}
           <div className="text-left space-y-2">
             <span className="text-ossisto-blue text-xs uppercase tracking-widest font-black block">
@@ -481,14 +489,18 @@ export default function CloudApplicationModernization() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4">
-            {/* Left Column Playbook Image */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-0">
+            {/* Left Column Playbook Video */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-sm overflow-hidden rounded-3xl shadow-lg border border-slate-100 max-h-[380px]">
-                <img
-                  src="/modernization_playbook.png"
-                  alt="Modernization Playbook"
-                  className="w-full h-full object-cover"
+              <div className="relative w-full max-w-sm overflow-hidden rounded-3xl shadow-lg border border-slate-100 max-h-[380px] aspect-video sm:aspect-square">
+                <video
+                  src="/2.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                  className="w-full h-full object-cover rounded-3xl"
                 />
               </div>
             </div>
