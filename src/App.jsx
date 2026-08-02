@@ -11,6 +11,7 @@ import CloudApplicationModernization from './components/CloudApplicationModerniz
 import DataAnalyticsModernization from './components/DataAnalyticsModernization';
 import DataApplicationSecurity from './components/DataApplicationSecurity';
 import BankingFinancialServices from './components/BankingFinancialServices';
+import AboutUsPage from './components/AboutUsPage';
 
 function App() {
   const getInitialView = () => {
@@ -21,6 +22,7 @@ function App() {
     if (path.includes('data-analytics-modernization')) return 'data-modernization';
     if (path.includes('data-application-security')) return 'data-security';
     if (path.includes('banking-financial-services')) return 'banking-services';
+    if (path.includes('about-us')) return 'about-us';
     return 'home';
   };
 
@@ -43,6 +45,8 @@ function App() {
       path = '/cyber-security/data-application-security';
     } else if (view === 'banking-services') {
       path = '/industries/banking-financial-services';
+    } else if (view === 'about-us') {
+      path = '/company/about-us';
     }
     window.history.pushState({ view }, '', path);
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -63,6 +67,8 @@ function App() {
         setCurrentView('data-security');
       } else if (path.includes('banking-financial-services')) {
         setCurrentView('banking-services');
+      } else if (path.includes('about-us')) {
+        setCurrentView('about-us');
       } else {
         setCurrentView('home');
       }
@@ -116,9 +122,13 @@ function App() {
         <div className="bg-white text-slate-900 w-full">
           <DataApplicationSecurity />
         </div>
-      ) : (
+      ) : currentView === 'banking-services' ? (
         <div className="bg-white text-slate-900 w-full">
           <BankingFinancialServices />
+        </div>
+      ) : (
+        <div className="bg-white text-slate-900 w-full">
+          <AboutUsPage onContactClick={() => setIsContactOpen(true)} />
         </div>
       )}
 

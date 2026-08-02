@@ -78,17 +78,19 @@ export default function Hero() {
 
               {/* Background Image with crisp contrast and full image text visibility */}
               <div
-                className={`absolute inset-0 bg-cover bg-center scale-100 transition-all duration-700 ${isHovered ? 'contrast-[1.12] brightness-[1.08] saturate-[1.12]' : 'contrast-[1.02] brightness-[1.02]'
+                className={`absolute inset-0 bg-cover bg-center scale-100 transition-all duration-700 ${isHovered ? 'contrast-[1.12] brightness-[1.08] saturate-[1.12]' : 'contrast-[1.02] brightness-[1.02] max-lg:brightness-[0.70]'
                   }`}
                 style={{ backgroundImage: `url(${panel.image})` }}
               />
 
-              {/* Mobile Drop Arrow (Reverses direction on row expanding/shrinking) */}
-              <div className="lg:hidden absolute top-3 right-4 z-30 pointer-events-none">
-                <div className={`p-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white transition-transform duration-300 ${
-                  isHovered ? 'rotate-180 text-ossisto-blue border-ossisto-blue' : 'rotate-0'
+              {/* Mobile Drop Arrow (Smoothly glides down below text overlay when row expands, glides back up when collapsed) */}
+              <div className={`lg:hidden absolute left-4 z-30 pointer-events-none transition-all duration-300 ${!isHovered
+                  ? (idx === 0 ? 'top-20 sm:top-24' : 'top-5 sm:top-6')
+                  : (idx === 0 ? 'top-36 sm:top-40' : idx === 3 ? 'top-48 sm:top-52' : 'top-44 sm:top-48')
                 }`}>
-                  <ChevronDown className="w-3.5 h-3.5" />
+                <div className={`p-1.5 rounded-full bg-black border-2 border-white/60 text-white shadow-[0_4px_14px_rgba(0,0,0,0.98)] transition-transform duration-300 ${isHovered ? 'rotate-180 text-ossisto-blue border-ossisto-blue' : 'rotate-0'
+                  }`}>
+                  <ChevronDown className="w-4 h-4 text-white" strokeWidth={3} />
                 </div>
               </div>
 
@@ -138,7 +140,7 @@ export default function Hero() {
                   <h3 className="text-sm sm:text-lg md:text-2.5xl lg:text-4xl font-bold leading-tight font-sans tracking-tight text-left text-white mb-1 sm:mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     Serving across all sectors
                   </h3>
-                  <div className="grid grid-cols-2 gap-x-2 gap-y-0.5 sm:block sm:space-y-1 font-normal font-sans text-[#c084fc] text-[10px] sm:text-lg md:text-xl lg:text-[22px] tracking-tight leading-snug sm:leading-normal text-left drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
+                  <div className="grid grid-cols-3 gap-x-2 gap-y-0.5 sm:block sm:space-y-1 font-normal font-sans text-[#c084fc] text-[10px] sm:text-lg md:text-xl lg:text-[22px] tracking-tight leading-snug sm:leading-normal text-left drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     <div>✓ Food processing</div>
                     <div>✓ Electronics</div>
                     <div>✓ Machinery</div>
@@ -154,32 +156,31 @@ export default function Hero() {
 
               {/* Dynamic Overlay Gradient based on hover state (Opposite: dim by default, bright on hover, soft dark scrim on mobile) */}
               <div className={`absolute inset-0 transition-all duration-500 ${hoveredIdx === null
-                  ? 'bg-black/65 opacity-100'
-                  : isHovered
-                    ? 'bg-gradient-to-b from-black/80 via-black/50 to-black/75 lg:bg-transparent lg:opacity-0'
-                    : 'bg-black/70 opacity-100'
+                ? 'bg-black/85 lg:bg-black/65 opacity-100'
+                : isHovered
+                  ? 'bg-gradient-to-b from-black/80 via-black/50 to-black/75 lg:bg-transparent lg:opacity-0'
+                  : 'bg-black/90 lg:bg-black/70 opacity-100'
                 }`} />
 
               {/* Content Box (Keeps expanding titles: AUTOMOTIVE, PHARMA, etc.) */}
-              <div className={`absolute inset-0 flex flex-col justify-end items-end p-4 md:p-8 z-10 text-right ${idx === 0 ? 'pb-1 sm:pb-2 lg:pb-20' : 'pb-3 sm:pb-6 lg:pb-20'
+              <div className={`absolute inset-0 flex flex-col items-end pr-4 sm:pr-8 lg:p-8 lg:justify-end z-10 text-right ${idx === 0 ? 'justify-start pt-24 sm:pt-28 lg:pt-0 lg:justify-end lg:pb-28' : 'justify-center pb-0 lg:pb-20'
                 }`}>
-                <div className="space-y-2.5 w-full flex flex-col items-end justify-end text-right">
+                <div className="space-y-0 lg:space-y-2.5 w-[195px] sm:w-[245px] lg:w-auto flex flex-col items-start lg:items-end justify-center lg:justify-end text-left lg:text-right">
 
-                   {/* Letter Header: Displays single letter when normal (D, T, T, W), expands to full word on hover */}
-                    <div className={`flex flex-col items-end justify-end text-right leading-normal ${idx === 0 ? 'pb-0' : 'pb-2'
-                    }`}>
-                      <div className="flex items-baseline justify-end text-right leading-normal">
-                        <span className={`font-black select-none tracking-wide transition-all duration-500 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] ${isHovered ? 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl' : 'text-2xl sm:text-3xl md:text-4xl lg:text-[42px]'
+                  {/* Letter Header: Displays single letter when normal (D, T, T, W), expands to full word on hover */}
+                  <div className="w-[195px] sm:w-[245px] lg:w-auto flex flex-col items-start lg:items-end justify-center lg:justify-end text-left lg:text-right leading-normal pb-0 lg:pb-2">
+                    <div className="w-[195px] sm:w-[245px] lg:w-auto flex items-baseline justify-start lg:justify-end text-left lg:text-right leading-normal tracking-tight max-lg:font-['Arial_Narrow',sans-serif]">
+                      <span className={`select-none transition-all duration-500 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[27px] sm:text-[33px] max-lg:font-normal lg:font-black ${isHovered ? 'lg:text-7xl' : idx === 1 ? 'lg:text-[28px] xl:text-[34px]' : 'lg:text-[42px]'
                         }`}>
-                          {panel.letter}
-                        </span>
-                        <span className={`font-black tracking-wide transition-all duration-500 origin-left overflow-hidden max-w-2xl opacity-100 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] ${idx === 0 ? 'pb-0' : 'pb-3'
-                        } ${isHovered ? 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl' : 'text-xl sm:text-2xl md:text-3xl lg:text-[32px]'
+                        {panel.letter}
+                      </span>
+                      <span className={`transition-all duration-500 origin-left opacity-100 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[25px] sm:text-[31px] max-lg:font-normal lg:font-black ${idx === 0 ? 'pb-0 lg:pb-3' : 'pb-0 lg:pb-3'
+                        } ${isHovered ? 'lg:text-6xl' : idx === 1 ? 'lg:text-[18px] xl:text-[23px] tracking-tight' : 'lg:text-[32px]'
                         }`}>
-                          {panel.wordSuffix}
-                        </span>
-                      </div>
+                        {panel.wordSuffix}
+                      </span>
                     </div>
+                  </div>
 
                 </div>
               </div>

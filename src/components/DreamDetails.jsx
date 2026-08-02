@@ -234,8 +234,8 @@ export default function DreamDetails() {
                         loop
                         muted
                         playsInline
-                        controls
-                        className="w-full h-full object-cover opacity-80"
+                        preload="auto"
+                        className="w-full h-full object-cover opacity-80 pointer-events-none"
                       />
                     </div>
                   </div>
@@ -403,9 +403,12 @@ export default function DreamDetails() {
             {/* Video Player Element */}
             <video
               src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-              controls
               autoPlay
-              className="w-full h-full object-cover"
+              muted
+              loop
+              playsInline
+              preload="auto"
+              className="w-full h-full object-cover pointer-events-none"
             />
           </div>
         </div>

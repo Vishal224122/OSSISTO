@@ -332,7 +332,7 @@ export default function CloudApplicationModernization() {
               DATA ENGINEERING & INTEGRATION
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight">
-              FIX The Data Foundation
+              Fix The Data Foundation
             </h1>
             <button className="bg-[#236CB1] hover:bg-[#1A5185] text-white text-[11px] sm:text-xs font-black uppercase py-2.5 px-5 sm:py-4 sm:px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
               LET'S CONNECT <span className="text-[10px]">▶</span>
@@ -348,8 +348,8 @@ export default function CloudApplicationModernization() {
                 loop
                 muted
                 playsInline
-                controls
-                className="w-full h-full object-cover opacity-90"
+                preload="auto"
+                className="w-full h-full object-cover opacity-90 pointer-events-none"
               />
             </div>
           </div>
@@ -433,14 +433,15 @@ export default function CloudApplicationModernization() {
 
             {/* Right Graphic Banner Video */}
             <div className="w-full md:w-2/5 p-4 sm:p-5 flex items-center justify-center bg-white">
-              <div className="relative w-full h-full min-h-[200px] rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-950 p-2.5 sm:p-3 aspect-video md:aspect-auto">
+              <div className="relative w-full h-full min-h-[200px] rounded-2xl overflow-hidden shadow-lg aspect-video md:aspect-auto">
                 <video
                   src="/1.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="w-full h-full object-cover rounded-xl"
+                  preload="auto"
+                  className="w-full h-full object-cover rounded-2xl scale-[1.08] transform pointer-events-none"
                 />
               </div>
             </div>
@@ -491,16 +492,16 @@ export default function CloudApplicationModernization() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-0">
             {/* Left Column Playbook Video */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-sm overflow-hidden rounded-3xl shadow-lg border border-slate-100 max-h-[380px] aspect-video sm:aspect-square">
+            <div className="lg:col-span-5 flex justify-center p-2 sm:p-4">
+              <div className="relative w-full max-w-sm overflow-hidden rounded-3xl shadow-xl aspect-video sm:aspect-square">
                 <video
                   src="/2.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
-                  controls
-                  className="w-full h-full object-cover rounded-3xl"
+                  preload="auto"
+                  className="w-full h-full object-cover rounded-3xl scale-[1.08] transform pointer-events-none"
                 />
               </div>
             </div>

@@ -13,6 +13,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
   const [activeTab, setActiveTab] = useState('DIGITAL');
 
   const handleMouseEnter = (index) => {
+    if (menuItems[index]?.title === "CAREER") return;
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
@@ -185,7 +186,7 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
       headerTitle: "About Ossisto Group",
       desc: "Review our journey of engineering innovation and leadership in enterprise software delivery.",
       links: [
-        { name: "Our story", href: "#about-ossisto" },
+        { name: "About US", href: "#about-ossisto" },
         { name: "Leadership", href: "#about-ossisto" },
         { name: "Global presence", href: "#contact" }
       ],
@@ -198,157 +199,139 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
     }
   ];
 
-  const sidebarGroups = {
-    company: [
-      { name: "Our Story", href: "#about-ossisto" },
-      { name: "Leadership Team", href: "#contact" },
-      { name: "News & Announcements", href: "#keeping-updated" },
-      { name: "Events", href: "#contact" },
-      { name: "Awards", href: "#contact" },
-      { name: "Social Responsibility", href: "#contact" }
-    ],
-    thoughtLeadership: [
-      { name: "Articles", href: "#keeping-updated" },
-      { name: "Interviews", href: "#keeping-updated" },
-      { name: "POV Reports", href: "#keeping-updated" }
-    ]
-  };
-
   return (
-    <nav className={`fixed w-screen top-0 z-40 transition-all duration-500 ${isScrolled
-      ? 'bg-white shadow-none lg:shadow-md border-b-0 lg:border-b border-slate-100 py-3'
-      : 'bg-black/20 backdrop-blur-[2px] border-b-0 lg:border-b border-white/10 py-5'
-      }`}>
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b border-slate-200 shadow-sm">
+      <div className="w-full px-4 sm:px-6 lg:px-12">
+        <div className="flex items-center justify-between h-20 sm:h-24">
 
-          {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
+          {/* Logo Section */}
+          <div className="flex items-center space-x-6 flex-shrink-0">
             <a
               href="#"
               onClick={(e) => {
                 e.preventDefault();
                 onNavigate('home');
               }}
-              className="flex items-center"
+              className="flex items-center space-x-3 group py-2"
             >
               <img
                 src="/logoos.jpeg"
                 alt="Ossisto Logo"
-                className={`h-8 md:h-10 object-contain transition-all duration-300 ${isScrolled ? '' : 'brightness-0 invert'}`}
+                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
 
-          {/* Desktop Menu links exactly as requested */}
+          {/* Desktop Menu links */}
           <div className="hidden lg:flex items-center space-x-5 xl:space-x-8 ml-8 xl:ml-16">
-            {menuItems.map((item, index) => (
-              <div
-                key={index}
-                className="group"
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
-              >
-                <button
-                  onClick={() => setActiveTab(item.title)}
-                  className={`relative flex items-center font-black text-[10.5px] xl:text-[11.5px] py-4 transition-colors whitespace-nowrap uppercase tracking-wider ${isScrolled ? 'text-slate-900 hover:text-ossisto-blue' : 'text-white hover:text-ossisto-blue'
-                    }`}
+            {menuItems.map((item, index) => {
+              const isCareerDisabled = item.title === "CAREER";
+              return (
+                <div
+                  key={index}
+                  className="group"
+                  onMouseEnter={() => !isCareerDisabled && handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  {item.title}
-                  {/* Underline matching the screenshot */}
-                  <span className={`absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full transition-transform duration-300 origin-left ${activeDropdown === index || (activeDropdown === null && activeTab === item.title)
-                    ? 'scale-x-100'
-                    : 'scale-x-0 group-hover:scale-x-100'
-                    }`} />
-                </button>
-
-                {/* Mega Dropdown Drawer */}
-                {activeDropdown === index && (
-                  <div
-                    className="absolute left-0 right-0 top-full w-screen bg-white shadow-2xl animate-slide-down-menu z-50 overflow-hidden"
-                    onMouseEnter={() => handleMouseEnter(index)}
-                    onMouseLeave={handleMouseLeave}
+                  <button
+                    onClick={(e) => {
+                      if (isCareerDisabled) {
+                        e.preventDefault();
+                        return;
+                      }
+                      if (item.title === 'ABOUT US') {
+                        onNavigate('about-us');
+                        setActiveDropdown(null);
+                      } else {
+                        setActiveTab(item.title);
+                      }
+                    }}
+                    className={`relative flex items-center font-black text-[10.5px] xl:text-[11.5px] py-4 transition-colors whitespace-nowrap uppercase tracking-wider ${
+                      isCareerDisabled
+                        ? (isScrolled ? 'text-slate-900' : 'text-white') + ' cursor-default pointer-events-none select-none'
+                        : isScrolled ? 'text-slate-900 hover:text-ossisto-blue' : 'text-white hover:text-ossisto-blue'
+                    }`}
                   >
-                    <div className="w-full px-4 sm:px-6 lg:px-8 grid grid-cols-12">
+                    {item.title}
+                    {!isCareerDisabled && (
+                      <span className={`absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full transition-transform duration-300 origin-left ${
+                        activeDropdown === index || (activeDropdown === null && ((currentView === 'about-us' && item.title === 'ABOUT US') || (currentView !== 'about-us' && activeTab === item.title)))
+                          ? 'scale-x-100'
+                          : 'scale-x-0 group-hover:scale-x-100'
+                      }`} />
+                    )}
+                  </button>
 
-                       {/* Column 2: Digital Engineering Narrative (now Column 1) */}
-                      <div className={`col-span-7 p-8 flex flex-col justify-center relative z-10 text-left transition-colors duration-300 border-b ${
-                        item.title === "AI & DATA" 
-                          ? "bg-[#236CB1] text-white lg:py-12 lg:pl-36 lg:pr-12 [box-shadow:-100vw_0_0_100vw_#236CB1] border-[#236CB1]" 
-                          : "bg-white text-black lg:p-12 border-slate-200"
-                      }`}>
-                        <h2 className={`text-2xl lg:text-3xl font-black tracking-tight mb-4 ${
-                          item.title === "AI & DATA" ? "text-white" : "text-black"
-                        }`}>
-                          {item.headerTitle}
-                        </h2>
-                        <p className={`text-xs lg:text-sm leading-relaxed font-medium whitespace-pre-line ${
-                          item.title === "AI & DATA" ? "text-slate-300 max-w-xl" : "text-gray-600 mb-6 max-w-md"
-                        }`}>
-                          {item.desc}
-                        </p>
-                        {item.title !== "AI & DATA" && (
-                          <a
-                            href="#dream-details"
-                            className="inline-flex items-center gap-1.5 text-xs lg:text-sm font-extrabold text-black hover:text-ossisto-blue transition-colors uppercase tracking-wider"
-                          >
-                            Know More <span className="text-[10px]">▶</span>
-                          </a>
-                        )}
-                      </div>
+                  {/* Mega Dropdown Drawer */}
+                  {activeDropdown === index && !isCareerDisabled && (
+                    <div
+                      className="absolute left-0 right-0 top-full w-screen bg-white shadow-2xl animate-slide-down-menu z-50 overflow-hidden"
+                      onMouseEnter={() => handleMouseEnter(index)}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <div className="w-full px-4 sm:px-6 lg:px-8 grid grid-cols-12">
 
-                      {/* Column 3: Sub-links Services List (now Column 2) */}
-                      <div className="col-span-5 bg-white p-8 lg:py-12 lg:pl-32 lg:pr-12 border-l border-b border-gray-100 flex flex-col justify-center relative z-10 text-left">
-                        <ul className="space-y-4">
-                          {item.links.map((link, idx) => (
-                            <li key={idx}>
-                              <a
-                                href={link.href}
-                                onClick={(e) => {
-                                  if (link.name === "IIoT") {
-                                    e.preventDefault();
-                                    onNavigate('product-engineering');
-                                    setActiveDropdown(null);
-                                  } else if (link.name === "Development") {
-                                    e.preventDefault();
-                                    onNavigate('application-development');
-                                    setActiveDropdown(null);
-                                  } else if (link.name === "Cloud" || link.name === "Data Engineering & integration" || link.name === "Cloud, DevOps & Infra" || link.name === "Digital Transformation Consulting") {
-                                    e.preventDefault();
-                                    onNavigate('cloud-modernization');
-                                    setActiveDropdown(null);
-                                  } else if (link.name === "Data engineering") {
-                                    e.preventDefault();
-                                    onNavigate('data-modernization');
-                                    setActiveDropdown(null);
-                                  } else if (link.name === "Cybersecurity") {
-                                    e.preventDefault();
-                                    onNavigate('data-security');
-                                    setActiveDropdown(null);
-                                  } else if (link.name === "Banking & Financial Services") {
-                                    e.preventDefault();
-                                    onNavigate('banking-services');
-                                    setActiveDropdown(null);
-                                  } else {
-                                    // Let anchor scrolling behave normally on home view
-                                    onNavigate('home');
-                                    setActiveDropdown(null);
-                                  }
-                                }}
-                                className="text-xs lg:text-sm font-bold text-slate-800 hover:text-ossisto-blue grid grid-cols-[280px_auto] items-center group/sublink transition-colors"
-                              >
-                                <span>{link.name}</span>
-                                <span className="text-[9px] text-slate-400 group-hover/sublink:text-ossisto-blue transition-colors">▶</span>
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
+                         {/* Column 1: Narrative */}
+                        <div className={`col-span-7 p-8 flex flex-col justify-center relative z-10 text-left transition-colors duration-300 border-b ${
+                          (item.title === "AI & DATA" || item.title === "ABOUT US")
+                            ? "bg-[#236CB1] text-white lg:py-12 lg:pl-36 lg:pr-12 [box-shadow:-100vw_0_0_100vw_#236CB1] border-[#236CB1]" 
+                            : "bg-white text-black lg:p-12 border-slate-200"
+                        }`}>
+                          <h2 className={`text-2xl lg:text-3xl font-black tracking-tight mb-4 ${
+                            (item.title === "AI & DATA" || item.title === "ABOUT US") ? "text-white" : "text-black"
+                          }`}>
+                            {item.headerTitle}
+                          </h2>
+                          <p className={`text-xs lg:text-sm leading-relaxed font-medium whitespace-pre-line ${
+                            (item.title === "AI & DATA" || item.title === "ABOUT US") ? "text-slate-300 max-w-xl" : "text-gray-600 mb-6 max-w-md"
+                          }`}>
+                            {item.desc}
+                          </p>
+                        </div>
+
+                        {/* Column 2: Sub-links Services List */}
+                        <div className="col-span-5 bg-white p-8 lg:py-12 lg:pl-32 lg:pr-12 border-l border-b border-gray-100 flex flex-col justify-center relative z-10 text-left">
+                          <ul className="space-y-4">
+                            {item.links.map((link, idx) => {
+                              const isEnabled = link.name === "Data Engineering & integration" || link.name === "About US";
+                              return (
+                                <li key={idx}>
+                                  <a
+                                    href={link.href}
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      if (!isEnabled) return;
+
+                                      if (link.name === "Data Engineering & integration") {
+                                        onNavigate('cloud-modernization');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "About US") {
+                                        onNavigate('about-us');
+                                        setActiveDropdown(null);
+                                      }
+                                    }}
+                                    className={`text-xs lg:text-sm font-bold grid grid-cols-[280px_auto] items-center group/sublink transition-colors ${
+                                      isEnabled
+                                        ? "text-slate-800 hover:text-ossisto-blue cursor-pointer"
+                                        : "text-slate-800 cursor-default pointer-events-none select-none"
+                                    }`}
+                                  >
+                                    <span>{link.name}</span>
+                                    <span className={`text-[9px] transition-colors ${
+                                      isEnabled ? "text-slate-400 group-hover/sublink:text-ossisto-blue" : "text-slate-400 opacity-60"
+                                    }`}>▶</span>
+                                  </a>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           {/* Right section: CONTACT button & Mobile Hamburger Toggle */}
@@ -357,26 +340,30 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
             {/* CONTACT ▶ Button */}
             <button
               onClick={onContactClick}
-              className="bg-ossisto-blue always-blue-bg hover:bg-[#236CB1] text-white font-normal sm:font-black py-1.5 px-3 sm:py-2.5 sm:px-7 text-[10px] sm:text-xs rounded-md uppercase tracking-wider flex items-center justify-center gap-1 transition-all duration-300 shadow-md shadow-ossisto-blue/10 shrink-0"
+              className="bg-ossisto-blue text-white text-[11px] sm:text-xs font-black px-4 sm:px-6 py-2.5 sm:py-3 rounded hover:bg-blue-700 transition-all uppercase tracking-wider shadow-md hover:shadow-lg flex items-center gap-1.5 active:scale-95"
             >
-              CONTACT <span className="text-[9px] select-none">▶</span>
+              <span>Contact</span>
+              <span className="text-[9px] font-normal">▶</span>
             </button>
 
-            {/* Mobile Hamburger Toggle Button */}
+            {/* Mobile Hamburger Toggle */}
             <button
               onClick={() => setIsSidePanelOpen(!isSidePanelOpen)}
-              className="lg:hidden p-2 text-slate-800 hover:text-ossisto-blue focus:outline-none transition-colors"
-              aria-label="Toggle mobile menu"
+              className="lg:hidden p-2 text-slate-800 hover:text-ossisto-blue transition-colors focus:outline-none"
+              aria-label="Toggle Navigation Menu"
             >
-              <Menu className="w-6 h-6 stroke-[2.2]" />
+              {isSidePanelOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
-
           </div>
 
         </div>
       </div>
 
-      {/* Side Navigation Panel Drawer (Slide in from right) */}
+      {/* Mobile Navigation Drawer */}
       {isSidePanelOpen && (
         <div className="fixed inset-0 z-50 flex justify-end animate-fade-in">
           {/* Backdrop */}
@@ -408,36 +395,43 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
 
               {/* Main Services Navigation Links */}
               {menuItems.map((item, idx) => {
+                const isCareerDisabled = item.title === "CAREER";
                 const isOpen = activeSideSub === idx;
                 return (
                   <div key={idx} className="pb-2.5">
                     <button
-                      onClick={() => setActiveSideSub(isOpen ? null : idx)}
-                      className="w-full flex items-center justify-between text-xs sm:text-sm font-extrabold text-slate-900 hover:text-ossisto-blue transition-colors text-left uppercase tracking-wider py-1"
+                      onClick={() => !isCareerDisabled && setActiveSideSub(isOpen ? null : idx)}
+                      className={`w-full flex items-center justify-between text-xs sm:text-sm font-extrabold text-left uppercase tracking-wider py-1 ${
+                        isCareerDisabled
+                          ? "text-slate-900 cursor-default pointer-events-none select-none"
+                          : "text-slate-900 hover:text-ossisto-blue transition-colors"
+                      }`}
                     >
                       <span>{item.title}</span>
-                      <span className="text-xs text-ossisto-blue font-mono font-bold">
-                        {isOpen ? '−' : '+'}
-                      </span>
+                      {!isCareerDisabled && (
+                        <span className="text-xs text-ossisto-blue font-mono font-bold">
+                          {isOpen ? '−' : '+'}
+                        </span>
+                      )}
                     </button>
 
                     {/* Sub-links dropdown */}
-                    {isOpen && (
+                    {isOpen && !isCareerDisabled && (
                       <div className="mt-3 space-y-3 animate-fade-in">
 
                         {/* Narrative Header Box */}
                         <div className={`p-4 rounded-xl text-left transition-all ${
-                          item.title === "AI & DATA"
+                          (item.title === "AI & DATA" || item.title === "ABOUT US")
                             ? "bg-[#236CB1] text-white shadow-md"
                             : "bg-slate-50 text-slate-900 border border-slate-100"
                         }`}>
                           <h4 className={`text-sm sm:text-base font-black tracking-tight mb-1.5 ${
-                            item.title === "AI & DATA" ? "text-white" : "text-black"
+                            (item.title === "AI & DATA" || item.title === "ABOUT US") ? "text-white" : "text-black"
                           }`}>
                             {item.headerTitle}
                           </h4>
                           <p className={`text-[11px] sm:text-xs leading-relaxed font-medium whitespace-pre-line ${
-                            item.title === "AI & DATA" ? "text-slate-100" : "text-slate-600"
+                            (item.title === "AI & DATA" || item.title === "ABOUT US") ? "text-slate-100" : "text-slate-600"
                           }`}>
                             {item.desc}
                           </p>
@@ -445,53 +439,47 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
 
                         {/* Sub-links List */}
                         <div className="pl-2 space-y-2 border-l-2 border-ossisto-blue/30 pt-1">
-                          {item.links.map((link, lIdx) => (
-                            <a
-                              key={lIdx}
-                              href={link.href}
-                              onClick={(e) => {
-                                setIsSidePanelOpen(false);
-                                if (link.name === "IIoT") {
+                          {item.links.map((link, lIdx) => {
+                            const isEnabled = link.name === "Data Engineering & integration" || link.name === "About US";
+                            return (
+                              <a
+                                key={lIdx}
+                                href={link.href}
+                                onClick={(e) => {
                                   e.preventDefault();
-                                  onNavigate('product-engineering');
-                                } else if (link.name === "Development") {
-                                  e.preventDefault();
-                                  onNavigate('application-development');
-                                } else if (link.name === "Cloud" || link.name === "Data Engineering & integration" || link.name === "Cloud, DevOps & Infra" || link.name === "Digital Transformation Consulting") {
-                                  e.preventDefault();
-                                  onNavigate('cloud-modernization');
-                                } else if (link.name === "Data engineering") {
-                                  e.preventDefault();
-                                  onNavigate('data-modernization');
-                                } else if (link.name === "Cybersecurity") {
-                                  e.preventDefault();
-                                  onNavigate('data-security');
-                                } else if (link.name === "Banking & Financial Services") {
-                                  e.preventDefault();
-                                  onNavigate('banking-services');
-                                } else {
-                                  onNavigate('home');
-                                }
-                              }}
-                              className="flex items-center justify-between text-xs font-bold text-slate-800 hover:text-ossisto-blue py-1 transition-colors group/m-link"
-                            >
-                              <span>{link.name}</span>
-                              <span className="text-[9px] text-slate-400 group-hover/m-link:text-ossisto-blue transition-colors">▶</span>
-                            </a>
-                          ))}
+                                  if (!isEnabled) return;
+                                  setIsSidePanelOpen(false);
+
+                                  if (link.name === "Data Engineering & integration") {
+                                    onNavigate('cloud-modernization');
+                                  } else if (link.name === "About US") {
+                                    onNavigate('about-us');
+                                  }
+                                }}
+                                className={`flex items-center justify-between text-xs font-bold py-1 transition-colors group/m-link ${
+                                  isEnabled
+                                    ? "text-slate-800 hover:text-ossisto-blue cursor-pointer"
+                                    : "text-slate-800 cursor-default pointer-events-none select-none"
+                                }`}
+                              >
+                                <span>{link.name}</span>
+                                <span className={`text-[9px] transition-colors ${
+                                  isEnabled ? "text-slate-400 group-hover/m-link:text-ossisto-blue" : "text-slate-400 opacity-60"
+                                }`}>▶</span>
+                              </a>
+                            );
+                          })}
                         </div>
                       </div>
                     )}
                   </div>
                 );
               })}
-
             </div>
 
-            {/* Footer space removed as requested */}
           </div>
         </div>
       )}
-    </nav>
+    </header>
   );
 }

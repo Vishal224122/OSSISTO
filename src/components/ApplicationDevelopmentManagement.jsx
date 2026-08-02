@@ -399,8 +399,8 @@ export default function ApplicationDevelopmentManagement() {
                 loop
                 muted
                 playsInline
-                controls
-                className="w-full h-full object-cover opacity-90"
+                preload="auto"
+                className="w-full h-full object-cover opacity-90 pointer-events-none"
               />
             </div>
           </div>
