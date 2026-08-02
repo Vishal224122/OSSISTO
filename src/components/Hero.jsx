@@ -78,7 +78,7 @@ export default function Hero() {
 
               {/* Background Image with crisp contrast and full image text visibility */}
               <div
-                className={`absolute inset-0 bg-cover bg-center scale-100 transition-all duration-700 ${isHovered ? 'contrast-[1.12] brightness-[1.08] saturate-[1.12]' : 'contrast-[1.02] brightness-[1.02] max-lg:brightness-[0.70]'
+                className={`absolute inset-0 bg-cover bg-center scale-100 transition-all duration-700 ${isHovered ? 'contrast-[1.12] brightness-[1.08] saturate-[1.12]' : 'contrast-[1.02] brightness-[1.02]'
                   }`}
                 style={{ backgroundImage: `url(${panel.image})` }}
               />
@@ -156,7 +156,7 @@ export default function Hero() {
 
               {/* Dynamic Overlay Gradient based on hover state (Opposite: dim by default, bright on hover, soft dark scrim on mobile) */}
               <div className={`absolute inset-0 transition-all duration-500 ${hoveredIdx === null
-                ? 'bg-black/85 lg:bg-black/65 opacity-100'
+                ? 'bg-black/80 lg:bg-black/65 opacity-100'
                 : isHovered
                   ? 'bg-gradient-to-b from-black/80 via-black/50 to-black/75 lg:bg-transparent lg:opacity-0'
                   : 'bg-black/90 lg:bg-black/70 opacity-100'
