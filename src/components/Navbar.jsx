@@ -337,13 +337,12 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
           {/* Right section: CONTACT button & Mobile Hamburger Toggle */}
           <div className="flex items-center gap-3 lg:-mr-4">
 
-            {/* CONTACT ▶ Button */}
+            {/* LET'S CONNECT Button */}
             <button
               onClick={onContactClick}
-              className="bg-ossisto-blue text-white text-[11px] sm:text-xs font-black px-4 sm:px-6 py-2.5 sm:py-3 rounded hover:bg-blue-700 transition-all uppercase tracking-wider shadow-md hover:shadow-lg flex items-center gap-1.5 active:scale-95"
+              className="bg-ossisto-blue text-white text-[11px] sm:text-xs font-bold px-3.5 sm:px-4.5 py-1.5 sm:py-2 rounded hover:bg-blue-700 transition-all tracking-wide shadow-sm hover:shadow flex items-center justify-center leading-none whitespace-nowrap active:scale-95"
             >
-              <span>Contact</span>
-              <span className="text-[9px] font-normal">▶</span>
+              <span>Let's Connect</span>
             </button>
 
             {/* Mobile Hamburger Toggle */}
