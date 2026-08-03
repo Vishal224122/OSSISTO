@@ -72,7 +72,7 @@ export default function Hero() {
               key={idx}
               onMouseEnter={() => handleMouseEnter(idx)}
               onClick={() => handlePanelClick(idx)}
-              className={`relative h-1/5 lg:h-full transition-all duration-700 ease-in-out overflow-hidden border-b-0 lg:border-r border-slate-900/40 cursor-pointer ${isHovered ? 'flex-[2] lg:flex-[2.2]' : 'flex-1 lg:flex-[0.7]'
+              className={`relative h-1/5 lg:h-full transition-all duration-700 ease-in-out overflow-hidden border-b-0 lg:border-r border-slate-900/40 cursor-pointer ${isHovered ? 'flex-[2] lg:flex-[1.8]' : 'flex-1 lg:flex-[0.85]'
                 }`}
             >
 
@@ -163,19 +163,18 @@ export default function Hero() {
                 }`} />
 
               {/* Content Box (Keeps expanding titles: AUTOMOTIVE, PHARMA, etc.) */}
-              <div className={`absolute inset-0 flex flex-col items-end pr-4 sm:pr-8 lg:p-8 lg:justify-end z-10 text-right ${idx === 0 ? 'justify-start pt-24 sm:pt-28 lg:pt-0 lg:justify-end lg:pb-28' : 'justify-center pb-0 lg:pb-20'
+              <div className={`absolute inset-0 flex flex-col items-end pr-4 sm:pr-8 lg:py-8 lg:px-2 lg:justify-end z-10 text-right ${idx === 0 ? 'justify-start pt-24 sm:pt-28 lg:pt-0 lg:justify-end lg:pb-20' : 'justify-center pb-0 lg:pb-20'
                 }`}>
                 <div className="space-y-0 lg:space-y-2.5 w-[195px] sm:w-[245px] lg:w-auto flex flex-col items-start lg:items-end justify-center lg:justify-end text-left lg:text-right">
 
                   {/* Letter Header: Displays single letter when normal (D, T, T, W), expands to full word on hover */}
                   <div className="w-[195px] sm:w-[245px] lg:w-auto flex flex-col items-start lg:items-end justify-center lg:justify-end text-left lg:text-right leading-normal pb-0 lg:pb-2">
                     <div className="w-[195px] sm:w-[245px] lg:w-auto flex items-baseline justify-start lg:justify-end text-left lg:text-right leading-normal tracking-tight max-lg:font-['Arial_Narrow',sans-serif]">
-                      <span className={`select-none transition-all duration-500 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[27px] sm:text-[33px] max-lg:font-normal lg:font-black ${isHovered ? 'lg:text-7xl' : idx === 1 ? 'lg:text-[28px] xl:text-[34px]' : 'lg:text-[42px]'
+                      <span className={`select-none transition-all duration-500 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[27px] sm:text-[33px] max-lg:font-normal lg:font-black ${isHovered ? 'lg:text-7xl' : 'lg:text-[36px] xl:text-[40px]'
                         }`}>
                         {panel.letter}
                       </span>
-                      <span className={`transition-all duration-500 origin-left opacity-100 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[25px] sm:text-[31px] max-lg:font-normal lg:font-black ${idx === 0 ? 'pb-0 lg:pb-3' : 'pb-0 lg:pb-3'
-                        } ${isHovered ? 'lg:text-6xl' : idx === 1 ? 'lg:text-[18px] xl:text-[23px] tracking-tight' : 'lg:text-[32px]'
+                      <span className={`transition-all duration-500 origin-left opacity-100 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[25px] sm:text-[31px] max-lg:font-normal lg:font-black pb-0 lg:pb-3 ${isHovered ? 'lg:text-6xl' : 'lg:text-[26px] xl:text-[30px] tracking-tight'
                         }`}>
                         {panel.wordSuffix}
                       </span>
