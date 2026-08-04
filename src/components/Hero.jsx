@@ -110,7 +110,7 @@ export default function Hero() {
                   : (idx === 0 ? 'top-40 sm:top-44' : idx === 3 ? 'top-52 sm:top-56' : 'top-48 sm:top-52')
                   }`}
               >
-                <div className={`transition-transform duration-300 ${isHovered ? 'rotate-180 text-ossisto-blue' : 'rotate-0 text-white/90'
+                <div className={`transition-transform duration-300 ${isHovered ? 'rotate-180 text-ossisto-blue' : 'rotate-0 text-white/75'
                   }`}>
                   <ChevronDown className="w-5 h-5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" strokeWidth={2.5} />
                 </div>
@@ -255,7 +255,7 @@ export default function Hero() {
             const el = document.getElementById('about-ossisto-modern');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="animate-bounce transition-colors duration-200 cursor-pointer text-[#D9D9D9] hover:text-white"
+          className="animate-bounce transition-colors duration-200 cursor-pointer text-[#C4C4C4] hover:text-white"
           aria-label="Scroll down"
         >
           <svg className="w-5 h-5 stroke-[2.5px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">

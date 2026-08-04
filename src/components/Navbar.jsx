@@ -202,7 +202,7 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b border-slate-200 shadow-sm">
       <div className="w-full px-4 sm:px-6 lg:px-12">
-        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
+        <div className="flex items-center justify-between h-[54px] sm:h-16 lg:h-20">
 
           {/* Logo Section */}
           <div className="flex items-center space-x-6 flex-shrink-0">
@@ -217,7 +217,7 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
               <img
                 src="/logoos.jpeg"
                 alt="Ossisto Logo"
-                className="h-8 sm:h-10 md:h-12 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-[30px] sm:h-10 md:h-12 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
