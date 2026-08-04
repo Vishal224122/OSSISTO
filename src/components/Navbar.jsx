@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Search, Linkedin, Instagram, Facebook, Twitter, Youtube, ArrowRight } from 'lucide-react';
 
+/**
+ * Navbar Component - Responsive Navigation Header with Mega Dropdown Menus
+ * Maintains stateful navigation routing and interactive desktop/mobile menus
+ */
 export default function Navbar({ onContactClick, onNavigate, currentView }) {
   const isScrolled = true;
   const [activeDropdown, setActiveDropdown] = useState(null);

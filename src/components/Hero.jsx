@@ -1,6 +1,10 @@
 import React, { useState, useRef } from 'react';
 import { ArrowUpRight, ChevronDown } from 'lucide-react';
 
+/**
+ * Hero Component - Dynamic Accordion & Mobile Touch Interactivity Section
+ * Manages responsive vertical/horizontal accordion panels and touch gestures
+ */
 export default function Hero() {
   const [hoveredIdx, setHoveredIdx] = useState(null); // Defaults to null (all panels equal width)
   const hoverTimeout = useRef(null);
