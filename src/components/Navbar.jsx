@@ -216,12 +216,12 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                 e.preventDefault();
                 onNavigate('home');
               }}
-              className="flex items-center space-x-3 group py-1.5"
+              className="flex items-center space-x-3 group py-0.5"
             >
               <img
                 src="/logoos.jpeg"
                 alt="Ossisto Logo"
-                className="h-[30px] sm:h-10 md:h-12 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-[38px] sm:h-10 md:h-12 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </a>
           </div>
@@ -344,7 +344,7 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
             {/* LET'S CONNECT Button */}
             <button
               onClick={onContactClick}
-              className="bg-ossisto-blue text-white text-[11px] sm:text-xs font-bold px-3.5 sm:px-4.5 py-1.5 sm:py-2 rounded hover:bg-blue-700 transition-all tracking-wide shadow-sm hover:shadow flex items-center justify-center leading-none whitespace-nowrap active:scale-95"
+              className="bg-ossisto-blue text-white text-[11px] sm:text-xs font-bold px-2.5 sm:px-3 py-1.5 sm:py-2 rounded hover:bg-blue-700 transition-all tracking-wide shadow-sm hover:shadow flex items-center justify-center leading-none whitespace-nowrap active:scale-95"
             >
               <span>Let's Connect</span>
             </button>

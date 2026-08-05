@@ -88,41 +88,25 @@ export default function Hero() {
               onClick={() => handlePanelClick(idx)}
               onTouchStart={() => handleTouch(idx)}
               onTouchMove={() => handleTouch(idx)}
-              className={`relative h-1/4 lg:h-full transition-all duration-700 ease-in-out overflow-hidden border-b-0 lg:border-r border-slate-900/40 cursor-pointer ${isHovered ? 'flex-[2] lg:flex-[1.8]' : 'flex-1 lg:flex-[0.85]'
+              style={{ WebkitTapHighlightColor: 'transparent' }}
+              className={`relative h-1/4 lg:h-full transition-all duration-700 ease-in-out overflow-hidden border-b-0 lg:border-r border-slate-900/40 cursor-pointer select-none touch-manipulation ${isHovered ? 'lg:flex-[1.8]' : 'lg:flex-[0.85]'
                 }`}
             >
 
               {/* Background Image with crisp contrast and full image text visibility */}
               <div
-                className={`absolute inset-0 bg-cover bg-center scale-100 transition-all duration-700 ${isHovered ? 'contrast-100 brightness-100 saturate-100' : 'contrast-[1.02] brightness-[1.02]'
+                className={`absolute inset-0 bg-cover bg-center scale-100 transition-all duration-700 ${isHovered
+                  ? 'contrast-100 brightness-100 saturate-100'
+                  : (idx === 0 || idx === 1)
+                    ? 'contrast-[1.05] brightness-[1.12] max-lg:brightness-[1.25] saturate-[1.05]'
+                    : 'contrast-[1.05] brightness-[1.12] saturate-[1.05]'
                   }`}
                 style={{ backgroundImage: `url(${panel.image})` }}
               />
 
-              {/* Mobile Drop Arrow (Smoothly glides down below text overlay when row expands, glides back up when collapsed) */}
-              <div
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handlePanelClick(idx);
-                }}
-                onTouchStart={(e) => {
-                  e.stopPropagation();
-                  handleTouch(idx);
-                }}
-                className={`lg:hidden absolute left-6 z-30 cursor-pointer pointer-events-auto transition-all duration-300 ${!isHovered
-                  ? 'top-1/2 -translate-y-1/2'
-                  : (idx === 0 ? 'top-40 sm:top-44' : idx === 3 ? 'top-52 sm:top-56' : 'top-48 sm:top-52')
-                  }`}
-              >
-                <div className={`transition-transform duration-300 ${isHovered ? 'rotate-180 text-ossisto-blue' : 'rotate-0 text-white/75'
-                  }`}>
-                  <ChevronDown className="w-5 h-5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" strokeWidth={2.5} />
-                </div>
-              </div>
-
               {/* Top-left Orange Text Overlay for the first panel (Automotive) */}
               {idx === 0 && (
-                <div className={`absolute top-16 left-6 sm:top-20 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-[52vw] sm:max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                <div className={`absolute top-[84px] left-6 sm:top-24 sm:left-8 md:left-10 lg:top-28 z-20 pointer-events-none select-none text-left max-w-[52vw] sm:max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                   }`}>
                   <h3 className="text-sm sm:text-lg md:text-2.5xl lg:text-4xl font-bold text-white leading-tight font-sans tracking-tight mb-0.5 sm:mb-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     Automotive
@@ -135,7 +119,7 @@ export default function Hero() {
 
               {/* Top-left Blue/Cyan Text Overlay for the second panel (Pharma) */}
               {idx === 1 && (
-                <div className={`absolute top-16 left-6 sm:top-20 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-[52vw] sm:max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                <div className={`absolute top-[84px] left-6 sm:top-24 sm:left-8 md:left-10 lg:top-28 z-20 pointer-events-none select-none text-left max-w-[52vw] sm:max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                   }`}>
                   <h3 className="text-sm sm:text-lg md:text-2.5xl lg:text-4xl font-bold text-white leading-tight font-sans tracking-tight mb-0.5 sm:mb-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     Pharma
@@ -148,7 +132,7 @@ export default function Hero() {
 
               {/* Text Overlay for the third panel (Electronics / Manufacturing Sectors) */}
               {idx === 2 && (
-                <div className={`absolute top-16 left-6 sm:top-20 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-[52vw] sm:max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                <div className={`absolute top-[84px] left-6 sm:top-24 sm:left-8 md:left-10 lg:top-28 z-20 pointer-events-none select-none text-left max-w-[52vw] sm:max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                   }`}>
                   <h3 className="text-sm sm:text-lg md:text-2.5xl lg:text-4xl font-bold text-white leading-tight font-sans tracking-tight mb-0.5 sm:mb-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     Chemicals
@@ -161,51 +145,72 @@ export default function Hero() {
 
               {/* Text Overlay for the fourth panel (Global / Value addition) */}
               {idx === 3 && (
-                <div className={`absolute top-16 left-6 sm:top-20 sm:left-8 md:top-28 md:left-10 z-20 pointer-events-none select-none text-left max-w-[52vw] sm:max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                <div className={`absolute top-[84px] left-6 sm:top-24 sm:left-8 md:left-10 lg:top-28 z-20 pointer-events-none select-none text-left max-w-[55vw] sm:max-w-md md:max-w-lg lg:max-w-xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                   }`}>
                   <h3 className="text-sm sm:text-lg md:text-2.5xl lg:text-4xl font-bold leading-tight font-sans tracking-tight text-left text-white mb-1 sm:mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     Serving across all sectors
                   </h3>
-                  <div className="grid grid-cols-3 gap-x-2 gap-y-0.5 sm:block sm:space-y-1 font-normal font-sans text-[#c084fc] text-[10px] sm:text-lg md:text-xl lg:text-[22px] tracking-tight leading-snug sm:leading-normal text-left drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
+                  <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 sm:block sm:space-y-1 font-normal font-sans text-[#c084fc] text-[10px] sm:text-lg md:text-xl lg:text-[22px] tracking-tight leading-snug sm:leading-normal text-left drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     <div>✓ Food</div>
-                    <div>✓ Electronics</div>
-                    <div>✓ Machinery</div>
-                    <div>✓ Metals</div>
-                    <div>✓ Appliances</div>
                     <div>✓ Plastic</div>
+                    <div>✓ Electronics</div>
                     <div>✓ Rubber</div>
+                    <div>✓ Machinery</div>
                     <div>✓ Packaging</div>
-                    <div className="pl-1 sm:pl-4">etc.</div>
+                    <div>✓ Metals</div>
+                    <div>etc.</div>
+                    <div>✓ Appliances</div>
                   </div>
                 </div>
               )}
 
               {/* Dynamic Overlay Gradient based on hover state */}
               <div className={`absolute inset-0 transition-all duration-500 ${hoveredIdx === null
-                ? 'bg-black/80 lg:bg-black/65 opacity-100'
+                ? (idx === 0 || idx === 1)
+                  ? 'max-lg:bg-black/50 bg-black/65 lg:bg-black/50 opacity-100'
+                  : 'bg-black/65 lg:bg-black/50 opacity-100'
                 : isHovered
                   ? 'bg-transparent opacity-0'
-                  : 'bg-black/90 lg:bg-black/70 opacity-100'
+                  : 'bg-black/85 lg:bg-black/65 opacity-100'
                 }`} />
 
               {/* Content Box (Keeps expanding titles: AUTOMOTIVE, PHARMA, etc.) */}
-              <div className={`absolute inset-0 flex flex-col items-end pr-4 sm:pr-8 lg:py-8 lg:px-2 lg:justify-end z-10 text-right ${idx === 0 ? 'justify-start pt-24 sm:pt-28 lg:pt-0 lg:justify-end lg:pb-20' : 'justify-center pb-0 lg:pb-20'
-                }`}>
+              <div className="absolute top-[84px] right-4 sm:right-8 lg:inset-0 lg:top-0 lg:right-0 lg:flex lg:flex-col lg:items-end lg:pr-8 lg:py-8 lg:px-6 lg:justify-end z-10 text-right lg:pb-20">
                 <div className="space-y-0 lg:space-y-2.5 w-auto flex flex-col items-end justify-end text-right">
 
                   {/* Letter Header: Displays single letter when normal (D, T, T, W), expands to full word on hover */}
                   <div className="w-auto flex flex-col items-end justify-end text-right leading-normal pb-0 lg:pb-2">
-                    <div className="w-auto flex items-baseline justify-end text-right leading-normal tracking-tight max-lg:font-['Arial_Narrow',sans-serif]">
-                      <span className={`select-none transition-all duration-500 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[27px] sm:text-[33px] max-lg:font-normal lg:font-black ${isHovered ? 'lg:text-7xl' : 'lg:text-[36px] xl:text-[40px]'
+                    <div className="w-auto flex items-center justify-end text-right leading-normal tracking-tight max-lg:font-['Arial_Narrow',sans-serif]">
+
+                      {/* Mobile Drop Arrow positioned right in front of the heading word */}
+                      <span
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handlePanelClick(idx);
+                        }}
+                        onTouchStart={(e) => {
+                          e.stopPropagation();
+                          handleTouch(idx);
+                        }}
+                        style={{ WebkitTapHighlightColor: 'transparent' }}
+                        className="lg:hidden mr-3 cursor-pointer pointer-events-auto flex items-center justify-center w-6 h-6 select-none touch-manipulation"
+                      >
+                        <div className={`transform-gpu transition-transform duration-300 ease-in-out flex items-center justify-center ${isHovered ? 'rotate-180 text-ossisto-blue' : 'rotate-0 text-white'
+                          }`}>
+                          <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)]" strokeWidth={2.5} />
+                        </div>
+                      </span>
+
+                      <span className={`select-none text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[26px] sm:text-[31px] lg:text-[32px] xl:text-[36px] max-lg:font-normal lg:font-bold tracking-tight transition-all duration-500 ${isHovered ? 'lg:text-6xl xl:text-7xl lg:font-black' : ''
                         }`}>
                         {panel.letter}
                       </span>
-                      <span className={`transition-all duration-500 origin-left opacity-100 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[25px] sm:text-[31px] max-lg:font-normal lg:font-black pb-0 lg:pb-3 ${isHovered ? 'lg:text-6xl' : 'lg:text-[26px] xl:text-[30px] tracking-tight'
+                      <span className={`select-none text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[26px] sm:text-[31px] lg:text-[32px] xl:text-[36px] max-lg:font-normal lg:font-bold tracking-tight transition-all duration-500 ${isHovered ? 'lg:text-6xl xl:text-7xl lg:font-black' : ''
                         }`}>
                         {panel.wordSuffix}
                       </span>
                       {panel.wordSuffix.length < 13 && (
-                        <span className="lg:hidden opacity-0 select-none pointer-events-none text-[25px] sm:text-[31px] max-lg:font-normal pb-0 inline-block">
+                        <span className="lg:hidden opacity-0 select-none pointer-events-none text-[26px] sm:text-[31px] max-lg:font-normal tracking-tight pb-0 inline-block">
                           {"ransformation".slice(panel.wordSuffix.length)}
                         </span>
                       )}
