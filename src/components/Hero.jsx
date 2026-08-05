@@ -150,16 +150,16 @@ export default function Hero() {
                   <h3 className="text-sm sm:text-lg md:text-2.5xl lg:text-4xl font-bold leading-tight font-sans tracking-tight text-left text-white mb-1 sm:mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     Serving across all sectors
                   </h3>
-                  <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 sm:block sm:space-y-1 font-normal font-sans text-[#c084fc] text-[10px] sm:text-lg md:text-xl lg:text-[22px] tracking-tight leading-snug sm:leading-normal text-left drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
+                  <div className="grid grid-flow-col grid-rows-5 gap-x-3 gap-y-0.5 sm:block sm:space-y-1 font-normal font-sans text-[#c084fc] text-[10px] sm:text-lg md:text-xl lg:text-[22px] tracking-tight leading-snug sm:leading-normal text-left drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
                     <div>✓ Food</div>
-                    <div>✓ Plastic</div>
                     <div>✓ Electronics</div>
-                    <div>✓ Rubber</div>
                     <div>✓ Machinery</div>
-                    <div>✓ Packaging</div>
                     <div>✓ Metals</div>
-                    <div>etc.</div>
                     <div>✓ Appliances</div>
+                    <div>✓ Plastic</div>
+                    <div>✓ Rubber</div>
+                    <div>✓ Packaging</div>
+                    <div className="pl-[1.1em]">etc.</div>
                   </div>
                 </div>
               )}
