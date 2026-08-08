@@ -297,7 +297,7 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                         <div className="col-span-5 bg-white p-8 lg:py-12 lg:pl-32 lg:pr-12 border-l border-b border-gray-100 flex flex-col justify-center relative z-10 text-left">
                           <ul className="space-y-4">
                             {item.links.map((link, idx) => {
-                              const isEnabled = link.name === "Data Engineering & integration" || link.name === "About US";
+                              const isEnabled = link.name === "Data Engineering & integration" || link.name === "Analytics, BI and dashboards" || link.name === "Gen AI solutions" || link.name === "Intelligent Automation" || link.name === "Applied AI and Machine Learning" || link.name === "Computer & Machine Vision" || link.name === "About US";
                               return (
                                 <li key={idx}>
                                   <a
@@ -308,6 +308,21 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
 
                                       if (link.name === "Data Engineering & integration") {
                                         onNavigate('cloud-modernization');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Analytics, BI and dashboards") {
+                                        onNavigate('analytics-bi');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Gen AI solutions") {
+                                        onNavigate('gen-ai');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Intelligent Automation") {
+                                        onNavigate('intelligent-automation');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Applied AI and Machine Learning") {
+                                        onNavigate('applied-ai');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Computer & Machine Vision") {
+                                        onNavigate('computer-vision');
                                         setActiveDropdown(null);
                                       } else if (link.name === "About US") {
                                         onNavigate('about-us');
@@ -443,7 +458,7 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                         {/* Sub-links List */}
                         <div className="pl-2 space-y-2 border-l-2 border-ossisto-blue/30 pt-1">
                           {item.links.map((link, lIdx) => {
-                            const isEnabled = link.name === "Data Engineering & integration" || link.name === "About US";
+                            const isEnabled = link.name === "Data Engineering & integration" || link.name === "Analytics, BI and dashboards" || link.name === "Gen AI solutions" || link.name === "Intelligent Automation" || link.name === "Applied AI and Machine Learning" || link.name === "Computer & Machine Vision" || link.name === "About US";
                             return (
                               <a
                                 key={lIdx}
@@ -455,6 +470,16 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
 
                                   if (link.name === "Data Engineering & integration") {
                                     onNavigate('cloud-modernization');
+                                  } else if (link.name === "Analytics, BI and dashboards") {
+                                    onNavigate('analytics-bi');
+                                  } else if (link.name === "Gen AI solutions") {
+                                    onNavigate('gen-ai');
+                                  } else if (link.name === "Intelligent Automation") {
+                                    onNavigate('intelligent-automation');
+                                  } else if (link.name === "Applied AI and Machine Learning") {
+                                    onNavigate('applied-ai');
+                                  } else if (link.name === "Computer & Machine Vision") {
+                                    onNavigate('computer-vision');
                                   } else if (link.name === "About US") {
                                     onNavigate('about-us');
                                   }
