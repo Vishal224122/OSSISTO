@@ -356,8 +356,8 @@ export default function ProductPlatformEngineering() {
       {/* 2. Sub-Navbar Tab Menu Wrapper (Hidden as requested) */}
       <div id="subnav-anchor" className="hidden w-full h-[56px] relative z-30">
         <div className={`bg-white border-b-0 lg:border-b border-gray-200 shadow-none lg:shadow-sm transition-all duration-150 ${isSticky
-            ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}`
-            : 'absolute top-0 left-0 w-full'
+          ? `fixed left-0 w-full ${isScrolled ? 'top-[64px]' : 'top-[80px]'}`
+          : 'absolute top-0 left-0 w-full'
           }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex space-x-8 md:space-x-12 overflow-x-auto scrollbar-none py-4 justify-start sm:justify-center">

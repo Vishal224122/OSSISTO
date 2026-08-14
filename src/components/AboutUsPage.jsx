@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Footer from './Footer';
 
 export default function AboutUsPage({ onContactClick }) {
   useEffect(() => {
@@ -58,9 +57,6 @@ export default function AboutUsPage({ onContactClick }) {
 
         </div>
       </section>
-
-      {/* Footer Component */}
-      <Footer />
 
     </div>
   );

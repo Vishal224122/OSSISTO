@@ -2,76 +2,53 @@ import React, { useState, useEffect } from 'react';
 import { Cpu, Layers, Shield, Zap, Monitor, Settings, RefreshCw, Sparkles, Code, Plus, Minus } from 'lucide-react';
 import ContactAndLocations from './ContactAndLocations';
 
-export default function ApplicationDevelopmentManagement() {
+export default function SapConsultingServices() {
   const [activeTab, setActiveTab] = useState('intro');
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
-  const [activeResourceTab, setActiveResourceTab] = useState('thought');
-  const [expandedFaq, setExpandedFaq] = useState(null);
 
   const tabs = [
-    { id: 'intro', name: 'Strategic Guidance & Execution' },
+    { id: 'intro', name: 'SAP Strategy & Modernization' },
     { id: 'capabilities', name: 'Our Capabilities' },
-    { id: 'differentiators', name: 'Our Key Differentiators' },
-    { id: 'insights', name: 'Featured Insight' },
     { id: 'delivery', name: 'How We Deliver' }
   ];
 
   const capabilities = [
     {
-      desc: "We make the build-or-configure judgement honestly first, including when the answer is to configure a standard product and remove our own scope."
+      desc: "We start with a process and usage review, identifying unused standard functionality, parallel spreadsheets, unmaintained master data fields and configuration that was never completed."
     },
     {
-      desc: "We build focused custom applications only where they genuinely differentiate, such as distinctive processes, gaps between systems, shop-floor operations and customer or supplier portals."
+      desc: "We produce a costed improvement backlog, most of which is achievable within your existing licences rather than through new investment."
     },
     {
-      desc: "We assess legacy systems candidly, recommending replace, re-platform, wrap with an interface or leave alone, since rewriting a stable system rarely justifies its risk."
+      desc: "We work through it in prioritised increments across planning, materials, quality, sales, finance and maintenance functions, with proper testing and user training on each release."
     },
     {
-      desc: "We integrate with your enterprise, engineering and shop-floor systems from the first release rather than as a later phase, modernising the databases underneath where needed."
+      desc: "We give master data explicit attention, covering material, bill of material, routing, work centre and vendor records, because planning behaviour and costing accuracy depend on fields nobody owns."
     },
     {
-      desc: "We deliver a working increment within four to six weeks and then fortnightly, because manufacturing requirements clarify through use far more reliably than through specification documents."
+      desc: "We deliver small releases rather than large ones, because enterprise system changes fail through user workarounds far more often than through technical defect."
     },
     {
-      desc: "Code, pipelines and documentation sit in your accounts from day one, with delivery from India or developers placed onsite in Europe and the US where user proximity is essential."
-    }
-  ];
-
-  const differentiators = [
-    {
-      title: "Outcome-Driven Advisory",
-      icon: <Cpu className="w-6 h-6 text-ossisto-blue" />,
-      desc: "We anchor every transformation initiative to tangible business metrics—reducing cycle times, cutting operational debt, and accelerating value."
-    },
-    {
-      title: "Enterprise Integration Fabrics",
-      icon: <Layers className="w-6 h-6 text-ossisto-blue" />,
-      desc: "We connect siloed ERP, MES, and cloud platforms with standardized APIs, ensuring real-time visibility across complex operations."
-    },
-    {
-      title: "DevSecOps & Governance",
-      icon: <Shield className="w-6 h-6 text-ossisto-blue" />,
-      desc: "We embed security, compliance, and risk management into transformation blueprints from day one for continuous operational safety."
+      desc: "We structure improvements to reduce future upgrade scope, support them from India in your working hours, and place functional and technical consultants onsite in Europe and the US."
     }
   ];
 
   const playbookSteps = [
     {
-      label: "Assess & Align",
-      desc: "Comprehensive evaluation of existing technology assets, operational workflows, and strategic business goals."
+      label: "Discover & Assess",
+      desc: "Evaluating current SAP architecture, custom code footprint, data health, and readiness for cloud transformation."
     },
     {
-      label: "Architect & Roadmap",
-      desc: "Designing modular, future-ready enterprise architectures with clear execution milestones and fundable increments."
+      label: "Architect & Prepare",
+      desc: "Designing target S/4HANA landscape, data migration strategies, and enterprise integration patterns."
     },
     {
-      label: "Execute & Integrate",
-      desc: "Deploying solutions using agile frameworks, connecting legacy core systems with modern cloud infrastructure."
+      label: "Build & Integrate",
+      desc: "Executing core SAP configuration, custom extension development, data cleansing, and interface testing."
     },
     {
-      label: "Govern & Scale",
-      desc: "Establishing enterprise data and software governance to sustain long-term digital growth and operational resilience."
+      label: "Deploy & Optimize",
+      desc: "Managing cutover execution, user enablement, post-go-live hypercare, and continuous application optimization."
     }
   ];
 
@@ -104,10 +81,10 @@ export default function ApplicationDevelopmentManagement() {
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
             <span className="text-ossisto-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block">
-              APPLICATION DEVELOPMENT & MODERNIZATION
+              SAP CONSULTING & SERVICES
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight">
-              Build What You Really Need
+              Make SAP Work Harder
             </h1>
 
             <button className="bg-[#236CB1] hover:bg-[#1A5185] text-white text-[11px] sm:text-xs font-black uppercase py-2.5 px-5 sm:py-4 sm:px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
@@ -137,27 +114,28 @@ export default function ApplicationDevelopmentManagement() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-12 lg:col-span-12 space-y-5 text-center">
             <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
-              APPLICATIONS THAT FIT
+
+              SAP THAT DELIVERS
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-2xl mx-auto">
-              Custom applications and legacy modernisation
+              Configuration, master data, reporting and support
             </h2>
             <div className="space-y-4 text-slate-500 text-sm leading-relaxed max-w-3xl font-medium mx-auto text-justify">
               <p>
-                Some processes are too specific to your business for packaged software. Some existing applications are too important to retire and too fragile to extend. Ossisto Global handles both and starts by telling you honestly which situation you are in, including when the right answer is to configure a standard product instead of building anything.
+                Most manufacturers use only a fraction of the SAP functionality they already own, and fill the gaps with spreadsheets. Ossisto Global helps you get more from that investment by making the system work the way your plant actually runs, rather than starting another transformation programme.
               </p>
               <p>
-                Where custom development is justified, we scope tightly around the workflow and connect to your enterprise and shop-floor systems from the first release rather than as a later phase. Our bias is towards the smallest application that solves the problem, because the long-term cost of software is driven by how much there is to maintain.
+                We begin with a review of how SAP is used today - which transactions people rely on, where parallel spreadsheets have appeared, which master data fields nobody maintains, and which standard functionality was never switched on. This consistently uncovers improvements that need no new licences.
               </p>
               <p>
-                For older systems we assess candidly what should be replaced, rebuilt on a current platform, wrapped with a modern interface, or simply left alone, since rewriting something stable rarely justifies the risk. Throughout, we use conventional engineering practice such as version control, automated testing and documented architecture, so the result can be maintained by your own team or any other supplier.
+                We then work through them in priority order across planning, materials, quality, sales, finance and maintenance, with proper testing and user training on each change. Master data receives particular attention, because planning behaviour and costing accuracy depend on fields that often have no owner. Where a move to S/4HANA is on your horizon, we structure the work to reduce that project's scope rather than create effort you will throw away.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Importance of data foundation Section */}
+      {/* Defining the Digital future Section */}
       <section id="insights" className="py-6 md:py-8 lg:py-10 px-12 sm:px-16 md:px-24 lg:px-32 border-b-0 lg:border-b border-gray-150 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-xl border border-slate-150 flex flex-col md:flex-row bg-white min-h-[280px]">
@@ -165,10 +143,10 @@ export default function ApplicationDevelopmentManagement() {
             <div className="w-full md:w-3/5 p-8 lg:p-10 flex flex-col justify-between text-left">
               <div>
                 <h3 className="text-black text-xl md:text-2xl font-black leading-snug mb-4 max-w-md">
-                  Why it matters
+                  How we add value
                 </h3>
                 <p className="text-slate-500 text-xs leading-relaxed font-medium max-w-md text-justify">
-                  Manufacturers accumulate application debt quietly. An Access database running production scheduling, a VB tool nobody can modify, a customer portal on an unsupported framework, an integration held together by scheduled file transfers - each works until it does not, and each concentrates operational risk. Meanwhile genuine process advantages go unsupported because no packaged product fits and internal capacity does not exist. Addressing both sides has direct value: reduced operational risk from unsupported technology, and process capabilities competitors buying standard software cannot easily replicate. Modernisation also removes constraints on everything else, since integration, analytics, cloud migration and mobile access are all considerably harder against legacy applications. The discipline that matters is restraint - building only what genuinely differentiates, and configuring standard products for everything else.
+                  SAP is usually the largest single IT investment a mid-sized manufacturer has made, and typically the most under-used. The symptoms are recognisable: planners overriding MRP because parameters are wrong, costing nobody trusts for pricing decisions, quality data recorded on paper then re-entered, and month-end closing dependent on spreadsheet reconciliation. Each has a configuration or master data root cause and a measurable cost. Addressing them improves inventory accuracy, planning reliability and margin visibility without new licence spend. There is also a readiness dimension, since S/4HANA migration difficulty is driven largely by custom code volume, master data quality and process discipline - so improvements made now directly reduce the cost and risk of a project most manufacturers will face within a few years.                  <br /><br />
                 </p>
               </div>
             </div>
@@ -199,7 +177,7 @@ export default function ApplicationDevelopmentManagement() {
               Our Capabilities
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight max-w-2xl mx-auto leading-tight">
-              <span className="text-[#236CB1]">Ossisto</span>  services
+              <span className="text-[#236CB1]">Ossisto</span> services
             </h2>
           </div>
 
@@ -226,7 +204,7 @@ export default function ApplicationDevelopmentManagement() {
               OUR METHODOLOGY
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight leading-tight">
-              Transformation Execution Framework
+              SAP Delivery Framework
             </h2>
           </div>
 
@@ -262,7 +240,7 @@ export default function ApplicationDevelopmentManagement() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-5 space-y-4 text-left relative">
             <h2 className="text-2xl sm:text-3xl font-black text-black tracking-tight leading-tight max-w-sm relative z-10 pt-4">
-              Our key areas for Application Development & Modernization
+              Our key areas for SAP Consulting Services
             </h2>
           </div>
 

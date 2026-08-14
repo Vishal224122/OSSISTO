@@ -21,28 +21,22 @@ export default function CloudApplicationModernization() {
 
   const capabilities = [
     {
-      title: "Data Landscape Mapping",
-      desc: "We map the data landscape first - source systems, ownership, refresh cycles and the reports built on exports nobody maintains - and anchor the first build to one decision that is currently poorly served."
+      desc: "We assess infrastructure from the plant backwards - what must keep running when connectivity fails, what benefits from cloud elasticity, and what is constrained by data residency or contract terms."
     },
     {
-      title: "Ingestion Pipeline Engineering",
-      desc: "We build ingestion pipelines from your enterprise, manufacturing, commercial and machine data sources into a governed layer, working on your existing cloud environment and licences rather than proposing a new stack."
+      desc: "We design a hybrid target rather than applying a cloud-first default, which is nearly always the correct answer for multi-site manufacturers."
     },
     {
-      title: "Master Data Alignment",
-      desc: "We align master data across product, part, plant, customer and asset hierarchies, then define a semantic layer so every report calculates business terms identically."
+      desc: "We verify rather than assume, testing backup restoration, failover behaviour and network separation between office and plant systems, and reporting findings without softening."
     },
     {
-      title: "Manufacturing Data Design",
-      desc: "We design for manufacturing realities such as time-series machine volume, batch genealogy and unit-of-measure conversion, with automated quality tests and exception reporting owned by named people."
+      desc: "We migrate in sequence from lowest to highest production impact, with rehearsed cutover and a defined rollback point per wave, moving plant-critical systems last."
     },
     {
-      title: "Historical Data Cleansing",
-      desc: "We migrate and cleanse historical data from legacy systems and spreadsheets, applying access controls and lineage documentation aligned to your privacy and customer confidentiality obligations."
+      desc: "We establish operating discipline covering automated provisioning, release automation, patch management, meaningful alerting and documented recovery times, so a small team can run it confidently."
     },
     {
-      title: "Global Quality Delivery",
-      desc: "Every pipeline ships with tests, runbooks and a data dictionary, delivered offshore from India or onsite in Europe and the US where data residency or source-system knowledge requires local presence."
+      desc: "We offer managed operations from India with extended-hours coverage where needed, monthly service reporting, and infrastructure engineers placed onsite in Europe and the US for migration waves."
     }
   ];
 
@@ -329,11 +323,10 @@ export default function CloudApplicationModernization() {
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
             <span className="text-ossisto-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block">
-              DATA ENGINEERING & INTEGRATION
+              Cloud, DevOps & Infra
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight">
-              Fix The Data Foundation
-            </h1>
+              Infrastructure That Stays Up            </h1>
             <button className="bg-[#236CB1] hover:bg-[#1A5185] text-white text-[11px] sm:text-xs font-black uppercase py-2.5 px-5 sm:py-4 sm:px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
               LET'S CONNECT <span className="text-[10px]">▶</span>
             </button>
@@ -388,20 +381,20 @@ export default function CloudApplicationModernization() {
           {/* Right Text Block matching the screenshot mockup exactly */}
           <div className="md:col-span-12 lg:col-span-12 space-y-5 text-center">
             <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
-              DATA FOUNDATION
+              RESILIENT BY DESIGN
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-2xl mx-auto">
-              Pipelines,models and governance
+              Hybrid cloud, plant-edge resilience and DevOps discipline
             </h2>
             <div className="space-y-4 text-slate-500 text-sm leading-relaxed max-w-3xl font-medium mx-auto text-justify">
               <p>
-                Analytics and AI depend on reliable data. Ossisto helps organizations unify scattered information across ERP, MES, CRM, plant historians and machine systems into a governed, queryable data layer.
+                Manufacturing has a harder infrastructure problem than most sectors: plants that cannot tolerate downtime, factory networks that must stay separated from office systems, sites with poor connectivity, and lean IT teams covering all of it.
               </p>
               <p>
-                We begin by mapping data sources, master records, duplicate identities and inconsistent business definitions. We then build connectors, staging layers, governed pipelines, conformed dimensions and semantic models that create a consistent view of products, plants, customers and assets.
+                Ossisto Global designs infrastructure from the plant backwards. We look at what must keep running when the network fails, what genuinely benefits from the cloud, and what is constrained by data residency or customer contract terms. That usually points to a hybrid answer rather than a cloud-first default, which for multi-site manufacturers is nearly always correct.
               </p>
               <p>
-                For manufacturing environments, we also address time-series machine data, batch genealogy, production context and unit-of-measure conversions. We work with existing platforms wherever practical and deliver documented, testable pipelines that internal teams can maintain and extend.
+                Migration then follows a low-risk sequence, with rehearsed switchover and a defined point of return for each wave, and plant-critical systems moved last. Alongside this we put the operating discipline in place: automated deployment, patching, meaningful alerts, and backup and recovery that has actually been tested rather than assumed. The aim is infrastructure your own small team can run with confidence, supported by us where you would rather not.
               </p>
             </div>
           </div>
@@ -422,11 +415,10 @@ export default function CloudApplicationModernization() {
               <div>
 
                 <h3 className="text-black text-xl md:text-2xl font-black leading-snug mb-4 max-w-md">
-                  Importance of data foundation
+                  Why it matters
                 </h3>
                 <p className="text-slate-500 text-xs leading-relaxed font-medium max-w-md text-justify">
-                  Data integration is the tax every digital initiative pays, and paying it repeatedly is what makes transformation programmes expensive. When each new dashboard, planning tool or AI model requires its own extract, the cost of the tenth use case is as high as the first. A governed data layer inverts that, because the marginal cost of each new question falls once the joins, definitions and quality rules already exist. There are direct operational effects too. Reconciled master data reduces incorrect BOMs, duplicate part numbers and inventory discrepancies. Consistent definitions end the meetings spent debating whose number is right. And machine learning is largely a data-quality exercise in practice, since models trained on inconsistent, poorly labelled manufacturing data fail quietly and then get blamed on the algorithm.
-                </p>
+                  operational rather than an IT concern. Yet mid-sized manufacturers commonly run critical workloads on ageing hardware, with backups nobody has restored from, patching deferred because change windows are scarce, and OT and IT networks less separated than assumed - a material ransomware exposure given how heavily manufacturing has been targeted. Addressing this reduces genuine business risk, not theoretical risk. Beyond resilience, disciplined infrastructure and deployment practice accelerates everything else, because teams that can deploy safely within an hour iterate on applications and analytics far faster than teams whose releases require weekend windows. Cost control matters too, since unmanaged cloud consumption reliably exceeds the on-premise spend it replaced.                </p>
               </div>
 
             </div>
@@ -458,7 +450,7 @@ export default function CloudApplicationModernization() {
               Our Capabilities
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight max-w-2xl mx-auto leading-tight">
-              <span className="text-[#236CB1]">Ossisto</span> delivery strategy
+              <span className="text-[#236CB1]">Ossisto</span> services
             </h2>
           </div>
 

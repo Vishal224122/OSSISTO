@@ -71,7 +71,7 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
     {
       title: "ENGINEERING SERVICES",
       headerTitle: "Engineering Services",
-      desc: "Implement scalable and resilient database management architectures, modular resource planning systems, and customized support pipelines.",
+      desc: "Design-office capacity, embedded and E/E engineering, sustenance, validation and documentation - delivered onsite and from India for mid-sized manufacturers and automotive suppliers.",
       links: [
         { name: "Product Engineering Support", href: "#dream-details" },
         { name: "Embedded Software & Firmware", href: "#dream-details" },
@@ -110,16 +110,13 @@ Applied AI scoped by measurable payback and validated against the method you use
     },
     {
       title: "ENTERPRISE DIGITAL & IT",
-      headerTitle: "Digital Engineering",
-      desc: `The industrial world is changing at a pace that paper-based processes, disconnected systems, and on-premise-only thinking simply cannot match.
-
-Ossisto Global brings together cloud infrastructure, digital twin technology, and industrial IoT to give asset-heavy and engineering-led businesses a single, connected view of their operations — in real time, at scale, from anywhere. We don't digitise for the sake of it. We build digital capability that makes your physical operations faster, smarter, and harder to disrupt.`,
+      headerTitle: "Enterprise Digital & IT",
+      desc: `Transformation roadmaps, SAP, custom applications, cloud and infrastructure, integration, PLM and quality engineering - delivered in fundable increments, with your own team able to run what we build.`,
       links: [
         { name: "Digital Transformation Consulting", href: "#dream-details" },
         { name: "SAP Consulting & Services", href: "#dream-details" },
         { name: "Application Development & Modernization", href: "#dream-details" },
         { name: "Cloud, DevOps & Infra", href: "#dream-details" },
-        { name: "Enterprise integration", href: "#dream-details" },
         { name: "PLM Services", href: "#dream-details" },
         { name: "Quality engineering and test automation", href: "#dream-details" }
       ],
@@ -250,19 +247,17 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                         setActiveTab(item.title);
                       }
                     }}
-                    className={`relative flex items-center font-black text-[10.5px] xl:text-[11.5px] py-4 transition-colors whitespace-nowrap uppercase tracking-wider ${
-                      isCareerDisabled
-                        ? (isScrolled ? 'text-slate-900' : 'text-white') + ' cursor-default pointer-events-none select-none'
-                        : isScrolled ? 'text-slate-900 hover:text-ossisto-blue' : 'text-white hover:text-ossisto-blue'
-                    }`}
+                    className={`relative flex items-center font-black text-[10.5px] xl:text-[11.5px] py-4 transition-colors whitespace-nowrap uppercase tracking-wider ${isCareerDisabled
+                      ? (isScrolled ? 'text-slate-900' : 'text-white') + ' cursor-default pointer-events-none select-none'
+                      : isScrolled ? 'text-slate-900 hover:text-ossisto-blue' : 'text-white hover:text-ossisto-blue'
+                      }`}
                   >
                     {item.title}
                     {!isCareerDisabled && (
-                      <span className={`absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full transition-transform duration-300 origin-left ${
-                        activeDropdown === index || (activeDropdown === null && ((currentView === 'about-us' && item.title === 'ABOUT US') || (currentView !== 'about-us' && activeTab === item.title)))
-                          ? 'scale-x-100'
-                          : 'scale-x-0 group-hover:scale-x-100'
-                      }`} />
+                      <span className={`absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full transition-transform duration-300 origin-left ${activeDropdown === index || (activeDropdown === null && ((currentView === 'about-us' && item.title === 'ABOUT US') || (currentView !== 'about-us' && activeTab === item.title)))
+                        ? 'scale-x-100'
+                        : 'scale-x-0 group-hover:scale-x-100'
+                        }`} />
                     )}
                   </button>
 
@@ -275,20 +270,17 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                     >
                       <div className="w-full px-4 sm:px-6 lg:px-8 grid grid-cols-12">
 
-                         {/* Column 1: Narrative */}
-                        <div className={`col-span-7 p-8 flex flex-col justify-center relative z-10 text-left transition-colors duration-300 border-b ${
-                          (item.title === "AI & DATA" || item.title === "ABOUT US")
-                            ? "bg-[#236CB1] text-white lg:py-12 lg:pl-36 lg:pr-12 [box-shadow:-100vw_0_0_100vw_#236CB1] border-[#236CB1]" 
-                            : "bg-white text-black lg:p-12 border-slate-200"
-                        }`}>
-                          <h2 className={`text-2xl lg:text-3xl font-black tracking-tight mb-4 ${
-                            (item.title === "AI & DATA" || item.title === "ABOUT US") ? "text-white" : "text-black"
+                        {/* Column 1: Narrative */}
+                        <div className={`col-span-7 p-8 flex flex-col justify-center relative z-10 text-left transition-colors duration-300 border-b ${(item.title === "AI & DATA" || item.title === "ENTERPRISE DIGITAL & IT" || item.title === "ENGINEERING SERVICES" || item.title === "ABOUT US")
+                          ? "bg-[#236CB1] text-white lg:py-12 lg:pl-36 lg:pr-12 [box-shadow:-100vw_0_0_100vw_#236CB1] border-[#236CB1]"
+                          : "bg-white text-black lg:p-12 border-slate-200"
                           }`}>
+                          <h2 className={`text-2xl lg:text-3xl font-black tracking-tight mb-4 ${(item.title === "AI & DATA" || item.title === "ENTERPRISE DIGITAL & IT" || item.title === "ENGINEERING SERVICES" || item.title === "ABOUT US") ? "text-white" : "text-black"
+                            }`}>
                             {item.headerTitle}
                           </h2>
-                          <p className={`text-xs lg:text-sm leading-relaxed font-medium whitespace-pre-line ${
-                            (item.title === "AI & DATA" || item.title === "ABOUT US") ? "text-slate-300 max-w-xl" : "text-gray-600 mb-6 max-w-md"
-                          }`}>
+                          <p className={`text-xs lg:text-sm leading-relaxed font-medium whitespace-pre-line ${(item.title === "AI & DATA" || item.title === "ENTERPRISE DIGITAL & IT" || item.title === "ENGINEERING SERVICES" || item.title === "ABOUT US") ? "text-slate-300 max-w-xl" : "text-gray-600 mb-6 max-w-md"
+                            }`}>
                             {item.desc}
                           </p>
                         </div>
@@ -297,7 +289,9 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                         <div className="col-span-5 bg-white p-8 lg:py-12 lg:pl-32 lg:pr-12 border-l border-b border-gray-100 flex flex-col justify-center relative z-10 text-left">
                           <ul className="space-y-4">
                             {item.links.map((link, idx) => {
-                              const isEnabled = link.name === "Data Engineering & integration" || link.name === "Analytics, BI and dashboards" || link.name === "Gen AI solutions" || link.name === "Intelligent Automation" || link.name === "Applied AI and Machine Learning" || link.name === "Computer & Machine Vision" || link.name === "About US";
+                              const isEnterpriseDigitalLink = item.title === "ENTERPRISE DIGITAL & IT";
+                              const isEngineeringServicesLink = item.title === "ENGINEERING SERVICES";
+                              const isEnabled = isEnterpriseDigitalLink || isEngineeringServicesLink || link.name === "Data Engineering & integration" || link.name === "Analytics, BI and dashboards" || link.name === "Gen AI solutions" || link.name === "Intelligent Automation" || link.name === "Applied AI and Machine Learning" || link.name === "Computer & Machine Vision" || link.name === "About US";
                               return (
                                 <li key={idx}>
                                   <a
@@ -306,7 +300,40 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                                       e.preventDefault();
                                       if (!isEnabled) return;
 
-                                      if (link.name === "Data Engineering & integration") {
+                                      if (link.name === "Digital Transformation Consulting") {
+                                        onNavigate('digital-transformation');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "SAP Consulting & Services") {
+                                        onNavigate('sap-consulting');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Application Development & Modernization") {
+                                        onNavigate('application-development');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "PLM Services") {
+                                        onNavigate('plm-services');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Quality engineering and test automation") {
+                                        onNavigate('quality-engineering');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Product Engineering Support") {
+                                        onNavigate('product-engineering-support');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Embedded Software & Firmware") {
+                                        onNavigate('embedded-software-firmware');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "E/E Systems Engineering Support") {
+                                        onNavigate('ee-systems-engineering');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Product Sustenance & Lifecycle Support") {
+                                        onNavigate('product-sustenance-lifecycle');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Testing and validation support") {
+                                        onNavigate('testing-validation-support');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Engineering documentation & drafting support") {
+                                        onNavigate('engineering-documentation-drafting');
+                                        setActiveDropdown(null);
+                                      } else if (isEnterpriseDigitalLink || link.name === "Data Engineering & integration") {
                                         onNavigate('cloud-modernization');
                                         setActiveDropdown(null);
                                       } else if (link.name === "Analytics, BI and dashboards") {
@@ -329,16 +356,14 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                                         setActiveDropdown(null);
                                       }
                                     }}
-                                    className={`text-xs lg:text-sm font-bold grid grid-cols-[280px_auto] items-center group/sublink transition-colors ${
-                                      isEnabled
-                                        ? "text-slate-800 hover:text-ossisto-blue cursor-pointer"
-                                        : "text-slate-800 cursor-default pointer-events-none select-none"
-                                    }`}
+                                    className={`text-xs lg:text-sm font-bold grid grid-cols-[280px_auto] items-center group/sublink transition-colors ${isEnabled
+                                      ? "text-slate-800 hover:text-ossisto-blue cursor-pointer"
+                                      : "text-slate-800 cursor-default pointer-events-none select-none"
+                                      }`}
                                   >
                                     <span>{link.name}</span>
-                                    <span className={`text-[9px] transition-colors ${
-                                      isEnabled ? "text-slate-400 group-hover/sublink:text-ossisto-blue" : "text-slate-400 opacity-60"
-                                    }`}>▶</span>
+                                    <span className={`text-[9px] transition-colors ${isEnabled ? "text-slate-400 group-hover/sublink:text-ossisto-blue" : "text-slate-400 opacity-60"
+                                      }`}>▶</span>
                                   </a>
                                 </li>
                               );
@@ -419,11 +444,10 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                   <div key={idx} className="pb-2.5">
                     <button
                       onClick={() => !isCareerDisabled && setActiveSideSub(isOpen ? null : idx)}
-                      className={`w-full flex items-center justify-between text-xs sm:text-sm font-extrabold text-left uppercase tracking-wider py-1 ${
-                        isCareerDisabled
-                          ? "text-slate-900 cursor-default pointer-events-none select-none"
-                          : "text-slate-900 hover:text-ossisto-blue transition-colors"
-                      }`}
+                      className={`w-full flex items-center justify-between text-xs sm:text-sm font-extrabold text-left uppercase tracking-wider py-1 ${isCareerDisabled
+                        ? "text-slate-900 cursor-default pointer-events-none select-none"
+                        : "text-slate-900 hover:text-ossisto-blue transition-colors"
+                        }`}
                     >
                       <span>{item.title}</span>
                       {!isCareerDisabled && (
@@ -438,19 +462,16 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                       <div className="mt-3 space-y-3 animate-fade-in">
 
                         {/* Narrative Header Box */}
-                        <div className={`p-4 rounded-xl text-left transition-all ${
-                          (item.title === "AI & DATA" || item.title === "ABOUT US")
-                            ? "bg-[#236CB1] text-white shadow-md"
-                            : "bg-slate-50 text-slate-900 border border-slate-100"
-                        }`}>
-                          <h4 className={`text-sm sm:text-base font-black tracking-tight mb-1.5 ${
-                            (item.title === "AI & DATA" || item.title === "ABOUT US") ? "text-white" : "text-black"
+                        <div className={`p-4 rounded-xl text-left transition-all ${(item.title === "AI & DATA" || item.title === "ENTERPRISE DIGITAL & IT" || item.title === "ABOUT US")
+                          ? "bg-[#236CB1] text-white shadow-md"
+                          : "bg-slate-50 text-slate-900 border border-slate-100"
                           }`}>
+                          <h4 className={`text-sm sm:text-base font-black tracking-tight mb-1.5 ${(item.title === "AI & DATA" || item.title === "ENTERPRISE DIGITAL & IT" || item.title === "ABOUT US") ? "text-white" : "text-black"
+                            }`}>
                             {item.headerTitle}
                           </h4>
-                          <p className={`text-[11px] sm:text-xs leading-relaxed font-medium whitespace-pre-line ${
-                            (item.title === "AI & DATA" || item.title === "ABOUT US") ? "text-slate-100" : "text-slate-600"
-                          }`}>
+                          <p className={`text-[11px] sm:text-xs leading-relaxed font-medium whitespace-pre-line ${(item.title === "AI & DATA" || item.title === "ENTERPRISE DIGITAL & IT" || item.title === "ABOUT US") ? "text-slate-100" : "text-slate-600"
+                            }`}>
                             {item.desc}
                           </p>
                         </div>
@@ -458,7 +479,9 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                         {/* Sub-links List */}
                         <div className="pl-2 space-y-2 border-l-2 border-ossisto-blue/30 pt-1">
                           {item.links.map((link, lIdx) => {
-                            const isEnabled = link.name === "Data Engineering & integration" || link.name === "Analytics, BI and dashboards" || link.name === "Gen AI solutions" || link.name === "Intelligent Automation" || link.name === "Applied AI and Machine Learning" || link.name === "Computer & Machine Vision" || link.name === "About US";
+                            const isEnterpriseDigitalLink = item.title === "ENTERPRISE DIGITAL & IT";
+                            const isEngineeringServicesLink = item.title === "ENGINEERING SERVICES";
+                            const isEnabled = isEnterpriseDigitalLink || isEngineeringServicesLink || link.name === "Data Engineering & integration" || link.name === "Analytics, BI and dashboards" || link.name === "Gen AI solutions" || link.name === "Intelligent Automation" || link.name === "Applied AI and Machine Learning" || link.name === "Computer & Machine Vision" || link.name === "About US";
                             return (
                               <a
                                 key={lIdx}
@@ -468,7 +491,29 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                                   if (!isEnabled) return;
                                   setIsSidePanelOpen(false);
 
-                                  if (link.name === "Data Engineering & integration") {
+                                  if (link.name === "Digital Transformation Consulting") {
+                                    onNavigate('digital-transformation');
+                                  } else if (link.name === "SAP Consulting & Services") {
+                                    onNavigate('sap-consulting');
+                                  } else if (link.name === "Application Development & Modernization") {
+                                    onNavigate('application-development');
+                                  } else if (link.name === "PLM Services") {
+                                    onNavigate('plm-services');
+                                  } else if (link.name === "Quality engineering and test automation") {
+                                    onNavigate('quality-engineering');
+                                  } else if (link.name === "Product Engineering Support") {
+                                    onNavigate('product-engineering-support');
+                                  } else if (link.name === "Embedded Software & Firmware") {
+                                    onNavigate('embedded-software-firmware');
+                                  } else if (link.name === "E/E Systems Engineering Support") {
+                                    onNavigate('ee-systems-engineering');
+                                  } else if (link.name === "Product Sustenance & Lifecycle Support") {
+                                    onNavigate('product-sustenance-lifecycle');
+                                  } else if (link.name === "Testing and validation support") {
+                                    onNavigate('testing-validation-support');
+                                  } else if (link.name === "Engineering documentation & drafting support") {
+                                    onNavigate('engineering-documentation-drafting');
+                                  } else if (isEnterpriseDigitalLink || link.name === "Data Engineering & integration") {
                                     onNavigate('cloud-modernization');
                                   } else if (link.name === "Analytics, BI and dashboards") {
                                     onNavigate('analytics-bi');
@@ -484,16 +529,14 @@ Ossisto Global brings together cloud infrastructure, digital twin technology, an
                                     onNavigate('about-us');
                                   }
                                 }}
-                                className={`flex items-center justify-between text-xs font-bold py-1 transition-colors group/m-link ${
-                                  isEnabled
-                                    ? "text-slate-800 hover:text-ossisto-blue cursor-pointer"
-                                    : "text-slate-800 cursor-default pointer-events-none select-none"
-                                }`}
+                                className={`flex items-center justify-between text-xs font-bold py-1 transition-colors group/m-link ${isEnabled
+                                  ? "text-slate-800 hover:text-ossisto-blue cursor-pointer"
+                                  : "text-slate-800 cursor-default pointer-events-none select-none"
+                                  }`}
                               >
                                 <span>{link.name}</span>
-                                <span className={`text-[9px] transition-colors ${
-                                  isEnabled ? "text-slate-400 group-hover/m-link:text-ossisto-blue" : "text-slate-400 opacity-60"
-                                }`}>▶</span>
+                                <span className={`text-[9px] transition-colors ${isEnabled ? "text-slate-400 group-hover/m-link:text-ossisto-blue" : "text-slate-400 opacity-60"
+                                  }`}>▶</span>
                               </a>
                             );
                           })}

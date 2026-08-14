@@ -16,6 +16,16 @@ import AppliedAiMachineLearning from './components/AppliedAiMachineLearning';
 import ComputerMachineVision from './components/ComputerMachineVision';
 import DataApplicationSecurity from './components/DataApplicationSecurity';
 import BankingFinancialServices from './components/BankingFinancialServices';
+import DigitalTransformationConsulting from './components/DigitalTransformationConsulting';
+import SapConsultingServices from './components/SapConsultingServices';
+import PlmServices from './components/PlmServices';
+import QualityEngineeringTestAutomation from './components/QualityEngineeringTestAutomation';
+import ProductEngineeringSupport from './components/ProductEngineeringSupport';
+import EmbeddedSoftwareFirmware from './components/EmbeddedSoftwareFirmware';
+import EeSystemsEngineering from './components/EeSystemsEngineering';
+import ProductSustenanceLifecycle from './components/ProductSustenanceLifecycle';
+import TestingValidationSupport from './components/TestingValidationSupport';
+import EngineeringDocumentationDrafting from './components/EngineeringDocumentationDrafting';
 import AboutUsPage from './components/AboutUsPage';
 
 function App() {
@@ -32,6 +42,16 @@ function App() {
     if (path.includes('data-analytics-modernization')) return 'data-modernization';
     if (path.includes('data-application-security')) return 'data-security';
     if (path.includes('banking-financial-services')) return 'banking-services';
+    if (path.includes('digital-transformation-consulting')) return 'digital-transformation';
+    if (path.includes('sap-consulting-services')) return 'sap-consulting';
+    if (path.includes('plm-services')) return 'plm-services';
+    if (path.includes('quality-engineering')) return 'quality-engineering';
+    if (path.includes('product-engineering-support')) return 'product-engineering-support';
+    if (path.includes('embedded-software-firmware')) return 'embedded-software-firmware';
+    if (path.includes('ee-systems-engineering')) return 'ee-systems-engineering';
+    if (path.includes('product-sustenance-lifecycle')) return 'product-sustenance-lifecycle';
+    if (path.includes('testing-validation-support')) return 'testing-validation-support';
+    if (path.includes('engineering-documentation-drafting')) return 'engineering-documentation-drafting';
     if (path.includes('about-us')) return 'about-us';
     return 'home';
   };
@@ -65,6 +85,26 @@ function App() {
       path = '/cyber-security/data-application-security';
     } else if (view === 'banking-services') {
       path = '/industries/banking-financial-services';
+    } else if (view === 'digital-transformation') {
+      path = '/digital-engineering-services/digital-transformation-consulting';
+    } else if (view === 'sap-consulting') {
+      path = '/digital-engineering-services/sap-consulting-services';
+    } else if (view === 'plm-services') {
+      path = '/digital-engineering-services/plm-services';
+    } else if (view === 'quality-engineering') {
+      path = '/digital-engineering-services/quality-engineering-test-automation';
+    } else if (view === 'product-engineering-support') {
+      path = '/engineering-services/product-engineering-support';
+    } else if (view === 'embedded-software-firmware') {
+      path = '/engineering-services/embedded-software-firmware';
+    } else if (view === 'ee-systems-engineering') {
+      path = '/engineering-services/ee-systems-engineering';
+    } else if (view === 'product-sustenance-lifecycle') {
+      path = '/engineering-services/product-sustenance-lifecycle';
+    } else if (view === 'testing-validation-support') {
+      path = '/engineering-services/testing-validation-support';
+    } else if (view === 'engineering-documentation-drafting') {
+      path = '/engineering-services/engineering-documentation-drafting';
     } else if (view === 'about-us') {
       path = '/company/about-us';
     }
@@ -97,6 +137,26 @@ function App() {
         setCurrentView('data-security');
       } else if (path.includes('banking-financial-services')) {
         setCurrentView('banking-services');
+      } else if (path.includes('digital-transformation-consulting')) {
+        setCurrentView('digital-transformation');
+      } else if (path.includes('sap-consulting-services')) {
+        setCurrentView('sap-consulting');
+      } else if (path.includes('plm-services')) {
+        setCurrentView('plm-services');
+      } else if (path.includes('quality-engineering')) {
+        setCurrentView('quality-engineering');
+      } else if (path.includes('product-engineering-support')) {
+        setCurrentView('product-engineering-support');
+      } else if (path.includes('embedded-software-firmware')) {
+        setCurrentView('embedded-software-firmware');
+      } else if (path.includes('ee-systems-engineering')) {
+        setCurrentView('ee-systems-engineering');
+      } else if (path.includes('product-sustenance-lifecycle')) {
+        setCurrentView('product-sustenance-lifecycle');
+      } else if (path.includes('testing-validation-support')) {
+        setCurrentView('testing-validation-support');
+      } else if (path.includes('engineering-documentation-drafting')) {
+        setCurrentView('engineering-documentation-drafting');
       } else if (path.includes('about-us')) {
         setCurrentView('about-us');
       } else {
@@ -171,6 +231,46 @@ function App() {
       ) : currentView === 'data-security' ? (
         <div className="bg-white text-slate-900 w-full">
           <DataApplicationSecurity />
+        </div>
+      ) : currentView === 'digital-transformation' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <DigitalTransformationConsulting />
+        </div>
+      ) : currentView === 'sap-consulting' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <SapConsultingServices />
+        </div>
+      ) : currentView === 'plm-services' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <PlmServices />
+        </div>
+      ) : currentView === 'quality-engineering' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <QualityEngineeringTestAutomation />
+        </div>
+      ) : currentView === 'product-engineering-support' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <ProductEngineeringSupport />
+        </div>
+      ) : currentView === 'embedded-software-firmware' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <EmbeddedSoftwareFirmware />
+        </div>
+      ) : currentView === 'ee-systems-engineering' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <EeSystemsEngineering />
+        </div>
+      ) : currentView === 'product-sustenance-lifecycle' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <ProductSustenanceLifecycle />
+        </div>
+      ) : currentView === 'testing-validation-support' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <TestingValidationSupport />
+        </div>
+      ) : currentView === 'engineering-documentation-drafting' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <EngineeringDocumentationDrafting />
         </div>
       ) : currentView === 'banking-services' ? (
         <div className="bg-white text-slate-900 w-full">

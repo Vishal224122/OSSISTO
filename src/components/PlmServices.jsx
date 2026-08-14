@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Cpu, Layers, Shield, Zap, Monitor, Settings, RefreshCw, Sparkles, Code, Plus, Minus } from 'lucide-react';
 import ContactAndLocations from './ContactAndLocations';
 
-export default function ApplicationDevelopmentManagement() {
+export default function PlmServices() {
   const [activeTab, setActiveTab] = useState('intro');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -19,22 +19,22 @@ export default function ApplicationDevelopmentManagement() {
 
   const capabilities = [
     {
-      desc: "We make the build-or-configure judgement honestly first, including when the answer is to configure a standard product and remove our own scope."
+      desc: "We begin with change control, mapping how changes are actually raised, reviewed and communicated today including the informal routes, then design workflows faster than current practice."
     },
     {
-      desc: "We build focused custom applications only where they genuinely differentiate, such as distinctive processes, gaps between systems, shop-floor operations and customer or supplier portals."
+      desc: "We configure part, document and bill of material structures around how your products are engineered, sold and manufactured, with realistic approval routing and revision control."
     },
     {
-      desc: "We assess legacy systems candidly, recommending replace, re-platform, wrap with an interface or leave alone, since rewriting a stable system rarely justifies its risk."
+      desc: "We scope data preparation as our work rather than yours, covering part number rationalisation, revision reconciliation, metadata completion and cleansing at predictable unit cost."
     },
     {
-      desc: "We integrate with your enterprise, engineering and shop-floor systems from the first release rather than as a later phase, modernising the databases underneath where needed."
+      desc: "We define the handover to your production systems with clear ownership boundaries, because ambiguity between engineering and production bills of material is a persistent source of error."
     },
     {
-      desc: "We deliver a working increment within four to six weeks and then fortnightly, because manufacturing requirements clarify through use far more reliably than through specification documents."
+      desc: "We implement one product family and one complete change process first, run it live for a full cycle, and expand only once engineers prefer it to the previous method."
     },
     {
-      desc: "Code, pipelines and documentation sit in your accounts from day one, with delivery from India or developers placed onsite in Europe and the US where user proximity is essential."
+      desc: "We keep customisation minimal to protect future upgrade cost, train by role, measure adoption over six months, and place consultants onsite in Europe and the US for deployment waves."
     }
   ];
 
@@ -104,10 +104,10 @@ export default function ApplicationDevelopmentManagement() {
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
             <span className="text-ossisto-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block">
-              APPLICATION DEVELOPMENT & MODERNIZATION
+              PLM SERVICES
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight">
-              Build What You Really Need
+              One Source of Engineering Truth
             </h1>
 
             <button className="bg-[#236CB1] hover:bg-[#1A5185] text-white text-[11px] sm:text-xs font-black uppercase py-2.5 px-5 sm:py-4 sm:px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
@@ -137,20 +137,20 @@ export default function ApplicationDevelopmentManagement() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-12 lg:col-span-12 space-y-5 text-center">
             <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
-              APPLICATIONS THAT FIT
+              ONE ENGINEERING RECORD
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-2xl mx-auto">
-              Custom applications and legacy modernisation
+              Part, BOM and change management
             </h2>
             <div className="space-y-4 text-slate-500 text-sm leading-relaxed max-w-3xl font-medium mx-auto text-justify">
               <p>
-                Some processes are too specific to your business for packaged software. Some existing applications are too important to retire and too fragile to extend. Ossisto Global handles both and starts by telling you honestly which situation you are in, including when the right answer is to configure a standard product instead of building anything.
+                PLM fails when it is deployed as a document store and adopted as an obligation. Ossisto Global implements it around the way your engineers already work, so that it reduces effort rather than adding steps.
               </p>
               <p>
-                Where custom development is justified, we scope tightly around the workflow and connect to your enterprise and shop-floor systems from the first release rather than as a later phase. Our bias is towards the smallest application that solves the problem, because the long-term cost of software is driven by how much there is to maintain.
+                We begin with change control, because that is where both the value and the resistance sit. We map how changes are actually raised, reviewed and communicated today, including the informal routes, and design workflows that are faster than current practice rather than stricter versions of it.
               </p>
               <p>
-                For older systems we assess candidly what should be replaced, rebuilt on a current platform, wrapped with a modern interface, or simply left alone, since rewriting something stable rarely justifies the risk. Throughout, we use conventional engineering practice such as version control, automated testing and documented architecture, so the result can be maintained by your own team or any other supplier.
+                Data preparation is the other thing that decides whether adoption succeeds, so we scope it as our work rather than yours: part numbering, revision reconciliation, structure clean-up and missing information. We define the handover to your production systems with clear ownership boundaries, since ambiguity between engineering and production parts lists is a persistent source of error. Customisation stays minimal to protect the cost of future upgrades.
               </p>
             </div>
           </div>
@@ -168,7 +168,7 @@ export default function ApplicationDevelopmentManagement() {
                   Why it matters
                 </h3>
                 <p className="text-slate-500 text-xs leading-relaxed font-medium max-w-md text-justify">
-                  Manufacturers accumulate application debt quietly. An Access database running production scheduling, a VB tool nobody can modify, a customer portal on an unsupported framework, an integration held together by scheduled file transfers - each works until it does not, and each concentrates operational risk. Meanwhile genuine process advantages go unsupported because no packaged product fits and internal capacity does not exist. Addressing both sides has direct value: reduced operational risk from unsupported technology, and process capabilities competitors buying standard software cannot easily replicate. Modernisation also removes constraints on everything else, since integration, analytics, cloud migration and mobile access are all considerably harder against legacy applications. The discipline that matters is restraint - building only what genuinely differentiates, and configuring standard products for everything else.
+                  Engineering data errors are expensive precisely because they propagate. A wrong revision released to production becomes scrap and rework. An inaccurate BOM becomes incorrect purchasing, missing components at kitting and mis-stated cost. An untracked change becomes a warranty claim nobody can explain. PLM addresses these structurally by making the current revision unambiguous, enforcing review before release, and recording change history for audit and customer requirements. For manufacturers with growing variant complexity it also makes configuration management feasible rather than heroic. There is a wider dependency too, because PLM is the authoritative source that ERP, MES, service documentation, spare-parts systems and digital twin initiatives all draw from, so weakness here constrains every downstream programme regardless of how well those are individually executed.
                 </p>
               </div>
             </div>
@@ -199,7 +199,7 @@ export default function ApplicationDevelopmentManagement() {
               Our Capabilities
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight max-w-2xl mx-auto leading-tight">
-              <span className="text-[#236CB1]">Ossisto</span>  services
+              <span className="text-[#236CB1]">Ossisto</span> services
             </h2>
           </div>
 
@@ -262,7 +262,7 @@ export default function ApplicationDevelopmentManagement() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-5 space-y-4 text-left relative">
             <h2 className="text-2xl sm:text-3xl font-black text-black tracking-tight leading-tight max-w-sm relative z-10 pt-4">
-              Our key areas for Application Development & Modernization
+              Our key areas for PLM Services
             </h2>
           </div>
 

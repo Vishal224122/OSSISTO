@@ -2,39 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { Cpu, Layers, Shield, Zap, Monitor, Settings, RefreshCw, Sparkles, Code, Plus, Minus } from 'lucide-react';
 import ContactAndLocations from './ContactAndLocations';
 
-export default function ApplicationDevelopmentManagement() {
+export default function ProductEngineeringSupport() {
   const [activeTab, setActiveTab] = useState('intro');
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
-  const [activeResourceTab, setActiveResourceTab] = useState('thought');
-  const [expandedFaq, setExpandedFaq] = useState(null);
-
-  const tabs = [
-    { id: 'intro', name: 'Strategic Guidance & Execution' },
-    { id: 'capabilities', name: 'Our Capabilities' },
-    { id: 'differentiators', name: 'Our Key Differentiators' },
-    { id: 'insights', name: 'Featured Insight' },
-    { id: 'delivery', name: 'How We Deliver' }
-  ];
 
   const capabilities = [
     {
-      desc: "We make the build-or-configure judgement honestly first, including when the answer is to configure a standard product and remove our own scope."
+      desc: "We support your design office with additional engineering capacity, working inside your existing tools, standards and release process rather than asking you to adapt to ours."
     },
     {
-      desc: "We build focused custom applications only where they genuinely differentiate, such as distinctive processes, gaps between systems, shop-floor operations and customer or supplier portals."
+      desc: "We help with detailing, modelling and drawing updates, and can extend into checking and standards compliance as our team builds familiarity with your product families."
     },
     {
-      desc: "We assess legacy systems candidly, recommending replace, re-platform, wrap with an interface or leave alone, since rewriting a stable system rarely justifies its risk."
+      desc: "We assist with parts lists, numbering and change documentation aligned to your release process, and with preparing drawing packs for your suppliers."
     },
     {
-      desc: "We integrate with your enterprise, engineering and shop-floor systems from the first release rather than as a later phase, modernising the databases underneath where needed."
-    },
-    {
-      desc: "We deliver a working increment within four to six weeks and then fortnightly, because manufacturing requirements clarify through use far more reliably than through specification documents."
-    },
-    {
-      desc: "Code, pipelines and documentation sit in your accounts from day one, with delivery from India or developers placed onsite in Europe and the US where user proximity is essential."
+      desc: "We prefer to begin with a small, defined work package so you can assess quality and turnaround before scaling, and we document what we learn so it stays with you."
     }
   ];
 
@@ -104,10 +87,10 @@ export default function ApplicationDevelopmentManagement() {
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
             <span className="text-ossisto-blue text-xs md:text-sm font-extrabold uppercase tracking-widest block">
-              APPLICATION DEVELOPMENT & MODERNIZATION
+              PRODUCT ENGINEERING SUPPORT
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-white max-w-xl tracking-tight">
-              Build What You Really Need
+              Extend Your Engineering Bench
             </h1>
 
             <button className="bg-[#236CB1] hover:bg-[#1A5185] text-white text-[11px] sm:text-xs font-black uppercase py-2.5 px-5 sm:py-4 sm:px-8 rounded flex items-center gap-1.5 w-fit mt-8 transition-all tracking-widest shadow-md shadow-ossisto-blue/10 hover:scale-105 active:scale-95 duration-200">
@@ -137,20 +120,20 @@ export default function ApplicationDevelopmentManagement() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-12 lg:col-span-12 space-y-5 text-center">
             <span className="text-ossisto-blue text-xs font-black uppercase tracking-wider block">
-              APPLICATIONS THAT FIT
+              ENGINEERING CAPACITY
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight max-w-2xl mx-auto">
-              Custom applications and legacy modernisation
+              From concept sketches to production-ready data
             </h2>
             <div className="space-y-4 text-slate-500 text-sm leading-relaxed max-w-3xl font-medium mx-auto text-justify">
               <p>
-                Some processes are too specific to your business for packaged software. Some existing applications are too important to retire and too fragile to extend. Ossisto Global handles both and starts by telling you honestly which situation you are in, including when the right answer is to configure a standard product instead of building anything.
+                Your product roadmap rarely waits for headcount approval. Ossisto Global gives manufacturers a dependable extension of their design office - design engineers, modellers, simulation analysts and checkers who work inside your existing tools, standards and release gates.
               </p>
               <p>
-                Where custom development is justified, we scope tightly around the workflow and connect to your enterprise and shop-floor systems from the first release rather than as a later phase. Our bias is towards the smallest application that solves the problem, because the long-term cost of software is driven by how much there is to maintain.
+                We treat this as a maturity exercise rather than a staffing transaction. We start by understanding how your design data actually flows: which systems are in play, where drawings get held up, how changes are raised, and which activities are genuinely repeatable. A small, named team then learns your part families and design standards, and we capture that knowledge in checklists, templates and reusable libraries that stay with you.
               </p>
               <p>
-                For older systems we assess candidly what should be replaced, rebuilt on a current platform, wrapped with a modern interface, or simply left alone, since rewriting something stable rarely justifies the risk. Throughout, we use conventional engineering practice such as version control, automated testing and documented architecture, so the result can be maintained by your own team or any other supplier.
+                Over successive programmes our teams take on wider scope, moving from detailing to modelling, and from modelling to variant configuration and design automation. The intention is that every engagement leaves your engineering organisation faster and better documented than we found it, with less knowledge held only in people's heads.
               </p>
             </div>
           </div>
@@ -165,10 +148,10 @@ export default function ApplicationDevelopmentManagement() {
             <div className="w-full md:w-3/5 p-8 lg:p-10 flex flex-col justify-between text-left">
               <div>
                 <h3 className="text-black text-xl md:text-2xl font-black leading-snug mb-4 max-w-md">
-                  Why it matters
+                  Importance of flexible engineering capacity
                 </h3>
                 <p className="text-slate-500 text-xs leading-relaxed font-medium max-w-md text-justify">
-                  Manufacturers accumulate application debt quietly. An Access database running production scheduling, a VB tool nobody can modify, a customer portal on an unsupported framework, an integration held together by scheduled file transfers - each works until it does not, and each concentrates operational risk. Meanwhile genuine process advantages go unsupported because no packaged product fits and internal capacity does not exist. Addressing both sides has direct value: reduced operational risk from unsupported technology, and process capabilities competitors buying standard software cannot easily replicate. Modernisation also removes constraints on everything else, since integration, analytics, cloud migration and mobile access are all considerably harder against legacy applications. The discipline that matters is restraint - building only what genuinely differentiates, and configuring standard products for everything else.
+                  Design throughput is now the constraint on most mid-sized manufacturers' growth. Variant proliferation, regional compliance requirements and customer-specific engineering mean the volume of drawings, BOMs and change notices grows faster than headcount ever will. When senior engineers spend their week on detailing, dimensioning and drawing corrections, architecture decisions and manufacturability reviews get deferred - and cost gets locked into the product before the first prototype exists. Structured engineering support breaks that cycle. It converts unplanned overtime into predictable capacity, shortens the concept-to-release cycle, and produces the clean, parameterised, well-governed design data that every downstream initiative depends on. PLM, MES, configurators and digital twin programmes stall more often on weak engineering data than on technology choice.
                 </p>
               </div>
             </div>
@@ -199,11 +182,11 @@ export default function ApplicationDevelopmentManagement() {
               Our Capabilities
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight max-w-2xl mx-auto leading-tight">
-              <span className="text-[#236CB1]">Ossisto</span>  services
+              <span className="text-[#236CB1]">Ossisto</span> services
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto pt-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto pt-0">
             {capabilities.map((item, idx) => (
               <div
                 key={idx}
@@ -262,7 +245,7 @@ export default function ApplicationDevelopmentManagement() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-5 space-y-4 text-left relative">
             <h2 className="text-2xl sm:text-3xl font-black text-black tracking-tight leading-tight max-w-sm relative z-10 pt-4">
-              Our key areas for Application Development & Modernization
+              Our key areas for Product Engineering Support
             </h2>
           </div>
 
