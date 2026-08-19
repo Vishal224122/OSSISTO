@@ -1,5 +1,4 @@
 import React from 'react';
-import ContactAndLocations from './ContactAndLocations';
 
 export default function PharmaFoodServices() {
   return (
@@ -132,9 +131,6 @@ export default function PharmaFoodServices() {
         </section>
 
       </div>
-
-      {/* Footer Contact & Locations */}
-      <ContactAndLocations />
     </div>
   );
 }
