@@ -105,9 +105,11 @@ export default function DreamDetails() {
       tabs: [
         {
           name: "INDUSTRY 4.0",
-          title: "Smart Factory & Industry 4.0",
+          title: "Industry 4.0 & Smart factory",
           image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
-          text: "Bridge physical manufacturing assets with cognitive cloud frameworks to build connected, smart industrial spaces.",
+          text: `MES, machine connectivity, frontline enablement, OEE analytics, predictive maintenance and supply chain digitisation - scoped to prove value on one line before scaling across the plant.
+
+Connected machines, execution systems (MES), shop-floor analytics, predictive maintenance and supply chain digitisation - scoped to prove measurable gains on every line and across the plant.`,
           services: [
             { title: "MES services", desc: "Implementing and optimizing Manufacturing Execution Systems." },
             { title: "Connected Factory (IIOT)", desc: "Integrating plant sensors, legacy machines, and cloud storage." },

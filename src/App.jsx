@@ -27,6 +27,13 @@ import ProductSustenanceLifecycle from './components/ProductSustenanceLifecycle'
 import TestingValidationSupport from './components/TestingValidationSupport';
 import EngineeringDocumentationDrafting from './components/EngineeringDocumentationDrafting';
 import AboutUsPage from './components/AboutUsPage';
+import MesServices from './components/MesServices';
+import ConnectedFactoryIiot from './components/ConnectedFactoryIiot';
+import ConnectedWorkforce from './components/ConnectedWorkforce';
+import ManufacturingAnalyticsOee from './components/ManufacturingAnalyticsOee';
+import PredictiveMaintenance from './components/PredictiveMaintenance';
+import SupplyChainDigitization from './components/SupplyChainDigitization';
+import PharmaFoodServices from './components/PharmaFoodServices';
 
 function App() {
   const getInitialView = () => {
@@ -52,6 +59,13 @@ function App() {
     if (path.includes('product-sustenance-lifecycle')) return 'product-sustenance-lifecycle';
     if (path.includes('testing-validation-support')) return 'testing-validation-support';
     if (path.includes('engineering-documentation-drafting')) return 'engineering-documentation-drafting';
+    if (path.includes('mes-services')) return 'mes-services';
+    if (path.includes('connected-factory-iiot')) return 'connected-factory-iiot';
+    if (path.includes('connected-workforce')) return 'connected-workforce';
+    if (path.includes('manufacturing-analytics-oee')) return 'manufacturing-analytics-oee';
+    if (path.includes('predictive-maintenance')) return 'predictive-maintenance';
+    if (path.includes('supply-chain-digitization')) return 'supply-chain-digitization';
+    if (path.includes('pharma-food')) return 'pharma-food';
     if (path.includes('about-us')) return 'about-us';
     return 'home';
   };
@@ -105,6 +119,20 @@ function App() {
       path = '/engineering-services/testing-validation-support';
     } else if (view === 'engineering-documentation-drafting') {
       path = '/engineering-services/engineering-documentation-drafting';
+    } else if (view === 'mes-services') {
+      path = '/industry-4-0/mes-services';
+    } else if (view === 'connected-factory-iiot') {
+      path = '/industry-4-0/connected-factory-iiot';
+    } else if (view === 'connected-workforce') {
+      path = '/industry-4-0/connected-workforce';
+    } else if (view === 'manufacturing-analytics-oee') {
+      path = '/industry-4-0/manufacturing-analytics-oee';
+    } else if (view === 'predictive-maintenance') {
+      path = '/industry-4-0/predictive-maintenance';
+    } else if (view === 'supply-chain-digitization') {
+      path = '/industry-4-0/supply-chain-digitization';
+    } else if (view === 'pharma-food') {
+      path = '/industries/pharma-food';
     } else if (view === 'about-us') {
       path = '/company/about-us';
     }
@@ -157,6 +185,20 @@ function App() {
         setCurrentView('testing-validation-support');
       } else if (path.includes('engineering-documentation-drafting')) {
         setCurrentView('engineering-documentation-drafting');
+      } else if (path.includes('mes-services')) {
+        setCurrentView('mes-services');
+      } else if (path.includes('connected-factory-iiot')) {
+        setCurrentView('connected-factory-iiot');
+      } else if (path.includes('connected-workforce')) {
+        setCurrentView('connected-workforce');
+      } else if (path.includes('manufacturing-analytics-oee')) {
+        setCurrentView('manufacturing-analytics-oee');
+      } else if (path.includes('predictive-maintenance')) {
+        setCurrentView('predictive-maintenance');
+      } else if (path.includes('supply-chain-digitization')) {
+        setCurrentView('supply-chain-digitization');
+      } else if (path.includes('pharma-food')) {
+        setCurrentView('pharma-food');
       } else if (path.includes('about-us')) {
         setCurrentView('about-us');
       } else {
@@ -271,6 +313,34 @@ function App() {
       ) : currentView === 'engineering-documentation-drafting' ? (
         <div className="bg-white text-slate-900 w-full">
           <EngineeringDocumentationDrafting />
+        </div>
+      ) : currentView === 'mes-services' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <MesServices />
+        </div>
+      ) : currentView === 'connected-factory-iiot' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <ConnectedFactoryIiot />
+        </div>
+      ) : currentView === 'connected-workforce' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <ConnectedWorkforce />
+        </div>
+      ) : currentView === 'manufacturing-analytics-oee' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <ManufacturingAnalyticsOee />
+        </div>
+      ) : currentView === 'predictive-maintenance' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <PredictiveMaintenance />
+        </div>
+      ) : currentView === 'supply-chain-digitization' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <SupplyChainDigitization />
+        </div>
+      ) : currentView === 'pharma-food' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <PharmaFoodServices />
         </div>
       ) : currentView === 'banking-services' ? (
         <div className="bg-white text-slate-900 w-full">

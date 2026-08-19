@@ -51,8 +51,10 @@ export default function Navbar({ onContactClick, onNavigate, currentView }) {
   const menuItems = [
     {
       title: "INDUSTRY 4.0",
-      headerTitle: "Industry 4.0 ",
-      desc: "Bridge physical manufacturing assets with cognitive cloud frameworks to build connected, smart industrial spaces.",
+      headerTitle: "Industry 4.0 & Smart factory",
+      desc: `MES, machine connectivity, frontline enablement, OEE analytics, predictive maintenance and supply chain digitisation - scoped to prove value on one line before scaling across the plant.
+
+Connected machines, execution systems (MES), shop-floor analytics, predictive maintenance and supply chain digitisation - scoped to prove measurable gains on every line and across the plant.`,
       links: [
         { name: "MES services", href: "#dream-details" },
         { name: "Connected Factory (IIOT)", href: "#dream-details" },
@@ -150,6 +152,7 @@ Applied AI scoped by measurable payback and validated against the method you use
       title: "PHARMA & FOOD",
       headerTitle: "Life Sciences, Pharma & Food",
       desc: "Leverage automated compliance frameworks, serialization systems, and laboratory digitization models to streamline auditing workflows.",
+      /* Submenu and left blue section commented out as requested:
       links: [
         { name: "Pharma 4.0", href: "#dream-details" },
         { name: "Quality Intelligence", href: "#dream-details" },
@@ -164,6 +167,8 @@ Applied AI scoped by measurable payback and validated against the method you use
         desc: "Best practices for digitization across compliance-heavy biotech industries.",
         image: "https://www.xoriant.com/cdn/ff/mdvIcgUZhbbMQczMvbsjbPz6X0qrifA-bXuSpv-nBi4/1735031350/public/Bodhi-Images/Banner%20Image.jpg"
       }
+      */
+      links: []
     },
 
     {
@@ -227,11 +232,12 @@ Applied AI scoped by measurable payback and validated against the method you use
           <div className="hidden lg:flex items-center space-x-5 xl:space-x-8 ml-8 xl:ml-16">
             {menuItems.map((item, index) => {
               const isCareerDisabled = item.title === "CAREER";
+              const isPharmaFoodDirect = item.title === "PHARMA & FOOD";
               return (
                 <div
                   key={index}
                   className="group"
-                  onMouseEnter={() => !isCareerDisabled && handleMouseEnter(index)}
+                  onMouseEnter={() => !isCareerDisabled && !isPharmaFoodDirect && handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
@@ -242,6 +248,9 @@ Applied AI scoped by measurable payback and validated against the method you use
                       }
                       if (item.title === 'ABOUT US') {
                         onNavigate('about-us');
+                        setActiveDropdown(null);
+                      } else if (item.title === 'PHARMA & FOOD') {
+                        onNavigate('pharma-food');
                         setActiveDropdown(null);
                       } else {
                         setActiveTab(item.title);
@@ -254,7 +263,7 @@ Applied AI scoped by measurable payback and validated against the method you use
                   >
                     {item.title}
                     {!isCareerDisabled && (
-                      <span className={`absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full transition-transform duration-300 origin-left ${activeDropdown === index || (activeDropdown === null && ((currentView === 'about-us' && item.title === 'ABOUT US') || (currentView !== 'about-us' && activeTab === item.title)))
+                      <span className={`absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full transition-transform duration-300 origin-left ${activeDropdown === index || (activeDropdown === null && ((currentView === 'about-us' && item.title === 'ABOUT US') || (currentView === 'pharma-food' && item.title === 'PHARMA & FOOD') || (currentView !== 'about-us' && currentView !== 'pharma-food' && activeTab === item.title)))
                         ? 'scale-x-100'
                         : 'scale-x-0 group-hover:scale-x-100'
                         }`} />
@@ -262,7 +271,7 @@ Applied AI scoped by measurable payback and validated against the method you use
                   </button>
 
                   {/* Mega Dropdown Drawer */}
-                  {activeDropdown === index && !isCareerDisabled && (
+                  {activeDropdown === index && !isCareerDisabled && !isPharmaFoodDirect && (
                     <div
                       className="absolute left-0 right-0 top-full w-screen bg-white shadow-2xl animate-slide-down-menu z-50 overflow-hidden"
                       onMouseEnter={() => handleMouseEnter(index)}
@@ -271,15 +280,15 @@ Applied AI scoped by measurable payback and validated against the method you use
                       <div className="w-full px-4 sm:px-6 lg:px-8 grid grid-cols-12">
 
                         {/* Column 1: Narrative */}
-                        <div className={`col-span-7 p-8 flex flex-col justify-center relative z-10 text-left transition-colors duration-300 border-b ${(item.title === "AI & DATA" || item.title === "ENTERPRISE DIGITAL & IT" || item.title === "ENGINEERING SERVICES" || item.title === "ABOUT US")
+                        <div className={`col-span-7 p-8 flex flex-col justify-center relative z-10 text-left transition-colors duration-300 border-b ${(item.title === "INDUSTRY 4.0" || item.title === "ENGINEERING SERVICES" || item.title === "AI & DATA" || item.title === "ENTERPRISE DIGITAL & IT" || item.title === "AUTOMOTIVE" || item.title === "PHARMA & FOOD" || item.title === "ABOUT US")
                           ? "bg-[#236CB1] text-white lg:py-12 lg:pl-36 lg:pr-12 [box-shadow:-100vw_0_0_100vw_#236CB1] border-[#236CB1]"
                           : "bg-white text-black lg:p-12 border-slate-200"
                           }`}>
-                          <h2 className={`text-2xl lg:text-3xl font-black tracking-tight mb-4 ${(item.title === "AI & DATA" || item.title === "ENTERPRISE DIGITAL & IT" || item.title === "ENGINEERING SERVICES" || item.title === "ABOUT US") ? "text-white" : "text-black"
+                          <h2 className={`text-2xl lg:text-3xl font-black tracking-tight mb-4 ${(item.title === "INDUSTRY 4.0" || item.title === "ENGINEERING SERVICES" || item.title === "AI & DATA" || item.title === "ENTERPRISE DIGITAL & IT" || item.title === "AUTOMOTIVE" || item.title === "PHARMA & FOOD" || item.title === "ABOUT US") ? "text-white" : "text-black"
                             }`}>
                             {item.headerTitle}
                           </h2>
-                          <p className={`text-xs lg:text-sm leading-relaxed font-medium whitespace-pre-line ${(item.title === "AI & DATA" || item.title === "ENTERPRISE DIGITAL & IT" || item.title === "ENGINEERING SERVICES" || item.title === "ABOUT US") ? "text-slate-300 max-w-xl" : "text-gray-600 mb-6 max-w-md"
+                          <p className={`text-xs lg:text-sm leading-relaxed font-medium whitespace-pre-line ${(item.title === "INDUSTRY 4.0" || item.title === "ENGINEERING SERVICES" || item.title === "AI & DATA" || item.title === "ENTERPRISE DIGITAL & IT" || item.title === "AUTOMOTIVE" || item.title === "PHARMA & FOOD" || item.title === "ABOUT US") ? "text-slate-300 max-w-xl" : "text-gray-600 mb-6 max-w-md"
                             }`}>
                             {item.desc}
                           </p>
@@ -288,10 +297,11 @@ Applied AI scoped by measurable payback and validated against the method you use
                         {/* Column 2: Sub-links Services List */}
                         <div className="col-span-5 bg-white p-8 lg:py-12 lg:pl-32 lg:pr-12 border-l border-b border-gray-100 flex flex-col justify-center relative z-10 text-left">
                           <ul className="space-y-4">
-                            {item.links.map((link, idx) => {
+                             {item.links.map((link, idx) => {
                               const isEnterpriseDigitalLink = item.title === "ENTERPRISE DIGITAL & IT";
                               const isEngineeringServicesLink = item.title === "ENGINEERING SERVICES";
-                              const isEnabled = isEnterpriseDigitalLink || isEngineeringServicesLink || link.name === "Data Engineering & integration" || link.name === "Analytics, BI and dashboards" || link.name === "Gen AI solutions" || link.name === "Intelligent Automation" || link.name === "Applied AI and Machine Learning" || link.name === "Computer & Machine Vision" || link.name === "About US";
+                              const isIndustry40Link = item.title === "INDUSTRY 4.0";
+                              const isEnabled = isEnterpriseDigitalLink || isEngineeringServicesLink || isIndustry40Link || link.name === "Data Engineering & integration" || link.name === "Analytics, BI and dashboards" || link.name === "Gen AI solutions" || link.name === "Intelligent Automation" || link.name === "Applied AI and Machine Learning" || link.name === "Computer & Machine Vision" || link.name === "About US";
                               return (
                                 <li key={idx}>
                                   <a
@@ -300,7 +310,25 @@ Applied AI scoped by measurable payback and validated against the method you use
                                       e.preventDefault();
                                       if (!isEnabled) return;
 
-                                      if (link.name === "Digital Transformation Consulting") {
+                                      if (link.name === "MES services") {
+                                        onNavigate('mes-services');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Connected Factory (IIOT)") {
+                                        onNavigate('connected-factory-iiot');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Connected Workforce") {
+                                        onNavigate('connected-workforce');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Manufacturing analytics & OEE") {
+                                        onNavigate('manufacturing-analytics-oee');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Predictive maintenance") {
+                                        onNavigate('predictive-maintenance');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Supply Chain Digitization") {
+                                        onNavigate('supply-chain-digitization');
+                                        setActiveDropdown(null);
+                                      } else if (link.name === "Digital Transformation Consulting") {
                                         onNavigate('digital-transformation');
                                         setActiveDropdown(null);
                                       } else if (link.name === "SAP Consulting & Services") {
@@ -443,14 +471,22 @@ Applied AI scoped by measurable payback and validated against the method you use
                 return (
                   <div key={idx} className="pb-2.5">
                     <button
-                      onClick={() => !isCareerDisabled && setActiveSideSub(isOpen ? null : idx)}
+                      onClick={() => {
+                        if (isCareerDisabled) return;
+                        if (item.title === "PHARMA & FOOD") {
+                          onNavigate('pharma-food');
+                          setIsSidePanelOpen(false);
+                          return;
+                        }
+                        setActiveSideSub(isOpen ? null : idx);
+                      }}
                       className={`w-full flex items-center justify-between text-xs sm:text-sm font-extrabold text-left uppercase tracking-wider py-1 ${isCareerDisabled
                         ? "text-slate-900 cursor-default pointer-events-none select-none"
                         : "text-slate-900 hover:text-ossisto-blue transition-colors"
                         }`}
                     >
                       <span>{item.title}</span>
-                      {!isCareerDisabled && (
+                      {!isCareerDisabled && item.title !== "PHARMA & FOOD" && (
                         <span className="text-xs text-ossisto-blue font-mono font-bold">
                           {isOpen ? '−' : '+'}
                         </span>
@@ -481,7 +517,8 @@ Applied AI scoped by measurable payback and validated against the method you use
                           {item.links.map((link, lIdx) => {
                             const isEnterpriseDigitalLink = item.title === "ENTERPRISE DIGITAL & IT";
                             const isEngineeringServicesLink = item.title === "ENGINEERING SERVICES";
-                            const isEnabled = isEnterpriseDigitalLink || isEngineeringServicesLink || link.name === "Data Engineering & integration" || link.name === "Analytics, BI and dashboards" || link.name === "Gen AI solutions" || link.name === "Intelligent Automation" || link.name === "Applied AI and Machine Learning" || link.name === "Computer & Machine Vision" || link.name === "About US";
+                            const isIndustry40Link = item.title === "INDUSTRY 4.0";
+                            const isEnabled = isEnterpriseDigitalLink || isEngineeringServicesLink || isIndustry40Link || link.name === "Data Engineering & integration" || link.name === "Analytics, BI and dashboards" || link.name === "Gen AI solutions" || link.name === "Intelligent Automation" || link.name === "Applied AI and Machine Learning" || link.name === "Computer & Machine Vision" || link.name === "About US";
                             return (
                               <a
                                 key={lIdx}
@@ -491,7 +528,19 @@ Applied AI scoped by measurable payback and validated against the method you use
                                   if (!isEnabled) return;
                                   setIsSidePanelOpen(false);
 
-                                  if (link.name === "Digital Transformation Consulting") {
+                                  if (link.name === "MES services") {
+                                    onNavigate('mes-services');
+                                  } else if (link.name === "Connected Factory (IIOT)") {
+                                    onNavigate('connected-factory-iiot');
+                                  } else if (link.name === "Connected Workforce") {
+                                    onNavigate('connected-workforce');
+                                  } else if (link.name === "Manufacturing analytics & OEE") {
+                                    onNavigate('manufacturing-analytics-oee');
+                                  } else if (link.name === "Predictive maintenance") {
+                                    onNavigate('predictive-maintenance');
+                                  } else if (link.name === "Supply Chain Digitization") {
+                                    onNavigate('supply-chain-digitization');
+                                  } else if (link.name === "Digital Transformation Consulting") {
                                     onNavigate('digital-transformation');
                                   } else if (link.name === "SAP Consulting & Services") {
                                     onNavigate('sap-consulting');
