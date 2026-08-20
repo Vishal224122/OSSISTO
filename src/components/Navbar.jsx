@@ -133,6 +133,7 @@ Applied AI scoped by measurable payback and validated against the method you use
       title: "AUTOMOTIVE",
       headerTitle: "Automotive Co-Engineering",
       desc: "Delivering business success through tailored software engineering for next-generation software-defined vehicles.",
+      /* Submenu and left blue section commented out as requested:
       links: [
         { name: "SDV Platform", href: "#dream-details" },
         { name: "Electric Powertrain", href: "#dream-details" },
@@ -147,6 +148,8 @@ Applied AI scoped by measurable payback and validated against the method you use
         desc: "Preset framework parameters tailored for ADAS and connected platforms.",
         image: "https://www.xoriant.com/cdn/ff/GtZ1Doo7yII823_hfAETiQaeuDlL0YFKW4GbC9hQ3tA/1781711862/public/styles/webp/public/2026-06/Home%20Page%20Banner%20Orian.png.webp?itok=_etsdsBM"
       }
+      */
+      links: []
     },
     {
       title: "PHARMA & FOOD",
@@ -169,23 +172,6 @@ Applied AI scoped by measurable payback and validated against the method you use
       }
       */
       links: []
-    },
-
-    {
-      title: "CAREER",
-      headerTitle: "Careers at Ossisto",
-      desc: "Join our team of global co-creators, where every engineer builds technology that reshapes industries.",
-      links: [
-        { name: "Open roles", href: "#dream-details" },
-        { name: "Graduate programme", href: "#dream-details" },
-        { name: "Learning & development", href: "#dream-details" }
-      ],
-      featured: {
-        category: "Careers",
-        title: "Graduate and Professional Paths",
-        desc: "Explore current opportunities, internship systems, and training plans.",
-        image: "https://www.xoriant.com/cdn/ff/5hii6a26ufChGUjvX3c1n1H8r-6QIlwHLpZONHr00_Q/1771476515/public/styles/100/public/2026-02/Acquisition%20news%20%281%29.png_100x50_2.jpg.webp?itok=pf_clXkg"
-      }
     },
     {
       title: "ABOUT US",
@@ -231,47 +217,43 @@ Applied AI scoped by measurable payback and validated against the method you use
           {/* Desktop Menu links */}
           <div className="hidden lg:flex items-center space-x-5 xl:space-x-8 ml-8 xl:ml-16">
             {menuItems.map((item, index) => {
-              const isCareerDisabled = item.title === "CAREER";
               const isPharmaFoodDirect = item.title === "PHARMA & FOOD";
+              const isAutomotiveDirect = item.title === "AUTOMOTIVE";
+              const isDirectPage = isPharmaFoodDirect || isAutomotiveDirect;
               return (
                 <div
                   key={index}
                   className="group"
-                  onMouseEnter={() => !isCareerDisabled && !isPharmaFoodDirect && handleMouseEnter(index)}
+                  onMouseEnter={() => !isDirectPage && handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
                     onClick={(e) => {
-                      if (isCareerDisabled) {
-                        e.preventDefault();
-                        return;
-                      }
                       if (item.title === 'ABOUT US') {
                         onNavigate('about-us');
                         setActiveDropdown(null);
                       } else if (item.title === 'PHARMA & FOOD') {
                         onNavigate('pharma-food');
                         setActiveDropdown(null);
+                      } else if (item.title === 'AUTOMOTIVE') {
+                        onNavigate('automotive-services');
+                        setActiveDropdown(null);
                       } else {
                         setActiveTab(item.title);
                       }
                     }}
-                    className={`relative flex items-center font-black text-[10.5px] xl:text-[11.5px] py-4 transition-colors whitespace-nowrap uppercase tracking-wider ${isCareerDisabled
-                      ? (isScrolled ? 'text-slate-900' : 'text-white') + ' cursor-default pointer-events-none select-none'
-                      : isScrolled ? 'text-slate-900 hover:text-ossisto-blue' : 'text-white hover:text-ossisto-blue'
+                    className={`relative flex items-center font-black text-[10.5px] xl:text-[11.5px] py-4 transition-colors whitespace-nowrap uppercase tracking-wider ${isScrolled ? 'text-slate-900 hover:text-ossisto-blue' : 'text-white hover:text-ossisto-blue'
                       }`}
                   >
                     {item.title}
-                    {!isCareerDisabled && (
-                      <span className={`absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full transition-transform duration-300 origin-left ${activeDropdown === index || (activeDropdown === null && ((currentView === 'about-us' && item.title === 'ABOUT US') || (currentView === 'pharma-food' && item.title === 'PHARMA & FOOD') || (currentView !== 'about-us' && currentView !== 'pharma-food' && activeTab === item.title)))
-                        ? 'scale-x-100'
-                        : 'scale-x-0 group-hover:scale-x-100'
-                        }`} />
-                    )}
+                    <span className={`absolute bottom-0 left-0 w-full h-[3px] bg-ossisto-blue rounded-full transition-transform duration-300 origin-left ${activeDropdown === index || (activeDropdown === null && ((currentView === 'about-us' && item.title === 'ABOUT US') || (currentView === 'pharma-food' && item.title === 'PHARMA & FOOD') || (currentView === 'automotive-services' && item.title === 'AUTOMOTIVE') || (currentView !== 'about-us' && currentView !== 'pharma-food' && currentView !== 'automotive-services' && activeTab === item.title)))
+                      ? 'scale-x-100'
+                      : 'scale-x-0 group-hover:scale-x-100'
+                      }`} />
                   </button>
 
                   {/* Mega Dropdown Drawer */}
-                  {activeDropdown === index && !isCareerDisabled && !isPharmaFoodDirect && (
+                  {activeDropdown === index && !isDirectPage && (
                     <div
                       className="absolute left-0 right-0 top-full w-screen bg-white shadow-2xl animate-slide-down-menu z-50 overflow-hidden"
                       onMouseEnter={() => handleMouseEnter(index)}
@@ -466,27 +448,27 @@ Applied AI scoped by measurable payback and validated against the method you use
 
               {/* Main Services Navigation Links */}
               {menuItems.map((item, idx) => {
-                const isCareerDisabled = item.title === "CAREER";
                 const isOpen = activeSideSub === idx;
                 return (
                   <div key={idx} className="pb-2.5">
                     <button
                       onClick={() => {
-                        if (isCareerDisabled) return;
                         if (item.title === "PHARMA & FOOD") {
                           onNavigate('pharma-food');
                           setIsSidePanelOpen(false);
                           return;
                         }
+                        if (item.title === "AUTOMOTIVE") {
+                          onNavigate('automotive-services');
+                          setIsSidePanelOpen(false);
+                          return;
+                        }
                         setActiveSideSub(isOpen ? null : idx);
                       }}
-                      className={`w-full flex items-center justify-between text-xs sm:text-sm font-extrabold text-left uppercase tracking-wider py-1 ${isCareerDisabled
-                        ? "text-slate-900 cursor-default pointer-events-none select-none"
-                        : "text-slate-900 hover:text-ossisto-blue transition-colors"
-                        }`}
+                      className="w-full flex items-center justify-between text-xs sm:text-sm font-extrabold text-left uppercase tracking-wider py-1 text-slate-900 hover:text-ossisto-blue transition-colors"
                     >
                       <span>{item.title}</span>
-                      {!isCareerDisabled && item.title !== "PHARMA & FOOD" && (
+                      {item.title !== "PHARMA & FOOD" && item.title !== "AUTOMOTIVE" && (
                         <span className="text-xs text-ossisto-blue font-mono font-bold">
                           {isOpen ? '−' : '+'}
                         </span>

@@ -34,6 +34,7 @@ import ManufacturingAnalyticsOee from './components/ManufacturingAnalyticsOee';
 import PredictiveMaintenance from './components/PredictiveMaintenance';
 import SupplyChainDigitization from './components/SupplyChainDigitization';
 import PharmaFoodServices from './components/PharmaFoodServices';
+import AutomotiveServices from './components/AutomotiveServices';
 
 function App() {
   const getInitialView = () => {
@@ -66,6 +67,7 @@ function App() {
     if (path.includes('predictive-maintenance')) return 'predictive-maintenance';
     if (path.includes('supply-chain-digitization')) return 'supply-chain-digitization';
     if (path.includes('pharma-food')) return 'pharma-food';
+    if (path.includes('automotive-services') || path.includes('automotive')) return 'automotive-services';
     if (path.includes('about-us')) return 'about-us';
     return 'home';
   };
@@ -133,6 +135,8 @@ function App() {
       path = '/industry-4-0/supply-chain-digitization';
     } else if (view === 'pharma-food') {
       path = '/industries/pharma-food';
+    } else if (view === 'automotive-services') {
+      path = '/industries/automotive-services';
     } else if (view === 'about-us') {
       path = '/company/about-us';
     }
@@ -199,6 +203,8 @@ function App() {
         setCurrentView('supply-chain-digitization');
       } else if (path.includes('pharma-food')) {
         setCurrentView('pharma-food');
+      } else if (path.includes('automotive-services') || path.includes('automotive')) {
+        setCurrentView('automotive-services');
       } else if (path.includes('about-us')) {
         setCurrentView('about-us');
       } else {
@@ -341,6 +347,10 @@ function App() {
       ) : currentView === 'pharma-food' ? (
         <div className="bg-white text-slate-900 w-full">
           <PharmaFoodServices />
+        </div>
+      ) : currentView === 'automotive-services' ? (
+        <div className="bg-white text-slate-900 w-full">
+          <AutomotiveServices />
         </div>
       ) : currentView === 'banking-services' ? (
         <div className="bg-white text-slate-900 w-full">
