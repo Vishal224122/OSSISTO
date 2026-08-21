@@ -97,9 +97,7 @@ export default function Hero() {
               <div
                 className={`absolute inset-0 bg-cover bg-center scale-100 transition-all duration-700 ${isHovered
                   ? 'contrast-100 brightness-100 saturate-100'
-                  : (idx === 0 || idx === 1)
-                    ? 'contrast-[1.05] brightness-[1.12] max-lg:brightness-[1.25] saturate-[1.05]'
-                    : 'contrast-[1.05] brightness-[1.12] saturate-[1.05]'
+                  : 'contrast-[1.05] brightness-[1.12] max-lg:brightness-[0.70] saturate-[1.05]'
                   }`}
                 style={{ backgroundImage: `url(${panel.image})` }}
               />
@@ -166,9 +164,7 @@ export default function Hero() {
 
               {/* Dynamic Overlay Gradient based on hover state */}
               <div className={`absolute inset-0 transition-all duration-500 ${hoveredIdx === null
-                ? (idx === 0 || idx === 1)
-                  ? 'max-lg:bg-black/50 bg-black/65 lg:bg-black/50 opacity-100'
-                  : 'bg-black/65 lg:bg-black/50 opacity-100'
+                ? 'max-lg:bg-black/75 bg-black/65 lg:bg-black/50 opacity-100'
                 : isHovered
                   ? 'bg-transparent opacity-0'
                   : 'bg-black/85 lg:bg-black/65 opacity-100'
@@ -201,20 +197,20 @@ export default function Hero() {
                         </div>
                       </span>
 
-                      <span className={`select-none text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[26px] sm:text-[31px] max-lg:font-normal tracking-tight transition-all duration-500 ${isHovered
+                      <span className={`select-none text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[26px] sm:text-[31px] max-lg:font-semibold tracking-tight transition-all duration-500 ${isHovered
                         ? 'lg:text-[34px] xl:text-[42px] 2xl:text-[48px] lg:font-black'
                         : 'lg:text-[22px] xl:text-[26px] 2xl:text-[30px] lg:font-bold'
                         }`}>
                         {panel.letter}
                       </span>
-                      <span className={`select-none text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[26px] sm:text-[31px] max-lg:font-normal tracking-tight transition-all duration-500 ${isHovered
+                      <span className={`select-none text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[26px] sm:text-[31px] max-lg:font-semibold tracking-tight transition-all duration-500 ${isHovered
                         ? 'lg:text-[34px] xl:text-[42px] 2xl:text-[48px] lg:font-black'
                         : 'lg:text-[22px] xl:text-[26px] 2xl:text-[30px] lg:font-bold'
                         }`}>
                         {panel.wordSuffix}
                       </span>
                       {panel.wordSuffix.length < 13 && (
-                        <span className="lg:hidden opacity-0 select-none pointer-events-none text-[26px] sm:text-[31px] max-lg:font-normal tracking-tight pb-0 inline-block">
+                        <span className="lg:hidden opacity-0 select-none pointer-events-none text-[26px] sm:text-[31px] max-lg:font-semibold tracking-tight pb-0 inline-block">
                           {"ransformation".slice(panel.wordSuffix.length)}
                         </span>
                       )}
