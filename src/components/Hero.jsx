@@ -171,12 +171,12 @@ export default function Hero() {
                 }`} />
 
               {/* Content Box (Keeps expanding titles: AUTOMOTIVE, PHARMA, etc.) */}
-              <div className="absolute top-[84px] right-4 sm:right-8 lg:inset-0 lg:top-0 lg:right-0 lg:flex lg:flex-col lg:items-end lg:pr-4 xl:pr-5 2xl:pr-8 lg:py-6 2xl:py-8 lg:px-3 xl:px-4 2xl:px-6 lg:justify-end z-10 text-right lg:pb-16 xl:pb-16 2xl:pb-20">
-                <div className="space-y-0 lg:space-y-2.5 w-auto flex flex-col items-end justify-end text-right">
+              <div className="absolute top-[84px] right-2 sm:right-6 lg:inset-0 lg:top-0 lg:right-0 lg:flex lg:flex-col lg:items-end lg:pr-4 xl:pr-5 2xl:pr-8 lg:py-6 2xl:py-8 lg:px-3 xl:px-4 2xl:px-6 lg:justify-end z-10 text-right lg:pb-16 xl:pb-16 2xl:pb-20">
+                <div className="space-y-0 lg:space-y-2.5 w-[185px] sm:w-[215px] lg:w-auto flex flex-col items-start lg:items-end justify-start lg:justify-end text-left lg:text-right">
 
                   {/* Letter Header: Displays single letter when normal (D, T, T, W), expands to full word on hover */}
-                  <div className="w-auto flex flex-col items-end justify-end text-right leading-normal pb-0 lg:pb-2">
-                    <div className="w-auto flex items-center justify-end text-right leading-normal tracking-tight max-lg:font-['Arial_Narrow',sans-serif] whitespace-nowrap">
+                  <div className="w-full lg:w-auto flex flex-col items-start lg:items-end justify-start lg:justify-end text-left lg:text-right leading-normal pb-0 lg:pb-2">
+                    <div className="w-full lg:w-auto flex items-center justify-start lg:justify-end text-left lg:text-right leading-normal tracking-tight max-lg:font-['Arial_Narrow',sans-serif] whitespace-nowrap">
 
                       {/* Mobile Drop Arrow positioned right in front of the heading word */}
                       <span
@@ -189,7 +189,7 @@ export default function Hero() {
                           handleTouch(idx);
                         }}
                         style={{ WebkitTapHighlightColor: 'transparent' }}
-                        className="lg:hidden mr-3 cursor-pointer pointer-events-auto flex items-center justify-center w-6 h-6 select-none touch-manipulation"
+                        className="lg:hidden mr-2 cursor-pointer pointer-events-auto flex items-center justify-center w-5 h-5 select-none touch-manipulation flex-shrink-0"
                       >
                         <div className={`transform-gpu transition-transform duration-300 ease-in-out flex items-center justify-center ${isHovered ? 'rotate-180 text-ossisto-blue' : 'rotate-0 text-white'
                           }`}>
@@ -209,11 +209,6 @@ export default function Hero() {
                         }`}>
                         {panel.wordSuffix}
                       </span>
-                      {panel.wordSuffix.length < 13 && (
-                        <span className="lg:hidden opacity-0 select-none pointer-events-none text-[26px] sm:text-[31px] max-lg:font-semibold tracking-tight pb-0 inline-block">
-                          {"ransformation".slice(panel.wordSuffix.length)}
-                        </span>
-                      )}
                     </div>
                   </div>
 
