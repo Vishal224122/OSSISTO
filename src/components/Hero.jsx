@@ -172,7 +172,7 @@ export default function Hero() {
 
               {/* Content Box (Keeps expanding titles: AUTOMOTIVE, PHARMA, etc.) */}
               <div className="absolute top-[84px] right-2 sm:right-6 lg:inset-0 lg:top-0 lg:right-0 lg:flex lg:flex-col lg:items-end lg:pr-4 xl:pr-5 2xl:pr-8 lg:py-6 2xl:py-8 lg:px-3 xl:px-4 2xl:px-6 lg:justify-end z-10 text-right lg:pb-16 xl:pb-16 2xl:pb-20">
-                <div className="space-y-0 lg:space-y-2.5 w-[185px] sm:w-[215px] lg:w-auto flex flex-col items-start lg:items-end justify-start lg:justify-end text-left lg:text-right">
+                <div className="space-y-0 lg:space-y-2.5 w-[195px] sm:w-[225px] lg:w-auto flex flex-col items-start lg:items-end justify-start lg:justify-end text-left lg:text-right">
 
                   {/* Letter Header: Displays single letter when normal (D, T, T, W), expands to full word on hover */}
                   <div className="w-full lg:w-auto flex flex-col items-start lg:items-end justify-start lg:justify-end text-left lg:text-right leading-normal pb-0 lg:pb-2">
@@ -189,7 +189,7 @@ export default function Hero() {
                           handleTouch(idx);
                         }}
                         style={{ WebkitTapHighlightColor: 'transparent' }}
-                        className="lg:hidden mr-2 cursor-pointer pointer-events-auto flex items-center justify-center w-5 h-5 select-none touch-manipulation flex-shrink-0"
+                        className="lg:hidden mr-1.5 cursor-pointer pointer-events-auto flex items-center justify-center w-5 h-5 select-none touch-manipulation flex-shrink-0"
                       >
                         <div className={`transform-gpu transition-transform duration-300 ease-in-out flex items-center justify-center ${isHovered ? 'rotate-180 text-ossisto-blue' : 'rotate-0 text-white'
                           }`}>
@@ -197,13 +197,13 @@ export default function Hero() {
                         </div>
                       </span>
 
-                      <span className={`select-none text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[26px] sm:text-[31px] max-lg:font-semibold tracking-tight transition-all duration-500 ${isHovered
+                      <span className={`select-none text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[23.5px] sm:text-[31px] max-lg:font-semibold tracking-tight transition-all duration-500 ${isHovered
                         ? 'lg:text-[34px] xl:text-[42px] 2xl:text-[48px] lg:font-black'
                         : 'lg:text-[22px] xl:text-[26px] 2xl:text-[30px] lg:font-bold'
                         }`}>
                         {panel.letter}
                       </span>
-                      <span className={`select-none text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[26px] sm:text-[31px] max-lg:font-semibold tracking-tight transition-all duration-500 ${isHovered
+                      <span className={`select-none text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.98)] text-[23.5px] sm:text-[31px] max-lg:font-semibold tracking-tight transition-all duration-500 ${isHovered
                         ? 'lg:text-[34px] xl:text-[42px] 2xl:text-[48px] lg:font-black'
                         : 'lg:text-[22px] xl:text-[26px] 2xl:text-[30px] lg:font-bold'
                         }`}>
