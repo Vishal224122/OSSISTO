@@ -1,23 +1,28 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Play, X, Monitor, RefreshCw, Cpu, Zap, Settings, TrendingUp, HeartPulse, Store, Factory, Car, Pill, Utensils, Hammer, Package } from 'lucide-react';
 
-function ServiceCard({ card }) {
-  const [isHovered, setIsHovered] = useState(false);
+function ServiceCard({ card, isActive, onEnded, onHoverChange }) {
   const videoRef = useRef(null);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => { });
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    if (videoRef.current) {
+  useEffect(() => {
+    if (isActive && videoRef.current) {
+      videoRef.current.currentTime = 0;
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => { });
+      }
+    } else if (!isActive && videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
     }
+  }, [isActive]);
+
+  const handleMouseEnter = () => {
+    if (onHoverChange) onHoverChange(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (onHoverChange) onHoverChange(false);
   };
 
   return (
@@ -30,21 +35,23 @@ function ServiceCard({ card }) {
       <img
         src={card.image}
         alt={card.title}
-        className={`w-full h-full object-cover scale-[1.04] group-hover:scale-110 transition-all duration-500 ${isHovered && card.video ? 'opacity-0' : 'opacity-100'
-          }`}
+        className={`w-full h-full object-cover scale-[1.04] group-hover:scale-110 transition-all duration-500 ${
+          isActive && card.video ? 'opacity-0' : 'opacity-100'
+        }`}
       />
 
-      {/* Hover Video */}
+      {/* Sequential Auto-play & Hover Video */}
       {card.video && (
         <video
           ref={videoRef}
           src={card.video}
           muted
-          loop
           playsInline
           preload="auto"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'
-            }`}
+          onEnded={onEnded}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+            isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}
         />
       )}
 
@@ -52,7 +59,9 @@ function ServiceCard({ card }) {
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none z-10" />
 
       {/* Border Overlay */}
-      <div className="absolute inset-0 border-2 border-slate-300/90 group-hover:border-[#236CB1] rounded-2xl pointer-events-none z-20 transition-colors duration-300" />
+      <div className={`absolute inset-0 border-2 rounded-2xl pointer-events-none z-20 transition-colors duration-300 ${
+        isActive ? 'border-[#236CB1]' : 'border-slate-300/90 group-hover:border-[#236CB1]'
+      }`} />
 
       {/* Title Text centered at the bottom */}
       <div className="absolute bottom-5 left-5 right-5 text-center z-10 pointer-events-none">
@@ -60,6 +69,50 @@ function ServiceCard({ card }) {
           {card.title}
         </h4>
       </div>
+    </div>
+  );
+}
+
+function ServicesGrid({ cards }) {
+  const [activeVideoIdx, setActiveVideoIdx] = useState(0);
+  const [userHoveredIdx, setUserHoveredIdx] = useState(null);
+
+  // Fallback timer to advance video if onEnded doesn't fire within 8 seconds
+  useEffect(() => {
+    if (userHoveredIdx !== null) return;
+    const timer = setTimeout(() => {
+      setActiveVideoIdx((prev) => (prev + 1) % cards.length);
+    }, 8000);
+
+    return () => clearTimeout(timer);
+  }, [activeVideoIdx, userHoveredIdx, cards.length]);
+
+  const handleVideoEnded = (idx) => {
+    if (userHoveredIdx === null) {
+      setActiveVideoIdx((prev) => (prev + 1) % cards.length);
+    }
+  };
+
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {cards.map((card, cidx) => {
+        const isActive = userHoveredIdx !== null ? userHoveredIdx === cidx : activeVideoIdx === cidx;
+        return (
+          <ServiceCard
+            key={cidx}
+            card={card}
+            isActive={isActive}
+            onEnded={() => handleVideoEnded(cidx)}
+            onHoverChange={(hovering) => {
+              if (hovering) {
+                setUserHoveredIdx(cidx);
+              } else {
+                setUserHoveredIdx(null);
+              }
+            }}
+          />
+        );
+      })}
     </div>
   );
 }
@@ -183,7 +236,7 @@ Connected machines, execution systems (MES), shop-floor analytics, predictive ma
   ];
 
   return (
-    <section id="dream-details" className="bg-white py-16 px-6 md:px-12 lg:px-24 font-sans relative overflow-hidden border-none border-b-0 border-t-0 outline-none">
+    <section id="dream-details" className="bg-white pt-6 sm:pt-8 pb-16 px-6 md:px-12 lg:px-24 font-sans relative overflow-hidden border-none border-b-0 border-t-0 outline-none">
 
       {/* Inline styles for the horizontal logo marquee */}
       <style dangerouslySetInnerHTML={{
@@ -204,7 +257,7 @@ Connected machines, execution systems (MES), shop-floor analytics, predictive ma
 
 
 
-      <div className="max-w-6xl mx-auto relative mt-6 sm:mt-10 md:mt-12 pb-12 sm:pb-16">
+      <div className="max-w-6xl mx-auto relative mt-4 sm:mt-6 pb-12 sm:pb-16">
 
         {/* Roadmap Steps */}
         <div className="space-y-10 lg:space-y-24 pl-0 md:pl-20">
@@ -356,14 +409,9 @@ Connected machines, execution systems (MES), shop-floor analytics, predictive ma
                       })}
                     </div>
                   ) : (
-                    // Standard Cards Grid (2 columns side-by-side)
+                    // Standard Cards Grid (2 columns side-by-side with sequential auto-play)
                     <div>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        {step.cards.map((card, cidx) => (
-                          <ServiceCard key={cidx} card={card} />
-                        ))}
-                      </div>
-
+                      <ServicesGrid cards={step.cards} />
                     </div>
                   )}
                 </div>
