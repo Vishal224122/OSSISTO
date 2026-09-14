@@ -10,6 +10,8 @@ export default function Hero() {
   const hoverTimeout = useRef(null);
   const lastTouchTime = useRef(0);
 
+  const touchStartY = useRef(0);
+
   const handleMouseEnter = (idx) => {
     if (Date.now() - lastTouchTime.current < 800) return;
     if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
@@ -24,14 +26,22 @@ export default function Hero() {
     setHoveredIdx(null);
   };
 
-  const handleTouch = (idx) => {
+  const handleTouchStart = (e) => {
     lastTouchTime.current = Date.now();
-    if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
-    setHoveredIdx((prev) => (prev === idx ? null : idx));
+    touchStartY.current = e.touches[0]?.clientY || 0;
   };
 
-  const handlePanelClick = (idx) => {
-    if (Date.now() - lastTouchTime.current < 500) return; // Ignore synthetic click following touch
+  const handleTouchEnd = (e, idx) => {
+    lastTouchTime.current = Date.now();
+    const touchEndY = e.changedTouches[0]?.clientY || touchStartY.current;
+    if (Math.abs(touchEndY - touchStartY.current) < 10) {
+      if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
+      setHoveredIdx((prev) => (prev === idx ? null : idx));
+    }
+  };
+
+  const handlePanelClick = (e, idx) => {
+    if (Date.now() - lastTouchTime.current < 800) return; // Ignore synthetic click following touch
     if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
     setHoveredIdx((prev) => (prev === idx ? null : idx));
   };
@@ -85,9 +95,9 @@ export default function Hero() {
             <div
               key={idx}
               onMouseEnter={() => handleMouseEnter(idx)}
-              onClick={() => handlePanelClick(idx)}
-              onTouchStart={() => handleTouch(idx)}
-              onTouchMove={() => handleTouch(idx)}
+              onClick={(e) => handlePanelClick(e, idx)}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={(e) => handleTouchEnd(e, idx)}
               style={{ WebkitTapHighlightColor: 'transparent' }}
               className={`relative h-1/4 lg:h-full transition-all duration-700 ease-in-out overflow-hidden border-b-0 lg:border-r border-slate-900/40 cursor-pointer select-none touch-manipulation ${isHovered ? 'lg:flex-[1.8]' : 'lg:flex-[0.85]'
                 }`}
@@ -182,11 +192,15 @@ export default function Hero() {
                       <span
                         onClick={(e) => {
                           e.stopPropagation();
-                          handlePanelClick(idx);
+                          handlePanelClick(e, idx);
                         }}
                         onTouchStart={(e) => {
                           e.stopPropagation();
-                          handleTouch(idx);
+                          handleTouchStart(e);
+                        }}
+                        onTouchEnd={(e) => {
+                          e.stopPropagation();
+                          handleTouchEnd(e, idx);
                         }}
                         style={{ WebkitTapHighlightColor: 'transparent' }}
                         className="lg:hidden mr-1.5 cursor-pointer pointer-events-auto flex items-center justify-center w-5 h-5 select-none touch-manipulation flex-shrink-0"

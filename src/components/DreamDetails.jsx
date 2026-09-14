@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, X, Monitor, RefreshCw, Cpu, Zap, Settings, TrendingUp, HeartPulse, Store, Factory, Car, Pill, Utensils, Hammer, Package } from 'lucide-react';
 
-function ServiceCard({ card, isActive, onEnded, onHoverChange }) {
+function ServiceCard({ card, isActive, onEnded, onHoverChange, onTap }) {
   const videoRef = useRef(null);
+  const touchStartY = useRef(0);
 
   useEffect(() => {
     if (isActive && videoRef.current) {
@@ -25,11 +26,26 @@ function ServiceCard({ card, isActive, onEnded, onHoverChange }) {
     if (onHoverChange) onHoverChange(false);
   };
 
+  const handleTouchStart = (e) => {
+    touchStartY.current = e.touches[0]?.clientY || 0;
+  };
+
+  const handleTouchEnd = (e) => {
+    const touchEndY = e.changedTouches[0]?.clientY || touchStartY.current;
+    if (Math.abs(touchEndY - touchStartY.current) < 10) {
+      if (onTap) onTap();
+    }
+  };
+
   return (
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl group aspect-[4/3] bg-slate-950 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onClick={onTap}
+      style={{ WebkitTapHighlightColor: 'transparent' }}
+      className="relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl group aspect-[4/3] bg-slate-950 transition-all duration-300 hover:-translate-y-1 cursor-pointer select-none touch-manipulation"
     >
       {/* Background Thumbnail Image */}
       <img
@@ -40,7 +56,7 @@ function ServiceCard({ card, isActive, onEnded, onHoverChange }) {
         }`}
       />
 
-      {/* Sequential Auto-play & Hover Video */}
+      {/* Sequential Auto-play & Touch/Hover Video */}
       {card.video && (
         <video
           ref={videoRef}
@@ -93,6 +109,11 @@ function ServicesGrid({ cards }) {
     }
   };
 
+  const handleCardTap = (cidx) => {
+    setUserHoveredIdx((prev) => (prev === cidx ? null : cidx));
+    setActiveVideoIdx(cidx);
+  };
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
       {cards.map((card, cidx) => {
@@ -103,6 +124,7 @@ function ServicesGrid({ cards }) {
             card={card}
             isActive={isActive}
             onEnded={() => handleVideoEnded(cidx)}
+            onTap={() => handleCardTap(cidx)}
             onHoverChange={(hovering) => {
               if (hovering) {
                 setUserHoveredIdx(cidx);
@@ -340,7 +362,7 @@ Connected machines, execution systems (MES), shop-floor analytics, predictive ma
             }
 
             return (
-              <div key={idx} className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div key={idx} className={`relative grid grid-cols-1 lg:grid-cols-12 ${isServices ? 'gap-y-3 lg:gap-8' : 'gap-8'} items-start`}>
 
                 {/* Node circle on the timeline */}
                 {!isServices && !isEngineer && !isFocusSectors && Icon && (
@@ -352,8 +374,8 @@ Connected machines, execution systems (MES), shop-floor analytics, predictive ma
                 {/* Left part: Heading details */}
                 <div className="lg:col-span-4 space-y-5 pr-4">
                   {isServices ? (
-                    <div className="space-y-4 text-center lg:text-left">
-                      <span className="block text-lg font-black text-ossisto-blue tracking-wider uppercase text-center lg:text-left">
+                    <div className="space-y-1.5 sm:space-y-4 text-center lg:text-left">
+                      <span className="block text-[21.5px] sm:text-lg font-black text-ossisto-blue tracking-wider uppercase text-center lg:text-left">
                         SERVICES
                       </span>
                       <h3 className="text-2xl lg:text-3.5xl font-black text-black tracking-tight leading-tight text-center lg:text-left">
