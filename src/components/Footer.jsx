@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUp, Linkedin, Instagram, Facebook, Youtube } from 'lucide-react';
+import { ArrowUp, Linkedin } from 'lucide-react';
 
 const XIcon = () => (
   <svg className="w-4.5 h-4.5 fill-current" viewBox="0 0 24 24">
@@ -39,8 +39,6 @@ export default function Footer() {
               <a href="#contact" className="hover:text-ossisto-blue transition-colors underline">TERMS OF USE</a>
               <span>|</span>
               <a href="#contact" className="hover:text-ossisto-blue transition-colors underline">PRIVACY POLICY</a>
-              <span>|</span>
-              <a href="#contact" className="hover:text-ossisto-blue transition-colors underline">BRAND POLICY</a>
             </div>
 
             <div className="text-[10px] text-gray-500 font-bold uppercase tracking-widest mt-1">
@@ -58,42 +56,6 @@ export default function Footer() {
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-black hover:text-ossisto-blue transition-colors"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-5 h-5" />
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-black hover:text-ossisto-blue transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-black hover:text-ossisto-blue transition-colors"
-              aria-label="X"
-            >
-              <XIcon />
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-black hover:text-ossisto-blue transition-colors"
-              aria-label="YouTube"
-            >
-              <Youtube className="w-5 h-5" />
             </a>
           </div>
 

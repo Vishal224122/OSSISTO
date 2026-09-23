@@ -51,9 +51,8 @@ function ServiceCard({ card, isActive, onEnded, onHoverChange, onTap }) {
       <img
         src={card.image}
         alt={card.title}
-        className={`w-full h-full object-cover scale-[1.04] group-hover:scale-110 transition-all duration-500 ${
-          isActive && card.video ? 'opacity-0' : 'opacity-100'
-        }`}
+        className={`w-full h-full object-cover scale-[1.04] group-hover:scale-110 transition-all duration-500 ${isActive && card.video ? 'opacity-0' : 'opacity-100'
+          }`}
       />
 
       {/* Sequential Auto-play & Touch/Hover Video */}
@@ -65,9 +64,8 @@ function ServiceCard({ card, isActive, onEnded, onHoverChange, onTap }) {
           playsInline
           preload="auto"
           onEnded={onEnded}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-            isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          }`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            }`}
         />
       )}
 
@@ -75,9 +73,8 @@ function ServiceCard({ card, isActive, onEnded, onHoverChange, onTap }) {
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none z-10" />
 
       {/* Border Overlay */}
-      <div className={`absolute inset-0 border-2 rounded-2xl pointer-events-none z-20 transition-colors duration-300 ${
-        isActive ? 'border-[#236CB1]' : 'border-slate-300/90 group-hover:border-[#236CB1]'
-      }`} />
+      <div className={`absolute inset-0 border-2 rounded-2xl pointer-events-none z-20 transition-colors duration-300 ${isActive ? 'border-[#236CB1]' : 'border-slate-300/90 group-hover:border-[#236CB1]'
+        }`} />
 
       {/* Title Text centered at the bottom */}
       <div className="absolute bottom-5 left-5 right-5 text-center z-10 pointer-events-none">
@@ -318,23 +315,23 @@ Connected machines, execution systems (MES), shop-floor analytics, predictive ma
                   </div>
 
                   {/* Bottom Row: Left Tab selectors & Right Services Grid */}
-                  <div className="lg:col-span-4 pr-4 mt-3">
-                    <div className="flex flex-col gap-2 pt-2">
+                  <div className="lg:col-span-4 pr-0 lg:pr-4 mt-3 flex flex-col items-center sm:items-start">
+                    <div className="flex flex-col items-center sm:items-start gap-3 sm:gap-2 pt-2 text-center sm:text-left w-full">
                       {step.tabs.map((tab, tIdx) => {
                         const isActive = engineerTab === tIdx;
                         return (
                           <button
                             key={tIdx}
                             onClick={() => setEngineerTab(tIdx)}
-                            className={`flex items-center gap-2 text-left font-extrabold text-[11px] sm:text-xs md:text-sm py-1 transition-all always-blue ${isActive
-                                ? 'pl-0'
-                                : 'pl-6 sm:pl-8'
+                            className={`flex items-center justify-center sm:justify-start gap-2.5 sm:gap-2 text-center sm:text-left font-black text-xl sm:text-xs md:text-sm py-2 sm:py-1 transition-all always-blue ${isActive
+                              ? 'pl-0'
+                              : 'pl-0 sm:pl-8'
                               }`}
                             style={{
                               color: isActive ? '#236CB1' : 'rgba(35, 108, 177, 0.5)'
                             }}
                           >
-                            {isActive && <span className="text-ossisto-blue text-xs">▶</span>}
+                            {isActive && <span className="text-ossisto-blue text-base sm:text-xs">▶</span>}
                             {tab.name}
                           </button>
                         );
@@ -383,11 +380,11 @@ Connected machines, execution systems (MES), shop-floor analytics, predictive ma
                       </h3>
                     </div>
                   ) : isFocusSectors ? (
-                    <div className="space-y-4 text-center lg:text-left">
+                    <div className="space-y-1.5 text-center lg:text-left">
                       <span className="block text-lg font-black text-ossisto-blue tracking-wider uppercase text-center lg:text-left">
                         FOCUS SECTORS
                       </span>
-                      <div className="space-y-3 text-[15px] font-bold text-slate-800 leading-relaxed pt-1 text-center lg:text-left">
+                      <div className="space-y-1 text-[15px] font-bold text-slate-800 leading-snug text-center lg:text-left">
                         <p>Focus creates specialization.</p>
                         <p>We have created niche expertise in several manufacturing sectors.</p>
                       </div>

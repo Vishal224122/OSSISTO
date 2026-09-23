@@ -476,7 +476,7 @@ Applied AI scoped by measurable payback and validated against the method you use
                     </button>
 
                     {/* Sub-links dropdown */}
-                    {isOpen && !isCareerDisabled && (
+                    {isOpen && (
                       <div className="mt-3 space-y-3 animate-fade-in">
 
                         {/* Narrative Header Box */}
