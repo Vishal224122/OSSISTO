@@ -86,12 +86,12 @@ export default function AppliedAiMachineLearning() {
   ];
 
   const otherKeyAreas = [
-    { name: "Application Development", icon: <Monitor className="w-6 h-6 text-slate-800" /> },
-    { name: "DevOps", icon: <Layers className="w-6 h-6 text-slate-800" /> },
-    { name: "Quality Engineering", icon: <Settings className="w-6 h-6 text-slate-800" /> },
-    { name: "Application Modernization", icon: <RefreshCw className="w-6 h-6 text-slate-800" /> },
-    { name: "Experience Transformation", icon: <Sparkles className="w-6 h-6 text-slate-800" /> },
-    { name: "Engineering Frameworks", icon: <Code className="w-6 h-6 text-slate-800" /> }
+    { name: "Data Engineering & integration", icon: <Layers className="w-6 h-6 text-slate-800" /> },
+    { name: "Analytics, BI and dashboards", icon: <Monitor className="w-6 h-6 text-slate-800" /> },
+    { name: "Gen AI solutions", icon: <Sparkles className="w-6 h-6 text-slate-800" /> },
+    { name: "Intelligent Automation", icon: <Zap className="w-6 h-6 text-slate-800" /> },
+    { name: "Applied AI and Machine Learning", icon: <Cpu className="w-6 h-6 text-slate-800" /> },
+    { name: "Computer & Machine Vision", icon: <Code className="w-6 h-6 text-slate-800" /> }
   ];
 
   const scrollToSection = (id) => {
@@ -328,7 +328,8 @@ export default function AppliedAiMachineLearning() {
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-black text-black tracking-tight leading-tight max-w-sm relative z-10 pt-4">
-              Our other key areas for Digital Engineering Services
+              Our key areas for AI & DATA
+
             </h2>
           </div>
 

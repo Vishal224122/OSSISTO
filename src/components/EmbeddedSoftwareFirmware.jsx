@@ -59,12 +59,12 @@ export default function EmbeddedSoftwareFirmware() {
   ];
 
   const otherKeyAreas = [
-    { name: "Application Development", icon: <Monitor className="w-6 h-6 text-slate-800" /> },
-    { name: "DevOps", icon: <Layers className="w-6 h-6 text-slate-800" /> },
-    { name: "Quality Engineering", icon: <Settings className="w-6 h-6 text-slate-800" /> },
-    { name: "Application Modernization", icon: <RefreshCw className="w-6 h-6 text-slate-800" /> },
-    { name: "Experience Transformation", icon: <Sparkles className="w-6 h-6 text-slate-800" /> },
-    { name: "Engineering Frameworks", icon: <Code className="w-6 h-6 text-slate-800" /> }
+    { name: "Product Engineering Support", icon: <Cpu className="w-6 h-6 text-slate-800" /> },
+    { name: "Embedded Software & Firmware", icon: <Code className="w-6 h-6 text-slate-800" /> },
+    { name: "E/E Systems Engineering Support", icon: <Zap className="w-6 h-6 text-slate-800" /> },
+    { name: "Product Sustenance & Lifecycle Support", icon: <RefreshCw className="w-6 h-6 text-slate-800" /> },
+    { name: "Testing and validation support", icon: <Shield className="w-6 h-6 text-slate-800" /> },
+    { name: "Engineering documentation & drafting support", icon: <Layers className="w-6 h-6 text-slate-800" /> }
   ];
 
   useEffect(() => {
@@ -245,7 +245,7 @@ export default function EmbeddedSoftwareFirmware() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-5 space-y-4 text-left relative">
             <h2 className="text-2xl sm:text-3xl font-black text-black tracking-tight leading-tight max-w-sm relative z-10 pt-4">
-              Our key areas for Embedded Software & Firmware
+              Our key areas for Engineering Services
             </h2>
           </div>
 

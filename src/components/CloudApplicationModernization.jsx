@@ -201,12 +201,12 @@ export default function CloudApplicationModernization() {
   ];
 
   const otherKeyAreas = [
-    { name: "Application Development", icon: <Monitor className="w-6 h-6 text-slate-800" /> },
-    { name: "DevOps", icon: <Layers className="w-6 h-6 text-slate-800" /> },
-    { name: "Quality Engineering", icon: <Settings className="w-6 h-6 text-slate-800" /> },
-    { name: "Application Modernization", icon: <RefreshCw className="w-6 h-6 text-slate-800" /> },
-    { name: "Experience Transformation", icon: <Sparkles className="w-6 h-6 text-slate-800" /> },
-    { name: "Engineering Frameworks", icon: <Code className="w-6 h-6 text-slate-800" /> }
+    { name: "Digital Transformation Consulting", icon: <Sparkles className="w-6 h-6 text-slate-800" /> },
+    { name: "SAP Consulting & Services", icon: <Settings className="w-6 h-6 text-slate-800" /> },
+    { name: "Application Development & Modernization", icon: <Monitor className="w-6 h-6 text-slate-800" /> },
+    { name: "Cloud, DevOps & Infra", icon: <Layers className="w-6 h-6 text-slate-800" /> },
+    { name: "PLM Services", icon: <RefreshCw className="w-6 h-6 text-slate-800" /> },
+    { name: "Quality engineering and test automation", icon: <Shield className="w-6 h-6 text-slate-800" /> }
   ];
 
   const faqs = [
@@ -528,7 +528,9 @@ export default function CloudApplicationModernization() {
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-black text-black tracking-tight leading-tight max-w-sm relative z-10 pt-4">
-              Our other key areas for Digital Engineering Services
+              Our key areas for Enterprise Digital & IT
+
+
             </h2>
           </div>
 

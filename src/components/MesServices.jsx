@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Cpu, Layers, Shield, Zap, Monitor, Settings, RefreshCw, Sparkles, Code, Plus, Minus } from 'lucide-react';
+import { Cpu, Layers, Shield, Zap, Monitor, Settings, RefreshCw, Sparkles, Code, Plus, Minus, Factory, Users, BarChart2, Wrench, Truck } from 'lucide-react';
 import ContactAndLocations from './ContactAndLocations';
 
 export default function MesServices() {
@@ -195,12 +195,12 @@ export default function MesServices() {
   ];
 
   const otherKeyAreas = [
-    { name: "Application Development", icon: <Monitor className="w-6 h-6 text-slate-800" /> },
-    { name: "DevOps", icon: <Layers className="w-6 h-6 text-slate-800" /> },
-    { name: "Quality Engineering", icon: <Settings className="w-6 h-6 text-slate-800" /> },
-    { name: "Application Modernization", icon: <RefreshCw className="w-6 h-6 text-slate-800" /> },
-    { name: "Experience Transformation", icon: <Sparkles className="w-6 h-6 text-slate-800" /> },
-    { name: "Engineering Frameworks", icon: <Code className="w-6 h-6 text-slate-800" /> }
+    { name: "MES services", icon: <Settings className="w-6 h-6 text-slate-800" /> },
+    { name: "Connected Factory (IIOT)", icon: <Factory className="w-6 h-6 text-slate-800" /> },
+    { name: "Connected Workforce", icon: <Users className="w-6 h-6 text-slate-800" /> },
+    { name: "Manufacturing analytics & OEE", icon: <BarChart2 className="w-6 h-6 text-slate-800" /> },
+    { name: "Predictive maintenance", icon: <Wrench className="w-6 h-6 text-slate-800" /> },
+    { name: "Supply Chain Digitization", icon: <Truck className="w-6 h-6 text-slate-800" /> }
   ];
 
   const faqs = [
@@ -524,7 +524,7 @@ export default function MesServices() {
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-black text-black tracking-tight leading-tight max-w-sm relative z-10 pt-4">
-              Our other key areas for Digital Engineering Services
+              Our key areas for <br /> Industry 4.0
             </h2>
           </div>
 

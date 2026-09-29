@@ -76,12 +76,12 @@ export default function PlmServices() {
   ];
 
   const otherKeyAreas = [
-    { name: "Application Development", icon: <Monitor className="w-6 h-6 text-slate-800" /> },
-    { name: "DevOps", icon: <Layers className="w-6 h-6 text-slate-800" /> },
-    { name: "Quality Engineering", icon: <Settings className="w-6 h-6 text-slate-800" /> },
-    { name: "Application Modernization", icon: <RefreshCw className="w-6 h-6 text-slate-800" /> },
-    { name: "Experience Transformation", icon: <Sparkles className="w-6 h-6 text-slate-800" /> },
-    { name: "Engineering Frameworks", icon: <Code className="w-6 h-6 text-slate-800" /> }
+    { name: "Digital Transformation Consulting", icon: <Sparkles className="w-6 h-6 text-slate-800" /> },
+    { name: "SAP Consulting & Services", icon: <Settings className="w-6 h-6 text-slate-800" /> },
+    { name: "Application Development & Modernization", icon: <Monitor className="w-6 h-6 text-slate-800" /> },
+    { name: "Cloud, DevOps & Infra", icon: <Layers className="w-6 h-6 text-slate-800" /> },
+    { name: "PLM Services", icon: <RefreshCw className="w-6 h-6 text-slate-800" /> },
+    { name: "Quality engineering and test automation", icon: <Shield className="w-6 h-6 text-slate-800" /> }
   ];
 
   useEffect(() => {
@@ -262,7 +262,8 @@ export default function PlmServices() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-5 space-y-4 text-left relative">
             <h2 className="text-2xl sm:text-3xl font-black text-black tracking-tight leading-tight max-w-sm relative z-10 pt-4">
-              Our key areas for PLM Services
+              Our key areas for Enterprise Digital & IT
+
             </h2>
           </div>
 
