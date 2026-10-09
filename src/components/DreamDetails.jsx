@@ -229,7 +229,6 @@ Connected machines, execution systems (MES), shop-floor analytics, predictive ma
             { title: "SAP Consulting & Services", desc: "Resilient systems, custom implementations, and SAP ecosystem maintenance." },
             { title: "Application Development & Modernization", desc: "Build modular, cloud-native apps while systematically reducing technical debt." },
             { title: "Cloud, DevOps & Infra", desc: "CI/CD automated pipelines, zero-trust cloud orchestration, and cloud audit paths." },
-            { title: "Enterprise integration", desc: "Connecting distinct software applications and pipelines securely." },
             { title: "PLM Services", desc: "Deploying secure lifecycle management systems for engineering platforms." },
             { title: "Quality engineering and test automation", desc: "Next-gen test automation using AI-native testing architectures." }
           ]
@@ -315,24 +314,23 @@ Connected machines, execution systems (MES), shop-floor analytics, predictive ma
                   </div>
 
                   {/* Bottom Row: Left Tab selectors & Right Services Grid */}
-                  <div className="lg:col-span-4 pr-0 lg:pr-4 mt-3 flex flex-col items-center sm:items-start">
-                    <div className="flex flex-col items-center sm:items-start gap-3 sm:gap-2 pt-2 text-center sm:text-left w-full">
+                  <div className="lg:col-span-4 pr-0 lg:pr-4 mt-3 flex flex-col items-start">
+                    <div className="flex flex-col items-start gap-3 sm:gap-2 pt-2 text-left w-full px-4 sm:px-0">
                       {step.tabs.map((tab, tIdx) => {
                         const isActive = engineerTab === tIdx;
                         return (
                           <button
                             key={tIdx}
                             onClick={() => setEngineerTab(tIdx)}
-                            className={`flex items-center justify-center sm:justify-start gap-2.5 sm:gap-2 text-center sm:text-left font-black text-xl sm:text-xs md:text-sm py-2 sm:py-1 transition-all always-blue ${isActive
-                              ? 'pl-0'
-                              : 'pl-0 sm:pl-8'
-                              }`}
+                            className="flex items-center justify-start text-left font-black text-lg sm:text-xs md:text-sm py-2 sm:py-1 transition-all always-blue"
                             style={{
                               color: isActive ? '#236CB1' : 'rgba(35, 108, 177, 0.5)'
                             }}
                           >
-                            {isActive && <span className="text-ossisto-blue text-base sm:text-xs">▶</span>}
-                            {tab.name}
+                            <span className="w-5 sm:w-4 flex-shrink-0 inline-flex items-center justify-center text-ossisto-blue text-sm sm:text-xs mr-1">
+                              {isActive ? '▶' : ''}
+                            </span>
+                            <span>{tab.name}</span>
                           </button>
                         );
                       })}
